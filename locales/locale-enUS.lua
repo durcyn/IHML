@@ -20,7 +20,7 @@ Don't insert any comments above or below a line, since that
 will mess up the line numbers so they no longer match with 
 the enUS file. Any comments about translation goes at the 
 end of the line, before any comment that's already there.
-L["Example %d"] = "Examplé No. %d" <-- translators comment here> -- %d will be replaced by a number
+L["Example %d"] = "Examplé No. %d" -- translators comment here -- %d will be replaced by a number
 
 You must also add a line to the locales.xml for the game to
 load your translation.
@@ -32,15 +32,17 @@ Thanks for your effort!
 /Snago
 --]]
 
--- Core
+-- Core -------------------------------
 L["In combat! %s queued lol!"] = true -- %s will be replaced with the macro in question
 L["%s! I have that macro lol!"] = true -- %s will be replaced with the macro in question
 L["Please choose a macroname by typing: /ihml macroname <name here>"] = true -- Don't translate the command, it won't change
 L["|cffff9999Warning!|r No macro named %s found. Make it plz!"] = true -- %s will be replaced with macroname
 L["|cffff9999Warning!|r No free macro space for a non character specific macro :("] = true
 L["%s is character specific. It is recomended to use a general macro if the profile is used with more than one character. (And to get rid of this nagging ;P)"] = true -- %s gets replaced with the macroname
+-- /core ------------------------------
 
--- Config
+-- Config -----------------------------
+-- Options
 L["Macros"] = true
 L["Options"] = true
 L["Auto Swap"] = true
@@ -52,6 +54,9 @@ L["Zone"] = true
 L["By Zone"] = true
 L["Used Macro"] = true
 L["Make Macro"] = true
+L["Reinsert default macros"] = true
+L["Use this to recover any removed default macros. Won't replace changed versions. If you want to revert changed macros delete them first."] = true
+-- Macros
 L["Select Macro:"] = true
 L["Select a macro."] = true
 L["Swap!"] = true
@@ -74,7 +79,7 @@ L["New macro %d"] = true -- %d gets replaced with a number
 L["Remove!"] = true
 L["Remove the macro."] = true
 L["Are you sure you want to remove %s?"] = true -- %s gets replaced with the macro in question
-
+-- /config ----------------------------
 
 -- Default macros ---------------------
 -- Skettis ------------------

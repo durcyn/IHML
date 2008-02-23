@@ -10,6 +10,7 @@ local string = string
 local tonumber = tonumber
 local GetMinimapZoneText = GetMinimapZoneText
 local InCombatLockdown = InCombatLockdown
+local CreateMacro = CreateMacro
 local EditMacro = EditMacro
 local GetMacroIndexByName = GetMacroIndexByName
 local GetMacroInfo = GetMacroInfo
@@ -391,6 +392,12 @@ options.args.option.args = {
 		order = 201,
 		disabled = function() return GetMacroIndexByName(p.macroname) ~= 0 end,
 		func = function() checkMacro() end,
+	},
+	insertdefault = {
+		name = L["Reinsert default macros"], type = "execute",
+		desc = L["Use this to recover any removed default macros. Won't replace changed versions. If you want to revert changed macros delete them first."],
+		order = 300,
+		func = insertDefaultMacros,
 	},
 }
 
