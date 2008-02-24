@@ -8,6 +8,7 @@
 ## OptionalDeps: Ace3
 ## X-Embeds: Ace3
 
+## X-AceForum: 11547
 ## X-Website: http://www.wowace.com/wiki/IHML
 
 ## SavedVariables: IHMLDB

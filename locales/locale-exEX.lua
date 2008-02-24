@@ -91,8 +91,8 @@ L["m_vortexpinnacle"] = [[/use Wrangling Rope
 /stopattack]]
 L["Forge Camp: Wrath"] = "Forge Camp: Wrath"
 L["Forge Camp: Terror"] = "Forge Camp: Terror"
-L["m_forgecamp"] = [[/use [mounted] Skyguard Bombs
-/use [nomounted] Banishing Crystal]] 
+L["m_forgecamp"] = [[/use [flying] Skyguard Bombs
+/use [noflying] Banishing Crystal]] 
 -- Karazhan -----------------
 L["The Curator"] = "The Curator"
 L["m_curator"] = [[/target Astral Flare

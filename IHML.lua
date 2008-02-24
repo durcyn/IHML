@@ -291,7 +291,7 @@ function IHML:ChatCommand(msg)
 	elseif arg == "macroname" then
 		arg, pos = self:GetArgs(msg, 1, pos)
 		if arg then
-			checkMacro(arg)
+			checkMacro(arg, true)
 			p.macroname = arg
 		end
 	elseif arg == "insertdefault" then
