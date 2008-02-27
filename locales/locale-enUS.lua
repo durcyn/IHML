@@ -92,7 +92,7 @@ L["m_vortexpinnacle"] = [[/use Wrangling Rope
 L["Forge Camp: Wrath"] = true
 L["Forge Camp: Terror"] = true
 L["m_forgecamp"] = [[/use [flying] Skyguard Bombs
-/use [noflying] Banishing Crystal]] 
+/use [noflying] Banishing Crystal]]
 -- Karazhan -----------------
 L["The Curator"] = true
 L["m_curator"] = [[/target Astral Flare
