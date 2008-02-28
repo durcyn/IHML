@@ -86,7 +86,6 @@ setMacro(L["High Warlord Naj'entus"], 392, L["m_najentus"], true)
 end
 
 local function checkMacro(name, dontMake)
-	name = name or p.macroname or nil
 	if not name then
 		IHML:Print(L["Please choose a macroname by typing: /ihml macroname <name here>"])
 	elseif GetMacroIndexByName(name) == 0 then
@@ -136,7 +135,7 @@ end
 
 function IHML:OnEnable()
 	self:UpdateSettings()
-	checkMacro()
+	checkMacro(p.macroname)
 	AceLibrary("AceEvent-2.0").RegisterEvent(IHML, "Ace2_AddonEnabled", function(addon)
 		-- If the addon don't have enabletrigger then it's not a bossmod
 		if not addon.enabletrigger or not bw2bm then return end
@@ -383,7 +382,7 @@ options.args.option.args = {
 		desc = L["Used Macro"],
 		type = "input",
 		arg = "macroname",
-		set = function(k, v) p["macroname"] = v; checkMacro(v,true) end,
+		set = function(k, v) p["macroname"] = v or p.macroname; checkMacro(v,true) end,
 		order = 200,
 	},
 	makemacro = {
@@ -391,7 +390,7 @@ options.args.option.args = {
 		desc = L["Make Macro"],
 		order = 201,
 		disabled = function() return GetMacroIndexByName(p.macroname) ~= 0 end,
-		func = function() checkMacro() end,
+		func = function() checkMacro(p.macroname) end,
 	},
 	insertdefault = {
 		name = L["Reinsert default macros"], type = "execute",
@@ -643,7 +642,6 @@ do
 				desc = NEW_PROFILE_DESC,
 				type = "input",
 				order = 4,
-				--get = function() return false end,
 				get = false,
 				set = function(info, value) db:SetProfile(value) end,
 			},
@@ -657,7 +655,7 @@ do
 				type = "select",
 				name = COPY_PROFILE_NAME,
 				desc = COPY_PROFILE_DESC,
-				get = function() return false end,
+				get = false,
 				set = function(info, value) db:CopyProfile(value) end,
 				values = function() return getProfileList(nil, true) end,
 			},
@@ -671,7 +669,7 @@ do
 				type = "select",
 				name = DELETE_PROFILE_NAME,
 				desc = DELETE_PROFILE_DESC,
-				get = function() return false end,
+				get = false,
 				set = function(info, value) db:DeleteProfile(value) end,
 				values = function() return getProfileList(nil, true) end,
 				confirm = true,
