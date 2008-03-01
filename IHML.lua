@@ -69,18 +69,18 @@ setMacro(L["Halazzi"], 634, L["m_halazzi"], true)
 
 -- Serpentshrine Cavern ---------------
 setMacro(L["Fathom-Lord Karathress"], 376, L["m_flk"], true)
-setMacro(L["Lady Vashj"], 728, L["m_vashj"], true)
+setMacro(L["Lady Vashj"], 1, L["m_vashj"], true)
 ---------------------------------------
 
 -- Tempest Keep -----------------------
 ---------------------------------------
 
 -- Mount Hyjal ------------------------
-setMacro(L["Archimonde"], 275, L["m_archimonde"], true)
+setMacro(L["Archimonde"], 1, L["m_archimonde"], true)
 ---------------------------------------
 
 -- Black Temple -----------------------
-setMacro(L["High Warlord Naj'entus"], 392, L["m_najentus"], true)
+setMacro(L["High Warlord Naj'entus"], 1, L["m_najentus"], true)
 ---------------------------------------
 --XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 end
@@ -544,6 +544,11 @@ options.args.macros.args = {
 				name = L["Remove!"],
 				desc = L["Remove the macro."],
 				order = 550,
+				disabled = function()
+					local name = guiMacro or c.current
+					if mIcon[name] then return false end
+					return true
+				end,
 				confirm = function() return string.format("Are you sure you want to remove %s?", mIcon[guiMacro] and guiMacro or c.current) end,
 				func = function()
 					if mIcon[guiMacro] then

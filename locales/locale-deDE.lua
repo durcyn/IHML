@@ -84,14 +84,17 @@ L["Are you sure you want to remove %s?"] = "Bist du sicher, da\195\159 du %s ent
 -- Default macros ---------------------
 -- Skettis ------------------
 L["Skettis"] = "Skettis"
-L["m_skettis"] = [[/use Sprengladungen der Himmelswache]]
+L["m_skettis"] = [[#showtooltip
+/use Sprengladungen der Himmelswache]]
 -- Ogri'La ------------------
 L["Vortex Pinnacle"] = "Vortexgipfel"
-L["m_vortexpinnacle"] = [[/use Bändigungsseil
+L["m_vortexpinnacle"] = [[#showtooltip
+/use Bändigungsseil
 /stopattack]]
 L["Forge Camp: Wrath"] = "Konstruktionslager: Wut"
 L["Forge Camp: Terror"] = "Konstruktionslager: Terror"
-L["m_forgecamp"] = [[/use [flying] Bomben der Himmelswache
+L["m_forgecamp"] = [[#showtooltip
+/use [flying] Bomben der Himmelswache
 /use [noflying] Kristall der Verbannung]] 
 -- Karazhan -----------------
 L["The Curator"] = "Der Kurator"
@@ -109,15 +112,18 @@ L["Fathom-Lord Karathress"] = "Tiefenlord Karathress"
 L["m_flk"] = [[/target Feuerspuckendes Totem
 /startattack]]
 L["Lady Vashj"] = "Lady Vashj"
-L["m_vashj"] = [[/use Besudelter Kern
+L["m_vashj"] = [[#showtooltip
+/use Besudelter Kern
 /y <-- BESUDELTER KERN ZU: %t !!
 /s <-- BESUDELTER KERN ZU: %t !!
 /script SendChatMessage("!! DU HAST DEN KERN !!", "WHISPER", nil, UnitName("target"));]]
 -- Tempest Keep -------------
 -- Mount Hyjal --------------
 L["Archimonde"] = "Archimonde"
-L["m_archimonde"] = [[/use Tränen der Göttin]]
+L["m_archimonde"] = [[#showtooltip
+/use Tränen der Göttin]]
 -- Black Temple -------------
 L["High Warlord Naj'entus"] = "Oberster Kriegsfürst Naj'entus"
-L["m_najentus"] = [[/use Naj'entus' Stachel]]
+L["m_najentus"] = [[#showtooltip
+/use Naj'entus' Stachel]]
 -- /Default macros --------------------

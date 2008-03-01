@@ -84,14 +84,17 @@ L["Are you sure you want to remove %s?"] = true -- %s gets replaced with the mac
 -- Default macros ---------------------
 -- Skettis ------------------
 L["Skettis"] = true
-L["m_skettis"] = [[/use Skyguard Blasting Charges]]
+L["m_skettis"] = [[#showtooltip
+/use Skyguard Blasting Charges]]
 -- Ogri'La ------------------
 L["Vortex Pinnacle"] = true
-L["m_vortexpinnacle"] = [[/use Wrangling Rope
+L["m_vortexpinnacle"] = [[#showtooltip
+/use Wrangling Rope
 /stopattack]]
 L["Forge Camp: Wrath"] = true
 L["Forge Camp: Terror"] = true
-L["m_forgecamp"] = [[/use [flying] Skyguard Bombs
+L["m_forgecamp"] = [[#showtooltip
+/use [flying] Skyguard Bombs
 /use [noflying] Banishing Crystal]]
 -- Karazhan -----------------
 L["The Curator"] = true
@@ -109,15 +112,18 @@ L["Fathom-Lord Karathress"] = true
 L["m_flk"] = [[/target Spitfire Totem
 /startattack]]
 L["Lady Vashj"] = true
-L["m_vashj"] = [[/use Tainted Core
+L["m_vashj"] = [[#showtooltip
+/use Tainted Core
 /y <-- TAINTED CORE TO: %t !!
 /s <-- TAINTED CORE TO: %t !!
 /script SendChatMessage("!! YOU HAVE THE CORE !!", "WHISPER", nil, UnitName("target"));]]
 -- Tempest Keep -------------
 -- Mount Hyjal --------------
 L["Archimonde"] = true
-L["m_archimonde"] = [[/use Tears of the Goddess]]
+L["m_archimonde"] = [[#showtooltip
+/use Tears of the Goddess]]
 -- Black Temple -------------
 L["High Warlord Naj'entus"] = true
-L["m_najentus"] = [[/use Naj'entus Spine]]
+L["m_najentus"] = [[#showtooltip
+/use Naj'entus Spine]]
 -- /Default macros --------------------
