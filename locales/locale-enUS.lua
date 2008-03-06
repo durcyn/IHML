@@ -1,36 +1,6 @@
-local L = LibStub("AceLocale-3.0"):NewLocale("IHML", "enUS", true)
+ï»¿local L = LibStub("AceLocale-3.0"):NewLocale("IHML", "enUS", true)
 
-
---[[
-To make a translation, make a copy of the locale-exEX.lua 
-file and rename it to match your language (for example: 
-locale-frFR.lua for french). You must also replace "exEX" 
-on the first line with the code for your language.
-
-Translate the strings on the right side of the '='-sign
-L["Example"] = "Examplé"
-    |             \ Translate this part
-    \ Don't translate this part
-
-If the string contains any %s or %d, feel free to move them 
-around to match the grammar of your language as long as you
-keep them in the same order!
-
-Don't insert any comments above or below a line, since that
-will mess up the line numbers so they no longer match with 
-the enUS file. Any comments about translation goes at the 
-end of the line, before any comment that's already there.
-L["Example %d"] = "Examplé No. %d" -- translators comment here -- %d will be replaced by a number
-
-You must also add a line to the locales.xml for the game to
-load your translation.
-<Script file="locale-frFR.lua"/>
-Make sure you put it after <Script file="locale-enUS.lua"/>
-but before </Ui>
-
-Thanks for your effort!
-/Snago
---]]
+-- See locale-exEX.lua for instructions in how to make a translation
 
 -- Core -------------------------------
 L["In combat! %s queued lol!"] = true -- %s will be replaced with the macro in question
@@ -72,7 +42,6 @@ L["Icon:"] = true
 L["Icon"] = true
 --L["Macro body:"] = true
 L["The macro goes here. Still limited to 255 characters."] = true
-L["New macro"] = true
 L["Make a new macro."] = true
 L["New macro"] = true
 L["New macro %d"] = true -- %d gets replaced with a number

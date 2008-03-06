@@ -1,4 +1,4 @@
-local L = LibStub("AceLocale-3.0"):NewLocale("IHML", "exEX")
+ï»¿local L = LibStub("AceLocale-3.0"):NewLocale("IHML", "exEX")
 if not L then return end
 
 --[[
@@ -8,7 +8,7 @@ locale-frFR.lua for french). You must also replace "exEX"
 on the first line with the code for your language.
 
 Translate the strings on the right side of the '='-sign
-L["Example"] = "Examplé"
+L["Example"] = "ExamplÃ©"
     |             \ Translate this part
     \ Don't translate this part
 
@@ -20,7 +20,7 @@ Don't insert any comments above or below a line, since that
 will mess up the line numbers so they no longer match with 
 the enUS file. Any comments about translation goes at the 
 end of the line, before any comment that's already there.
-L["Example %d"] = "Examplé No. %d" -- translators comment here -- %d will be replaced by a number
+L["Example %d"] = "ExamplÃ© No. %d" -- translators comment here -- %d will be replaced by a number
 
 You must also add a line to the locales.xml for the game to
 load your translation.
@@ -72,7 +72,6 @@ L["Icon:"] = "Icon:"
 L["Icon"] = "Icon"
 --L["Macro body:"] = true
 L["The macro goes here. Still limited to 255 characters."] = "The macro goes here. Still limited to 255 characters."
-L["New macro"] = "New macro"
 L["Make a new macro."] = "Make a new macro."
 L["New macro"] = "New macro"
 L["New macro %d"] = "New macro %d" -- %d gets replaced with a number
@@ -84,14 +83,17 @@ L["Are you sure you want to remove %s?"] = "Are you sure you want to remove %s?"
 -- Default macros ---------------------
 -- Skettis ------------------
 L["Skettis"] = "Skettis"
-L["m_skettis"] = [[/use Skyguard Blasting Charges]]
+L["m_skettis"] = [[#showtooltip
+/use Skyguard Blasting Charges]]
 -- Ogri'La ------------------
 L["Vortex Pinnacle"] = "Vortex Pinnacle"
-L["m_vortexpinnacle"] = [[/use Wrangling Rope
+L["m_vortexpinnacle"] = [[#showtooltip
+/use Wrangling Rope
 /stopattack]]
 L["Forge Camp: Wrath"] = "Forge Camp: Wrath"
 L["Forge Camp: Terror"] = "Forge Camp: Terror"
-L["m_forgecamp"] = [[/use [flying] Skyguard Bombs
+L["m_forgecamp"] = [[#showtooltip
+/use [flying] Skyguard Bombs
 /use [noflying] Banishing Crystal]]
 -- Karazhan -----------------
 L["The Curator"] = "The Curator"
@@ -109,15 +111,18 @@ L["Fathom-Lord Karathress"] = "Fathom-Lord Karathress"
 L["m_flk"] = [[/target Spitfire Totem
 /startattack]]
 L["Lady Vashj"] = "Lady Vashj"
-L["m_vashj"] = [[/use Tainted Core
+L["m_vashj"] = [[#showtooltip
+/use Tainted Core
 /y <-- TAINTED CORE TO: %t !!
 /s <-- TAINTED CORE TO: %t !!
 /script SendChatMessage("!! YOU HAVE THE CORE !!", "WHISPER", nil, UnitName("target"));]]
 -- Tempest Keep -------------
 -- Mount Hyjal --------------
 L["Archimonde"] = "Archimonde"
-L["m_archimonde"] = [[/use Tears of the Goddess]]
+L["m_archimonde"] = [[#showtooltip
+/use Tears of the Goddess]]
 -- Black Temple -------------
 L["High Warlord Naj'entus"] = "High Warlord Naj'entus"
-L["m_najentus"] = [[/use Naj'entus Spine]]
+L["m_najentus"] = [[#showtooltip
+/use Naj'entus Spine]]
 -- /Default macros --------------------

@@ -1,35 +1,5 @@
-local L = LibStub("AceLocale-3.0"):NewLocale("IHML", "deDE")
+ï»¿local L = LibStub("AceLocale-3.0"):NewLocale("IHML", "deDE")
 if not L then return end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 -- Core -------------------------------
@@ -72,7 +42,6 @@ L["Icon:"] = "Symbol:"
 L["Icon"] = "Symbol"
 --L["Macro body:"] = true
 L["The macro goes here. Still limited to 255 characters."] = "Hierher kommt das Makro. Noch immer auf 255 Zeichen limitiert."
-L["New macro"] = "Neues Makro"
 L["Make a new macro."] = "Ein neues Makro erstellen."
 L["New macro"] = "Neues Makro"
 L["New macro %d"] = "Neues Makro %d" -- %d gets replaced with a number
@@ -89,7 +58,7 @@ L["m_skettis"] = [[#showtooltip
 -- Ogri'La ------------------
 L["Vortex Pinnacle"] = "Vortexgipfel"
 L["m_vortexpinnacle"] = [[#showtooltip
-/use Bändigungsseil
+/use BÃ¤ndigungsseil
 /stopattack]]
 L["Forge Camp: Wrath"] = "Konstruktionslager: Wut"
 L["Forge Camp: Terror"] = "Konstruktionslager: Terror"
@@ -101,7 +70,7 @@ L["The Curator"] = "Der Kurator"
 L["m_curator"] = [[/target Astralflimmern
 /startattack]]
 L["Terestian Illhoof"] = "Terestian Siechhuf"
-L["m_illhoof"] = [[/target Dämonenketten
+L["m_illhoof"] = [[/target DÃ¤monenketten
 /startattack]]
 -- Zul'Aman -----------------
 L["Halazzi"] = "Halazzi"
@@ -121,9 +90,9 @@ L["m_vashj"] = [[#showtooltip
 -- Mount Hyjal --------------
 L["Archimonde"] = "Archimonde"
 L["m_archimonde"] = [[#showtooltip
-/use Tränen der Göttin]]
+/use TrÃ¤nen der GÃ¶ttin]]
 -- Black Temple -------------
-L["High Warlord Naj'entus"] = "Oberster Kriegsfürst Naj'entus"
+L["High Warlord Naj'entus"] = "Oberster KriegsfÃ¼rst Naj'entus"
 L["m_najentus"] = [[#showtooltip
 /use Naj'entus' Stachel]]
 -- /Default macros --------------------
