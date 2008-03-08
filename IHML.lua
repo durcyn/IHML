@@ -31,6 +31,7 @@ local defaults = {
 	profile = {
 		autoswap = true,
 		byBigWigs2BossMod = true,
+		byInstanceType = true,
 		byZone = true,
 		macroname = "ihml",
 	}
@@ -163,6 +164,13 @@ end
 
 function IHML:ZoneChanged()
 	self:SwapMacro(GetMinimapZoneText())
+end
+
+function IHML:PLAYER_ENTERING_WORLD()
+	local _, instanceType = IsInInstance()
+	if instanceType ~= "none" then
+		self:SwapMacro(instanceType)
+	end
 end
 
 function IHML:ADDON_LOADED(addon)
@@ -319,15 +327,22 @@ end
 
 function IHML:UpdateSettings()
 	if p.autoswap then
-		if p.byBigWigs2BossMod then
-			bw2bm = true
+		bw2bm = p.byBigWigs2BossMod == true
+		if p.byInstanceType then
+			self:RegisterEvent("PLAYER_ENTERING_WORLD")
+		else
+			self:UnregisterEvent("PLAYER_ENTERING_WORLD")
 		end
 		if p.byZone then
 			self:RegisterEvent("MINIMAP_ZONE_CHANGED", "ZoneChanged")
 			self:RegisterEvent("ZONE_CHANGED", "ZoneChanged")
+		else
+			self:UnregisterEvent("MINIMAP_ZONE_CHANGED")
+			self:UnregisterEvent("ZONE_CHANGED")
 		end
 	else
 		bw2bm = nil
+		self:UnregisterEvent("PLAYER_ENTERING_WORLD")
 		self:UnregisterEvent("MINIMAP_ZONE_CHANGED")
 		self:UnregisterEvent("ZONE_CHANGED")
 	end
@@ -382,6 +397,12 @@ options.args.option.args = {
 						desc = L["By BigWigs Boss Module"],
 						order = 100,
 						arg = "byBigWigs2BossMod",
+					},
+					instancetype = {
+						name = L["Instance type"], type = "toggle",
+						desc = L["By instance type. (arena, pvp, party or raid)"],
+						order = 150,
+						arg = "byInstanceType",
 					},
 					zone = {
 						name = L["Zone"], type = "toggle",

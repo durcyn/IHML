@@ -12,7 +12,7 @@ L["%s is character specific. It is recomended to use a general macro if the prof
 -- /core ------------------------------
 
 -- Config -----------------------------
--- Options
+-- Options ------------------
 L["Macros"] = "Macros"
 L["Options"] = "Options"
 L["Auto Swap"] = "Auto Swap"
@@ -20,13 +20,15 @@ L["Use Auto Swap"] = "activer l'Auto Swap"
 L["Auto Swap events"] = "Auto Swap events"
 L["BigWigs"] = "BigWigs"
 L["By BigWigs Boss Module"] = "par Boss Module BigWigs"
+--L["Instance type"] = "Instance type"
+--L["By instance type. (arena, pvp, party or raid)"] = "By instance type. (arena, pvp, party or raid)" -- Don't translate (arena, pvp, party or raid), those names won't change with locale
 L["Zone"] = "Zone"
 L["By Zone"] = "par Zone"
 L["Used Macro"] = "Macros Utilisées"
 L["Make Macro"] = "Générer la Macro"
 L["Reinsert default macros"] = "Recréer les macros par Défaut"
 L["Use this to recover any removed default macros. Won't replace changed versions. If you want to revert changed macros delete them first."] = "Use this to recover any removed default macros. Won't replace changed versions. If you want to revert changed macros delete them first."
--- Macros
+-- Macros -------------------
 L["Select Macro:"] = "Macro Sélectionée:"
 L["Select a macro."] = "Choisissez une macro."
 L["Swap!"] = "Swap!"
