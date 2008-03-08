@@ -30,6 +30,7 @@ local lastboss
 local defaults = {
 	profile = {
 		autoswap = true,
+		silent = true,
 		byBigWigs2BossMod = true,
 		byInstanceType = true,
 		byZone = true,
@@ -147,7 +148,7 @@ function IHML:OnEnable()
 	if c.current then
 		queued = c.current
 		c.current = nil
-		self:SwapMacro()
+		self:SwapMacro(nil, true)
 	end
 	self:RegisterEvent("ADDON_LOADED") -- To detect when the BigWigs/Macro frame loads
 	if not bwLoaded and BigWigs then
@@ -163,13 +164,13 @@ function IHML:OnDisable()
 end
 
 function IHML:ZoneChanged()
-	self:SwapMacro(GetMinimapZoneText())
+	self:SwapMacro(GetMinimapZoneText(), p.silent)
 end
 
 function IHML:PLAYER_ENTERING_WORLD()
 	local _, instanceType = IsInInstance()
 	if instanceType ~= "none" then
-		self:SwapMacro(instanceType)
+		self:SwapMacro(instanceType, p.silent)
 	end
 end
 
@@ -193,7 +194,7 @@ function IHML:ADDON_LOADED(addon)
 			-- If the addon don't have enabletrigger then it's not a bossmod
 			if addon.enabletrigger and bw2bm then
 				lastboss = addon.name
-				IHML:SwapMacro(lastboss)
+				IHML:SwapMacro(lastboss, p.silent)
 			end
 		end)
 		bwLoaded = true
@@ -203,7 +204,7 @@ function IHML:ADDON_LOADED(addon)
 	end
 end
 
-function IHML:SwapMacro(new)
+function IHML:SwapMacro(new, silent)
 	new = new ~= "PLAYER_REGEN_ENABLED" and new or queued
 	if not new or -- Got called without argument even when there was nothing queued.
 		not mIcon[new] or -- Macro don't exists
@@ -214,11 +215,11 @@ function IHML:SwapMacro(new)
 		if queued and queued == new then return end
 		queued = new
 		self:RegisterEvent("PLAYER_REGEN_ENABLED", "SwapMacro")
-		self:Print(format(L["In combat! %s queued lol!"], queued))
+		if not silent then self:Print(format(L["In combat! %s queued lol!"], queued)) end
 		return
 	end
 	local icon, body = mIcon[new], mBody[new]
-	self:Print(format(L["%s! I have that macro lol!"], new))
+	if not silent then self:Print(format(L["%s! I have that macro lol!"], new)) end
 	EditMacro(GetMacroIndexByName(p.macroname), p.macroname, icon, body, 1, 0)
 	c.current = new
 	currentIcon = icon
@@ -322,7 +323,7 @@ function IHML:ChatCommand(msg)
 		return
 	end
 --	self:Print(msg)
-	self:SwapMacro(msg)
+	self:SwapMacro(msg, p.silent)
 end
 
 function IHML:UpdateSettings()
@@ -384,6 +385,13 @@ options.args.option.args = {
 				type = "toggle",
 				arg = "autoswap",
 				order = 100,
+			},
+			silent = {
+				name = L["Silent"],
+				desc = L["Don't print to chat when swapping."],
+				type = "toggle",
+				arg = "silent",
+				order = 150,
 			},
 			events = {
 				name = L["Auto Swap events"], type = "group",
@@ -466,7 +474,7 @@ options.args.macros.args = {
 		name = L["Swap!"],
 		desc = L["Swap to the selected macro."],
 		order = 101,
-		func = function() IHML:SwapMacro(guiMacro) end,
+		func = function() IHML:SwapMacro(guiMacro, p.silent) end,
 	},
 	macro = {
 		type = "group",
