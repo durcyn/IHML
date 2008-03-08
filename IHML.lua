@@ -8,6 +8,7 @@ local pairs = pairs
 local select = select
 local string = string
 local tonumber = tonumber
+local tostring = tostring
 local GetMinimapZoneText = GetMinimapZoneText
 local InCombatLockdown = InCombatLockdown
 local CreateMacro = CreateMacro
@@ -112,6 +113,17 @@ function IHML:OnInitialize()
 	db = LibStub("AceDB-3.0"):New("IHMLDB", defaults, "Default")
 	self.db = db
 	c = db.char
+	self:OnProfileChanged()
+	db.RegisterCallback(self, "OnProfileChanged")
+
+	LibStub("AceConfigRegistry-3.0"):RegisterOptionsTable("IHML", options)
+	self.options = options
+	options.args.profile = LibStub("AceDBOptions-3.0"):GetOptionsTable(db)
+	options.args.profile.order = 300
+	self:RegisterChatCommand("ihml", "ChatCommand", true)
+end
+
+function IHML:OnProfileChanged()
 	p = db.profile
 	mName = {}
 	mIcon = p.macroIcon
@@ -126,11 +138,7 @@ function IHML:OnInitialize()
 		for k in pairs(mIcon) do
 			mName[k] = k
 		end
-	end
-
-	LibStub("AceConfigRegistry-3.0"):RegisterOptionsTable("IHML", options)
-	self.options = options
-	self:RegisterChatCommand("ihml", "ChatCommand", true)
+	end	
 end
 
 function IHML:OnEnable()
@@ -408,7 +416,20 @@ options.args.macros.args = {
 		desc = L["Select a macro."],
 		order = 100,
 		values = function() return mName end,
-		get = function() return mIcon[guiMacro] and guiMacro or c.current or nil end,
+		get = function()
+			if guiMacro then
+				if guiMacro == c.current then
+					guiMacro = nil
+					return c.current
+				elseif mIcon[guiMacro] then
+					return guiMacro
+				end
+			elseif c.current then
+				return c.current
+			end
+			guiMacro = next(mName)
+			return guiMacro
+		end,
 		set = function(info,v) guiMacro = v ~= c.current and v or nil end,
 	},
 	swap = {
@@ -423,19 +444,13 @@ options.args.macros.args = {
 		name = L["Edit Macro"],
 		inline = true,
 		order = 200,
+		disabled = function() return guiMacro == nil and c.current == nil end,
 		args = {
 			info = {
 				type = "description",
 				name = L["Name: Type \"boss\" for last loaded boss module or \"zone\" for current zone.\nIcon: A number from 1 to 769. You might want to edit this from the Blizzard Macro UI."],
 				order = 100,
-				image = function()
-					if not guiMacro and not c.current then
-						guiMacro = next(mName)
-					elseif guiMacro == c.current then
-						guiMacro = nil
-					end
-					return GetMacroIconInfo(mIcon[guiMacro] or currentIcon), 56, 56
-				end,
+				image = function() return GetMacroIconInfo(mIcon[guiMacro] or (c.current ~= nil and currentIcon or 1)), 56, 56 end,
 			},
 			name = {
 				type = "input",
@@ -487,7 +502,7 @@ options.args.macros.args = {
 					end
 					return false
 				end,
-				get = function() return mIcon[guiMacro] or currentIcon end,
+				get = function() return tostring(mIcon[guiMacro] or currentIcon or "") end,
 				set = function(info,k)
 					if mIcon[guiMacro] then
 						mIcon[guiMacro] = tonumber(k)
@@ -524,6 +539,7 @@ options.args.macros.args = {
 				name = L["New macro"],
 				desc = L["Make a new macro."],
 				order = 560,
+				disabled = false,
 				func = function()
 					local name = L["New macro"]
 					if mIcon[name] then
@@ -546,7 +562,7 @@ options.args.macros.args = {
 				order = 550,
 				disabled = function()
 					local name = guiMacro or c.current
-					if mIcon[name] then return false end
+					if name and mIcon[name] then return false end
 					return true
 				end,
 				confirm = function() return string.format("Are you sure you want to remove %s?", mIcon[guiMacro] and guiMacro or c.current) end,
@@ -563,125 +579,5 @@ options.args.macros.args = {
 		},
 	},
 }
-
-do
-	local PROFILES_NAME = "Profiles"
-	local PROFILES_DESC = "Manage Profiles"
-	local DEFAULT = "Default"
-	local CHARACTER_COLON = "Character: "
-	local REALM_COLON = "Realm: "
-	local CLASS_COLON = "Class: "
-	local DELETE_PROFILE_HEADER = "Delete a profile"
-	local DELETE_PROFILE_NAME = "Delete a profile"
-	local DELETE_PROFILE_DESC = "Deletes a profile. Note that no check is made whether this profile is in use by other characters or not."
-	local DELETE_PROFILE_COMFIRM = "Are you sure you want to delete the selected profile?"
-	local CHOOSE_PROFILE_NAME = "Choose a profile"
-	local NEW_PROFILE_NAME = "New"
-	local NEW_PROFILE_DESC = "Enter the name of the profile to create."
-	local CURRENT_PROFILE_NAME = "Current"
-	local CURRENT_PROFILE_DESC = "Select an existing profile to use for this character."
-	local COPY_PROFILE_HEADER = "Copy a profile"
-	local COPY_PROFILE_NAME = "Copy from"
-	local COPY_PROFILE_DESC = "Copy settings from another profile."
-	local RESET_PROFILE = "Reset profile"
-	local RESET_PROFILE_DESC = "Clear all settings of the current profile."
-
-	local defaultProfiles
-	--[[ Utility functions ]]
-	-- get exisiting profiles + some default entries
-	local tmpprofiles = {}
-	local function getProfileList(common, nocurrent)
-		defaultProfiles = defaultProfiles or {
-			["Default"] = "Default",
-			[db.keys.char] = "Character: " .. db.keys.char,
-			[db.keys.realm] = "Realm: " .. db.keys.realm,
-			[db.keys.class] = "Class: " .. UnitClass("player")
-		}
-		-- clear old profile table
-		local profiles = {}
-
-		-- copy existing profiles into the table
-		local curr = db:GetCurrentProfile()
-		for _, v in pairs(db:GetProfiles(tmpprofiles)) do
-			if not (nocurrent and v == curr) then profiles[v] = v end
-		end
-
-		-- add our default profiles to choose from
-		for k, v in pairs(defaultProfiles) do
-			if (common or profiles[k]) and not (k == curr and nocurrent) then
-				profiles[k] = v
-			end
-		end
-		return profiles
-	end
-
-	options.args.profile_group = {
-		type = "group",
-		name = PROFILES_NAME,
-		desc = PROFILES_DESC,
-		order = 300,
-		args = {
-			reset = {
-				order = 1,
-				type = "execute",
-				name = RESET_PROFILE,
-				desc = RESET_PROFILE_DESC,
-				func = function() db:ResetProfile() end,
-			},
-			spacer1 = {
-				order = 2,
-				type = "header",
-				name = CHOOSE_PROFILE_NAME,
-			},
-			choose = {
-				name = CURRENT_PROFILE_NAME,
-				desc = CURRENT_PROFILE_DESC,
-				type = "select",
-				order = 3,
-				get = function() return db:GetCurrentProfile() end,
-				set = function(info, value) db:SetProfile(value) end,
-				values = function() return getProfileList(true) end,
-			},
-			new = {
-				name = NEW_PROFILE_NAME,
-				desc = NEW_PROFILE_DESC,
-				type = "input",
-				order = 4,
-				get = false,
-				set = function(info, value) db:SetProfile(value) end,
-			},
-			spacer2 = {
-				type = "header",
-				order = 5,
-				name = COPY_PROFILE_HEADER,
-			},
-			copyfrom = {
-				order = 6,
-				type = "select",
-				name = COPY_PROFILE_NAME,
-				desc = COPY_PROFILE_DESC,
-				get = false,
-				set = function(info, value) db:CopyProfile(value) end,
-				values = function() return getProfileList(nil, true) end,
-			},
-			spacer3 = {
-				type = "header",
-				order = 7,
-				name = DELETE_PROFILE_HEADER,
-			},
-			delete = {
-				order = 8,
-				type = "select",
-				name = DELETE_PROFILE_NAME,
-				desc = DELETE_PROFILE_DESC,
-				get = false,
-				set = function(info, value) db:DeleteProfile(value) end,
-				values = function() return getProfileList(nil, true) end,
-				confirm = true,
-				confirmText = DELETE_PROFILE_COMFIRM,
-			},
-		},
-	}
-end
 
 _G.IMHL = IHML
