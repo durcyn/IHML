@@ -18,14 +18,13 @@ local GetMacroInfo = GetMacroInfo
 local GetMacroIconInfo = GetMacroIconInfo
 
 -- locals
-local db, c, p
-local options
+local db, c, p, options
 local bw2bm
 local mName -- Need for AceConfig
 local mIcon, mBody
 local currentIcon -- the index for the current macro icon
 local queued
-
+local macroUIHooked, bwLoaded
 local lastboss
 
 local defaults = {
@@ -115,7 +114,7 @@ function IHML:OnInitialize()
 	c = db.char
 	self:OnProfileChanged()
 	db.RegisterCallback(self, "OnProfileChanged")
-
+	
 	LibStub("AceConfigRegistry-3.0"):RegisterOptionsTable("IHML", options)
 	self.options = options
 	options.args.profile = LibStub("AceDBOptions-3.0"):GetOptionsTable(db)
@@ -144,21 +143,17 @@ end
 function IHML:OnEnable()
 	self:UpdateSettings()
 	checkMacro(p.macroname)
-	AceLibrary("AceEvent-2.0").RegisterEvent(IHML, "Ace2_AddonEnabled", function(addon)
-		-- If the addon don't have enabletrigger then it's not a bossmod
-		if not addon.enabletrigger or not bw2bm then return end
-		lastboss = addon.name
-		IHML:SwapMacro(lastboss)
-	end)
 	if c.current then
 		queued = c.current
 		c.current = nil
 		self:SwapMacro()
 	end
-	if MacroFrame then
+	self:RegisterEvent("ADDON_LOADED") -- To detect when the BigWigs/Macro frame loads
+	if not bwLoaded and BigWigs then
+		self:ADDON_LOADED("BigWigs") -- BigWigs has already loaded
+	end
+	if not macroUIHooked and MacroFrame then
 		self:ADDON_LOADED("Blizzard_MacroUI") -- the MacroUI has already loaded
-	else
-		self:RegisterEvent("ADDON_LOADED") -- To detect when the Macro frame loads
 	end
 end
 
@@ -171,20 +166,33 @@ function IHML:ZoneChanged()
 end
 
 function IHML:ADDON_LOADED(addon)
-	if not addon == "Blizzard_MacroUI" then return end
-	-- Blizzard_MacroUI loads twice for some reason
-	-- (guessing it has got something to do with the dummy addon in the AddOns-folder)
-	-- MacroFrame remains nil until it has loaded for real.
-	if MacroFrame == nil then return end
-	-- Use secure hook, to avoid taint if editing macros in combat
-	self:SecureHook("MacroPopupOkayButton_OnClick", function()
-		if MacroPopupEditBox:GetText() == p.macroname then
-			currentIcon = MacroPopupFrame.selectedIcon
-			mIcon[c.current] = currentIcon
-			--IHML:Print("Caught macro icon index: "..currentIcon)
-		end
-	end)
-	self:UnregisterEvent("ADDON_LOADED") -- Don't need this anymore
+	if addon == "Blizzard_MacroUI" then
+		-- Blizzard_MacroUI loads twice for some reason
+		-- (guessing it has got something to do with the dummy addon in the AddOns-folder)
+		-- MacroFrame remains nil until it has loaded for real.
+		if MacroFrame == nil then return end
+		-- Use secure hook, to avoid taint if editing macros in combat
+		self:SecureHook("MacroPopupOkayButton_OnClick", function()
+			if MacroPopupEditBox:GetText() == p.macroname then
+				currentIcon = MacroPopupFrame.selectedIcon
+				mIcon[c.current] = currentIcon
+				--IHML:Print("Caught macro icon index: "..currentIcon)
+			end
+		end)
+		macroUIHooked = true
+	elseif addon == "BigWigs" then
+		AceLibrary("AceEvent-2.0").RegisterEvent(IHML, "Ace2_AddonEnabled", function(addon)
+			-- If the addon don't have enabletrigger then it's not a bossmod
+			if addon.enabletrigger and bw2bm then
+				lastboss = addon.name
+				IHML:SwapMacro(lastboss)
+			end
+		end)
+		bwLoaded = true
+	end
+	if macroUIHooked and bwLoaded then
+		self:UnregisterEvent("ADDON_LOADED") -- Don't need this anymore
+	end
 end
 
 function IHML:SwapMacro(new)
