@@ -86,7 +86,11 @@ L["Are you sure you want to remove %s?"] = "Are you sure you want to remove %s?"
 
 -- Default macros ---------------------
 -- Skettis ------------------
-L["Skettis"] = "Skettis"
+L["Blackwind Lake"] = "Blackwind Lake"
+L["Lower Veil Shil'ak"] = "Lower Veil Shil'ak"
+L["Terrok's Rest"] = "Terrok's Rest"
+L["Veil Ala'rak"] = "Veil Ala'rak"
+L["Veil Harr'ik"] = "Veil Harr'ik"
 L["m_skettis"] = [[#showtooltip
 /use Skyguard Blasting Charges]]
 -- Ogri'La ------------------
