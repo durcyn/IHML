@@ -58,7 +58,9 @@ L["Are you sure you want to remove %s?"] = "Voulez-vous vraiment supprimer la ma
 -- Skettis ------------------
 --L["Blackwind Lake"] = "Blackwind Lake"
 --L["Lower Veil Shil'ak"] = "Lower Veil Shil'ak"
---L["Terrok's Rest"] = "Terrok's Rest"
+L["Skettis"] = "Skettis"
+--L["Terokk's Rest"] = "Terokk's Rest"
+--L["Upper Veil Shil'ak"] = "Upper Veil Shil'ak"
 --L["Veil Ala'rak"] = "Veil Ala'rak"
 --L["Veil Harr'ik"] = "Veil Harr'ik"
 L["m_skettis"] = [[#showtooltip

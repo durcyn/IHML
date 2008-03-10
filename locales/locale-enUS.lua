@@ -58,7 +58,9 @@ L["Are you sure you want to remove %s?"] = true -- %s gets replaced with the mac
 -- Skettis ------------------
 L["Blackwind Lake"] = true
 L["Lower Veil Shil'ak"] = true
-L["Terrok's Rest"] = true
+L["Skettis"] = true
+L["Terokk's Rest"] = true
+L["Upper Veil Shil'ak"] = true
 L["Veil Ala'rak"] = true
 L["Veil Harr'ik"] = true
 L["m_skettis"] = [[#showtooltip
