@@ -10,6 +10,7 @@ local string = string
 local tonumber = tonumber
 local tostring = tostring
 local GetMinimapZoneText = GetMinimapZoneText
+local IsInInstance = IsInInstance
 local InCombatLockdown = InCombatLockdown
 local CreateMacro = CreateMacro
 local EditMacro = EditMacro
@@ -52,7 +53,11 @@ local function insertDefaultMacros()
 -- Some macros XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 -- Daily quests -----------------------
 -- Skettis --------
-setMacro(L["Skettis"], 1, L["m_skettis"], true)
+setMacro(L["Blackwind Lake"], 1, L["m_skettis"], true)
+setMacro(L["Lower Veil Shil'ak"], 1, L["m_skettis"], true)
+setMacro(L["Terrok's Rest"], 1, L["m_skettis"], true)
+setMacro(L["Veil Ala'rak"], 1, L["m_skettis"], true)
+setMacro(L["Veil Harr'ik"], 1, L["m_skettis"], true)
 -- Ogri'La --------
 setMacro(L["Vortex Pinnacle"], 1, L["m_vortexpinnacle"], true)
 setMacro(L["Forge Camp: Wrath"], 1, L["m_forgecamp"], true)
