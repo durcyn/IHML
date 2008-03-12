@@ -37,60 +37,72 @@ local defaults = {
 		byInstanceType = true,
 		byZone = true,
 		macroname = "ihml",
+		macroIcon = {
+			["*"] = 1,
+			[L["The Curator"]] = 651,
+			[L["Terestian Illhoof"]] = 626,
+			[L["Halazzi"]] = 634,
+			[L["Fathom-Lord Karathress"]] = 376,
+		},
+		macroBody = {
+			-- Daily quests ---------------------
+			-- Skettis ------
+			[L["Blackwind Lake"]] = L["m_skettis"],
+			[L["Lower Veil Shil'ak"]] = L["m_skettis"],
+			[L["Skettis"]] = L["m_skettis"],
+			[L["Terokk's Rest"]] = L["m_skettis"],
+			[L["Upper Veil Shil'ak"]] = L["m_skettis"],
+			[L["Veil Ala'rak"]] = L["m_skettis"],
+			[L["Veil Harr'ik"]] = L["m_skettis"],
+			-- Ogri'La ------
+			[L["Forge Camp: Wrath"]] = L["m_forgecamp"],
+			[L["Forge Camp: Terror"]] = L["m_forgecamp"],
+			[L["Vortex Pinnacle"]] = L["m_vortexpinnacle"],
+			-- Netherwing ---
+			-- TODO: Go figure out what macros to write
+			-------------------------------------
+			
+			-- Karazhan -------------------------
+			[L["The Curator"]] = L["m_curator"],
+			[L["Terestian Illhoof"]] = L["m_illhoof"],
+			-------------------------------------
+			
+			-- Zul'Aman -------------------------
+			[L["Halazzi"]] = L["m_halazzi"],
+			-------------------------------------
+			
+			-- Serpentshrine Cavern -------------
+			[L["Fathom-Lord Karathress"]] = L["m_flk"],
+			[L["Lady Vashj"]] = L["m_vashj"],
+			-------------------------------------
+			
+			-- Mount Hyjal ----------------------
+			[L["Archimonde"]] = L["m_archimonde"],
+			-------------------------------------
+			
+			-- Black Temple ---------------------
+			[L["High Warlord Naj'entus"]] = L["m_najentus"],
+			-------------------------------------
+		},
 	}
 }
 
 -- Helper function
-local function setMacro(name, icon, body, dontOverwrite)
-	if dontOverwrite and mIcon[name] then return end
-	mName[name] = icon and name or nil -- Makes it still possible to delete macros with setMacro(name)
-	mIcon[name] = icon
-	mBody[name] = body
-end
-
-local function insertDefaultMacros()
--- Please exuse the missing indent. He just couldn't make it.
--- Some macros XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
--- Daily quests -----------------------
--- Skettis --------
-setMacro(L["Blackwind Lake"], 1, L["m_skettis"], true)
-setMacro(L["Lower Veil Shil'ak"], 1, L["m_skettis"], true)
-setMacro(L["Terrok's Rest"], 1, L["m_skettis"], true)
-setMacro(L["Veil Ala'rak"], 1, L["m_skettis"], true)
-setMacro(L["Veil Harr'ik"], 1, L["m_skettis"], true)
--- Ogri'La --------
-setMacro(L["Vortex Pinnacle"], 1, L["m_vortexpinnacle"], true)
-setMacro(L["Forge Camp: Wrath"], 1, L["m_forgecamp"], true)
-setMacro(L["Forge Camp: Terror"], 1, L["m_forgecamp"], true)
--- Netherwing -----
--- TODO: Go figure out what macros to write
----------------------------------------
-
--- Karazhan ---------------------------
-setMacro(L["The Curator"], 651, L["m_curator"], true)
-setMacro(L["Terestian Illhoof"], 626, L["m_illhoof"], true)
----------------------------------------
-
--- Zul'Aman ---------------------------
-setMacro(L["Halazzi"], 634, L["m_halazzi"], true)
----------------------------------------
-
--- Serpentshrine Cavern ---------------
-setMacro(L["Fathom-Lord Karathress"], 376, L["m_flk"], true)
-setMacro(L["Lady Vashj"], 1, L["m_vashj"], true)
----------------------------------------
-
--- Tempest Keep -----------------------
----------------------------------------
-
--- Mount Hyjal ------------------------
-setMacro(L["Archimonde"], 1, L["m_archimonde"], true)
----------------------------------------
-
--- Black Temple -----------------------
-setMacro(L["High Warlord Naj'entus"], 1, L["m_najentus"], true)
----------------------------------------
---XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+local function setMacro(name, icon, body)
+	if icon == nil and body == nil then
+		mName[name] = nil
+		mIcon[name] = nil
+		mBody[name] = nil
+		-- Setting default macros to nil won't do it
+		db:RegisterDefaults(defaults)
+		if mBody[name] then
+			mBody[name] = false
+		end
+	else
+		mName[name] = name
+		mIcon[name] = icon
+		mBody[name] = body
+	end
 end
 
 local function checkMacro(name, dontMake)
@@ -135,17 +147,11 @@ function IHML:OnProfileChanged()
 	mName = {}
 	mIcon = p.macroIcon
 	mBody = p.macroBody
-	if not mIcon or not mBody then
-		mIcon = {}
-		mBody = {}
-		insertDefaultMacros()
-		p.macroIcon = mIcon
-		p.macroBody = mBody
-	else
-		for k in pairs(mIcon) do
+	for k, v in pairs(mBody) do
+		if v then
 			mName[k] = k
 		end
-	end	
+	end
 end
 
 function IHML:OnEnable()
@@ -241,7 +247,7 @@ end
 function IHML:SwapMacro(new, silent)
 	new = new ~= "PLAYER_REGEN_ENABLED" and new or queued
 	if not new or -- Got called without argument even when there was nothing queued.
-		not mIcon[new] or -- Macro don't exists
+		not mBody[new] or -- Macro don't exists
 		new == c.current then -- Macro is same as current macro. TODO: Swap anyway if the macro has been modified?
 		return
 	end
@@ -313,13 +319,13 @@ function IHML:ChatCommand(msg)
 		arg, arg2, pos = self:GetArgs(msg, 2, pos)
 		if arg then
 			if arg2 then
-				if mIcon[arg] and not mIcon[arg2] then
+				if mBody[arg] and not mBody[arg2] then
 					setMacro(arg2, mIcon[arg], mBody[arg])
 					setMacro(arg)
 					self:Print("Renamed \""..arg.."\" to \""..arg2.."\"")
 				end
 			else
-				if not mIcon[arg] then
+				if not mBody[arg] then
 					setMacro(arg, mIcon[c.current], mBody[c.current])
 					setMacro(c.current)
 					c.current = arg
@@ -342,7 +348,7 @@ function IHML:ChatCommand(msg)
 		end
 		return
 	elseif arg == "list" then
-		for k in pairs(mIcon) do
+		for k in pairs(mBody) do
 			self:Print(k)
 		end
 		return
@@ -353,7 +359,13 @@ function IHML:ChatCommand(msg)
 			p.macroname = arg
 		end
 	elseif arg == "insertdefault" then
-		insertDefaultMacros()
+		for k in pairs(mBody) do
+			if mBody[k] == false then
+				mBody[k] = nil
+			end
+		end
+		db:RegisterDefaults(defaults)
+		IHML:OnProfileChanged()
 		return
 	end
 --	self:Print(msg)
@@ -478,7 +490,15 @@ options.args.option.args = {
 		name = L["Reinsert default macros"], type = "execute",
 		desc = L["Use this to recover any removed default macros. Won't replace changed versions. If you want to revert changed macros delete them first."],
 		order = 300,
-		func = insertDefaultMacros,
+		func = function()
+			for k in pairs(mBody) do
+				if mBody[k] == false then
+					mBody[k] = nil
+				end
+			end
+			db:RegisterDefaults(defaults)
+			IHML:OnProfileChanged()
+		end,
 	},
 }
 
@@ -495,7 +515,7 @@ options.args.macros.args = {
 				if guiMacro == c.current then
 					guiMacro = nil
 					return c.current
-				elseif mIcon[guiMacro] then
+				elseif mBody[guiMacro] then
 					return guiMacro
 				end
 			elseif c.current then
@@ -524,7 +544,7 @@ options.args.macros.args = {
 				type = "description",
 				name = L["Name: Type \"boss\" for last loaded boss module or \"zone\" for current zone.\nIcon: A number from 1 to 769. You might want to edit this from the Blizzard Macro UI."],
 				order = 100,
-				image = function() return GetMacroIconInfo(mIcon[guiMacro] or (c.current ~= nil and currentIcon or 1)), 56, 56 end,
+				image = function() return GetMacroIconInfo(mBody[guiMacro] and mIcon[guiMacro] or (c.current ~= nil and currentIcon or 1)), 56, 56 end,
 			},
 			name = {
 				type = "input",
@@ -536,19 +556,19 @@ options.args.macros.args = {
 						return L["Macros must have a name!"]
 					elseif k == "boss" and lastboss == nil then
 						return L["No boss module loaded!"]
-					elseif mIcon[k] then
+					elseif mBody[k] then
 						return format(L["%s already exists!"], k)
 					end
 					return true
 				end,
-				get = function() return mIcon[guiMacro] and guiMacro or c.current end,
+				get = function() return mBody[guiMacro] and guiMacro or c.current end,
 				set = function(info,k)
 					if k == "boss" then
 						k = lastboss
 					elseif k == "zone" then
 						k = GetMinimapZoneText()
 					end
-					if mIcon[guiMacro] then
+					if mBody[guiMacro] then
 						setMacro(k, mIcon[guiMacro], mBody[guiMacro])
 						setMacro(guiMacro)
 						if guiMacro == c.current then
@@ -576,9 +596,9 @@ options.args.macros.args = {
 					end
 					return false
 				end,
-				get = function() return tostring(mIcon[guiMacro] or currentIcon or "") end,
+				get = function() return tostring(mBody[guiMacro] and mIcon[guiMacro] or currentIcon or "") end,
 				set = function(info,k)
-					if mIcon[guiMacro] then
+					if mBody[guiMacro] then
 						mIcon[guiMacro] = tonumber(k)
 					else
 						currentIcon = tonumber(k)
@@ -596,9 +616,9 @@ options.args.macros.args = {
 				order = 400,
 				multiline = true,
 				width = "full",
-				get = function() return mIcon[guiMacro] and mBody[guiMacro] or mBody[c.current] end,
+				get = function() return mBody[guiMacro] and mBody[guiMacro] or mBody[c.current] end,
 				set = function(info,k)
-					if mIcon[guiMacro] then
+					if mBody[guiMacro] then
 						mBody[guiMacro] = k
 					else
 						mBody[c.current] = k
@@ -616,10 +636,10 @@ options.args.macros.args = {
 				disabled = false,
 				func = function()
 					local name = L["New macro"]
-					if mIcon[name] then
+					if mBody[name] then
 						local i = 2
 						local testname = string.format("New macro %d", name, i)
-						while mIcon[testname] do
+						while mBody[testname] do
 							i = i + 1
 							testname = string.format("New macro %d", name, i)
 						end
@@ -636,12 +656,12 @@ options.args.macros.args = {
 				order = 550,
 				disabled = function()
 					local name = guiMacro or c.current
-					if name and mIcon[name] then return false end
+					if name and mBody[name] then return false end
 					return true
 				end,
-				confirm = function() return string.format("Are you sure you want to remove %s?", mIcon[guiMacro] and guiMacro or c.current) end,
+				confirm = function() return string.format("Are you sure you want to remove %s?", mBody[guiMacro] and guiMacro or c.current) end,
 				func = function()
-					if mIcon[guiMacro] then
+					if mBody[guiMacro] then
 						setMacro(guiMacro)
 						guiMacro = nil
 					elseif c.current then
@@ -654,4 +674,4 @@ options.args.macros.args = {
 	},
 }
 
-_G.IMHL = IHML
+_G.IHML = IHML
