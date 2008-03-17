@@ -47,16 +47,18 @@ local defaults = {
 		macroBody = {
 			-- Daily quests ---------------------
 			-- Skettis ------
-			[L["Blackwind Lake"]] = L["m_skettis"],
-			[L["Lower Veil Shil'ak"]] = L["m_skettis"],
-			[L["Skettis"]] = L["m_skettis"],
-			[L["Terokk's Rest"]] = L["m_skettis"],
-			[L["Upper Veil Shil'ak"]] = L["m_skettis"],
-			[L["Veil Ala'rak"]] = L["m_skettis"],
-			[L["Veil Harr'ik"]] = L["m_skettis"],
+			[1] = L["m_skettis"],
+			[L["Blackwind Lake"]] = 1,
+			[L["Lower Veil Shil'ak"]] = 1,
+			[L["Skettis"]] = 1,
+			[L["Terokk's Rest"]] = 1,
+			[L["Upper Veil Shil'ak"]] = 1,
+			[L["Veil Ala'rak"]] = 1,
+			[L["Veil Harr'ik"]] = 1,
 			-- Ogri'La ------
-			[L["Forge Camp: Wrath"]] = L["m_forgecamp"],
-			[L["Forge Camp: Terror"]] = L["m_forgecamp"],
+			[2] = L["m_forgecamp"],
+			[L["Forge Camp: Wrath"]] = 2,
+			[L["Forge Camp: Terror"]] = 2,
 			[L["Vortex Pinnacle"]] = L["m_vortexpinnacle"],
 			-- Netherwing ---
 			-- TODO: Go figure out what macros to write
@@ -90,7 +92,7 @@ local defaults = {
 -- Helper function
 local function setMacro(name, icon, body)
 	if icon == nil and body == nil then
-		mName[name] = nil
+		mName[tostring(name)] = nil
 		mIcon[name] = nil
 		mBody[name] = nil
 		-- Setting default macros to nil won't do it
@@ -99,7 +101,7 @@ local function setMacro(name, icon, body)
 			mBody[name] = false
 		end
 	else
-		mName[name] = name
+		mName[tostring(name)] = tostring(name)
 		mIcon[name] = icon
 		mBody[name] = body
 	end
@@ -149,7 +151,7 @@ function IHML:OnProfileChanged()
 	mBody = p.macroBody
 	for k, v in pairs(mBody) do
 		if v then
-			mName[k] = k
+			mName[tostring(k)] = tostring(k)
 		end
 	end
 end
@@ -180,11 +182,11 @@ function IHML:ZoneChanged()
 	local zone = GetMinimapZoneText()
 	self:SwapMacro(zone, p.silent)
 	if currentType == "zone" then
-		if c.current ~= zone then
+		if c.current ~= zone and c.current ~= mBody[zone] then
 			currentType = nil
 			self:SwapMacro("default", p.silent)
 		end
-	elseif c.current == zone then
+	elseif c.current == zone or c.current == mBody[zone] then
 		currentType = "zone"
 	end
 end
@@ -246,20 +248,27 @@ end
 
 function IHML:SwapMacro(new, silent)
 	new = new ~= "PLAYER_REGEN_ENABLED" and new or queued
+	local body = mBody[new]
+	local oldnew
+	if type(body) == "number" then
+		oldnew = new
+		new = body
+		body = mBody[new]
+	end
 	if not new or -- Got called without argument even when there was nothing queued.
 		not mBody[new] or -- Macro don't exists
 		new == c.current then -- Macro is same as current macro. TODO: Swap anyway if the macro has been modified?
 		return
 	end
 	if InCombatLockdown() then
-		if queued and queued == new then return end
-		queued = new
+		if queued and (queued == oldnew or queued == new) then return end
+		queued = oldnew or new
 		self:RegisterEvent("PLAYER_REGEN_ENABLED", "SwapMacro")
 		if not silent then self:Print(format(L["In combat! %s queued lol!"], queued)) end
 		return
 	end
-	local icon, body = mIcon[new], mBody[new]
-	if not silent then self:Print(format(L["%s! I have that macro lol!"], new)) end
+	local icon = mIcon[new]
+	if not silent then self:Print(format(L["%s! I have that macro lol!"], oldnew or new)) end
 	EditMacro(GetMacroIndexByName(p.macroname), p.macroname, icon, body, 1, 0)
 	c.current = new
 	currentIcon = icon
@@ -514,23 +523,27 @@ options.args.macros.args = {
 			if guiMacro then
 				if guiMacro == c.current then
 					guiMacro = nil
-					return c.current
+					return tostring(c.current)
 				elseif mBody[guiMacro] then
-					return guiMacro
+					return tostring(guiMacro)
 				end
 			elseif c.current then
-				return c.current
+				return tostring(c.current)
 			end
 			guiMacro = next(mName)
-			return guiMacro
+			return tostring(guiMacro)
 		end,
-		set = function(info,v) guiMacro = v ~= c.current and v or nil end,
+		set = function(info,v)
+			if tostring(tonumber(v)) == v then v = tonumber(v) end
+			guiMacro = v ~= c.current and v or nil
+		end,
 	},
 	swap = {
 		type = "execute",
 		name = L["Swap!"],
 		desc = L["Swap to the selected macro."],
 		order = 101,
+		disabled = function() return guiMacro == nil end,
 		func = function() IHML:SwapMacro(guiMacro, p.silent); if c.current == guiMacro then currentType = nil end end,
 	},
 	macro = {
@@ -561,12 +574,14 @@ options.args.macros.args = {
 					end
 					return true
 				end,
-				get = function() return mBody[guiMacro] and guiMacro or c.current end,
+				get = function() return mBody[guiMacro] and tostring(guiMacro) or tostring(c.current) end,
 				set = function(info,k)
 					if k == "boss" then
 						k = lastboss
 					elseif k == "zone" then
 						k = GetMinimapZoneText()
+					elseif tostring(tonumber(k)) == k then
+						k = tonumber(k)
 					end
 					if mBody[guiMacro] then
 						setMacro(k, mIcon[guiMacro], mBody[guiMacro])
@@ -616,8 +631,9 @@ options.args.macros.args = {
 				order = 400,
 				multiline = true,
 				width = "full",
-				get = function() return mBody[guiMacro] and mBody[guiMacro] or mBody[c.current] end,
+				get = function() return mBody[guiMacro] and tostring(mBody[guiMacro]) or tostring(mBody[c.current]) end,
 				set = function(info,k)
+					if tostring(tonumber(k)) == k then k = tonumber(k) end
 					if mBody[guiMacro] then
 						mBody[guiMacro] = k
 					else
