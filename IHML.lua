@@ -394,9 +394,11 @@ function IHML:UpdateSettings()
 		end
 		if p.byZone then
 			self:RegisterEvent("MINIMAP_ZONE_CHANGED", "ZoneChanged")
+			self:RegisterEvent("ZONE_CHANGED_INDOORS", "ZoneChanged")
 			self:RegisterEvent("ZONE_CHANGED", "ZoneChanged")
 		else
 			self:UnregisterEvent("MINIMAP_ZONE_CHANGED")
+			self:UnregisterEvent("ZONE_CHANGED_INDOORS")
 			self:UnregisterEvent("ZONE_CHANGED")
 		end
 	else
