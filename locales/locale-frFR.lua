@@ -69,7 +69,8 @@ L["m_skettis"] = [[#showtooltip
 L["Vortex Pinnacle"] = "Cime du vortex"
 L["m_vortexpinnacle"] = [[#showtooltip
 /use Lasso
-/stopattack]]
+/stopattack
+/petpassive]]
 L["Forge Camp: Wrath"] = "Camp de forge : Courroux"
 L["Forge Camp: Terror"] = "Camp de forge : Terreur"
 L["m_forgecamp"] = [[#showtooltip

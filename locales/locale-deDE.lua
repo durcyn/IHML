@@ -69,7 +69,8 @@ L["m_skettis"] = [[#showtooltip
 L["Vortex Pinnacle"] = "Vortexgipfel"
 L["m_vortexpinnacle"] = [[#showtooltip
 /use Bändigungsseil
-/stopattack]]
+/stopattack
+/petpassive]]
 L["Forge Camp: Wrath"] = "Konstruktionslager: Wut"
 L["Forge Camp: Terror"] = "Konstruktionslager: Terror"
 L["m_forgecamp"] = [[#showtooltip

@@ -99,7 +99,8 @@ L["m_skettis"] = [[#showtooltip
 L["Vortex Pinnacle"] = "Vortex Pinnacle"
 L["m_vortexpinnacle"] = [[#showtooltip
 /use Wrangling Rope
-/stopattack]]
+/stopattack
+/petpassive]]
 L["Forge Camp: Wrath"] = "Forge Camp: Wrath"
 L["Forge Camp: Terror"] = "Forge Camp: Terror"
 L["m_forgecamp"] = [[#showtooltip
