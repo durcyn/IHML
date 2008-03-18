@@ -76,6 +76,12 @@ L["Forge Camp: Terror"] = "Camp de forge : Terreur"
 L["m_forgecamp"] = [[#showtooltip
 /use [flying] Bombes de la Garde-ciel
 /use [noflying] Cristal de bannissement]]
+-- Netherwing ---------------
+--L["Netherwing Ledge"] = "Netherwing Ledge"
+--L["m_booterang"] = [[#showtooltip
+--/target Disobedient Dragonmaw Peon
+--/use Booterang
+--/cleartarget]]
 -- Karazhan -----------------
 L["The Curator"] = "Le conservateur"
 L["m_curator"] = [[/target Etincelle astrale

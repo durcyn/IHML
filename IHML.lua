@@ -61,7 +61,7 @@ local defaults = {
 			[L["Forge Camp: Terror"]] = 2,
 			[L["Vortex Pinnacle"]] = L["m_vortexpinnacle"],
 			-- Netherwing ---
-			-- TODO: Go figure out what macros to write
+			[L["Netherwing Ledge"]] = L["m_booterang"],
 			-------------------------------------
 			
 			-- Karazhan -------------------------

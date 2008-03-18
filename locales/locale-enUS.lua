@@ -76,6 +76,12 @@ L["Forge Camp: Terror"] = true
 L["m_forgecamp"] = [[#showtooltip
 /use [flying] Skyguard Bombs
 /use [noflying] Banishing Crystal]]
+-- Netherwing ---------------
+L["Netherwing Ledge"] = true
+L["m_booterang"] = [[#showtooltip
+/target Disobedient Dragonmaw Peon
+/use Booterang
+/cleartarget]]
 -- Karazhan -----------------
 L["The Curator"] = true
 L["m_curator"] = [[/target Astral Flare
