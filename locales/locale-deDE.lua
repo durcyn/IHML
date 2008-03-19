@@ -17,13 +17,13 @@ L["Macros"] = "Makros"
 L["Options"] = "Optionen"
 L["Auto Swap"] = "Auto-Wechsel"
 L["Use Auto Swap"] = "Auto-Wechsel verwenden"
---L["Silent"] = "Silent"
---L["Don't print to chat when swapping."] = "Don't print to chat when swapping."
+L["Silent"] = "Still"
+L["Don't print to chat when swapping."] = "Keine Chatausgabe beim Wechsel."
 L["Auto Swap events"] = "Auto-Wechsel-Events"
 L["BigWigs"] = "BigWigs"
 L["By BigWigs Boss Module"] = "Nach BigWigs Boss Modulen"
---L["Instance type"] = "Instance type"
---L["By instance type. (arena, pvp, party or raid)"] = "By instance type. (arena, pvp, party or raid)" -- Don't translate (arena, pvp, party or raid), those names won't change with locale
+L["Instance type"] = "Instanztyp"
+L["By instance type. (arena, pvp, party or raid)"] = "Nach Instanztyp. (arena, pvp, party oder raid)" -- Don't translate (arena, pvp, party or raid), those names won't change with locale
 L["Zone"] = "Zone"
 L["By Zone"] = "Nach Zone"
 L["Used Macro"] = "Verwendetes Makro"
@@ -44,7 +44,7 @@ L["No boss module loaded!"] = "Kein Bossmodul geladen!"
 L["%s already exists!"] = "%s existiert bereits!" -- %s gets replaced with the macro in question
 L["Icon:"] = "Symbol:"
 L["Icon"] = "Symbol"
---L["Macro body:"] = true
+--L["Macro body:"] = "Makro-K\195\182rper"
 L["The macro goes here. Still limited to 255 characters."] = "Hierher kommt das Makro. Noch immer auf 255 Zeichen limitiert."
 L["Make a new macro."] = "Ein neues Makro erstellen."
 L["New macro"] = "Neues Makro"
@@ -77,11 +77,11 @@ L["m_forgecamp"] = [[#showtooltip
 /use [flying] Bomben der Himmelswache
 /use [noflying] Kristall der Verbannung]] 
 -- Netherwing ---------------
---L["Netherwing Ledge"] = "Netherwing Ledge"
---L["m_booterang"] = [[#showtooltip
---/target Disobedient Dragonmaw Peon
---/use Booterang
---/cleartarget]]
+L["Netherwing Ledge"] = "Netherschwingenscherbe"
+L["m_booterang"] = [[#showtooltip
+/target Ungehorsamer Peon des Drachenmals
+/use Schuhmerang
+/cleartarget]]
 -- Karazhan -----------------
 L["The Curator"] = "Der Kurator"
 L["m_curator"] = [[/target Astralflimmern
