@@ -56,13 +56,13 @@ L["Are you sure you want to remove %s?"] = "Bist du sicher, da\195\159 du %s ent
 
 -- Default macros ---------------------
 -- Skettis ------------------
---L["Blackwind Lake"] = "Blackwind Lake"
---L["Lower Veil Shil'ak"] = "Lower Veil Shil'ak"
+L["Blackwind Lake"] = "Schattenwindsee"
+L["Lower Veil Shil'ak"] = "Unteres Shil'akversteck"
 L["Skettis"] = "Skettis"
---L["Terokk's Rest"] = "Terokk's Rest"
---L["Upper Veil Shil'ak"] = "Upper Veil Shil'ak"
---L["Veil Ala'rak"] = "Veil Ala'rak"
---L["Veil Harr'ik"] = "Veil Harr'ik"
+L["Terokk's Rest"] = "Terokks Ruh"
+L["Upper Veil Shil'ak"] = "Oberes Shil'akversteck"
+L["Veil Ala'rak"] = "Ala'rakversteck"
+L["Veil Harr'ik"] = "Harr'ikversteck"
 L["m_skettis"] = [[#showtooltip
 /use Sprengladungen der Himmelswache]]
 -- Ogri'La ------------------
