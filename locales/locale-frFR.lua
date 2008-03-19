@@ -17,13 +17,13 @@ L["Macros"] = "Macros"
 L["Options"] = "Options"
 L["Auto Swap"] = "Auto Swap"
 L["Use Auto Swap"] = "activer l'Auto Swap"
---L["Silent"] = "Silent"
---L["Don't print to chat when swapping."] = "Don't print to chat when swapping."
+L["Silent"] = "Silentieux"
+L["Don't print to chat when swapping."] = "Ne pas afficher les swap."
 L["Auto Swap events"] = "Auto Swap events"
 L["BigWigs"] = "BigWigs"
 L["By BigWigs Boss Module"] = "par Boss Module BigWigs"
---L["Instance type"] = "Instance type"
---L["By instance type. (arena, pvp, party or raid)"] = "By instance type. (arena, pvp, party or raid)" -- Don't translate (arena, pvp, party or raid), those names won't change with locale
+L["Instance type"] = "Type d'instance"
+L["By instance type. (arena, pvp, party or raid)"] = "Par type d'instance. (arena, pvp, party ou raid)" -- Don't translate (arena, pvp, party or raid), those names won't change with locale
 L["Zone"] = "Zone"
 L["By Zone"] = "par Zone"
 L["Used Macro"] = "Macros Utilisées"
@@ -44,7 +44,7 @@ L["No boss module loaded!"] = "Aucun Boss Module n'a été chargé!"
 L["%s already exists!"] = "Une macro %s existe déjà !" -- %s gets replaced with the macro in question
 L["Icon:"] = "Icon:"
 L["Icon"] = "Icon"
---L["Macro body:"] = true
+--L["Macro body:"] = "corp de la macro"
 L["The macro goes here. Still limited to 255 characters."] = "The macro goes here. Still limited to 255 characters."
 L["Make a new macro."] = "Créer un nouvelle macro."
 L["New macro"] = "Nouvelle macro"
@@ -56,13 +56,13 @@ L["Are you sure you want to remove %s?"] = "Voulez-vous vraiment supprimer la ma
 
 -- Default macros ---------------------
 -- Skettis ------------------
---L["Blackwind Lake"] = "Blackwind Lake"
---L["Lower Veil Shil'ak"] = "Lower Veil Shil'ak"
+L["Blackwind Lake"] = "Lac Noirvent"
+L["Lower Veil Shil'ak"] = "Voile Shil'ak inférieur"
 L["Skettis"] = "Skettis"
---L["Terokk's Rest"] = "Terokk's Rest"
---L["Upper Veil Shil'ak"] = "Upper Veil Shil'ak"
---L["Veil Ala'rak"] = "Veil Ala'rak"
---L["Veil Harr'ik"] = "Veil Harr'ik"
+L["Terokk's Rest"] = "Repos de Terokk"
+L["Upper Veil Shil'ak"] = "Voile Shil'ak supérieur"
+L["Veil Ala'rak"] = "Voile Ala'rak"
+L["Veil Harr'ik"] = "Voile Harr'ik"
 L["m_skettis"] = [[#showtooltip
 /use Détonateur de la Garde-ciel]]
 -- Ogri'La ------------------
@@ -77,11 +77,11 @@ L["m_forgecamp"] = [[#showtooltip
 /use [flying] Bombes de la Garde-ciel
 /use [noflying] Cristal de bannissement]]
 -- Netherwing ---------------
---L["Netherwing Ledge"] = "Netherwing Ledge"
---L["m_booterang"] = [[#showtooltip
---/target Disobedient Dragonmaw Peon
---/use Booterang
---/cleartarget]]
+L["Netherwing Ledge"] = "Escarpement d'Aile-du-Néant"
+L["m_booterang"] = [[#showtooltip
+/target Péons Gueules-de-dragon paresseux
+/use Botterang
+/ClearTarget]]
 -- Karazhan -----------------
 L["The Curator"] = "Le conservateur"
 L["m_curator"] = [[/target Etincelle astrale
