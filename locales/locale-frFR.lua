@@ -7,8 +7,7 @@ L["In combat! %s queued lol!"] = "En combat! %s a été mis dans la file d'atten
 L["%s! I have that macro lol!"] = "%s! j'ai cette macro lol!" -- %s will be replaced with the macro in question
 L["Please choose a macroname by typing: /ihml macroname <name here>"] = "Veuillez choisir une macro grace à la commande: /ihml macroname <name here>" -- Don't translate the command, it won't change
 L["|cffff9999Warning!|r No macro named %s found. Make it plz!"] = "|cffff9999Warning!|r Aucune macro du nom de %s n'a été trouvée. Veuillez la crééer!" -- %s will be replaced with macroname
-L["|cffff9999Warning!|r No free macro space for a non character specific macro :("] = "|cffff9999Warning!|r Vous n'avez plus de place pour une nouvelle 'Macro Générale' :("
-L["%s is character specific. It is recomended to use a general macro if the profile is used with more than one character. (And to get rid of this nagging ;P)"] = "%s est une macro liée à ce personnage. Si ce profile doit être utilisé par plus d'un personnage (reroll), il est préférable d'utiliser une macro 'Générale'. (dans le même temps, vous serrez débarassé de cette alerte ;P)" -- %s gets replaced with the macroname
+L["|cffff9999Warning!|r No free macro space :("] = "|cffff9999Warning!|r Vous n'avez plus de place pour une nouvelle macro :("
 -- /core ------------------------------
 
 -- Config -----------------------------

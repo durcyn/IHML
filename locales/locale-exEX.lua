@@ -37,8 +37,7 @@ L["In combat! %s queued lol!"] = "In combat! %s queued lol!" -- %s will be repla
 L["%s! I have that macro lol!"] = "%s! I have that macro lol!" -- %s will be replaced with the macro in question
 L["Please choose a macroname by typing: /ihml macroname <name here>"] = "Please choose a macroname by typing: /ihml macroname <name here>" -- Don't translate the command, it won't change
 L["|cffff9999Warning!|r No macro named %s found. Make it plz!"] = "|cffff9999Warning!|r No macro named %s found. Make it plz!" -- %s will be replaced with macroname
-L["|cffff9999Warning!|r No free macro space for a non character specific macro :("] = "|cffff9999Warning!|r No free macro space for a non character specific macro :("
-L["%s is character specific. It is recomended to use a general macro if the profile is used with more than one character. (And to get rid of this nagging ;P)"] = "%s is character specific. It is recomended to use a general macro if the profile is used with more than one character. (And to get rid of this nagging ;P)" -- %s gets replaced with the macroname
+L["|cffff9999Warning!|r No free macro space :("] = "|cffff9999Warning!|r No free macro space :("
 -- /core ------------------------------
 
 -- Config -----------------------------

@@ -38,7 +38,7 @@ local defaults = {
 		byZone = true,
 		macroname = "ihml",
 		macroIcon = {
-			["*"] = 1,
+			["*"] = 1, -- Most macros will have 1 (the question mark) as icon
 			[L["The Curator"]] = 651,
 			[L["Terestian Illhoof"]] = 626,
 			[L["Halazzi"]] = 634,
@@ -109,24 +109,22 @@ end
 
 local function checkMacro(name, dontMake)
 	if not name then
-		IHML:Print(L["Please choose a macroname by typing: /ihml macroname <name here>"])
+		return IHML:Print(L["Please choose a macroname by typing: /ihml macroname <name here>"])
 	elseif GetMacroIndexByName(name) == 0 then
-		if dontMake then
-			IHML:Print(format(L["|cffff9999Warning!|r No macro named %s found. Make it plz!"], name))
+		if dontMake or InCombatLockdown() then
+			return IHML:Print(format(L["|cffff9999Warning!|r No macro named %s found. Make it plz!"], name))
 		else
-			local i = 1
-			while i <= 18 do 
-				local test = GetMacroInfo(i)
-				if not test then
-					CreateMacro(name, 1, "", 1, false)
-					return
+			for perChar = 0, 1 do
+				local m = perChar*18+18
+				for i = m-17, m do 
+					local test = GetMacroInfo(i)
+					if not test then
+						return CreateMacro(name, 1, "", 1, perChar)
+					end
 				end
-				i = i + 1
 			end
-			IHML:Print(L["|cffff9999Warning!|r No free macro space for a non character specific macro :("])
+			return IHML:Print(L["|cffff9999Warning!|r No free macro space :("])
 		end
-	elseif GetMacroIndexByName(name) > 18 then
-		IHML:Print(format(L["%s is character specific. It is recomended to use a general macro if the profile is used with more than one character. (And to get rid of this nagging ;P)"], name))
 	end
 end
 
