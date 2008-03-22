@@ -162,6 +162,8 @@ function IHML:OnEnable()
 		c.current = nil
 		self:SwapMacro(nil, true)
 		currentType = nil
+	else
+		self:SwapMacro("default", true)
 	end
 	self:RegisterEvent("ADDON_LOADED") -- To detect when the BigWigs/Macro frame loads
 	if not bwLoaded and BigWigs then
@@ -178,11 +180,11 @@ end
 
 function IHML:ZoneChanged()
 	local zone = GetMinimapZoneText()
-	self:SwapMacro(zone, p.silent)
+	self:SwapMacro(zone)
 	if currentType == "zone" then
 		if c.current ~= zone and c.current ~= mBody[zone] then
 			currentType = nil
-			self:SwapMacro("default", p.silent)
+			self:SwapMacro("default")
 		end
 	elseif c.current == zone or c.current == mBody[zone] then
 		currentType = "zone"
@@ -194,10 +196,10 @@ function IHML:PLAYER_ENTERING_WORLD()
 	if instanceType == "none" then
 		if currentType == "instance" then
 			currentType = nil
-			self:SwapMacro("default", p.silent)
+			self:SwapMacro("default")
 		end
 	else
-		self:SwapMacro(instanceType, p.silent)
+		self:SwapMacro(instanceType)
 		if c.current == instanceType then
 			currentType = "instance"
 		end
@@ -224,7 +226,7 @@ function IHML:ADDON_LOADED(addon)
 			-- If the addon don't have enabletrigger then it's not a bossmod
 			if addon.enabletrigger and bw2bm then
 				lastboss = addon.name
-				IHML:SwapMacro(lastboss, p.silent)
+				IHML:SwapMacro(lastboss)
 				if c.current == lastboss then
 					currentType = "boss"
 				end
@@ -234,7 +236,7 @@ function IHML:ADDON_LOADED(addon)
 			if sync ~= "BossDeath" then return end
 			if c.current == module then
 				currentType = nil
-				IHML:SwapMacro("default", p.silent)
+				IHML:SwapMacro("default")
 			end
 		end)
 		bwLoaded = true
@@ -245,6 +247,7 @@ function IHML:ADDON_LOADED(addon)
 end
 
 function IHML:SwapMacro(new, silent)
+	if silent == nil then silent = p.silent end
 	new = new ~= "PLAYER_REGEN_ENABLED" and new or queued
 	local body = mBody[new]
 	local oldnew
@@ -267,7 +270,9 @@ function IHML:SwapMacro(new, silent)
 	end
 	local icon = mIcon[new]
 	if not silent then self:Print(format(L["%s! I have that macro lol!"], oldnew or new)) end
-	EditMacro(GetMacroIndexByName(p.macroname), p.macroname, icon, body, 1, 0)
+	local index = GetMacroIndexByName(p.macroname)
+	if index == 0 then return end
+	EditMacro(index, p.macroname, icon, body, 1, 0)
 	c.current = new
 	currentIcon = icon
 	queued = nil
@@ -376,7 +381,7 @@ function IHML:ChatCommand(msg)
 		return
 	end
 --	self:Print(msg)
-	self:SwapMacro(msg, p.silent)
+	self:SwapMacro(msg)
 	if c.current == msg then
 		currentType = nil
 	end
@@ -544,7 +549,7 @@ options.args.macros.args = {
 		desc = L["Swap to the selected macro."],
 		order = 101,
 		disabled = function() return guiMacro == nil end,
-		func = function() IHML:SwapMacro(guiMacro, p.silent); if c.current == guiMacro then currentType = nil end end,
+		func = function() IHML:SwapMacro(guiMacro); if c.current == guiMacro then currentType = nil end end,
 	},
 	macro = {
 		type = "group",
