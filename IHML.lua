@@ -63,7 +63,9 @@ local defaults = {
 			-- Netherwing ---
 			[L["Netherwing Ledge"]] = L["m_booterang"],
 			-- Shattered Sun Offensive --
-			[L["Shattered Sun Staging Area"]] = L["m_crystalcores"],
+			[L["Isle of Quel'Danas"]] = L["m_crystalcores"],
+			[L["Throne of Kil'jaeden"]] = L["m_blood4blood"],
+			[L["Spirit Fields"]] = L["m_spectrogoggles"],
 			-------------------------------------
 			
 			-- Karazhan -------------------------
@@ -613,7 +615,7 @@ options.args.macros.args = {
 					local n = tonumber(k) or 0
 					if n <= 0 or n >= 770 then
 						return false
-					elseif string.format("%d",n) == k then
+					elseif format("%d",n) == k then
 						return true
 					end
 					return false
@@ -661,10 +663,10 @@ options.args.macros.args = {
 					local name = L["New macro"]
 					if mBody[name] then
 						local i = 2
-						local testname = string.format("New macro %d", name, i)
+						local testname = format(L["New macro %d"], i)
 						while mBody[testname] do
 							i = i + 1
-							testname = string.format("New macro %d", name, i)
+							testname = format(L["New macro %d"], i)
 						end
 						name = testname
 					end
@@ -682,7 +684,7 @@ options.args.macros.args = {
 					if name and mBody[name] then return false end
 					return true
 				end,
-				confirm = function() return string.format("Are you sure you want to remove %s?", mBody[guiMacro] and guiMacro or c.current) end,
+				confirm = function() return format("Are you sure you want to remove %s?", mBody[guiMacro] and guiMacro or c.current) end,
 				func = function()
 					if mBody[guiMacro] then
 						setMacro(guiMacro)

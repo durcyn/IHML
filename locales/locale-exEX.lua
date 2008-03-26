@@ -112,10 +112,16 @@ L["m_booterang"] = [[#showtooltip
 /use Booterang
 /cleartarget]]
 -- Shattered Sun Offensive --
-L["Shattered Sun Staging Area"] = "Shattered Sun Staging Area"
+L["Isle of Quel'Danas"] = "Isle of Quel'Danas"
 L["m_crystalcores"] = [[#showtooltip
 /target Erratic Sentry
 /use Attuned Crystal Cores]]
+L["Throne of Kil'jaeden"] = "Throne of Kil'jaeden"
+L["m_blood4blood"] = [[#showtooltip Demonic Blood
+/use Fel Siphon]]
+L["Spirit Fields"] = "Spirit Fields"
+L["m_spectrogoggles"] = [[#showtooltip
+/use Multiphase Spectrographic Goggles]]
 -- Karazhan -----------------
 L["The Curator"] = "The Curator"
 L["m_curator"] = [[/target Astral Flare
