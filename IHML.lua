@@ -62,6 +62,8 @@ local defaults = {
 			[L["Vortex Pinnacle"]] = L["m_vortexpinnacle"],
 			-- Netherwing ---
 			[L["Netherwing Ledge"]] = L["m_booterang"],
+			-- Shattered Sun Offensive --
+			[L["Shattered Sun Staging Area"]] = L["m_crystalcores"],
 			-------------------------------------
 			
 			-- Karazhan -------------------------

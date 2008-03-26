@@ -111,6 +111,11 @@ L["m_booterang"] = [[#showtooltip
 /target Disobedient Dragonmaw Peon
 /use Booterang
 /cleartarget]]
+-- Shattered Sun Offensive --
+L["Shattered Sun Staging Area"] = "Shattered Sun Staging Area"
+L["m_crystalcores"] = [[#showtooltip
+/target Erratic Sentry
+/use Attuned Crystal Cores]]
 -- Karazhan -----------------
 L["The Curator"] = "The Curator"
 L["m_curator"] = [[/target Astral Flare

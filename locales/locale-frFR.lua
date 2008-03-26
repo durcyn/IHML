@@ -81,6 +81,11 @@ L["m_booterang"] = [[#showtooltip
 /target Péons Gueules-de-dragon paresseux
 /use Botterang
 /ClearTarget]]
+-- Shattered Sun Offensive --
+--L["Shattered Sun Staging Area"] = "Shattered Sun Staging Area"
+--L["m_crystalcores"] = [[#showtooltip
+--/target Erratic Sentry
+--/use Attuned Crystal Cores]]
 -- Karazhan -----------------
 L["The Curator"] = "Le conservateur"
 L["m_curator"] = [[/target Etincelle astrale

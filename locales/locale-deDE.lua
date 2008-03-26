@@ -81,6 +81,11 @@ L["m_booterang"] = [[#showtooltip
 /target Ungehorsamer Peon des Drachenmals
 /use Schuhmerang
 /cleartarget]]
+-- Shattered Sun Offensive --
+--L["Shattered Sun Staging Area"] = "Shattered Sun Staging Area"
+--L["m_crystalcores"] = [[#showtooltip
+--/target Erratic Sentry
+--/use Attuned Crystal Cores]]
 -- Karazhan -----------------
 L["The Curator"] = "Der Kurator"
 L["m_curator"] = [[/target Astralflimmern
