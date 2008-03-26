@@ -2,8 +2,8 @@
 ## Notes: Switch macro depending on zones or BigWigs boss modules
 ## Author: Snago
 
-## Interface: 20300
-## Version: 0.9
+## Interface: 20400
+## Version: 1.0
 
 ## OptionalDeps: Ace3
 ## X-Embeds: Ace3
