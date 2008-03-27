@@ -39,10 +39,10 @@ local defaults = {
 		macroname = "ihml",
 		macroIcon = {
 			["*"] = 1, -- Most macros will have 1 (the question mark) as icon
-			[L["The Curator"]] = 651,
-			[L["Terestian Illhoof"]] = 626,
-			[L["Halazzi"]] = 634,
-			[L["Fathom-Lord Karathress"]] = 376,
+			[L["The Curator"]] = 661,
+			[L["Terestian Illhoof"]] = 636,
+			[L["Halazzi"]] = 644,
+			[L["Fathom-Lord Karathress"]] = 384,
 		},
 		macroBody = {
 			-- Daily quests ---------------------
@@ -211,7 +211,7 @@ function IHML:PLAYER_ENTERING_WORLD()
 	end
 end
 
-function IHML:ADDON_LOADED(addon)
+function IHML:ADDON_LOADED(event, addon)
 	if addon == "Blizzard_MacroUI" then
 		-- Blizzard_MacroUI loads twice for some reason
 		-- (guessing it has got something to do with the dummy addon in the AddOns-folder)
@@ -569,7 +569,7 @@ options.args.macros.args = {
 		args = {
 			info = {
 				type = "description",
-				name = L["Name: Type \"boss\" for last loaded boss module or \"zone\" for current zone.\nIcon: A number from 1 to 769. You might want to edit this from the Blizzard Macro UI."],
+				name = L["Name: Type \"boss\" for last loaded boss module or \"zone\" for current zone.\nIcon: A number from 1 to 779. You might want to edit this from the Blizzard Macro UI."],
 				order = 100,
 				image = function() return GetMacroIconInfo(mBody[guiMacro] and mIcon[guiMacro] or (c.current ~= nil and currentIcon or 1)), 56, 56 end,
 			},
@@ -618,7 +618,7 @@ options.args.macros.args = {
 				order = 300,
 				validate = function(info, k)
 					local n = tonumber(k) or 0
-					if n <= 0 or n >= 770 then
+					if n <= 0 or n > 779 then
 						return false
 					elseif format("%d",n) == k then
 						return true
