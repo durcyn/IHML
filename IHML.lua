@@ -66,6 +66,9 @@ local defaults = {
 			[L["Isle of Quel'Danas"]] = L["m_crystalcores"],
 			[L["Throne of Kil'jaeden"]] = L["m_blood4blood"],
 			[L["Spirit Fields"]] = L["m_spectrogoggles"],
+			[L["The Dead Scar"]] = L["m_deadscar"],
+			[L["The Dawning Square"]] = L["m_ssbanner"],
+			[L["Bash'ir Landing"]] = L["m_bashir"],
 			-------------------------------------
 			
 			-- Karazhan -------------------------

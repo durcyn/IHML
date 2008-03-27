@@ -93,7 +93,18 @@ L["m_booterang"] = [[#showtooltip
 --/use Fel Siphon]]
 --L["Spirit Fields"] = "Spirit Fields"
 --L["m_spectrogoggles"] = [[#showtooltip
---/use Multiphase Spectrographic Goggles]]
+--/use Multiphase Spectrographic Goggles
+--/equip Multiphase Spectrographic Goggles]]
+--L["The Dead Scar"] = "The Dead Scar"
+--L["m_deadscar"] = [[#showtooltip
+--/use Arcane Charges]]
+--L["The Dawning Square"] = "The Dawning Square"
+--L["m_ssbanner"] = [[#showtooltip
+--/target Emissary of Hate
+--/use Shattered Sun Banner]]
+--L["Bash'ir Landing"] = "Bash'ir Landing"
+--L["m_bashir"] = [[#showtooltip
+--/use Bash'ir Phasing Device]]
 -- Karazhan -----------------
 L["The Curator"] = "Der Kurator"
 L["m_curator"] = [[/target Astralflimmern

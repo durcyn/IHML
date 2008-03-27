@@ -93,7 +93,18 @@ L["m_blood4blood"] = [[#showtooltip Demonic Blood
 /use Fel Siphon]]
 L["Spirit Fields"] = true
 L["m_spectrogoggles"] = [[#showtooltip
-/use Multiphase Spectrographic Goggles]]
+/use Multiphase Spectrographic Goggles
+/equip Multiphase Spectrographic Goggles]]
+L["The Dead Scar"] = true
+L["m_deadscar"] = [[#showtooltip
+/use Arcane Charges]]
+L["The Dawning Square"] = true
+L["m_ssbanner"] = [[#showtooltip
+/target Emissary of Hate
+/use Shattered Sun Banner]]
+L["Bash'ir Landing"] = true
+L["m_bashir"] = [[#showtooltip
+/use Bash'ir Phasing Device]]
 -- Karazhan -----------------
 L["The Curator"] = true
 L["m_curator"] = [[/target Astral Flare
