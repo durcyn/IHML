@@ -172,10 +172,10 @@ function IHML:OnEnable()
 	end
 	self:RegisterEvent("ADDON_LOADED") -- To detect when the BigWigs/Macro frame loads
 	if not bwLoaded and BigWigs then
-		self:ADDON_LOADED("BigWigs") -- BigWigs has already loaded
+		self:ADDON_LOADED(nil, "BigWigs") -- BigWigs has already loaded
 	end
 	if not macroUIHooked and MacroFrame then
-		self:ADDON_LOADED("Blizzard_MacroUI") -- the MacroUI has already loaded
+		self:ADDON_LOADED(nil, "Blizzard_MacroUI") -- the MacroUI has already loaded
 	end
 end
 
