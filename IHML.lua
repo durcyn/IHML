@@ -130,6 +130,7 @@ local function checkMacro(name, dontMake)
 			return IHML:Print(L["|cffff9999Warning!|r No free macro space :("])
 		end
 	end
+	return 1
 end
 
 function IHML:OnInitialize()
@@ -374,6 +375,11 @@ function IHML:ChatCommand(msg)
 			checkMacro(arg, true)
 			p.macroname = arg
 		end
+	elseif arg == "pickup" then
+		if InCombatLockdown() then return end
+		if checkMacro(p.macroname) == 1 then
+			PickupMacro(p.macroname)
+		end
 	elseif arg == "insertdefault" then
 		for k in pairs(mBody) do
 			if mBody[k] == false then
@@ -504,18 +510,17 @@ options.args.option.args = {
 		disabled = function() return GetMacroIndexByName(p.macroname) ~= 0 end,
 		func = function() checkMacro(p.macroname) end,
 	},
-	insertdefault = {
-		name = L["Reinsert default macros"], type = "execute",
-		desc = L["Use this to recover any removed default macros. Won't replace changed versions. If you want to revert changed macros delete them first."],
-		order = 300,
+	pickup = {
+		name = L["Pickup Macro"], type = "execute",
+		desc = L["Click to pickup the IHML macro so that you can place it on an action bar."],
+		order = 202,
+		disabled = InCombatLockdown,
 		func = function()
-			for k in pairs(mBody) do
-				if mBody[k] == false then
-					mBody[k] = nil
-				end
+			-- Shouldn't happen because the button is disabled, but it won't hurt to test anyway.
+			if InCombatLockdown() then return end
+			if checkMacro(p.macroname) == 1 then
+				PickupMacro(p.macroname)
 			end
-			db:RegisterDefaults(defaults)
-			IHML:OnProfileChanged()
 		end,
 	},
 }
@@ -696,6 +701,21 @@ options.args.macros.args = {
 				end,
 			},
 		},
+	},
+	insertdefault = {
+		name = L["Reinsert default macros"], type = "execute",
+		desc = L["Use this to recover any removed default macros. Won't replace changed versions. If you want to revert changed macros delete them first."],
+		order = 300,
+		width = "full",
+		func = function()
+			for k in pairs(mBody) do
+				if mBody[k] == false then
+					mBody[k] = nil
+				end
+			end
+			db:RegisterDefaults(defaults)
+			IHML:OnProfileChanged()
+		end,
 	},
 }
 

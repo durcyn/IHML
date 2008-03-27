@@ -27,6 +27,8 @@ L["Zone"] = true
 L["By Zone"] = true
 L["Used Macro"] = true
 L["Make Macro"] = true
+L["Pickup Macro"] = true
+L["Click to pickup the IHML macro so that you can place it on an action bar."] = true
 L["Reinsert default macros"] = true
 L["Use this to recover any removed default macros. Won't replace changed versions. If you want to revert changed macros delete them first."] = true
 -- Macros -------------------

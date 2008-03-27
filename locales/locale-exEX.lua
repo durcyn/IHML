@@ -57,6 +57,8 @@ L["Zone"] = "Zone"
 L["By Zone"] = "By Zone"
 L["Used Macro"] = "Used Macro"
 L["Make Macro"] = "Make Macro"
+L["Pickup Macro"] = "Pickup Macro"
+L["Click to pickup the IHML macro so that you can place it on an action bar."] = "Click to pickup the IHML macro so that you can place it on an action bar."
 L["Reinsert default macros"] = "Reinsert default macros"
 L["Use this to recover any removed default macros. Won't replace changed versions. If you want to revert changed macros delete them first."] = "Use this to recover any removed default macros. Won't replace changed versions. If you want to revert changed macros delete them first."
 -- Macros -------------------
