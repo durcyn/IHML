@@ -27,10 +27,10 @@ L["Zone"] = "Zone"
 L["By Zone"] = "Nach Zone"
 L["Used Macro"] = "Verwendetes Makro"
 L["Make Macro"] = "Makro erstellen"
---L["Pickup Macro"] = "Pickup Macro"
---L["Click to pickup the IHML macro so that you can place it on an action bar."] = "Click to pickup the IHML macro so that you can place it on an action bar."
+L["Pickup Macro"] = "Makro aufnehmen"
+L["Click to pickup the IHML macro so that you can place it on an action bar."] = "Klicke hier, um das IHML Makro aufzunehmen, so dass es in die F\195\164higkeitenleiste ziehen kannst."
 L["Reinsert default macros"] = "Standardmakros wieder einf\195\188gen"
-L["Use this to recover any removed default macros. Won't replace changed versions. If you want to revert changed macros delete them first."] = "Nutzen um ein entferntes Standardmakro wiederherzustellen. Ersetzt keine ge\195\164nderten Versionen. If you want to revert changed macros delete them first."
+L["Use this to recover any removed default macros. Won't replace changed versions. If you want to revert changed macros delete them first."] = "Klicke hier, um ein entferntes Standardmakro wiederherzustellen. Ersetzt keine ge\195\164nderten Makroversionen. Wenn du ge\195\164nderte Standardmakros wiederherstellen m\195\182chtest, musst du sie zuvor l\195\182schen."
 -- Macros -------------------
 L["Select Macro:"] = "Makro ausw\195\164hlen:"
 L["Select a macro."] = "Ein Makro ausw\195\164hlen."
@@ -45,7 +45,7 @@ L["No boss module loaded!"] = "Kein Bossmodul geladen!"
 L["%s already exists!"] = "%s existiert bereits!" -- %s gets replaced with the macro in question
 L["Icon:"] = "Symbol:"
 L["Icon"] = "Symbol"
---L["Macro body:"] = "Makro-K\195\182rper"
+L["Macro body:"] = "Makro-K\195\182rper"
 L["The macro goes here. Still limited to 255 characters."] = "Hierher kommt das Makro. Noch immer auf 255 Zeichen limitiert."
 L["Make a new macro."] = "Ein neues Makro erstellen."
 L["New macro"] = "Neues Makro"
@@ -84,10 +84,10 @@ L["m_booterang"] = [[#showtooltip
 /use Schuhmerang
 /cleartarget]]
 -- Shattered Sun Offensive --
---L["Isle of Quel'Danas"] = "Isle of Quel'Danas"
---L["m_crystalcores"] = [[#showtooltip
---/target Erratic Sentry
---/use Attuned Crystal Cores]]
+L["Isle of Quel'Danas"] = "Insel von Quel'Danas"
+L["m_crystalcores"] = [[#showtooltip
+/target Herumirrender Wachposten
+/use Abgestimmte Kristallkerne]]
 --L["Throne of Kil'jaeden"] = "Throne of Kil'jaeden"
 --L["m_blood4blood"] = [[#showtooltip Demonic Blood
 --/use Fel Siphon]]
