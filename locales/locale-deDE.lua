@@ -98,13 +98,13 @@ L["m_spectrogoggles"] = [[#showtooltip
 L["The Dead Scar"] = "Todesschneise"
 L["m_deadscar"] = [[#showtooltip
 /use Arkane Ladungen]]
---L["The Dawning Square"] = "The Dawning Square"
---L["m_ssbanner"] = [[#showtooltip
---/target Emissary of Hate
---/use Shattered Sun Banner]]
---L["Bash'ir Landing"] = "Bash'ir Landing"
---L["m_bashir"] = [[#showtooltip
---/use Bash'ir Phasing Device]]
+L["The Dawning Square"] = "Platz der Morgenröte"
+L["m_ssbanner"] = [[#showtooltip
+/target Abgesandter des Hasses
+/use Banner der Zerschmetterten Sonne]]
+L["Bash'ir Landing"] = "Landeplatz von Bash'ir"
+L["m_bashir"] = [[#showtooltip
+/use Phasenvorrichtung von Bash'ir]]
 -- Karazhan -----------------
 L["The Curator"] = "Der Kurator"
 L["m_curator"] = [[/target Astralflimmern
