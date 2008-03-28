@@ -88,16 +88,16 @@ L["Isle of Quel'Danas"] = "Insel von Quel'Danas"
 L["m_crystalcores"] = [[#showtooltip
 /target Herumirrender Wachposten
 /use Abgestimmte Kristallkerne]]
---L["Throne of Kil'jaeden"] = "Throne of Kil'jaeden"
---L["m_blood4blood"] = [[#showtooltip Demonic Blood
---/use Fel Siphon]]
---L["Spirit Fields"] = "Spirit Fields"
---L["m_spectrogoggles"] = [[#showtooltip
---/use Multiphase Spectrographic Goggles
---/equip Multiphase Spectrographic Goggles]]
---L["The Dead Scar"] = "The Dead Scar"
---L["m_deadscar"] = [[#showtooltip
---/use Arcane Charges]]
+L["Throne of Kil'jaeden"] = "Kil'jaedens Thron"
+L["m_blood4blood"] = [[#showtooltip Dämonenblut
+/use Teufelstrinker]]
+L["Spirit Fields"] = "Geisterfelder"
+L["m_spectrogoggles"] = [[#showtooltip
+/use Spektrografische Multiphasenbrille
+/equip Spektrografische Multiphasenbrille]]
+L["The Dead Scar"] = "Todesschneise"
+L["m_deadscar"] = [[#showtooltip
+/use Arkane Ladungen]]
 --L["The Dawning Square"] = "The Dawning Square"
 --L["m_ssbanner"] = [[#showtooltip
 --/target Emissary of Hate
