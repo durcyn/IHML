@@ -118,6 +118,9 @@ L["Isle of Quel'Danas"] = "Isle of Quel'Danas"
 L["m_crystalcores"] = [[#showtooltip
 /target Erratic Sentry
 /use Attuned Crystal Cores]]
+L["Sun's Reach Sanctum"] = "Sun's Reach Sanctum"
+L["m_manaremnants"] = [[#showtooltip
+/use Mana Remnants]]
 L["Throne of Kil'jaeden"] = "Throne of Kil'jaeden"
 L["m_blood4blood"] = [[#showtooltip Demonic Blood
 /use Fel Siphon]]

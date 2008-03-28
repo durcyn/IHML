@@ -88,6 +88,9 @@ L["Isle of Quel'Danas"] = true
 L["m_crystalcores"] = [[#showtooltip
 /target Erratic Sentry
 /use Attuned Crystal Cores]]
+L["Sun's Reach Sanctum"] = true
+L["m_manaremnants"] = [[#showtooltip
+/use Mana Remnants]]
 L["Throne of Kil'jaeden"] = true
 L["m_blood4blood"] = [[#showtooltip Demonic Blood
 /use Fel Siphon]]

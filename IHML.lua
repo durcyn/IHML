@@ -64,6 +64,7 @@ local defaults = {
 			[L["Netherwing Ledge"]] = L["m_booterang"],
 			-- Shattered Sun Offensive --
 			[L["Isle of Quel'Danas"]] = L["m_crystalcores"],
+			[L["Sun's Reach Sanctum"]] = L["m_manaremnants"],
 			[L["Throne of Kil'jaeden"]] = L["m_blood4blood"],
 			[L["Spirit Fields"]] = L["m_spectrogoggles"],
 			[L["The Dead Scar"]] = L["m_deadscar"],

@@ -88,6 +88,9 @@ L["Isle of Quel'Danas"] = "Insel von Quel'Danas"
 L["m_crystalcores"] = [[#showtooltip
 /target Herumirrender Wachposten
 /use Abgestimmte Kristallkerne]]
+--L["Sun's Reach Sanctum"] = "Sun's Reach Sanctum"
+--L["m_manaremnants"] = [[#showtooltip
+--/use Mana Remnants]]
 L["Throne of Kil'jaeden"] = "Kil'jaedens Thron"
 L["m_blood4blood"] = [[#showtooltip Dämonenblut
 /use Teufelstrinker]]
