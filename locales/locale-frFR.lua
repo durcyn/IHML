@@ -108,6 +108,10 @@ L["m_booterang"] = [[#showtooltip
 --L["Bash'ir Landing"] = "Bash'ir Landing"
 --L["m_bashir"] = [[#showtooltip
 --/use Bash'ir Phasing Device]]
+-- Magisters' Terrace -------
+--L["Halls of Theory"] = "Halls of Theory"
+--L["m_vexallus"] = [[/target Pure Energy
+--/startattack]]
 -- Karazhan -----------------
 L["The Curator"] = "Le conservateur"
 L["m_curator"] = [[/target Etincelle astrale

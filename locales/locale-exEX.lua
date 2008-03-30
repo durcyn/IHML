@@ -138,6 +138,10 @@ L["m_ssbanner"] = [[#showtooltip
 L["Bash'ir Landing"] = "Bash'ir Landing"
 L["m_bashir"] = [[#showtooltip
 /use Bash'ir Phasing Device]]
+-- Magisters' Terrace -------
+L["Halls of Theory"] = "Halls of Theory"
+L["m_vexallus"] = [[/target Pure Energy
+/startattack]]
 -- Karazhan -----------------
 L["The Curator"] = "The Curator"
 L["m_curator"] = [[/target Astral Flare

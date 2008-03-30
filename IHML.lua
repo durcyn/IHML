@@ -39,6 +39,7 @@ local defaults = {
 		macroname = "ihml",
 		macroIcon = {
 			["*"] = 1, -- Most macros will have 1 (the question mark) as icon
+			[L["Halls of Theory"]] = 661,
 			[L["The Curator"]] = 661,
 			[L["Terestian Illhoof"]] = 636,
 			[L["Halazzi"]] = 644,
@@ -70,6 +71,10 @@ local defaults = {
 			[L["The Dead Scar"]] = L["m_deadscar"],
 			[L["The Dawning Square"]] = L["m_ssbanner"],
 			[L["Bash'ir Landing"]] = L["m_bashir"],
+			-------------------------------------
+			
+			-- Magisters' Terrace ---------------
+			[L["Halls of Theory"]] = L["m_vexallus"],
 			-------------------------------------
 			
 			-- Karazhan -------------------------
