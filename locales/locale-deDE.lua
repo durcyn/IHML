@@ -98,7 +98,7 @@ L["Spirit Fields"] = "Geisterfelder"
 L["m_spectrogoggles"] = [[#showtooltip
 /use Spektrografische Multiphasenbrille
 /equip Spektrografische Multiphasenbrille]]
-L["The Dead Scar"] = "Todesschneise"
+L["The Dead Scar"] = "Die Todesschneise"
 L["m_deadscar"] = [[#showtooltip
 /use Arkane Ladungen]]
 L["The Dawning Square"] = "Platz der Morgenröte"
