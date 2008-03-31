@@ -1,7 +1,6 @@
 ﻿local L = LibStub("AceLocale-3.0"):NewLocale("IHML", "zhTW")
 if not L then return end
 
--- See locale-exEX.lua for instructions in how to make a translation
 
 --[[ Core -------------------------------
 L["In combat! %s queued lol!"] = true -- %s will be replaced with the macro in question
@@ -65,49 +64,49 @@ L["Terokk's Rest"] = "泰洛克之墓"
 L["Upper Veil Shil'ak"] = "迷霧希拉克上層"
 L["Veil Ala'rak"] = "迷霧亞拉芮克"
 L["Veil Harr'ik"] = "迷霧哈瑞克"
-L["m_skettis"] = [[#showtooltip
+L["m_skettis"] = [[#showtooltip item:32406
 /use [flying] 禦天者爆破彈藥]]
 -- Ogri'La ------------------
 L["Vortex Pinnacle"] = "漩渦尖塔"
-L["m_vortexpinnacle"] = [[#showtooltip
+L["m_vortexpinnacle"] = [[#showtooltip item:32698
 /use 綑綁套索
 /stopattack
 /petpassive]]
 L["Forge Camp: Wrath"] = "煉冶場:憤怒"
 L["Forge Camp: Terror"] = "煉冶場:驚駭"
-L["m_forgecamp"] = [[#showtooltip
+L["m_forgecamp"] = [[#showtooltip [flying] item:32456; item:32696
 /use [flying] 禦天者炸彈
 /use [noflying] 驅逐水晶]]
 -- Netherwing ---------------
 L["Netherwing Ledge"] = "虛空之翼岩架"
-L["m_booterang"] = [[#showtooltip
+L["m_booterang"] = [[#showtooltip item:32680
 /target 不服從的龍喉苦工
 /use 迴力靴
 /cleartarget]]
 -- Shattered Sun Offensive --
 L["Isle of Quel'Danas"] = "奎爾達納斯之島"
-L["m_crystalcores"] = [[#showtooltip
+L["m_crystalcores"] = [[#showtooltip item:34368
 /target 不穩定的哨兵
 /use 調諧水晶核]]
 L["Sun's Reach Sanctum"] = "日境聖所"
-L["m_manaremnants"] = [[#showtooltip
+L["m_manaremnants"] = [[#showtooltip item:34338
 /use 法力殘餘]]
 L["Throne of Kil'jaeden"] = "基爾加丹王座"
-L["m_blood4blood"] = [[#showtooltip
+L["m_blood4blood"] = [[#showtooltip item:34259
 /use 魔化虹管 ]]
 L["Spirit Fields"] = "靈魂原野"
-L["m_spectrogoggles"] = [[#showtooltip
+L["m_spectrogoggles"] = [[#showtooltip item:35233
 /use 多相光譜護目鏡
 /equip 多相光譜護目鏡]]
 L["The Dead Scar"] = "死亡之痕"
-L["m_deadscar"] = [[#showtooltip
+L["m_deadscar"] = [[#showtooltip item:34475
 /use 秘法炸藥]]
 L["The Dawning Square"] = "曙光廣場"
-L["m_ssbanner"] = [[#showtooltip
+L["m_ssbanner"] = [[#showtooltip item:34414
 /target 憎恨密使
 /use 破碎之日旗幟]]
 L["Bash'ir Landing"] = "貝許爾平臺"
-L["m_bashir"] = [[#showtooltip
+L["m_bashir"] = [[#showtooltip item:34248
 /use 貝許爾相位裝置]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "學術大廳"
@@ -129,7 +128,7 @@ L["Fathom-Lord Karathress"] = "深淵之王卡拉薩瑞斯"
 L["m_flk"] = [[/targetexact 飛火圖騰
 /startattack]]
 L["Lady Vashj"] = "瓦許女士"
-L["m_vashj"] = [[#showtooltip
+L["m_vashj"] = [[#showtooltip item:31088
 /use 受污染的核心
 /y <-- 受污染的核心 傳給: %t !!
 /s <-- 受污染的核心 傳給: %t !!
@@ -137,10 +136,10 @@ L["m_vashj"] = [[#showtooltip
 -- Tempest Keep -------------
 -- Mount Hyjal --------------
 L["Archimonde"] = "阿克蒙德"
-L["m_archimonde"] = [[#showtooltip
+L["m_archimonde"] = [[#showtooltip item:24494
 /use 女神之淚]]
 -- Black Temple -------------
 L["High Warlord Naj'entus"] = "高階督軍納珍塔斯"
-L["m_najentus"] = [[#showtooltip
+L["m_najentus"] = [[#showtooltip item:32408
 /use 納珍塔斯脊骨]]
 -- /Default macros --------------------

@@ -64,71 +64,71 @@ L["Terokk's Rest"] = "Terokks Ruh"
 L["Upper Veil Shil'ak"] = "Oberes Shil'akversteck"
 L["Veil Ala'rak"] = "Ala'rakversteck"
 L["Veil Harr'ik"] = "Harr'ikversteck"
-L["m_skettis"] = [[#showtooltip
+L["m_skettis"] = [[#showtooltip item:32406
 /use Sprengladungen der Himmelswache]]
 -- Ogri'La ------------------
 L["Vortex Pinnacle"] = "Vortexgipfel"
-L["m_vortexpinnacle"] = [[#showtooltip
+L["m_vortexpinnacle"] = [[#showtooltip item:32698
 /use Bändigungsseil
 /stopattack
 /petpassive]]
 L["Forge Camp: Wrath"] = "Konstruktionslager: Wut"
 L["Forge Camp: Terror"] = "Konstruktionslager: Terror"
-L["m_forgecamp"] = [[#showtooltip
+L["m_forgecamp"] = [[#showtooltip [flying] item:32456; item:32696
 /use [flying] Bomben der Himmelswache
 /use [noflying] Kristall der Verbannung]] 
 -- Netherwing ---------------
 L["Netherwing Ledge"] = "Netherschwingenscherbe"
-L["m_booterang"] = [[#showtooltip
-/target Ungehorsamer Peon des Drachenmals
+L["m_booterang"] = [[#showtooltip item:32680
+/targetexact Ungehorsamer Peon des Drachenmals
 /use Schuhmerang
 /cleartarget]]
 -- Shattered Sun Offensive --
 L["Isle of Quel'Danas"] = "Insel von Quel'Danas"
-L["m_crystalcores"] = [[#showtooltip
-/target Herumirrender Wachposten
+L["m_crystalcores"] = [[#showtooltip item:34368
+/targetexact Herumirrender Wachposten
 /use Abgestimmte Kristallkerne]]
 L["Sun's Reach Sanctum"] = "Sanktum der Sonnenweiten"
-L["m_manaremnants"] = [[#showtooltip
+L["m_manaremnants"] = [[#showtooltip item:34338
 /use Manaüberreste]]
 L["Throne of Kil'jaeden"] = "Kil'jaedens Thron"
-L["m_blood4blood"] = [[#showtooltip Dämonenblut
-/use Teufelstrinker]]
+L["m_blood4blood"] = [[#showtooltip item:34259
+/use Teufelstrinker]] -- #showtooltip Dämonenblut
 L["Spirit Fields"] = "Geisterfelder"
-L["m_spectrogoggles"] = [[#showtooltip
+L["m_spectrogoggles"] = [[#showtooltip item:35233
 /use Spektrografische Multiphasenbrille
 /equip Spektrografische Multiphasenbrille]]
 L["The Dead Scar"] = "Die Todesschneise"
-L["m_deadscar"] = [[#showtooltip
+L["m_deadscar"] = [[#showtooltip item:34475
 /use Arkane Ladungen]]
 L["The Dawning Square"] = "Platz der Morgenröte"
-L["m_ssbanner"] = [[#showtooltip
-/target Abgesandter des Hasses
+L["m_ssbanner"] = [[#showtooltip item:34414
+/targetexact Abgesandter des Hasses
 /use Banner der Zerschmetterten Sonne]]
 L["Bash'ir Landing"] = "Landeplatz von Bash'ir"
-L["m_bashir"] = [[#showtooltip
+L["m_bashir"] = [[#showtooltip item:34248
 /use Phasenvorrichtung von Bash'ir]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "Hallen der Theorie"
-L["m_vexallus"] = [[/target Pure Energie
+L["m_vexallus"] = [[/targetexact Pure Energie
 /startattack]]
 -- Karazhan -----------------
 L["The Curator"] = "Der Kurator"
-L["m_curator"] = [[/target Astralflimmern
+L["m_curator"] = [[/targetexact Astralflimmern
 /startattack]]
 L["Terestian Illhoof"] = "Terestian Siechhuf"
-L["m_illhoof"] = [[/target Dämonenketten
+L["m_illhoof"] = [[/targetexact Dämonenketten
 /startattack]]
 -- Zul'Aman -----------------
 L["Halazzi"] = "Halazzi"
-L["m_halazzi"] = [[/target Verderbtes Blitzschlagtotem
+L["m_halazzi"] = [[/targetexact Verderbtes Blitzschlagtotem
 /startattack]]
 -- Serpentshrine Cavern -----
 L["Fathom-Lord Karathress"] = "Tiefenlord Karathress"
-L["m_flk"] = [[/target Feuerspuckendes Totem
+L["m_flk"] = [[/targetexact Feuerspuckendes Totem
 /startattack]]
 L["Lady Vashj"] = "Lady Vashj"
-L["m_vashj"] = [[#showtooltip
+L["m_vashj"] = [[#showtooltip item:31088
 /use Besudelter Kern
 /y <-- BESUDELTER KERN ZU: %t !!
 /s <-- BESUDELTER KERN ZU: %t !!
@@ -136,10 +136,10 @@ L["m_vashj"] = [[#showtooltip
 -- Tempest Keep -------------
 -- Mount Hyjal --------------
 L["Archimonde"] = "Archimonde"
-L["m_archimonde"] = [[#showtooltip
+L["m_archimonde"] = [[#showtooltip item:24494
 /use Tränen der Göttin]]
 -- Black Temple -------------
 L["High Warlord Naj'entus"] = "Oberster Kriegsfürst Naj'entus"
-L["m_najentus"] = [[#showtooltip
+L["m_najentus"] = [[#showtooltip item:32408
 /use Naj'entus' Stachel]]
 -- /Default macros --------------------

@@ -94,71 +94,71 @@ L["Terokk's Rest"] = "Terokk's Rest"
 L["Upper Veil Shil'ak"] = "Upper Veil Shil'ak"
 L["Veil Ala'rak"] = "Veil Ala'rak"
 L["Veil Harr'ik"] = "Veil Harr'ik"
-L["m_skettis"] = [[#showtooltip
+L["m_skettis"] = [[#showtooltip item:32406
 /use Skyguard Blasting Charges]]
 -- Ogri'La ------------------
 L["Vortex Pinnacle"] = "Vortex Pinnacle"
-L["m_vortexpinnacle"] = [[#showtooltip
+L["m_vortexpinnacle"] = [[#showtooltip item:32698
 /use Wrangling Rope
 /stopattack
 /petpassive]]
 L["Forge Camp: Wrath"] = "Forge Camp: Wrath"
 L["Forge Camp: Terror"] = "Forge Camp: Terror"
-L["m_forgecamp"] = [[#showtooltip
+L["m_forgecamp"] = [[#showtooltip [flying] item:32456; item:32696
 /use [flying] Skyguard Bombs
 /use [noflying] Banishing Crystal]]
 -- Netherwing ---------------
 L["Netherwing Ledge"] = "Netherwing Ledge"
-L["m_booterang"] = [[#showtooltip
-/target Disobedient Dragonmaw Peon
+L["m_booterang"] = [[#showtooltip item:32680
+/targetexact Disobedient Dragonmaw Peon
 /use Booterang
 /cleartarget]]
 -- Shattered Sun Offensive --
 L["Isle of Quel'Danas"] = "Isle of Quel'Danas"
-L["m_crystalcores"] = [[#showtooltip
-/target Erratic Sentry
+L["m_crystalcores"] = [[#showtooltip item:34368
+/targetexact Erratic Sentry
 /use Attuned Crystal Cores]]
 L["Sun's Reach Sanctum"] = "Sun's Reach Sanctum"
-L["m_manaremnants"] = [[#showtooltip
+L["m_manaremnants"] = [[#showtooltip item:34338
 /use Mana Remnants]]
 L["Throne of Kil'jaeden"] = "Throne of Kil'jaeden"
-L["m_blood4blood"] = [[#showtooltip Demonic Blood
-/use Fel Siphon]]
+L["m_blood4blood"] = [[#showtooltip item:34259
+/use Fel Siphon]] -- #showtooltip Demonic Blood
 L["Spirit Fields"] = "Spirit Fields"
-L["m_spectrogoggles"] = [[#showtooltip
+L["m_spectrogoggles"] = [[#showtooltip item:35233
 /use Multiphase Spectrographic Goggles
 /equip Multiphase Spectrographic Goggles]]
 L["The Dead Scar"] = "The Dead Scar"
-L["m_deadscar"] = [[#showtooltip
+L["m_deadscar"] = [[#showtooltip item:34475
 /use Arcane Charges]]
 L["The Dawning Square"] = "The Dawning Square"
-L["m_ssbanner"] = [[#showtooltip
-/target Emissary of Hate
+L["m_ssbanner"] = [[#showtooltip item:34414
+/targetexact Emissary of Hate
 /use Shattered Sun Banner]]
 L["Bash'ir Landing"] = "Bash'ir Landing"
-L["m_bashir"] = [[#showtooltip
+L["m_bashir"] = [[#showtooltip item:34248
 /use Bash'ir Phasing Device]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "Halls of Theory"
-L["m_vexallus"] = [[/target Pure Energy
+L["m_vexallus"] = [[/targetexact Pure Energy
 /startattack]]
 -- Karazhan -----------------
 L["The Curator"] = "The Curator"
-L["m_curator"] = [[/target Astral Flare
+L["m_curator"] = [[/targetexact Astral Flare
 /startattack]]
 L["Terestian Illhoof"] = "Terestian Illhoof"
-L["m_illhoof"] = [[/target Demon Chains
+L["m_illhoof"] = [[/targetexact Demon Chains
 /startattack]]
 -- Zul'Aman -----------------
 L["Halazzi"] = "Halazzi"
-L["m_halazzi"] = [[/target Corrupted Lightning Totem
+L["m_halazzi"] = [[/targetexact Corrupted Lightning Totem
 /startattack]]
 -- Serpentshrine Cavern -----
 L["Fathom-Lord Karathress"] = "Fathom-Lord Karathress"
-L["m_flk"] = [[/target Spitfire Totem
+L["m_flk"] = [[/targetexact Spitfire Totem
 /startattack]]
 L["Lady Vashj"] = "Lady Vashj"
-L["m_vashj"] = [[#showtooltip
+L["m_vashj"] = [[#showtooltip item:31088
 /use Tainted Core
 /y <-- TAINTED CORE TO: %t !!
 /s <-- TAINTED CORE TO: %t !!
@@ -166,10 +166,10 @@ L["m_vashj"] = [[#showtooltip
 -- Tempest Keep -------------
 -- Mount Hyjal --------------
 L["Archimonde"] = "Archimonde"
-L["m_archimonde"] = [[#showtooltip
+L["m_archimonde"] = [[#showtooltip item:24494
 /use Tears of the Goddess]]
 -- Black Temple -------------
 L["High Warlord Naj'entus"] = "High Warlord Naj'entus"
-L["m_najentus"] = [[#showtooltip
+L["m_najentus"] = [[#showtooltip item:32408
 /use Naj'entus Spine]]
 -- /Default macros --------------------
