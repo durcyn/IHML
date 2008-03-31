@@ -3,4 +3,5 @@
 <Script file="locale-enUS.lua"/>
 <Script file="locale-deDE.lua"/>
 <Script file="locale-frFR.lua"/>
+<Script file="locale-zhTW.lua"/>
 </Ui>
