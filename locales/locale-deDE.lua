@@ -92,8 +92,8 @@ L["Sun's Reach Sanctum"] = "Sanktum der Sonnenweiten"
 L["m_manaremnants"] = [[#showtooltip item:34338
 /use Manaüberreste]]
 L["Throne of Kil'jaeden"] = "Kil'jaedens Thron"
-L["m_blood4blood"] = [[#showtooltip item:34259
-/use Teufelstrinker]] -- #showtooltip Dämonenblut
+L["m_blood4blood"] = [[#showtooltip item:34257
+/use Teufelstrinker]]
 L["Spirit Fields"] = "Geisterfelder"
 L["m_spectrogoggles"] = [[#showtooltip item:35233
 /use Spektrografische Multiphasenbrille

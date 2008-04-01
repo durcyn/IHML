@@ -92,8 +92,8 @@ L["Sun's Reach Sanctum"] = true
 L["m_manaremnants"] = [[#showtooltip item:34338
 /use Mana Remnants]]
 L["Throne of Kil'jaeden"] = true
-L["m_blood4blood"] = [[#showtooltip item:34259
-/use Fel Siphon]] -- #showtooltip Demonic Blood
+L["m_blood4blood"] = [[#showtooltip item:34257
+/use Fel Siphon]]
 L["Spirit Fields"] = true
 L["m_spectrogoggles"] = [[#showtooltip item:35233
 /use Multiphase Spectrographic Goggles

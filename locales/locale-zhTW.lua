@@ -92,7 +92,7 @@ L["Sun's Reach Sanctum"] = "日境聖所"
 L["m_manaremnants"] = [[#showtooltip item:34338
 /use 法力殘餘]]
 L["Throne of Kil'jaeden"] = "基爾加丹王座"
-L["m_blood4blood"] = [[#showtooltip item:34259
+L["m_blood4blood"] = [[#showtooltip item:34257
 /use 魔化虹管 ]]
 L["Spirit Fields"] = "靈魂原野"
 L["m_spectrogoggles"] = [[#showtooltip item:35233
