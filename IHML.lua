@@ -71,6 +71,10 @@ local defaults = {
 			[L["The Dead Scar"]] = L["m_deadscar"],
 			[L["The Dawning Square"]] = L["m_ssbanner"],
 			[L["Bash'ir Landing"]] = L["m_bashir"],
+			[3] = L["m_flamingoil"],
+			[L["The Sin'loren"]] = 3,
+			[L["The Dawnchaser"]] = 3,
+			[L["The Bloodoath"]] = 3,
 			-------------------------------------
 			
 			-- Magisters' Terrace ---------------
@@ -218,6 +222,7 @@ function IHML:PLAYER_ENTERING_WORLD()
 			currentType = "instance"
 		end
 	end
+	self:ZoneChanged()
 end
 
 function IHML:ADDON_LOADED(event, addon)

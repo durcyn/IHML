@@ -108,6 +108,11 @@ L["m_ssbanner"] = [[#showtooltip item:34414
 L["Bash'ir Landing"] = "貝許爾平臺"
 L["m_bashir"] = [[#showtooltip item:34248
 /use 貝許爾相位裝置]]
+--L["The Sin'loren"] = "The Sin'loren"
+--L["The Dawnchaser"] = "The Dawnchaser"
+--L["The Bloodoath"] = "The Bloodoath"
+--L["m_flamingoil"] = [[#showtooltip item:34489
+--/use Flaming Oil]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "學術大廳"
 L["m_vexallus"] = [[/targetexact 純淨能量

@@ -108,6 +108,11 @@ L["m_ssbanner"] = [[#showtooltip item:34414
 L["Bash'ir Landing"] = true
 L["m_bashir"] = [[#showtooltip item:34248
 /use Bash'ir Phasing Device]]
+L["The Sin'loren"] = true
+L["The Dawnchaser"] = true
+L["The Bloodoath"] = true
+L["m_flamingoil"] = [[#showtooltip item:34489
+/use Flaming Oil]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = true
 L["m_vexallus"] = [[/targetexact Pure Energy

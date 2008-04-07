@@ -108,6 +108,11 @@ L["m_booterang"] = [[#showtooltip item:32680
 --L["Bash'ir Landing"] = "Bash'ir Landing"
 --L["m_bashir"] = [[#showtooltip item:34248
 --/use Bash'ir Phasing Device]]
+--L["The Sin'loren"] = "The Sin'loren"
+--L["The Dawnchaser"] = "The Dawnchaser"
+--L["The Bloodoath"] = "The Bloodoath"
+--L["m_flamingoil"] = [[#showtooltip item:34489
+--/use Flaming Oil]]
 -- Magisters' Terrace -------
 --L["Halls of Theory"] = "Halls of Theory"
 --L["m_vexallus"] = [[/targetexact Pure Energy
