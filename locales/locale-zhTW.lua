@@ -1,6 +1,7 @@
 ﻿local L = LibStub("AceLocale-3.0"):NewLocale("IHML", "zhTW")
 if not L then return end
 
+-- See locale-exEX.lua for instructions in how to make a translation
 
 --[[ Core -------------------------------
 L["In combat! %s queued lol!"] = true -- %s will be replaced with the macro in question
@@ -65,7 +66,7 @@ L["Upper Veil Shil'ak"] = "迷霧希拉克上層"
 L["Veil Ala'rak"] = "迷霧亞拉芮克"
 L["Veil Harr'ik"] = "迷霧哈瑞克"
 L["m_skettis"] = [[#showtooltip item:32406
-/use [flying] 禦天者爆破彈藥]]
+/use [mounted] 禦天者爆破彈藥]]
 -- Ogri'La ------------------
 L["Vortex Pinnacle"] = "漩渦尖塔"
 L["m_vortexpinnacle"] = [[#showtooltip item:32698
@@ -80,13 +81,13 @@ L["m_forgecamp"] = [[#showtooltip [flying] item:32456; item:32696
 -- Netherwing ---------------
 L["Netherwing Ledge"] = "虛空之翼岩架"
 L["m_booterang"] = [[#showtooltip item:32680
-/target 不服從的龍喉苦工
+/targetexact 不服從的龍喉苦工
 /use 迴力靴
 /cleartarget]]
 -- Shattered Sun Offensive --
 L["Isle of Quel'Danas"] = "奎爾達納斯之島"
 L["m_crystalcores"] = [[#showtooltip item:34368
-/target 不穩定的哨兵
+/targetexact 不穩定的哨兵
 /use 調諧水晶核]]
 L["Sun's Reach Sanctum"] = "日境聖所"
 L["m_manaremnants"] = [[#showtooltip item:34338
@@ -103,16 +104,16 @@ L["m_deadscar"] = [[#showtooltip item:34475
 /use 秘法炸藥]]
 L["The Dawning Square"] = "曙光廣場"
 L["m_ssbanner"] = [[#showtooltip item:34414
-/target 憎恨密使
+/targetexact 憎恨密使
 /use 破碎之日旗幟]]
 L["Bash'ir Landing"] = "貝許爾平臺"
 L["m_bashir"] = [[#showtooltip item:34248
 /use 貝許爾相位裝置]]
---L["The Sin'loren"] = "The Sin'loren"
---L["The Dawnchaser"] = "The Dawnchaser"
---L["The Bloodoath"] = "The Bloodoath"
---L["m_flamingoil"] = [[#showtooltip item:34489
---/use Flaming Oil]]
+L["The Sin'loren"] = "辛洛倫"
+L["The Dawnchaser"] = "晨逐者"
+L["The Bloodoath"] = "血之誓約"
+L["m_flamingoil"] = [[#showtooltip item:34489
+/use 烈焰之油]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "學術大廳"
 L["m_vexallus"] = [[/targetexact 純淨能量
