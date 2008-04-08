@@ -102,9 +102,12 @@ L["The Dead Scar"] = true
 L["m_deadscar"] = [[#showtooltip item:34475
 /use Arcane Charges]]
 L["The Dawning Square"] = true
-L["m_ssbanner"] = [[#showtooltip item:34414
-/targetexact Emissary of Hate
-/use Shattered Sun Banner]]
+L["m_ssbanner"] = [[#showtooltip [dead] item:34414; item:34533
+/use [dead] Shattered Sun Banner; Astromancer's Crystal]]
+L["Greengil Coast"] = true
+L["Dawnstar Village"] = true
+L["m_astrocrystal"] = [[#showtooltip item:34533
+/use Astromancer's Crystal]]
 L["Bash'ir Landing"] = true
 L["m_bashir"] = [[#showtooltip item:34248
 /use Bash'ir Phasing Device]]

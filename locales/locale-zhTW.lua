@@ -103,9 +103,12 @@ L["The Dead Scar"] = "死亡之痕"
 L["m_deadscar"] = [[#showtooltip item:34475
 /use 秘法炸藥]]
 L["The Dawning Square"] = "曙光廣場"
-L["m_ssbanner"] = [[#showtooltip item:34414
-/targetexact 憎恨密使
-/use 破碎之日旗幟]]
+L["m_ssbanner"] = [[#showtooltip [dead] item:34414; item:34533
+/use [dead] 破碎之日旗幟; item:34533]] -- Translate Astromancer's Crystal pls :)
+--L["Greengil Coast"] = "Greengil Coast"
+--L["Dawnstar Village"] = "Dawnstar Village"
+--L["m_astrocrystal"] = [[#showtooltip item:34533
+--/use Astromancer's Crystal]]
 L["Bash'ir Landing"] = "貝許爾平臺"
 L["m_bashir"] = [[#showtooltip item:34248
 /use 貝許爾相位裝置]]

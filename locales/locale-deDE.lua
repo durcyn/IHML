@@ -102,9 +102,12 @@ L["The Dead Scar"] = "Die Todesschneise"
 L["m_deadscar"] = [[#showtooltip item:34475
 /use Arkane Ladungen]]
 L["The Dawning Square"] = "Platz der Morgenröte"
-L["m_ssbanner"] = [[#showtooltip item:34414
-/targetexact Abgesandter des Hasses
-/use Banner der Zerschmetterten Sonne]]
+L["m_ssbanner"] = [[#showtooltip [dead] item:34414; item:34533
+/use [dead] Banner der Zerschmetterten Sonne; item:34533]] -- Translate Astromancer's Crystal pls :)
+--L["Greengil Coast"] = "Greengil Coast"
+--L["Dawnstar Village"] = "Dawnstar Village"
+--L["m_astrocrystal"] = [[#showtooltip item:34533
+--/use Astromancer's Crystal]]
 L["Bash'ir Landing"] = "Landeplatz von Bash'ir"
 L["m_bashir"] = [[#showtooltip item:34248
 /use Phasenvorrichtung von Bash'ir]]
