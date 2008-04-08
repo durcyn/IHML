@@ -3,56 +3,56 @@ if not L then return end
 
 
 -- Core -------------------------------
-L["In combat! %s queued lol!"] = "En combat! %s a été mis dans la file d'attente lol!" -- %s will be replaced with the macro in question
-L["%s! I have that macro lol!"] = "%s! j'ai cette macro lol!" -- %s will be replaced with the macro in question
-L["Please choose a macroname by typing: /ihml macroname <name here>"] = "Veuillez choisir une macro grace à la commande: /ihml macroname <name here>" -- Don't translate the command, it won't change
-L["|cffff9999Warning!|r No macro named %s found. Make it plz!"] = "|cffff9999Warning!|r Aucune macro du nom de %s n'a été trouvée. Veuillez la crééer!" -- %s will be replaced with macroname
-L["|cffff9999Warning!|r No free macro space :("] = "|cffff9999Warning!|r Vous n'avez plus de place pour une nouvelle macro :("
+L["In combat! %s queued lol!"] = "En combat ! %s a été mis dans la file d'attente lol !" -- %s will be replaced with the macro in question
+L["%s! I have that macro lol!"] = "%s ! j'ai cette macro lol !" -- %s will be replaced with the macro in question
+L["Please choose a macroname by typing: /ihml macroname <name here>"] = "Veuillez choisir une macro grace à la commande : /ihml macroname <nom ici>" -- Don't translate the command, it won't change
+L["|cffff9999Warning!|r No macro named %s found. Make it plz!"] = "|cffff9999Attention !|r Aucune macro du nom de %s n'a été trouvée. Veuillez la crééer !" -- %s will be replaced with macroname
+L["|cffff9999Warning!|r No free macro space :("] = "|cffff9999Attention !|r Vous n'avez plus de place pour une nouvelle macro :("
 -- /core ------------------------------
 
 -- Config -----------------------------
 -- Options ------------------
 L["Macros"] = "Macros"
 L["Options"] = "Options"
-L["Auto Swap"] = "Auto Swap"
-L["Use Auto Swap"] = "activer l'Auto Swap"
-L["Silent"] = "Silentieux"
-L["Don't print to chat when swapping."] = "Ne pas afficher les swap."
-L["Auto Swap events"] = "Auto Swap events"
+L["Auto Swap"] = "Changement automatique"
+L["Use Auto Swap"] = "Changement auto."
+L["Silent"] = "Silencieux"
+L["Don't print to chat when swapping."] = "Ne pas afficher les changements dans la fenêtre de discussion."
+L["Auto Swap events"] = "Événements de changement automatique"
 L["BigWigs"] = "BigWigs"
-L["By BigWigs Boss Module"] = "par Boss Module BigWigs"
+L["By BigWigs Boss Module"] = "Par les modules de boss de BigWigs."
 L["Instance type"] = "Type d'instance"
 L["By instance type. (arena, pvp, party or raid)"] = "Par type d'instance. (arena, pvp, party ou raid)" -- Don't translate (arena, pvp, party or raid), those names won't change with locale
 L["Zone"] = "Zone"
-L["By Zone"] = "par Zone"
-L["Used Macro"] = "Macros Utilisées"
-L["Make Macro"] = "Générer la Macro"
---L["Pickup Macro"] = "Pickup Macro"
---L["Click to pickup the IHML macro so that you can place it on an action bar."] = "Click to pickup the IHML macro so that you can place it on an action bar."
-L["Reinsert default macros"] = "Recréer les macros par Défaut"
-L["Use this to recover any removed default macros. Won't replace changed versions. If you want to revert changed macros delete them first."] = "Use this to recover any removed default macros. Won't replace changed versions. If you want to revert changed macros delete them first."
+L["By Zone"] = "Par zone."
+L["Used Macro"] = "Macros utilisées"
+L["Make Macro"] = "Générer la macro"
+L["Pickup Macro"] = "Saisir la macro"
+L["Click to pickup the IHML macro so that you can place it on an action bar."] = "Cliquez pour saisir la macro IHML afin de la place sur une barre d'actions."
+L["Reinsert default macros"] = "Recréer les macros par défaut"
+L["Use this to recover any removed default macros. Won't replace changed versions. If you want to revert changed macros delete them first."] = "Utilisez ceci pour récupérer les macros par défaut supprimées. Ceci ne remplacera pas les versions modifiées. Si vous voulez inverser les macros modifiées, supprimez-les d'abord."
 -- Macros -------------------
-L["Select Macro:"] = "Macro Sélectionée:"
+L["Select Macro:"] = "Macro sélectionée :"
 L["Select a macro."] = "Choisissez une macro."
-L["Swap!"] = "Swap!"
+L["Swap!"] = "Changer !"
 L["Swap to the selected macro."] = "Swap to the selected macro."
-L["Edit Macro"] = "Editer la Macro"
-L["Name: Type \"boss\" for last loaded boss module or \"zone\" for current zone.\nIcon: A number from 1 to 779. You might want to edit this from the Blizzard Macro UI."] = "Nom: Tapez \"boss\" pour le dernier  Boss Module chargé ou \"zone\" pour la zone courante.\nIcon: Un nombre compris entre 1 et 779. Si vous le souhaitez, vous pouvez utiliser l'interface par défaut (Blizzard) pour modifier les macros."
-L["Name:"] = "Nom:"
-L["This needs to match the boss module name or zone exactly for auto swap to work."] = "Ce paramètre doit correspondre exactement au nom d'un Boss Module ou d'une Zone pour que l'Auto Swap fonctionne ."
-L["Macros must have a name!"] = "Vous devez donner un nom à la macro!"
-L["No boss module loaded!"] = "Aucun Boss Module n'a été chargé!"
-L["%s already exists!"] = "Une macro %s existe déjà !" -- %s gets replaced with the macro in question
-L["Icon:"] = "Icon:"
-L["Icon"] = "Icon"
---L["Macro body:"] = "corp de la macro"
-L["The macro goes here. Still limited to 255 characters."] = "The macro goes here. Still limited to 255 characters."
+L["Edit Macro"] = "Editer la macro"
+L["Name: Type \"boss\" for last loaded boss module or \"zone\" for current zone.\nIcon: A number from 1 to 779. You might want to edit this from the Blizzard Macro UI."] = "Nom : Tapez \"boss\" pour le dernier module de boss chargé ou \"zone\" pour la zone actuelle.\nIcône : Un nombre compris entre 1 et 779. Si vous le souhaitez, vous pouvez utiliser l'interface par défaut (Blizzard) pour modifier les macros."
+L["Name:"] = "Nom :"
+L["This needs to match the boss module name or zone exactly for auto swap to work."] = "Ce paramètre doit correspondre exactement au nom d'un module de boss ou d'une zone pour que le changement automatique fonctionne."
+L["Macros must have a name!"] = "Vous devez donner un nom à la macro !"
+L["No boss module loaded!"] = "Aucun module de boss n'a été chargé !"
+L["%s already exists!"] = "%s existe déjà !" -- %s gets replaced with the macro in question
+L["Icon:"] = "Icône :"
+L["Icon"] = "Icône"
+--L["Macro body:"] = "Corp de la macro :"
+L["The macro goes here. Still limited to 255 characters."] = "La macro doit être entrée ici. Toujours limitée à 255 caractères."
 L["Make a new macro."] = "Créer un nouvelle macro."
 L["New macro"] = "Nouvelle macro"
 L["New macro %d"] = "Nouvelle macro %d" -- %d gets replaced with a number
-L["Remove!"] = "Supprimer!"
+L["Remove!"] = "Supprimer !"
 L["Remove the macro."] = "Supprimer la macro."
-L["Are you sure you want to remove %s?"] = "Voulez-vous vraiment supprimer la macro %s?" -- %s gets replaced with the macro in question
+L["Are you sure you want to remove %s?"] = "Voulez-vous vraiment supprimer la macro %s ?" -- %s gets replaced with the macro in question
 -- /config ----------------------------
 
 -- Default macros ---------------------
@@ -72,8 +72,8 @@ L["m_vortexpinnacle"] = [[#showtooltip item:32698
 /use Lasso
 /stopattack
 /petpassive]]
-L["Forge Camp: Wrath"] = "Camp de forge : Courroux"
-L["Forge Camp: Terror"] = "Camp de forge : Terreur"
+L["Forge Camp: Wrath"] = "Camp de forge : Courroux"
+L["Forge Camp: Terror"] = "Camp de forge : Terreur"
 L["m_forgecamp"] = [[#showtooltip [flying] item:32456; item:32696
 /use [flying] Bombes de la Garde-ciel
 /use [noflying] Cristal de bannissement]]
@@ -84,41 +84,41 @@ L["m_booterang"] = [[#showtooltip item:32680
 /use Botterang
 /ClearTarget]]
 -- Shattered Sun Offensive --
---L["Isle of Quel'Danas"] = "Isle of Quel'Danas"
---L["m_crystalcores"] = [[#showtooltip item:34368
---/targetexact Erratic Sentry
---/use Attuned Crystal Cores]]
---L["Sun's Reach Sanctum"] = "Sun's Reach Sanctum"
---L["m_manaremnants"] = [[#showtooltip item:34338
---/use Mana Remnants]]
---L["Throne of Kil'jaeden"] = "Throne of Kil'jaeden"
---L["m_blood4blood"] = [[#showtooltip item:34257
---/use Fel Siphon]]
---L["Spirit Fields"] = "Spirit Fields"
---L["m_spectrogoggles"] = [[#showtooltip item:35233
---/use Multiphase Spectrographic Goggles
---/equip Multiphase Spectrographic Goggles]]
---L["The Dead Scar"] = "The Dead Scar"
---L["m_deadscar"] = [[#showtooltip item:34475
---/use Arcane Charges]]
---L["The Dawning Square"] = "The Dawning Square"
---L["m_ssbanner"] = [[#showtooltip [dead] item:34414; item:34533
---/use [dead] Shattered Sun Banner; Astromancer's Crystal]]
---L["Greengil Coast"] = "Greengil Coast"
---L["Dawnstar Village"] = "Dawnstar Village"
---L["m_astrocrystal"] = [[#showtooltip item:34533
---/use Astromancer's Crystal]]
---L["Bash'ir Landing"] = "Bash'ir Landing"
---L["m_bashir"] = [[#showtooltip item:34248
---/use Bash'ir Phasing Device]]
---L["The Sin'loren"] = "The Sin'loren"
---L["The Dawnchaser"] = "The Dawnchaser"
---L["The Bloodoath"] = "The Bloodoath"
---L["m_flamingoil"] = [[#showtooltip item:34489
---/use Flaming Oil]]
+L["Isle of Quel'Danas"] = "Île de Quel'Danas"
+L["m_crystalcores"] = [[#showtooltip item:34368
+/targetexact Factionnaire erratique
+/use Noyaux cristallins en phase]]
+L["Sun's Reach Sanctum"] = "Sanctum des Confins du soleil"
+L["m_manaremnants"] = [[#showtooltip item:34338
+/use Restes de mana]]
+L["Throne of Kil'jaeden"] = "Trône de Kil'jaeden"
+L["m_blood4blood"] = [[#showtooltip item:34257
+/use Gangresiphon]]
+L["Spirit Fields"] = "Champs des esprits"
+L["m_spectrogoggles"] = [[#showtooltip item:35233
+/use Lunettes spectrographiques multiphases
+/equip Lunettes spectrographiques multiphases]]
+L["The Dead Scar"] = "La Malebrèche"
+L["m_deadscar"] = [[#showtooltip item:34475
+/use Charges arcaniques]]
+L["The Dawning Square"] = "Place du Point-du-jour"
+L["m_ssbanner"] = [[#showtooltip [dead] item:34414; item:34533
+/use [dead] Bannière du Soleil brisé; Cristal de l'astromancien]]
+L["Greengil Coast"] = "Côte de Verte-branchie"
+L["Dawnstar Village"] = "Étoile-de-l'aube"
+L["m_astrocrystal"] = [[#showtooltip item:34533
+/use Cristal de l'astromancien]]
+L["Bash'ir Landing"] = "Point d'ancrage de Bash'ir"
+L["m_bashir"] = [[#showtooltip item:34248
+/use Machine éclipsante de Bash'ir]]
+L["The Sin'loren"] = "Le Sin'loren"
+L["The Dawnchaser"] = "Le Chasselaube"
+L["The Bloodoath"] = "Le Serment de sang"
+L["m_flamingoil"] = [[#showtooltip item:34489
+/use Huile enflammée]]
 -- Magisters' Terrace -------
---L["Halls of Theory"] = "Halls of Theory"
---L["m_vexallus"] = [[/targetexact Pure Energy
+L["Halls of Theory"] = "Les salles de théorie"
+L["m_vexallus"] = [[/targetexact Energie pure
 --/startattack]]
 -- Karazhan -----------------
 L["The Curator"] = "Le conservateur"
@@ -138,9 +138,9 @@ L["m_flk"] = [[/targetexact Totem crache-feu
 L["Lady Vashj"] = "Dame Vashj"
 L["m_vashj"] = [[#showtooltip item:31088
 /use Coeur corrompu
-/y <-- TAINTED CORE TO: %t !!
-/s <-- TAINTED CORE TO: %t !!
-/script SendChatMessage("!! Vous avez le Coeur !!", "WHISPER", nil, UnitName("target"));]]
+/y <-- NOYAU CONTAMINÉ À : %t !!
+/s <-- NOYAU CONTAMINÉ À : %t !!
+/script SendChatMessage("!! TU AS LE NOYAU !!", "WHISPER", nil, UnitName("target"));]]
 -- Tempest Keep -------------
 -- Mount Hyjal --------------
 L["Archimonde"] = "Archimonde"
