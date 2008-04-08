@@ -1,5 +1,6 @@
 ## Title: I Have Macro Lol
 ## Notes: Switch macro depending on zones or BigWigs boss modules
+## Notes-zhTW: 隨地點或首領模組變換巨集
 ## Author: Snago
 
 ## Interface: 20400
