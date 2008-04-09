@@ -104,7 +104,7 @@ L["m_deadscar"] = [[#showtooltip item:34475
 L["The Dawning Square"] = true
 L["m_ssbanner"] = [[#showtooltip [dead] item:34414; item:34533
 /use [dead] Shattered Sun Banner; Astromancer's Crystal]]
-L["Greengil Coast"] = true
+L["Greengill Coast"] = true
 L["Dawnstar Village"] = true
 L["m_astrocrystal"] = [[#showtooltip item:34533
 /use Astromancer's Crystal]]

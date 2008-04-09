@@ -76,7 +76,7 @@ local defaults = {
 			[L["The Dawnchaser"]] = 3,
 			[L["The Bloodoath"]] = 3,
 			[4] = L["m_astrocrystal"],
-			[L["Greengil Coast"]] = 4,
+			[L["Greengill Coast"]] = 4,
 			[L["Dawnstar Village"]] = 4,
 			-------------------------------------
 			
@@ -225,7 +225,6 @@ function IHML:PLAYER_ENTERING_WORLD()
 			currentType = "instance"
 		end
 	end
-	self:ZoneChanged()
 end
 
 function IHML:ADDON_LOADED(event, addon)
@@ -424,10 +423,12 @@ function IHML:UpdateSettings()
 		end
 		if p.byZone then
 			self:RegisterEvent("MINIMAP_ZONE_CHANGED", "ZoneChanged")
+			self:RegisterEvent("ZONE_CHANGED_NEW_AREA", "ZoneChanged")
 			self:RegisterEvent("ZONE_CHANGED_INDOORS", "ZoneChanged")
 			self:RegisterEvent("ZONE_CHANGED", "ZoneChanged")
 		else
 			self:UnregisterEvent("MINIMAP_ZONE_CHANGED")
+			self:UnregisterEvent("ZONE_CHANGED_NEW_AREA")
 			self:UnregisterEvent("ZONE_CHANGED_INDOORS")
 			self:UnregisterEvent("ZONE_CHANGED")
 		end

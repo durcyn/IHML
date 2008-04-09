@@ -105,7 +105,7 @@ L["m_deadscar"] = [[#showtooltip item:34475
 L["The Dawning Square"] = "曙光廣場"
 L["m_ssbanner"] = [[#showtooltip [dead] item:34414; item:34533
 /use [dead] 破碎之日旗幟; item:34533]] -- Translate Astromancer's Crystal pls :)
-L["Greengil Coast"] = "綠鰓海岸"
+L["Greengill Coast"] = "綠鰓海岸"
 L["Dawnstar Village"] = "晨星村"
 L["m_astrocrystal"] = [[#showtooltip item:34533
 /use 星術師水晶]]

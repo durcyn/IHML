@@ -104,7 +104,7 @@ L["m_deadscar"] = [[#showtooltip item:34475
 L["The Dawning Square"] = "Place du Point-du-jour"
 L["m_ssbanner"] = [[#showtooltip [dead] item:34414; item:34533
 /use [dead] Bannière du Soleil brisé; Cristal de l'astromancien]]
-L["Greengil Coast"] = "Côte de Verte-branchie"
+L["Greengill Coast"] = "Côte de Verte-branchie"
 L["Dawnstar Village"] = "Étoile-de-l'aube"
 L["m_astrocrystal"] = [[#showtooltip item:34533
 /use Cristal de l'astromancien]]
