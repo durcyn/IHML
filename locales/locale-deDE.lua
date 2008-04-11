@@ -103,19 +103,19 @@ L["m_deadscar"] = [[#showtooltip item:34475
 /use Arkane Ladungen]]
 L["The Dawning Square"] = "Platz der Morgenröte"
 L["m_ssbanner"] = [[#showtooltip [dead] item:34414; item:34533
-/use [dead] Banner der Zerschmetterten Sonne; item:34533]] -- Translate Astromancer's Crystal pls :)
---L["Greengil Coast"] = "Greengil Coast"
---L["Dawnstar Village"] = "Dawnstar Village"
---L["m_astrocrystal"] = [[#showtooltip item:34533
---/use Astromancer's Crystal]]
+/use [dead] Banner der Zerschmetterten Sonne; item:34533]]
+L["Greengill Coast"] = "Küste der Grünkiemen"
+L["Dawnstar Village"] = "Morgenstern"
+L["m_astrocrystal"] = [[#showtooltip item:34533
+/use Kristall des Astromanten]]
 L["Bash'ir Landing"] = "Landeplatz von Bash'ir"
 L["m_bashir"] = [[#showtooltip item:34248
 /use Phasenvorrichtung von Bash'ir]]
---L["The Sin'loren"] = "The Sin'loren"
---L["The Dawnchaser"] = "The Dawnchaser"
---L["The Bloodoath"] = "The Bloodoath"
---L["m_flamingoil"] = [[#showtooltip item:34489
---/use Flaming Oil]]
+L["The Sin'loren"] = "Die Sin'loren"
+L["The Dawnchaser"] = "Die Morgensturm"
+L["The Bloodoath"] = "Die Blutschwur"
+L["m_flamingoil"] = [[#showtooltip item:34489
+/use Flammendes Öl]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "Hallen der Theorie"
 L["m_vexallus"] = [[/targetexact Pure Energie
