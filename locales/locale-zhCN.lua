@@ -116,6 +116,9 @@ L["m_bashir"] = [[#showtooltip item:34248
 --L["The Bloodoath"] = "The Bloodoath"
 --L["m_flamingoil"] = [[#showtooltip item:34489
 --/use Flaming Oil]]
+--L["Sun's Reach Armory"] = "Sun's Reach Armory"
+--L["m_atamal"] = [[#showtooltip item:34500
+--/use Ata'mal Armament]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "学术大厅"
 L["m_vexallus"] = [[/targetexact 纯净能量

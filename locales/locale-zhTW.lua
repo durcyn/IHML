@@ -104,7 +104,7 @@ L["m_deadscar"] = [[#showtooltip item:34475
 /use 秘法炸藥]]
 L["The Dawning Square"] = "曙光廣場"
 L["m_ssbanner"] = [[#showtooltip [dead] item:34414; item:34533
-/use [dead] 破碎之日旗幟; item:34533]] -- Translate Astromancer's Crystal pls :)
+/use [dead] 破碎之日旗幟; 星術師水晶]]
 L["Greengill Coast"] = "綠鰓海岸"
 L["Dawnstar Village"] = "晨星村"
 L["m_astrocrystal"] = [[#showtooltip item:34533
@@ -117,6 +117,9 @@ L["The Dawnchaser"] = "晨逐者"
 L["The Bloodoath"] = "血之誓約"
 L["m_flamingoil"] = [[#showtooltip item:34489
 /use 烈焰之油]]
+--L["Sun's Reach Armory"] = "Sun's Reach Armory"
+--L["m_atamal"] = [[#showtooltip item:34500
+--/use Ata'mal Armament]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "學術大廳"
 L["m_vexallus"] = [[/targetexact 純淨能量

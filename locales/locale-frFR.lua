@@ -116,6 +116,9 @@ L["The Dawnchaser"] = "Le Chasselaube"
 L["The Bloodoath"] = "Le Serment de sang"
 L["m_flamingoil"] = [[#showtooltip item:34489
 /use Huile enflammée]]
+--L["Sun's Reach Armory"] = "Sun's Reach Armory"
+--L["m_atamal"] = [[#showtooltip item:34500
+--/use Ata'mal Armament]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "Les salles de théorie"
 L["m_vexallus"] = [[/targetexact Energie pure

@@ -103,7 +103,7 @@ L["m_deadscar"] = [[#showtooltip item:34475
 /use Arkane Ladungen]]
 L["The Dawning Square"] = "Platz der Morgenröte"
 L["m_ssbanner"] = [[#showtooltip [dead] item:34414; item:34533
-/use [dead] Banner der Zerschmetterten Sonne; item:34533]]
+/use [dead] Banner der Zerschmetterten Sonne; Kristall des Astromanten]]
 L["Greengill Coast"] = "Küste der Grünkiemen"
 L["Dawnstar Village"] = "Morgenstern"
 L["m_astrocrystal"] = [[#showtooltip item:34533
@@ -116,6 +116,9 @@ L["The Dawnchaser"] = "Die Morgensturm"
 L["The Bloodoath"] = "Die Blutschwur"
 L["m_flamingoil"] = [[#showtooltip item:34489
 /use Flammendes Öl]]
+--L["Sun's Reach Armory"] = "Sun's Reach Armory"
+--L["m_atamal"] = [[#showtooltip item:34500
+--/use Ata'mal Armament]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "Hallen der Theorie"
 L["m_vexallus"] = [[/targetexact Pure Energie

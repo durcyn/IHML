@@ -78,6 +78,7 @@ local defaults = {
 			[4] = L["m_astrocrystal"],
 			[L["Greengill Coast"]] = 4,
 			[L["Dawnstar Village"]] = 4,
+			[L["Sun's Reach Armory"]] = L["m_atamal"],
 			-------------------------------------
 			
 			-- Magisters' Terrace ---------------

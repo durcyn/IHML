@@ -116,6 +116,9 @@ L["The Dawnchaser"] = true
 L["The Bloodoath"] = true
 L["m_flamingoil"] = [[#showtooltip item:34489
 /use Flaming Oil]]
+L["Sun's Reach Armory"] = true
+L["m_atamal"] = [[#showtooltip item:34500
+/use Ata'mal Armament]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = true
 L["m_vexallus"] = [[/targetexact Pure Energy
