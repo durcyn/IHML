@@ -117,9 +117,9 @@ L["The Dawnchaser"] = "晨逐者"
 L["The Bloodoath"] = "血之誓約"
 L["m_flamingoil"] = [[#showtooltip item:34489
 /use 烈焰之油]]
---L["Sun's Reach Armory"] = "Sun's Reach Armory"
---L["m_atamal"] = [[#showtooltip item:34500
---/use Ata'mal Armament]]
+L["Sun's Reach Armory"] = "日境軍械庫"
+L["m_atamal"] = [[#showtooltip item:34500
+/use 阿塔莫武裝]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "學術大廳"
 L["m_vexallus"] = [[/targetexact 純淨能量
