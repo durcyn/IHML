@@ -80,7 +80,7 @@ L["m_forgecamp"] = [[#showtooltip [flying] item:32456; item:32696
 -- Netherwing ---------------
 L["Netherwing Ledge"] = "Escarpement d'Aile-du-Néant"
 L["m_booterang"] = [[#showtooltip item:32680
-/targetexact Péons Gueules-de-dragon paresseux
+/targetexact Péons Gueules-de-dragon désobéissant
 /use Botterang
 /ClearTarget]]
 -- Shattered Sun Offensive --
