@@ -1,60 +1,58 @@
 ﻿local L = LibStub("AceLocale-3.0"):NewLocale("IHML", "zhTW")
 if not L then return end
 
--- See locale-exEX.lua for instructions in how to make a translation
-
---[[ Core -------------------------------
-L["In combat! %s queued lol!"] = true -- %s will be replaced with the macro in question
-L["%s! I have that macro lol!"] = true -- %s will be replaced with the macro in question
-L["Please choose a macroname by typing: /ihml macroname <name here>"] = true -- Don't translate the command, it won't change
-L["|cffff9999Warning!|r No macro named %s found. Make it plz!"] = true -- %s will be replaced with macroname
-L["|cffff9999Warning!|r No free macro space :("] = true
+-- Core -------------------------------
+L["In combat! %s queued lol!"] = "進入戰鬥! %s 排列 lol!" -- %s will be replaced with the macro in question
+L["%s! I have that macro lol!"] = "%s! 我有該巨集了 lol!" -- %s will be replaced with the macro in question
+L["Please choose a macroname by typing: /ihml macroname <name here>"] = "請選擇這巨集名稱的類型: /ihml macroname <name here>" -- Don't translate the command, it won't change
+L["|cffff9999Warning!|r No macro named %s found. Make it plz!"] = "|cffff9999警告!|r 找不到巨集名稱 %s . 請標記它!" -- %s will be replaced with macroname
+L["|cffff9999Warning!|r No free macro space :("] = "|cffff9999警告!|r 無自由巨集空白 :("
 -- /core ------------------------------
 
 -- Config -----------------------------
 -- Options ------------------
-L["Macros"] = true
-L["Options"] = true
-L["Auto Swap"] = true
-L["Use Auto Swap"] = true
-L["Silent"] = true
-L["Don't print to chat when swapping."] = true
-L["Auto Swap events"] = true
-L["BigWigs"] = true
-L["By BigWigs Boss Module"] = true
-L["Instance type"] = true
-L["By instance type. (arena, pvp, party or raid)"] = true -- Don't translate (arena, pvp, party or raid), those names won't change with locale
-L["Zone"] = true
-L["By Zone"] = true
-L["Used Macro"] = true
-L["Make Macro"] = true
-L["Pickup Macro"] = true
-L["Click to pickup the IHML macro so that you can place it on an action bar."] = true
-L["Reinsert default macros"] = true
-L["Use this to recover any removed default macros. Won't replace changed versions. If you want to revert changed macros delete them first."] = true
+L["Macros"] = "巨集"
+L["Options"] = "操作選項"
+L["Auto Swap"] = "自動變換"
+L["Use Auto Swap"] = "使用自動變換"
+L["Silent"] = "不活動"
+L["Don't print to chat when swapping."] = "當變換時無法顯示到字串。"
+L["Auto Swap events"] = "自動變換狀態"
+L["BigWigs"] = "BigWigs"
+L["By BigWigs Boss Module"] = "對應Bigwigs首領模組"
+L["Instance type"] = "情況類型"
+L["By instance type. (arena, pvp, party or raid)"] = "使用事例型態. (競技場, pvp, 小隊或團隊)" -- Don't translate (arena, pvp, party or raid), those names won't change with locale
+L["Zone"] = "地區"
+L["By Zone"] = "在地區"
+L["Used Macro"] = "使用巨集"
+L["Make Macro"] = "標記巨集"
+L["Pickup Macro"] = "收集巨集"
+L["Click to pickup the IHML macro so that you can place it on an action bar."] = "點擊拉動 IHML 巨集到你的動作欄裡."
+L["Reinsert default macros"] = "重新插入預設巨集"
+L["Use this to recover any removed default macros. Won't replace changed versions. If you want to revert changed macros delete them first."] = "使用還原來恢復任何以刪除的預設巨集，不會變更替換版本，如果想恢復以變更的巨集請刪除它們。"
 -- Macros -------------------
-L["Select Macro:"] = true
-L["Select a macro."] = true
-L["Swap!"] = true
-L["Swap to the selected macro."] = true
-L["Edit Macro"] = true
-L["Name: Type \"boss\" for last loaded boss module or \"zone\" for current zone.\nIcon: A number from 1 to 779. You might want to edit this from the Blizzard Macro UI."] = true
-L["Name:"] = true
-L["This needs to match the boss module name or zone exactly for auto swap to work."] = true
-L["Macros must have a name!"] = true
-L["No boss module loaded!"] = true
-L["%s already exists!"] = true -- %s gets replaced with the macro in question
-L["Icon:"] = true
-L["Icon"] = true
---L["Macro body:"] = true
-L["The macro goes here. Still limited to 255 characters."] = true
-L["Make a new macro."] = true
-L["New macro"] = true
-L["New macro %d"] = true -- %d gets replaced with a number
-L["Remove!"] = true
-L["Remove the macro."] = true
-L["Are you sure you want to remove %s?"] = true -- %s gets replaced with the macro in question
--- /config ----------------------------]]
+L["Select Macro:"] = "選擇巨集:"
+L["Select a macro."] = "選擇巨集"
+L["Swap!"] = "變換!"
+L["Swap to the selected macro."] = "變更到選擇的巨集"
+L["Edit Macro"] = "編輯巨集"
+L["Name: Type \"boss\" for last loaded boss module or \"zone\" for current zone.\nIcon: A number from 1 to 779. You might want to edit this from the Blizzard Macro UI."] = "名稱: 類型 \"boss\" 載入最新的首領模組或者 \"zone\" 的來源地區，\n圖示: 一個數字從 1 到 779. 也許你會想去編輯暴風雪的巨集介面。"
+L["Name:"] = "名稱:"
+L["This needs to match the boss module name or zone exactly for auto swap to work."] = "這需要跟隨首領模組名稱或者是準確地區名稱才能使自動變換動作。"
+L["Macros must have a name!"] = "巨集必需要有名稱!"
+L["No boss module loaded!"] = "沒有首領模組載入!"
+L["%s already exists!"] = "%s 已經存在!" -- %s gets replaced with the macro in question
+L["Icon:"] = "圖示:"
+L["Icon"] = "圖示"
+--L["Macro body:"] = "Macro body:"
+L["The macro goes here. Still limited to 255 characters."] = "這個巨集已經達到255個字串界限了"
+L["Make a new macro."] = "標記新巨集。"
+L["New macro"] = "新巨集"
+L["New macro %d"] = "新巨集 %d" -- %d gets replaced with a number
+L["Remove!"] = "移除！"
+L["Remove the macro."] = "移除該巨集"
+L["Are you sure you want to remove %s?"] = "你確定移除 %s？" -- %s gets replaced with the macro in question
+-- /config ----------------------------
 
 -- Default macros ---------------------
 -- Skettis ------------------
