@@ -2,56 +2,56 @@
 if not L then return end
 
 -- Core -------------------------------
-L["In combat! %s queued lol!"] = "進入戰鬥! %s 排列 lol!" -- %s will be replaced with the macro in question
-L["%s! I have that macro lol!"] = "%s! 我有該巨集了 lol!" -- %s will be replaced with the macro in question
-L["Please choose a macroname by typing: /ihml macroname <name here>"] = "請選擇這巨集名稱的類型: /ihml macroname <name here>" -- Don't translate the command, it won't change
-L["|cffff9999Warning!|r No macro named %s found. Make it plz!"] = "|cffff9999警告!|r 找不到巨集名稱 %s . 請標記它!" -- %s will be replaced with macroname
-L["|cffff9999Warning!|r No free macro space :("] = "|cffff9999警告!|r 無自由巨集空白 :("
+L["In combat! %s queued lol!"] = "戰鬥中! %s 已排程!" -- %s will be replaced with the macro in question
+L["%s! I have that macro lol!"] = "%s! 巨集已存在!" -- %s will be replaced with the macro in question
+L["Please choose a macroname by typing: /ihml macroname <name here>"] = "請用以下命令指定巨集: /ihml macroname <巨集名稱>" -- Don't translate the command, it won't change
+L["|cffff9999Warning!|r No macro named %s found. Make it plz!"] = "|cffff9999警告!|r 找不到巨集 %s。請建立新的巨集!" -- %s will be replaced with macroname
+L["|cffff9999Warning!|r No free macro space :("] = "|cffff9999警告!|r 巨集空間不足"
 -- /core ------------------------------
 
 -- Config -----------------------------
 -- Options ------------------
 L["Macros"] = "巨集"
-L["Options"] = "操作選項"
-L["Auto Swap"] = "自動變換"
-L["Use Auto Swap"] = "使用自動變換"
+L["Options"] = "選項"
+L["Auto Swap"] = "自動更換"
+L["Use Auto Swap"] = "使用自動更換"
 L["Silent"] = "不活動"
-L["Don't print to chat when swapping."] = "當變換時無法顯示到字串。"
-L["Auto Swap events"] = "自動變換狀態"
+L["Don't print to chat when swapping."] = "更換時不印出訊息"
+L["Auto Swap events"] = "自動更換事件"
 L["BigWigs"] = "BigWigs"
-L["By BigWigs Boss Module"] = "對應Bigwigs首領模組"
-L["Instance type"] = "情況類型"
-L["By instance type. (arena, pvp, party or raid)"] = "使用事例型態. (競技場, pvp, 小隊或團隊)" -- Don't translate (arena, pvp, party or raid), those names won't change with locale
+L["By BigWigs Boss Module"] = "依 BigWigs 模組"
+L["Instance type"] = "副本類別"
+L["By instance type. (arena, pvp, party or raid)"] = "依副本類別 (arena, pvp, party or raid)" -- Don't translate (arena, pvp, party or raid), those names won't change with locale
 L["Zone"] = "地區"
-L["By Zone"] = "在地區"
-L["Used Macro"] = "使用巨集"
-L["Make Macro"] = "標記巨集"
-L["Pickup Macro"] = "收集巨集"
-L["Click to pickup the IHML macro so that you can place it on an action bar."] = "點擊拉動 IHML 巨集到你的動作欄裡."
-L["Reinsert default macros"] = "重新插入預設巨集"
-L["Use this to recover any removed default macros. Won't replace changed versions. If you want to revert changed macros delete them first."] = "使用還原來恢復任何以刪除的預設巨集，不會變更替換版本，如果想恢復以變更的巨集請刪除它們。"
+L["By Zone"] = "依地區"
+L["Used Macro"] = "已使用巨集"
+L["Make Macro"] = "建立新巨集"
+L["Pickup Macro"] = "選擇巨集"
+L["Click to pickup the IHML macro so that you can place it on an action bar."] = "點擊 IHML 巨集，這樣你可以將它放到你的動作條上"
+L["Reinsert default macros"] = "重置預設巨集"
+L["Use this to recover any removed default macros. Won't replace changed versions. If you want to revert changed macros delete them first."] = "還原已刪除的預設巨集。不會取代已變更的版本，如果你要還原已變更的巨集，請先刪除它們"
 -- Macros -------------------
 L["Select Macro:"] = "選擇巨集:"
-L["Select a macro."] = "選擇巨集"
-L["Swap!"] = "變換!"
-L["Swap to the selected macro."] = "變更到選擇的巨集"
+L["Select a macro."] = "選擇一個巨集。"
+L["Swap!"] = "更換!"
+L["Swap to the selected macro."] = "更換成選擇的巨集"
 L["Edit Macro"] = "編輯巨集"
-L["Name: Type \"boss\" for last loaded boss module or \"zone\" for current zone.\nIcon: A number from 1 to 779. You might want to edit this from the Blizzard Macro UI."] = "名稱: 類型 \"boss\" 載入最新的首領模組或者 \"zone\" 的來源地區，\n圖示: 一個數字從 1 到 779. 也許你會想去編輯暴風雪的巨集介面。"
+L["Name: Type \"boss\" for last loaded boss module or \"zone\" for current zone.\nIcon: A number from 1 to 779. You might want to edit this from the Blizzard Macro UI."] = "名稱: 輸入 \"boss\" 代表最後使用的首領模組 或 \"zone\" 代表目前地區。\n圖示: 為 1 到 779 的數字，從暴風雪巨集視窗來編輯會比較容易"
 L["Name:"] = "名稱:"
-L["This needs to match the boss module name or zone exactly for auto swap to work."] = "這需要跟隨首領模組名稱或者是準確地區名稱才能使自動變換動作。"
+L["This needs to match the boss module name or zone exactly for auto swap to work."] = "這必須對應首領模組名稱或者是準確地區名稱才能使自動變換動作"
 L["Macros must have a name!"] = "巨集必需要有名稱!"
 L["No boss module loaded!"] = "沒有首領模組載入!"
 L["%s already exists!"] = "%s 已經存在!" -- %s gets replaced with the macro in question
 L["Icon:"] = "圖示:"
 L["Icon"] = "圖示"
---L["Macro body:"] = "Macro body:"
-L["The macro goes here. Still limited to 255 characters."] = "這個巨集已經達到255個字串界限了"
-L["Make a new macro."] = "標記新巨集。"
+--L["Macro body:"] = true
+L["The macro goes here. Still limited to 255 characters."] = "輸入巨集，內容仍限制在 255 字元以內"
+L["Make a new macro."] = "建立新巨集"
 L["New macro"] = "新巨集"
 L["New macro %d"] = "新巨集 %d" -- %d gets replaced with a number
-L["Remove!"] = "移除！"
+L["Remove!"] = "移除!"
 L["Remove the macro."] = "移除該巨集"
-L["Are you sure you want to remove %s?"] = "你確定移除 %s？" -- %s gets replaced with the macro in question
+L["Are you sure you want to remove %s?"] = "你確定要移除 %s 嗎?" -- %s gets replaced with the macro in question
 -- /config ----------------------------
 
 -- Default macros ---------------------
@@ -64,7 +64,7 @@ L["Upper Veil Shil'ak"] = "迷霧希拉克上層"
 L["Veil Ala'rak"] = "迷霧亞拉芮克"
 L["Veil Harr'ik"] = "迷霧哈瑞克"
 L["m_skettis"] = [[#showtooltip item:32406
-/use [mounted] 禦天者爆破彈藥]]
+/use [flying] 禦天者爆破彈藥]]
 -- Ogri'La ------------------
 L["Vortex Pinnacle"] = "漩渦尖塔"
 L["m_vortexpinnacle"] = [[#showtooltip item:32698
