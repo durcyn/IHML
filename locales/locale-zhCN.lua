@@ -65,7 +65,7 @@ L["Upper Veil Shil'ak"] = "上层夏尔克鸦巢"
 L["Veil Ala'rak"] = "奥拉克鸦巢"
 L["Veil Harr'ik"] = "哈雷克鸦巢"
 L["m_skettis"] = [[#showtooltip item:32406
-/use [flying] 天空卫队的炸弹]]
+/use 天空卫队的炸弹]]
 -- Ogri'La ------------------
 L["Vortex Pinnacle"] = "漩涡峰"
 L["m_vortexpinnacle"] = [[#showtooltip item:32698
@@ -74,7 +74,7 @@ L["m_vortexpinnacle"] = [[#showtooltip item:32698
 /petpassive]]
 L["Forge Camp: Wrath"] = "铸魔营地：天罚"
 L["Forge Camp: Terror"] = "铸魔营地：恐怖"
-L["m_forgecamp"] = [[#showtooltip item:32456; item:32696
+L["m_forgecamp"] = [[#showtooltip [flying] item:32456; item:32696
 /use [flying] 天空卫队炸弹
 /use [noflying] 放逐水晶]]
 -- Netherwing ---------------
@@ -86,39 +86,39 @@ L["m_booterang"] = [[#showtooltip item:32680
 -- Shattered Sun Offensive --
 L["Isle of Quel'Danas"] = "奎尔丹纳斯岛"
 L["m_crystalcores"] = [[#showtooltip item:34368
-/target 游荡的奥术守卫
+/targetexact 游荡的奥术守卫
 /use 调和过的水晶核心]]
-L["Sun's Reach Sanctum"] = "日境圣所"
+L["Sun's Reach Sanctum"] = "阳湾圣殿"
 L["m_manaremnants"] = [[#showtooltip item:34338
 /use 法力余烬]]
 L["Throne of Kil'jaeden"] = "基尔加丹王座"
 L["m_blood4blood"] = [[#showtooltip item:34257
-/use 魔化虹管 ]]
+/use 魔能虹吸宝石]]
 L["Spirit Fields"] = "灵魂平原"
 L["m_spectrogoggles"] = [[#showtooltip item:35233
 /use 多相光谱护目镜
 /equip 多相光谱护目镜]]
 L["The Dead Scar"] = "死亡之痕"
 L["m_deadscar"] = [[#showtooltip item:34475
-/use 秘法炸药]]
-L["The Dawning Square"] = "曙光广场"
+/use 奥术炸药]]
+L["The Dawning Square"] = "黎明广场"
 L["m_ssbanner"] = [[#showtooltip [dead] item:34414; item:34533
-/use [dead] 破碎之日旗帜; item:34533]] -- Translate Astromancer's Crystal pls :)
---L["Greengill Coast"] = "Greengill Coast"
---L["Dawnstar Village"] = "Dawnstar Village"
---L["m_astrocrystal"] = [[#showtooltip item:34533
---/use Astromancer's Crystal]]
+/use [dead] 破碎残阳战旗; 星术师的水晶]]
+L["Greengill Coast"] = "绿鳃海岸"
+L["Dawnstar Village"] = "晨星村"
+L["m_astrocrystal"] = [[#showtooltip item:34533
+/use 星术师的水晶]]
 L["Bash'ir Landing"] = "巴什伊尔码头"
 L["m_bashir"] = [[#showtooltip item:34248
 /use 巴什伊尔相位设备]]
---L["The Sin'loren"] = "The Sin'loren"
---L["The Dawnchaser"] = "The Dawnchaser"
---L["The Bloodoath"] = "The Bloodoath"
---L["m_flamingoil"] = [[#showtooltip item:34489
---/use Flaming Oil]]
---L["Sun's Reach Armory"] = "Sun's Reach Armory"
---L["m_atamal"] = [[#showtooltip item:34500
---/use Ata'mal Armament]]
+L["The Sin'loren"] = "辛洛雷号"
+L["The Dawnchaser"] = "曙光追寻者号"
+L["The Bloodoath"] = "血誓号"
+L["m_flamingoil"] = [[#showtooltip item:34489
+/use 火油]]
+L["Sun's Reach Armory"] = "阳湾军械库"
+L["m_atamal"] = [[#showtooltip item:34500
+/use 阿塔玛军备]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "学术大厅"
 L["m_vexallus"] = [[/targetexact 纯净能量
@@ -128,11 +128,11 @@ L["The Curator"] = "馆长"
 L["m_curator"] = [[/targetexact 星界光芒
 /startattack]]
 L["Terestian Illhoof"] = "特雷斯坦·邪蹄"
-L["m_illhoof"] = [[/targetexact 恶魔锁链
+L["m_illhoof"] = [[/targetexact 恶魔之链
 /startattack]]
 -- Zul'Aman -----------------
 L["Halazzi"] = "哈尔拉兹"
-L["m_halazzi"] = [[/targetexact 堕落闪电图腾
+L["m_halazzi"] = [[/targetexact 腐化闪电图腾
 /startattack]]
 -- Serpentshrine Cavern -----
 L["Fathom-Lord Karathress"] = "深水领主卡拉瑟雷斯"
@@ -141,9 +141,9 @@ L["m_flk"] = [[/targetexact 溅火图腾
 L["Lady Vashj"] = "瓦丝琪"
 L["m_vashj"] = [[#showtooltip item:31088
 /use 污染之核
-/y <-- 污染之核 传给: %t !!
-/s <-- 污染之核 传给: %t !!
-/script SendChatMessage("你有污染之核！", "WHISPER", nil, UnitName("target"));]]
+/y <-- 我把污染之核 传给: %t 了!!
+/s <-- 我把污染之核 传给: %t 了!!
+/script SendChatMessage("%t 我把污染之核传给你了", "WHISPER", nil, UnitName("target"));]]
 -- Tempest Keep -------------
 -- Mount Hyjal --------------
 L["Archimonde"] = "阿克蒙德"
