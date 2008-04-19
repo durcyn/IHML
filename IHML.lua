@@ -3,20 +3,22 @@ local IHML = LibStub("AceAddon-3.0"):NewAddon("IHML", "AceConsole-3.0", "AceEven
 local L = LibStub("AceLocale-3.0"):GetLocale("IHML")
 
 -- Upvalues from the global namespace
-local format = string.format
+local next = next
+local type = type
 local pairs = pairs
 local select = select
-local string = string
 local tonumber = tonumber
 local tostring = tostring
-local GetMinimapZoneText = GetMinimapZoneText
-local IsInInstance = IsInInstance
-local InCombatLockdown = InCombatLockdown
-local CreateMacro = CreateMacro
 local EditMacro = EditMacro
-local GetMacroIndexByName = GetMacroIndexByName
+local format = string.format
+local CreateMacro = CreateMacro
+local PickupMacro = PickupMacro
+local IsInInstance = IsInInstance
 local GetMacroInfo = GetMacroInfo
+local InCombatLockdown = InCombatLockdown
 local GetMacroIconInfo = GetMacroIconInfo
+local GetMinimapZoneText = GetMinimapZoneText
+local GetMacroIndexByName = GetMacroIndexByName
 
 -- locals
 local db, c, p, options
@@ -279,8 +281,15 @@ function IHML:SwapMacro(new, silent)
 		body = mBody[new]
 	end
 	if not new or -- Got called without argument even when there was nothing queued.
-		not mBody[new] or -- Macro don't exists
-		new == c.current then -- Macro is same as current macro. TODO: Swap anyway if the macro has been modified?
+		not body then -- Macro don't exists
+		return
+	end
+	if new == c.current then -- Macro is same as current macro.
+		if queued then
+			-- Remove the queued macro
+			queued = nil
+			self:UnregisterEvent("PLAYER_REGEN_ENABLED")
+		end
 		return
 	end
 	if InCombatLockdown() then
