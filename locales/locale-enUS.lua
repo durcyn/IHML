@@ -105,9 +105,11 @@ L["The Dawning Square"] = true
 L["m_ssbanner"] = [[#showtooltip [dead] item:34414; item:34533
 /use [dead] Shattered Sun Banner; Astromancer's Crystal]]
 L["Greengill Coast"] = true
+L["m_greengil"] = [[#showtooltip [exists] item:34483; item:34533
+/use [exists] Orb of Murloc Control; Astromancer's Crystal]]
 L["Dawnstar Village"] = true
-L["m_astrocrystal"] = [[#showtooltip item:34533
-/use Astromancer's Crystal]]
+L["m_dawnstar"] = [[#showtooltip [dead] item:34368; item:34533
+/use [dead] Attuned Crystal Cores; Astromancer's Crystal]]
 L["Bash'ir Landing"] = true
 L["m_bashir"] = [[#showtooltip item:34248
 /use Bash'ir Phasing Device]]

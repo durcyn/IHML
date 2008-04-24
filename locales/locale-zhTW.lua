@@ -104,7 +104,11 @@ L["The Dawning Square"] = "曙光廣場"
 L["m_ssbanner"] = [[#showtooltip [dead] item:34414; item:34533
 /use [dead] 破碎之日旗幟; 星術師水晶]]
 L["Greengill Coast"] = "綠鰓海岸"
+--L["m_greengil"] = [[#showtooltip [exists] item:34483; item:34533
+--/use [exists] Orb of Murloc Control; 星術師水晶]]
 L["Dawnstar Village"] = "晨星村"
+L["m_dawnstar"] = [[#showtooltip [dead] item:34368; item:34533
+/use [dead] 調諧水晶核; 星術師水晶]]
 L["m_astrocrystal"] = [[#showtooltip item:34533
 /use 星術師水晶]]
 L["Bash'ir Landing"] = "貝許爾平臺"

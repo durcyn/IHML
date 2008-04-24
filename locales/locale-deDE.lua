@@ -105,9 +105,11 @@ L["The Dawning Square"] = "Platz der Morgenröte"
 L["m_ssbanner"] = [[#showtooltip [dead] item:34414; item:34533
 /use [dead] Banner der Zerschmetterten Sonne; Kristall des Astromanten]]
 L["Greengill Coast"] = "Küste der Grünkiemen"
+--L["m_greengil"] = [[#showtooltip [exists] item:34483; item:34533
+--/use [exists] Orb of Murloc Control; Kristall des Astromanten]]
 L["Dawnstar Village"] = "Morgenstern"
-L["m_astrocrystal"] = [[#showtooltip item:34533
-/use Kristall des Astromanten]]
+L["m_dawnstar"] = [[#showtooltip [dead] item:34368; item:34533
+/use [dead] Abgestimmte Kristallkerne; Kristall des Astromanten]]
 L["Bash'ir Landing"] = "Landeplatz von Bash'ir"
 L["m_bashir"] = [[#showtooltip item:34248
 /use Phasenvorrichtung von Bash'ir]]

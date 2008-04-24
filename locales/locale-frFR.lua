@@ -105,9 +105,11 @@ L["The Dawning Square"] = "Place du Point-du-jour"
 L["m_ssbanner"] = [[#showtooltip [dead] item:34414; item:34533
 /use [dead] Bannière du Soleil brisé; Cristal de l'astromancien]]
 L["Greengill Coast"] = "Côte de Verte-branchie"
+--L["m_greengil"] = [[#showtooltip [exists] item:34483; item:34533
+--/use [exists] Orb of Murloc Control; Cristal de l'astromancien]]
 L["Dawnstar Village"] = "Étoile-de-l'aube"
-L["m_astrocrystal"] = [[#showtooltip item:34533
-/use Cristal de l'astromancien]]
+L["m_dawnstar"] = [[#showtooltip [dead] item:34368; item:34533
+/use [dead] Noyaux cristallins en phase; Cristal de l'astromancien]]
 L["Bash'ir Landing"] = "Point d'ancrage de Bash'ir"
 L["m_bashir"] = [[#showtooltip item:34248
 /use Machine éclipsante de Bash'ir]]

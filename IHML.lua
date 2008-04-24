@@ -77,9 +77,8 @@ local defaults = {
 			[L["The Sin'loren"]] = 3,
 			[L["The Dawnchaser"]] = 3,
 			[L["The Bloodoath"]] = 3,
-			[4] = L["m_astrocrystal"],
-			[L["Greengill Coast"]] = 4,
-			[L["Dawnstar Village"]] = 4,
+			[L["Greengill Coast"]] = L["m_greengil"],
+			[L["Dawnstar Village"]] = L["m_dawnstar"],
 			[L["Sun's Reach Armory"]] = L["m_atamal"],
 			-------------------------------------
 			
