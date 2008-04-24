@@ -80,6 +80,7 @@ local defaults = {
 			[L["Greengill Coast"]] = L["m_greengil"],
 			[L["Dawnstar Village"]] = L["m_dawnstar"],
 			[L["Sun's Reach Armory"]] = L["m_atamal"],
+			[L["Razorthorn Rise"]] = L["m_razorthorn"],
 			-------------------------------------
 			
 			-- Magisters' Terrace ---------------
