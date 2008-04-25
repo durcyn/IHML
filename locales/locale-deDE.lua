@@ -122,9 +122,9 @@ L["Sun's Reach Armory"] = "Waffenkammer der Sonnenweiten"
 L["m_atamal"] = [[#showtooltip item:34500
 /use Waffe von Ata'mal]]
 --L["Razorthorn Rise"] = "Razorthorn Rise"
---L["m_razorthorn"] = [[#showtooltip [pet] Expose Razorthorn Root; item:34255
+--L["m_razorthorn"] = [[#showtooltip [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root; item:34255
 --/use [nopet] Razorthorn Flayer Gland
---/cast [pet] Expose Razorthorn Root]]
+--/cast [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "Hallen der Theorie"
 L["m_vexallus"] = [[/targetexact Pure Energie

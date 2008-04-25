@@ -122,9 +122,9 @@ L["m_flamingoil"] = [[#showtooltip item:34489
 --L["m_atamal"] = [[#showtooltip item:34500
 --/use Ata'mal Armament]]
 --L["Razorthorn Rise"] = "Razorthorn Rise"
---L["m_razorthorn"] = [[#showtooltip [pet] Expose Razorthorn Root; item:34255
+--L["m_razorthorn"] = [[#showtooltip [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root; item:34255
 --/use [nopet] Razorthorn Flayer Gland
---/cast [pet] Expose Razorthorn Root]]
+--/cast [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "Les salles de théorie"
 L["m_vexallus"] = [[/targetexact Energie pure

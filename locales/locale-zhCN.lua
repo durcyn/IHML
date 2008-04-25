@@ -122,9 +122,9 @@ L["Sun's Reach Armory"] = "阳湾军械库"
 L["m_atamal"] = [[#showtooltip item:34500
 /use 阿塔玛军备]]
 --L["Razorthorn Rise"] = "Razorthorn Rise"
---L["m_razorthorn"] = [[#showtooltip [pet] Expose Razorthorn Root; item:34255
+--L["m_razorthorn"] = [[#showtooltip [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root; item:34255
 --/use [nopet] Razorthorn Flayer Gland
---/cast [pet] Expose Razorthorn Root]]
+--/cast [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "学术大厅"
 L["m_vexallus"] = [[/targetexact 纯净能量
