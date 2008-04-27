@@ -146,7 +146,7 @@ L["m_flk"] = [[/targetexact Totem crache-feu
 /startattack]]
 L["Lady Vashj"] = "Dame Vashj"
 L["m_vashj"] = [[#showtooltip item:31088
-/use Coeur corrompu
+/use Noyau contaminé
 /y <-- NOYAU CONTAMINÉ À : %t !
 /s <-- NOYAU CONTAMINÉ À : %t !
 /script SendChatMessage("TU AS LE NOYAU !", "WHISPER", nil, UnitName("target"));]]
