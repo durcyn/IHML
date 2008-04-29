@@ -79,6 +79,12 @@ L["m_forgecamp"] = [[#showtooltip [flying] item:32456; item:32696
 /use [noflying] Kristall der Verbannung]] 
 -- Netherwing ---------------
 L["Netherwing Ledge"] = "Netherschwingenscherbe"
+--L["m_booterang"] = [[#showtooltip [flying] item:32680; item:32503
+--/use [noflying] Yarzill's Mutton
+--/stopmacro [noflying]
+--/targetexact Ungehorsamer Peon des Drachenmals
+--/use Schuhmerang
+--/cleartarget]] -- Translate Yarzill's Mutton, uncomment and remove the other macro
 L["m_booterang"] = [[#showtooltip item:32680
 /targetexact Ungehorsamer Peon des Drachenmals
 /use Schuhmerang

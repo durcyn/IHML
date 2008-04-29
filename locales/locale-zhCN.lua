@@ -79,8 +79,14 @@ L["m_forgecamp"] = [[#showtooltip [flying] item:32456; item:32696
 /use [noflying] 放逐水晶]]
 -- Netherwing ---------------
 L["Netherwing Ledge"] = "灵翼浮岛"
+--L["m_booterang"] = [[#showtooltip [flying] item:32680; item:32503
+--/use [noflying] Yarzill's Mutton
+--/stopmacro [noflying]
+--/targetexact 偷懒的龙喉苦工
+--/use 训诫靴
+--/cleartarget]] -- Translate Yarzill's Mutton, uncomment and remove the other macro
 L["m_booterang"] = [[#showtooltip item:32680
-/target 偷懒的龙喉苦工
+/targetexact 偷懒的龙喉苦工
 /use 训诫靴
 /cleartarget]]
 -- Shattered Sun Offensive --

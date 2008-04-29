@@ -109,7 +109,9 @@ L["m_forgecamp"] = [[#showtooltip [flying] item:32456; item:32696
 /use [noflying] Banishing Crystal]]
 -- Netherwing ---------------
 L["Netherwing Ledge"] = "Netherwing Ledge"
-L["m_booterang"] = [[#showtooltip item:32680
+L["m_booterang"] = [[#showtooltip [flying] item:32680; item:32503
+/use [noflying] Yarzill's Mutton
+/stopmacro [noflying]
 /targetexact Disobedient Dragonmaw Peon
 /use Booterang
 /cleartarget]]
