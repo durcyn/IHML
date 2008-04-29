@@ -535,13 +535,14 @@ options.args.option.args = {
 		name = L["Make Macro"], type = "execute",
 		desc = L["Make Macro"],
 		order = 201,
-		disabled = function() return GetMacroIndexByName(p.macroname) ~= 0 end,
+		hidden = function() return GetMacroIndexByName(p.macroname) ~= 0 end,
 		func = function() checkMacro(p.macroname) end,
 	},
 	pickup = {
 		name = L["Pickup Macro"], type = "execute",
 		desc = L["Click to pickup the IHML macro so that you can place it on an action bar."],
 		order = 202,
+		hidden = function() return GetMacroIndexByName(p.macroname) == 0 end,
 		disabled = InCombatLockdown,
 		func = function()
 			-- Shouldn't happen because the button is disabled, but it won't hurt to test anyway.
