@@ -36,7 +36,7 @@ L["Select Macro:"] = "Macro sélectionée :"
 L["Select a macro."] = "Choisissez une macro."
 L["Swap!"] = "Changer !"
 L["Swap to the selected macro."] = "Swap to the selected macro."
-L["Edit Macro"] = "Editer la macro"
+L["Edit Macro"] = "Éditer la macro"
 L["Name: Type \"boss\" for last loaded boss module or \"zone\" for current zone.\nIcon: A number from 1 to 779. You might want to edit this from the Blizzard Macro UI."] = "Nom : Tapez \"boss\" pour le dernier module de boss chargé ou \"zone\" pour la zone actuelle.\nIcône : Un nombre compris entre 1 et 779. Si vous le souhaitez, vous pouvez utiliser l'interface par défaut (Blizzard) pour modifier les macros."
 L["Name:"] = "Nom :"
 L["This needs to match the boss module name or zone exactly for auto swap to work."] = "Ce paramètre doit correspondre exactement au nom d'un module de boss ou d'une zone pour que le changement automatique fonctionne."
@@ -78,17 +78,13 @@ L["m_forgecamp"] = [[#showtooltip [flying] item:32456; item:32696
 /use [flying] Bombes de la Garde-ciel
 /use [noflying] Cristal de bannissement]]
 -- Netherwing ---------------
-L["Netherwing Ledge"] = "Escarpement d'Aile-du-Néant"
---L["m_booterang"] = [[#showtooltip [flying] item:32680; item:32503
---/use [noflying] Yarzill's Mutton
---/stopmacro [noflying]
---/targetexact Péons Gueules-de-dragon désobéissant
---/use Botterang
---/cleartarget]] -- Translate Yarzill's Mutton, uncomment and remove the other macro
-L["m_booterang"] = [[#showtooltip item:32680
-/targetexact Péons Gueules-de-dragon désobéissant
+L["Netherwing Ledge"] = "Escarpement de l'Aile-du-Néant"
+L["m_booterang"] = [[#showtooltip [flying] item:32680; item:32503
+/use [noflying] Viande de mouton de Yarzill
+/stopmacro [noflying]
+/targetexact Péon Gueule-de-dragon désobéissant
 /use Botterang
-/ClearTarget]]
+/cleartarget]]
 -- Shattered Sun Offensive --
 L["Isle of Quel'Danas"] = "Île de Quel'Danas"
 L["m_crystalcores"] = [[#showtooltip item:34368
