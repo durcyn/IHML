@@ -78,13 +78,9 @@ L["m_forgecamp"] = [[#showtooltip [flying] item:32456; item:32696
 /use [noflying] 驅逐水晶]]
 -- Netherwing ---------------
 L["Netherwing Ledge"] = "虛空之翼岩架"
---L["m_booterang"] = [[#showtooltip [flying] item:32680; item:32503
---/use [noflying] Yarzill's Mutton
---/stopmacro [noflying]
---/targetexact 不服從的龍喉苦工
---/use 迴力靴
---/cleartarget]] -- Translate Yarzill's Mutton, uncomment and remove the other macro
-L["m_booterang"] = [[#showtooltip item:32680
+L["m_booterang"] = [[#showtooltip [flying] item:32680; item:32503
+/use [noflying] 亞吉歐的羊肉
+/stopmacro [noflying]
 /targetexact 不服從的龍喉苦工
 /use 迴力靴
 /cleartarget]]
@@ -128,10 +124,10 @@ L["m_flamingoil"] = [[#showtooltip item:34489
 L["Sun's Reach Armory"] = "日境軍械庫"
 L["m_atamal"] = [[#showtooltip item:34500
 /use 阿塔莫武裝]]
---L["Razorthorn Rise"] = "Razorthorn Rise"
---L["m_razorthorn"] = [[#showtooltip [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root; item:34255
---/use [nopet] Razorthorn Flayer Gland
---/cast [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root]]
+L["Razorthorn Rise"] = "刺棘高地"
+L["m_razorthorn"] = [[#showtooltip [pet, harm, nodead] 劫掠; [pet] 發現刺棘根莖; item:34255
+/use [nopet] 刺棘撕掠者腺體
+/cast [pet, harm, nodead] 劫掠; [pet] 發現刺棘根莖]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "學術大廳"
 L["m_vexallus"] = [[/targetexact 純淨能量
