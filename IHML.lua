@@ -718,7 +718,7 @@ options.args.macros.args = {
 					if name and mBody[name] then return false end
 					return true
 				end,
-				confirm = function() return format("Are you sure you want to remove %s?", mBody[guiMacro] and guiMacro or c.current) end,
+				confirm = function() return format(L["Are you sure you want to remove %s?"], mBody[guiMacro] and guiMacro or c.current) end,
 				func = function()
 					if mBody[guiMacro] then
 						setMacro(guiMacro)
