@@ -107,8 +107,8 @@ L["The Dawning Square"] = "曙光廣場"
 L["m_ssbanner"] = [[#showtooltip [dead] item:34414; item:34533
 /use [dead] 破碎之日旗幟; 星術師水晶]]
 L["Greengill Coast"] = "綠鰓海岸"
---L["m_greengil"] = [[#showtooltip [exists] item:34483; item:34533
---/use [exists] Orb of Murloc Control; 星術師水晶]]
+L["m_greengil"] = [[#showtooltip [exists] item:34483; item:34533
+/use [exists] 人魚控制寶珠; 星術師水晶]]
 L["Dawnstar Village"] = "晨星村"
 L["m_dawnstar"] = [[#showtooltip [dead] item:34368; item:34533
 /use [dead] 調諧水晶核; 星術師水晶]]
@@ -128,9 +128,9 @@ L["m_razorthorn"] = [[#showtooltip [pet, harm, nodead] 劫掠; [pet] 發現刺�
 /use [nopet] 刺棘撕掠者腺體
 /cast [pet, harm, nodead] 劫掠; [pet] 發現刺棘根莖]]
 -- Cooking ------------------
---L["Ancestral Grounds"] = "Ancestral Grounds"
---L["m_soup4soul"] = [[#showtooltip item:33851
---/use Cooking Pot]]
+L["Ancestral Grounds"] = "先祖之地"
+L["m_soup4soul"] = [[#showtooltip item:33851
+/use 煮菜鍋]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "學術大廳"
 L["m_vexallus"] = [[/targetexact 純淨能量
