@@ -127,6 +127,10 @@ L["Razorthorn Rise"] = "Éminence de Tranchépine"
 L["m_razorthorn"] = [[#showtooltip [pet, harm, nodead] Ravage; [pet] Déterrer une racine de tranchépine; item:34255
 /use [nopet] Glande d'écorcheur tranchépine
 /cast [pet, harm, nodead] Ravage; [pet] Déterrer une racine de tranchépine]]
+-- Cooking ------------------
+--L["Ancestral Grounds"] = "Ancestral Grounds"
+--L["m_soup4soul"] = [[#showtooltip item:33851
+--/use Cooking Pot]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "Les salles de théorie"
 L["m_vexallus"] = [[/targetexact Energie pure

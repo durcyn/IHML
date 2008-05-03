@@ -157,6 +157,10 @@ L["Razorthorn Rise"] = "Razorthorn Rise"
 L["m_razorthorn"] = [[#showtooltip [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root; item:34255
 /use [nopet] Razorthorn Flayer Gland
 /cast [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root]]
+-- Cooking ------------------
+L["Ancestral Grounds"] = "Ancestral Grounds"
+L["m_soup4soul"] = [[#showtooltip item:33851
+/use Cooking Pot]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "Halls of Theory"
 L["m_vexallus"] = [[/targetexact Pure Energy

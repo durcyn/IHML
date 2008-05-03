@@ -131,6 +131,10 @@ L["m_atamal"] = [[#showtooltip item:34500
 --L["m_razorthorn"] = [[#showtooltip [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root; item:34255
 --/use [nopet] Razorthorn Flayer Gland
 --/cast [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root]]
+-- Cooking ------------------
+--L["Ancestral Grounds"] = "Ancestral Grounds"
+--L["m_soup4soul"] = [[#showtooltip item:33851
+--/use Cooking Pot]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "学术大厅"
 L["m_vexallus"] = [[/targetexact 纯净能量

@@ -81,6 +81,8 @@ local defaults = {
 			[L["Dawnstar Village"]] = L["m_dawnstar"],
 			[L["Sun's Reach Armory"]] = L["m_atamal"],
 			[L["Razorthorn Rise"]] = L["m_razorthorn"],
+			-- Cooking ------
+			[L["Ancestral Grounds"]] = L["m_soup4soul"],
 			-------------------------------------
 			
 			-- Magisters' Terrace ---------------

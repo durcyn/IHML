@@ -1,6 +1,7 @@
 ﻿local L = LibStub("AceLocale-3.0"):NewLocale("IHML", "zhTW")
 if not L then return end
 
+
 -- Core -------------------------------
 L["In combat! %s queued lol!"] = "戰鬥中! %s 已排程!" -- %s will be replaced with the macro in question
 L["%s! I have that macro lol!"] = "%s! 巨集已存在!" -- %s will be replaced with the macro in question
@@ -111,8 +112,6 @@ L["Greengill Coast"] = "綠鰓海岸"
 L["Dawnstar Village"] = "晨星村"
 L["m_dawnstar"] = [[#showtooltip [dead] item:34368; item:34533
 /use [dead] 調諧水晶核; 星術師水晶]]
-L["m_astrocrystal"] = [[#showtooltip item:34533
-/use 星術師水晶]]
 L["Bash'ir Landing"] = "貝許爾平臺"
 L["m_bashir"] = [[#showtooltip item:34248
 /use 貝許爾相位裝置]]
@@ -128,6 +127,10 @@ L["Razorthorn Rise"] = "刺棘高地"
 L["m_razorthorn"] = [[#showtooltip [pet, harm, nodead] 劫掠; [pet] 發現刺棘根莖; item:34255
 /use [nopet] 刺棘撕掠者腺體
 /cast [pet, harm, nodead] 劫掠; [pet] 發現刺棘根莖]]
+-- Cooking ------------------
+--L["Ancestral Grounds"] = "Ancestral Grounds"
+--L["m_soup4soul"] = [[#showtooltip item:33851
+--/use Cooking Pot]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "學術大廳"
 L["m_vexallus"] = [[/targetexact 純淨能量
