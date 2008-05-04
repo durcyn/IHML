@@ -79,13 +79,9 @@ L["m_forgecamp"] = [[#showtooltip [flying] item:32456; item:32696
 /use [noflying] 放逐水晶]]
 -- Netherwing ---------------
 L["Netherwing Ledge"] = "灵翼浮岛"
---L["m_booterang"] = [[#showtooltip [flying] item:32680; item:32503
---/use [noflying] Yarzill's Mutton
---/stopmacro [noflying]
---/targetexact 偷懒的龙喉苦工
---/use 训诫靴
---/cleartarget]] -- Translate Yarzill's Mutton, uncomment and remove the other macro
-L["m_booterang"] = [[#showtooltip item:32680
+L["m_booterang"] = [[#showtooltip [flying] item:32680; item:32503
+/use [noflying] 亚兹尔的羊肉
+/stopmacro [noflying]
 /targetexact 偷懒的龙喉苦工
 /use 训诫靴
 /cleartarget]]
@@ -111,8 +107,8 @@ L["The Dawning Square"] = "黎明广场"
 L["m_ssbanner"] = [[#showtooltip [dead] item:34414; item:34533
 /use [dead] 破碎残阳战旗; 星术师的水晶]]
 L["Greengill Coast"] = "绿鳃海岸"
---L["m_greengil"] = [[#showtooltip [exists] item:34483; item:34533
---/use [exists] Orb of Murloc Control; 星术师的水晶]]
+L["m_greengil"] = [[#showtooltip [exists] item:34483; item:34533
+/use [exists] 鱼人控制宝珠; 星术师的水晶]]
 L["Dawnstar Village"] = "晨星村"
 L["m_dawnstar"] = [[#showtooltip [dead] item:34368; item:34533
 /use [dead] 调和过的水晶核心; 星术师的水晶]]
@@ -127,14 +123,14 @@ L["m_flamingoil"] = [[#showtooltip item:34489
 L["Sun's Reach Armory"] = "阳湾军械库"
 L["m_atamal"] = [[#showtooltip item:34500
 /use 阿塔玛军备]]
---L["Razorthorn Rise"] = "Razorthorn Rise"
---L["m_razorthorn"] = [[#showtooltip [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root; item:34255
---/use [nopet] Razorthorn Flayer Gland
---/cast [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root]]
+L["Razorthorn Rise"] = "荆刺高地"
+L["m_razorthorn"] = [[#showtooltip [pet, harm, nodead] 毁灭; [pet] 发现荆刺根须; item:34255
+/use [nopet] 荆刺剥石者的腺体
+/cast [pet, harm, nodead] 毁灭; [pet] 发现荆刺根须]]
 -- Cooking ------------------
---L["Ancestral Grounds"] = "Ancestral Grounds"
---L["m_soup4soul"] = [[#showtooltip item:33851
---/use Cooking Pot]]
+L["Ancestral Grounds"] = "先祖之地"
+L["m_soup4soul"] = [[#showtooltip item:33851
+/use 烹饪锅]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "学术大厅"
 L["m_vexallus"] = [[/targetexact 纯净能量
