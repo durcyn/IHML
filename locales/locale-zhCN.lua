@@ -151,6 +151,9 @@ L["Fathom-Lord Karathress"] = "深水领主卡拉瑟雷斯"
 L["m_flk"] = [[/targetexact 溅火图腾
 /startattack]]
 L["Lady Vashj"] = "瓦丝琪"
+--L["m_vashj"] = [[/stopmacro[noexists][harm]
+--/run i=31088 t="target" if GetItemCount(i)>0 and HasFullControl() and IsItemInRange(i,t) then n=UnitName(t) s=SendChatMessage m="<-- TAINTED CORE TO --> " s(m..n.." !","RAID") s(m.."YOU !","WHISPER",nil,n) end
+--/use item:31088]] -- I won't even try to translate this myself :P Keep the 255 char limit in mind.
 L["m_vashj"] = [[#showtooltip item:31088
 /use 污染之核
 /y <-- 我把污染之核 传给: %t 了!!

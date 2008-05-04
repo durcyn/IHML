@@ -151,11 +151,9 @@ L["Fathom-Lord Karathress"] = true
 L["m_flk"] = [[/targetexact Spitfire Totem
 /startattack]]
 L["Lady Vashj"] = true
-L["m_vashj"] = [[#showtooltip item:31088
-/use Tainted Core
-/y <-- TAINTED CORE TO: %t !!
-/s <-- TAINTED CORE TO: %t !!
-/script SendChatMessage("!! YOU HAVE THE CORE !!", "WHISPER", nil, UnitName("target"));]]
+L["m_vashj"] = [[/stopmacro[noexists][harm]
+/run i=31088 t="target" if GetItemCount(i)>0 and HasFullControl() and IsItemInRange(i,t) then n=UnitName(t) s=SendChatMessage m="<-- TAINTED CORE TO --> " s(m..n.." !","RAID") s(m.."YOU !","WHISPER",nil,n) end
+/use item:31088]]
 -- Tempest Keep -------------
 -- Mount Hyjal --------------
 L["Archimonde"] = true

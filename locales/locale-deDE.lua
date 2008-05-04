@@ -155,11 +155,9 @@ L["Fathom-Lord Karathress"] = "Tiefenlord Karathress"
 L["m_flk"] = [[/targetexact Feuerspuckendes Totem
 /startattack]]
 L["Lady Vashj"] = "Lady Vashj"
-L["m_vashj"] = [[#showtooltip item:31088
-/use Besudelter Kern
-/y <-- BESUDELTER KERN ZU: %t !!
-/s <-- BESUDELTER KERN ZU: %t !!
-/script SendChatMessage("!! DU HAST DEN KERN !!", "WHISPER", nil, UnitName("target"));]]
+L["m_vashj"] = [[/stopmacro[noexists][harm]
+/run i=31088 t="target" if GetItemCount(i)>0 and HasFullControl() and IsItemInRange(i,t) then n=UnitName(t) s=SendChatMessage m="<-- KERN ZU --> " s(m..n.." !","RAID") s(m.."DU !","WHISPER",nil,n) end
+/use item:31088]] -- This is probably as bad as "All your base are belong to us". Keep the 255 char limit in mind when doing a proper translation
 -- Tempest Keep -------------
 -- Mount Hyjal --------------
 L["Archimonde"] = "Archimonde"

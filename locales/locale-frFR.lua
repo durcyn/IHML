@@ -151,11 +151,9 @@ L["Fathom-Lord Karathress"] = "Seigneur des fonds Karathress"
 L["m_flk"] = [[/targetexact Totem crache-feu
 /startattack]]
 L["Lady Vashj"] = "Dame Vashj"
-L["m_vashj"] = [[#showtooltip item:31088
-/use Noyau contaminé
-/y <-- NOYAU CONTAMINÉ À : %t !
-/s <-- NOYAU CONTAMINÉ À : %t !
-/script SendChatMessage("TU AS LE NOYAU !", "WHISPER", nil, UnitName("target"));]]
+L["m_vashj"] = [[/stopmacro[noexists][harm]
+/run i=31088 t="target" if GetItemCount(i)>0 and HasFullControl() and IsItemInRange(i,t) then n=UnitName(t) s=SendChatMessage m="<- NOYAU CONTAMINÉ À -> " s(m..n.." !","RAID") s(m.."TU !","WHISPER",nil,n) end
+/use item:31088]] -- Please, laugh at my french :P and keep the 255 char limit in mind
 -- Tempest Keep -------------
 -- Mount Hyjal --------------
 L["Archimonde"] = "Archimonde"
