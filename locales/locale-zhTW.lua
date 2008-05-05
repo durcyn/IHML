@@ -153,7 +153,7 @@ L["m_flk"] = [[/targetexact 飛火圖騰
 L["Lady Vashj"] = "瓦許女士"
 L["m_vashj"] = [[/stopmacro[noexists][harm]
 /run i=31088 t="target" if GetItemCount(i)>0 and HasFullControl() and IsItemInRange(i,t) then n=UnitName(t) s=SendChatMessage m="<- 受污染的核心 -> " s(m..n,"RAID") s(m.."你","WHISPER",nil,n) end
-/use 受污染的核心
+/use 受污染的核心]]
 --L["m_vashj"] = [[#showtooltip item:31088
 --/use 受污染的核心
 --/y <-- 受污染的核心 傳給: %t !!
