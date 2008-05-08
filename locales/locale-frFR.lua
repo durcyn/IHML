@@ -128,9 +128,9 @@ L["m_razorthorn"] = [[#showtooltip [pet, harm, nodead] Ravage; [pet] Déterrer u
 /use [nopet] Glande d'écorcheur tranchépine
 /cast [pet, harm, nodead] Ravage; [pet] Déterrer une racine de tranchépine]]
 -- Cooking ------------------
---L["Ancestral Grounds"] = "Ancestral Grounds"
---L["m_soup4soul"] = [[#showtooltip item:33851
---/use Cooking Pot]]
+L["Ancestral Grounds"] = "Terres ancestrales"
+L["m_soup4soul"] = [[#showtooltip item:33851
+/use Casserole]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "Les salles de théorie"
 L["m_vexallus"] = [[/targetexact Energie pure
@@ -152,8 +152,8 @@ L["m_flk"] = [[/targetexact Totem crache-feu
 /startattack]]
 L["Lady Vashj"] = "Dame Vashj"
 L["m_vashj"] = [[/stopmacro[noexists][harm]
-/run i=31088 t="target" if GetItemCount(i)>0 and HasFullControl() and IsItemInRange(i,t) then n=UnitName(t) s=SendChatMessage m="<- NOYAU CONTAMINÉ À -> " s(m..n.." !","RAID") s(m.."TU !","WHISPER",nil,n) end
-/use item:31088]] -- Please, laugh at my french :P and keep the 255 char limit in mind
+/run i=31088 t="target" if GetItemCount(i)>0 and HasFullControl() and IsItemInRange(i,t) then n=UnitName(t) s=SendChatMessage m="NOYAU CONTAMINÉ ENVOYÉ À -> " s(m..n.." !","RAID") s(m.."TOI !","WHISPER",nil,n) end
+/use item:31088]]
 -- Tempest Keep -------------
 -- Mount Hyjal --------------
 L["Archimonde"] = "Archimonde"
