@@ -79,16 +79,12 @@ L["m_forgecamp"] = [[#showtooltip [flying] item:32456; item:32696
 /use [noflying] Kristall der Verbannung]] 
 -- Netherwing ---------------
 L["Netherwing Ledge"] = "Netherschwingenscherbe"
---L["m_booterang"] = [[#showtooltip [flying] item:32680; item:32503
---/use [noflying] Yarzill's Mutton
---/stopmacro [noflying]
---/targetexact Ungehorsamer Peon des Drachenmals
---/use Schuhmerang
---/cleartarget]] -- Translate Yarzill's Mutton, uncomment and remove the other macro
-L["m_booterang"] = [[#showtooltip item:32680
+L["m_booterang"] = [[#showtooltip [flying] item:32680; item:32503
+/use [noflying] Yarzills Hammel
+/stopmacro [noflying]
 /targetexact Ungehorsamer Peon des Drachenmals
 /use Schuhmerang
-/cleartarget]]
+/cleartarget]] 
 -- Shattered Sun Offensive --
 L["Isle of Quel'Danas"] = "Insel von Quel'Danas"
 L["m_crystalcores"] = [[#showtooltip item:34368
@@ -111,8 +107,8 @@ L["The Dawning Square"] = "Platz der Morgenröte"
 L["m_ssbanner"] = [[#showtooltip [dead] item:34414; item:34533
 /use [dead] Banner der Zerschmetterten Sonne; Kristall des Astromanten]]
 L["Greengill Coast"] = "Küste der Grünkiemen"
---L["m_greengil"] = [[#showtooltip [exists] item:34483; item:34533
---/use [exists] Orb of Murloc Control; Kristall des Astromanten]]
+L["m_greengil"] = [[#showtooltip [exists] item:34483; item:34533
+/use [exists] Kugel der Murlockontrolle; Kristall des Astromanten]]
 L["Dawnstar Village"] = "Morgenstern"
 L["m_dawnstar"] = [[#showtooltip [dead] item:34368; item:34533
 /use [dead] Abgestimmte Kristallkerne; Kristall des Astromanten]]
@@ -127,10 +123,10 @@ L["m_flamingoil"] = [[#showtooltip item:34489
 L["Sun's Reach Armory"] = "Waffenkammer der Sonnenweiten"
 L["m_atamal"] = [[#showtooltip item:34500
 /use Waffe von Ata'mal]]
---L["Razorthorn Rise"] = "Razorthorn Rise"
---L["m_razorthorn"] = [[#showtooltip [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root; item:34255
---/use [nopet] Razorthorn Flayer Gland
---/cast [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root]]
+L["Razorthorn Rise"] = "Messerdornhöhe"
+L["m_razorthorn"] = [[#showtooltip [pet, harm, nodead] Messerdornfelshetzer; [pet] Messerdornwurzel aufdecken; item:34255
+/use [nopet] Messerdornschinderdrüse
+/cast [pet, harm, nodead] Messerdornfelshetzer; [pet] Messerdornwurzel aufdecken]]
 -- Cooking ------------------
 --L["Ancestral Grounds"] = "Ancestral Grounds"
 --L["m_soup4soul"] = [[#showtooltip item:33851
