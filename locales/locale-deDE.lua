@@ -128,9 +128,9 @@ L["m_razorthorn"] = [[#showtooltip [pet, harm, nodead] Messerdornfelshetzer; [pe
 /use [nopet] Messerdornschinderdrüse
 /cast [pet, harm, nodead] Messerdornfelshetzer; [pet] Messerdornwurzel aufdecken]]
 -- Cooking ------------------
---L["Ancestral Grounds"] = "Ancestral Grounds"
---L["m_soup4soul"] = [[#showtooltip item:33851
---/use Cooking Pot]]
+L["Ancestral Grounds"] = "Ahnengrund"
+L["m_soup4soul"] = [[#showtooltip item:33851
+/use Kochtopf]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "Hallen der Theorie"
 L["m_vexallus"] = [[/targetexact Pure Energie
