@@ -152,7 +152,7 @@ L["m_flk"] = [[/targetexact Totem crache-feu
 /startattack]]
 L["Lady Vashj"] = "Dame Vashj"
 L["m_vashj"] = [[/stopmacro[noexists][harm]
-/run i=31088 t="target" if GetItemCount(i)>0 and HasFullControl() and IsItemInRange(i,t) then n=UnitName(t) s=SendChatMessage m="NOYAU CONTAMINÉ ENVOYÉ À -> " s(m..n,"RAID") s(m.."TOI !","WHISPER",nil,n) end
+/run i=31088 t="target" if GetItemCount(i)>0 and HasFullControl() and IsItemInRange(i,t) then n=UnitName(t) s=SendChatMessage m="NOYAU ENVOYÉ À -> " s(m..n.." !","RAID") s(m.."TOI !","WHISPER",nil,n) end
 /use item:31088]]
 -- Tempest Keep -------------
 -- Mount Hyjal --------------
