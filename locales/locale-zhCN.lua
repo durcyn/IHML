@@ -132,9 +132,9 @@ L["Ancestral Grounds"] = "先祖之地"
 L["m_soup4soul"] = [[#showtooltip item:33851
 /use 烹饪锅]]
 -- The Black Morass -------------
---L["The Black Morass"] = "The Black Morass"
---L["m_blackmorass"] = [[#showtooltip item:24289
---/use Chrono-beacon]]
+L["The Black Morass"] = "黑色沼泽"
+L["m_blackmorass"] = [[#showtooltip item:24289
+/use 时空道标]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "学术大厅"
 L["m_vexallus"] = [[/targetexact 纯净能量
@@ -155,14 +155,14 @@ L["Fathom-Lord Karathress"] = "深水领主卡拉瑟雷斯"
 L["m_flk"] = [[/targetexact 溅火图腾
 /startattack]]
 L["Lady Vashj"] = "瓦丝琪"
---L["m_vashj"] = [[/stopmacro[noexists][harm]
---/run i=31088 t="target" if GetItemCount(i)>0 and HasFullControl() and IsItemInRange(i,t) then n=UnitName(t) s=SendChatMessage m="<-- TAINTED CORE TO --> " s(m..n.." !","RAID") s(m.."YOU !","WHISPER",nil,n) end
---/use item:31088]] -- I won't even try to translate this myself :P Keep the 255 char limit in mind.
-L["m_vashj"] = [[#showtooltip item:31088
-/use 污染之核
-/y <-- 我把污染之核 传给: %t 了!!
-/s <-- 我把污染之核 传给: %t 了!!
-/script SendChatMessage("%t 我把污染之核传给你了", "WHISPER", nil, UnitName("target"));]]
+L["m_vashj"] = [[/stopmacro[noexists][harm]
+/run i=31088 t="target" if GetItemCount(i)>0 and HasFullControl() and IsItemInRange(i,t) then n=UnitName(t) s=SendChatMessage m="<- 污染之核 -> " s(m..n,"RAID") s(m.."你","WHISPER",nil,n) end
+/use 污染之核]]
+--L["m_vashj"] = [[#showtooltip item:31088
+--/use 污染之核
+--/y <-- 我把污染之核 传给: %t 了!!
+--/s <-- 我把污染之核 传给: %t 了!!
+--/script SendChatMessage("%t 我把污染之核传给你了", "WHISPER", nil, UnitName("target"));]]
 -- Tempest Keep -------------
 -- Mount Hyjal --------------
 L["Archimonde"] = "阿克蒙德"
