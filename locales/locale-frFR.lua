@@ -131,6 +131,10 @@ L["m_razorthorn"] = [[#showtooltip [pet, harm, nodead] Ravage; [pet] Déterrer u
 L["Ancestral Grounds"] = "Terres ancestrales"
 L["m_soup4soul"] = [[#showtooltip item:33851
 /use Casserole]]
+-- The Black Morass -------------
+--L["The Black Morass"] = "The Black Morass"
+--L["m_blackmorass"] = [[#showtooltip item:24289
+--/use Chrono-beacon]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "Les salles de théorie"
 L["m_vexallus"] = [[/targetexact Energie pure

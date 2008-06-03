@@ -131,6 +131,10 @@ L["m_razorthorn"] = [[#showtooltip [pet, harm, nodead] Ravage; [pet] Expose Razo
 L["Ancestral Grounds"] = true
 L["m_soup4soul"] = [[#showtooltip item:33851
 /use Cooking Pot]]
+-- The Black Morass -------------
+L["The Black Morass"] = true
+L["m_blackmorass"] = [[#showtooltip item:24289
+/use Chrono-beacon]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = true
 L["m_vexallus"] = [[/targetexact Pure Energy
