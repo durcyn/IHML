@@ -1,12 +1,12 @@
-## Interface: 20400
+## Interface: 30000
 ## Title: I Have Macro Lol
 ## Notes: Switch macro depending on zones or BigWigs boss modules
 ## Notes-frFR: Change de macro selon la zone où vous vous trouvez ou selon les modules de boss BigWigs activés.
 ## Notes-zhCN: 随地点或首领模组变换宏
 ## Notes-zhTW: 隨地點或首領模組變換巨集
 ## Author: Snago
-## Version: 1.0
-## X-Website: http://www.curse.com/downloads/details/12698/
+## Version: 1.1
+## X-Website: http://wow.curse.com/downloads/wow-addons/details/ihml.aspx
 
 ## OptionalDeps: Ace3
 ## X-Embeds: Ace3
