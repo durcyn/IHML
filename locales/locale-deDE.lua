@@ -132,9 +132,9 @@ L["Ancestral Grounds"] = "Ahnengrund"
 L["m_soup4soul"] = [[#showtooltip item:33851
 /use Kochtopf]]
 -- The Black Morass -------------
---L["The Black Morass"] = "The Black Morass"
---L["m_blackmorass"] = [[#showtooltip item:24289
---/use Chrono-beacon]]
+L["The Black Morass"] = "Der schwarze Morast"
+L["m_blackmorass"] = [[#showtooltip item:24289
+/use Chronosignal]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = "Hallen der Theorie"
 L["m_vexallus"] = [[/targetexact Pure Energie
@@ -167,4 +167,29 @@ L["m_archimonde"] = [[#showtooltip item:24494
 L["High Warlord Naj'entus"] = "Oberster Kriegsfürst Naj'entus"
 L["m_najentus"] = [[#showtooltip item:32408
 /use Naj'entus' Stachel]]
+L["The Forlorn Mine"] = "Die verlassene Mine"
+L["m_discipline"] = [[#showtooltip item:42837
+/use Disziplinarrute]]
+L["The Valley of Fallen Heroes"] = "Das Tal der Gefallenen Helden"
+L["m_alliancebline"] = [[#showtooltip item:44212
+/target Kampfaufklärer der Himmelsbrecher
+/use SGM-3]]
+L["Njorndar Village"] = "Njorndar"
+L["m_leavemark"] = [[#showtooltip item:42480
+/use [dead] Banner der Schwarzen Klinge]]
+L["Onslaught Harbor"] = "Hafen des Ansturms"
+L["m_corpserise"] = [[#showtooltip item:40587
+/use [dead] Tinktur des Dunkelheilers]]
+L["The Stormwright's Shelf"] = "Das Sturmherrenschelf"
+L["m_windandwater"] = [[#showtooltip item:39571
+/use Trommeln des Sturms]]
+L["Howling Fjord"] = "Der heulende Fjord"
+L["Ledge of Garvan"] = "Garvans Riff"
+L["Twin Coast"] = "Zwillingsküste"
+L["m_fishyfish"] = [[#showtooltip item:40946
+/use Anuniaqs Netz]]
+L["m_lureit"] = [[#showtooltip item:34127
+/target Riffbulle
+/target Angelockter Riffbulle
+/use Schmackhafter Rifffisch]]
 -- /Default macros --------------------

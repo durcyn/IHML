@@ -175,6 +175,10 @@ L["m_drakehunt"] = [[#showtooltip item:35506
 L["The Forlorn Mine"] = true
 L["m_discipline"] = [[#showtooltip item:42837
 /use Disciplining Rod]]
+L["Fjorn's Anvil"] = true
+L["Frostfield Lake"] = true
+L["m_essenceofice"] = [[#showtooltip item:42246
+/use Essence of Ice]]
 L["The Valley of Fallen Heroes"] = true
 L["m_alliancebline"] = [[#showtooltip item:44212
 /target Skybreaker Recon Fighter
@@ -188,4 +192,32 @@ L["m_corpserise"] = [[#showtooltip item:40587
 L["The Stormwright's Shelf"] = true
 L["m_windandwater"] = [[#showtooltip item:39571
 /use Drums of the Tempest]]
+L["Valkyrion"] = true
+L["The Blighted Pool"] = true
+L["m_aberations"] = [["#showtooltip item:41612
+/use Vial of Frost Oil"]]
+L["Courtyard of the Ancients"] = true
+L["m_strand"] = [["#showtooltip item:39213
+/use Massive Seaforium Charge"]]
+L["Garm's Bane"] = true
+L["m_landmine"] = [["#showtooltip item:40676
+/use Improved Land Mines"]]
+L["Thunderfall"] = true
+L["m_hodirhorn"] = [["#showtooltip item:42164
+/use Hodir's Horn"]]
+L["Valley of Ancient Winters"] = true
+L["m_hodirdaily"] = [["#showtooltip [dead] item:42479; item:42774
+/use [dead] Ethereal Worg's Fang; Arngrim's Tooth\n"]]
+L["The Culling of Stratholme"] = true
+L["m_cos"] = [["#showtooltip item:37888
+/use Arcane Disruptor"]]
+L["Howling Fjord"] = true
+L["Ledge of Garvan"] = true
+L["Twin Coast"] = true
+L["m_fishyfish"] = [[#showtooltip item:40946
+/use Anuniaq's Net]]
+L["m_lureit"] = [[#showtooltip item:34127
+/target Reef Bull
+/target Attracted Reef Bull
+/use Tasty Reef Fish]]
 -- /Default macros --------------------

@@ -48,6 +48,7 @@ local defaults = {
 			[L["Fathom-Lord Karathress"]] = 384,
 		},
 		macroBody = {
+			-- BC Dailies
 			-- Daily quests ---------------------
 			-- Skettis ------
 			[1] = L["m_skettis"],
@@ -83,45 +84,53 @@ local defaults = {
 			[L["Razorthorn Rise"]] = L["m_razorthorn"],
 			-- Cooking ------
 			[L["Ancestral Grounds"]] = L["m_soup4soul"],
-			-------------------------------------
-			
+			-- BC Instances
 			-- Magisters' Terrace ---------------
 			[L["Halls of Theory"]] = L["m_vexallus"],
-			-------------------------------------
-			
 			-- Karazhan -------------------------
 			[L["The Curator"]] = L["m_curator"],
 			[L["Terestian Illhoof"]] = L["m_illhoof"],
-			-------------------------------------
-			
 			-- Zul'Aman -------------------------
 			[L["Halazzi"]] = L["m_halazzi"],
-			-------------------------------------
-			
 			-- Serpentshrine Cavern -------------
 			[L["Fathom-Lord Karathress"]] = L["m_flk"],
 			[L["Lady Vashj"]] = L["m_vashj"],
-			-------------------------------------
-			
 			-- Mount Hyjal ----------------------
 			[L["Archimonde"]] = L["m_archimonde"],
-			-------------------------------------
-			
 			-- Black Temple ---------------------
 			[L["High Warlord Naj'entus"]] = L["m_najentus"],
 			-------------------------------------
+
 			-- Wrath Dailies
-			--
+			-- Howling Fjord
+			[7] = L["m_fishyfish"],
+			[L["Howling Fjord"]] = 7,
+			[L["Ledge of Garvan"]] = 7,
+			[L["Twin Coast"]] = L["m_lureit"],
+			-- Borean Tundra
 			[L["Coldarra"]] = L["m_drakehunt"],
 			-- The Storm Peaks
+			[5] = L["m_essenceofice"],
+			[L["Fjorn's Anvil"]] = 5,
+			[L["Frostfield Lake"]] = 5,
 			[L["The Forlorn Mine"]] = L["m_discipline"],
+			[6] = L["m_aberations"],
+			[L["The Blighted Pool"]] = 6,
+			[L["Valkyrion"]] = 6,
+			[L["Garm's Bane"]] = L["m_landmine"],
+			[L["Thunderfall"]] = L["m_hodirhorn"],
+			[L["Valley of Ancient Winters"]] = L["m_hodirdaily"],
 			-- Ice Crown
 			[L["The Valley of Fallen Heroes"]] = L["m_alliancebline"],
 			[L["Njorndar Village"]] = L["m_leavemark"],
 			[L["Onslaught Harbor"]] = L["m_corpserise"],
-
 			-- Shozalar Basin
 			[L["The Stormwright's Shelf"]] = L["m_windandwater"],
+			-- Strand of the Ancients
+			[L["Courtyard of the Ancients"]] = L["m_strand"],
+			-- WotLK Instances
+			-- Culling of Stratholme
+			[L["The Culling of Stratholme"]] = L["m_cos"],
 		},
 	}
 }
