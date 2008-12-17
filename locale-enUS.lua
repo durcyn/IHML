@@ -182,4 +182,7 @@ L["m_leavemark"] = [[#showtooltip item:42480
 L["Onslaught Harbor"] = true
 L["m_corpserise"] = [[#showtooltip item:40587
 /use [dead] Darkmender's Tincture]]
+L["The Stormwright's Shelf"] = true
+L["m_windandwater"] = [[#showtooltip item:39571
+/use Drums of the Tempest]]
 -- /Default macros --------------------
