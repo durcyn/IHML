@@ -179,4 +179,7 @@ L["m_alliancebline"] = [[#showtooltip item:44212
 L["Njorndar Village"] = true
 L["m_leavemark"] = [[#showtooltip item:42480
 /use [dead] Ebon Blade Banner]]
+L["Onslaught Harbor"] = true
+L["m_corpserise"] = [[#showtooltip item:40587
+/use [dead] Darkmender's Tincture]]
 -- /Default macros --------------------

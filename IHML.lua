@@ -116,6 +116,7 @@ local defaults = {
 			-- Ice Crown
 			[L["The Valley of Fallen Heroes"]] = L["m_alliancebline"],
 			[L["Njorndar Village"]] = L["m_leavemark"],
+			[L["Onslaught Harbor"]] = L["m_corpserise"],
 		},
 	}
 }
