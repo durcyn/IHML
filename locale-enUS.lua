@@ -169,6 +169,9 @@ L["m_najentus"] = [[#showtooltip item:32408
 /use Naj'entus Spine]]
 
 -- WotLK
+L["Coldarra"] = true
+L["m_drakehunt"] = [[#showtooltip item:35506
+/use Raelorasz's Spear]]
 L["The Forlorn Mine"] = true
 L["m_discipline"] = [[#showtooltip item:42837
 /use Disciplining Rod]]
