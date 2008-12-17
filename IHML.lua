@@ -110,6 +110,9 @@ local defaults = {
 			-- Black Temple ---------------------
 			[L["High Warlord Naj'entus"]] = L["m_najentus"],
 			-------------------------------------
+			-- Wrath Dailies
+			-- The Storm Peaks
+			[L["The Forlorn Mine"]] = L["m_discipline"],
 		},
 	}
 }

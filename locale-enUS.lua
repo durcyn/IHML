@@ -167,4 +167,9 @@ L["m_archimonde"] = [[#showtooltip item:24494
 L["High Warlord Naj'entus"] = true
 L["m_najentus"] = [[#showtooltip item:32408
 /use Naj'entus Spine]]
+
+-- WotLK
+L["The Forlorn Mine"] = true
+L["m_discipline"] = [[#showtooltip item:42837
+/use Disciplining Rod]]
 -- /Default macros --------------------
