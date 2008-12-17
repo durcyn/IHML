@@ -115,6 +115,7 @@ local defaults = {
 			[L["The Forlorn Mine"]] = L["m_discipline"],
 			-- Ice Crown
 			[L["The Valley of Fallen Heroes"]] = L["m_alliancebline"],
+			[L["Njorndar Village"]] = L["m_leavemark"],
 		},
 	}
 }

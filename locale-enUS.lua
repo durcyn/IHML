@@ -176,4 +176,7 @@ L["The Valley of Fallen Heroes"] = true
 L["m_alliancebline"] = [[#showtooltip item:44212
 /target Skybreaker Recon Fighter
 /use SGM-3]]
+L["Njorndar Village"] = true
+L["m_leavemark"] = [[#showtooltip item:42480
+/use [dead] Ebon Blade Banner]]
 -- /Default macros --------------------
