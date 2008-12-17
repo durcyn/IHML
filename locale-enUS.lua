@@ -172,4 +172,8 @@ L["m_najentus"] = [[#showtooltip item:32408
 L["The Forlorn Mine"] = true
 L["m_discipline"] = [[#showtooltip item:42837
 /use Disciplining Rod]]
+L["The Valley of Fallen Heroes"] = true
+L["m_alliancebline"] = [[#showtooltip item:44212
+/target Skybreaker Recon Fighter
+/use SGM-3]]
 -- /Default macros --------------------
