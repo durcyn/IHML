@@ -654,7 +654,7 @@ options.args.macros.args = {
 				order = 300,
 				validate = function(info, k)
 					local n = tonumber(k) or 0
-					if n <= 0 or n > 779 then
+					if n <= 0 or n > 1044 then
 						return false
 					elseif format("%d",n) == k then
 						return true
