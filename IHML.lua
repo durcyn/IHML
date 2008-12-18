@@ -1,6 +1,9 @@
 local LibStub = LibStub
-local IHML = LibStub("AceAddon-3.0"):NewAddon("IHML", "AceConsole-3.0", "AceEvent-3.0", "AceHook-3.0")
-local L = LibStub("AceLocale-3.0"):GetLocale("IHML")
+
+local MODNAME = "IHML"
+
+local IHML = LibStub("AceAddon-3.0"):NewAddon(MODNAME,"AceConsole-3.0","AceEvent-3.0","AceHook-3.0")
+local L = LibStub("AceLocale-3.0"):GetLocale(MODNAME)
 
 -- Upvalues from the global namespace
 local next = next
@@ -187,6 +190,13 @@ function IHML:OnInitialize()
 	options.args.profile = LibStub("AceDBOptions-3.0"):GetOptionsTable(db)
 	options.args.profile.order = 300
 	self:RegisterChatCommand("ihml", "ChatCommand", true)
+
+	if LibStub:GetLibrary("LibAboutPanel", true) then
+		LibStub("LibAboutPanel").new(nil,MODNAME)
+	else
+		self:Print("Lib AboutPanel not loaded.")
+	end
+
 end
 
 function IHML:OnProfileChanged()

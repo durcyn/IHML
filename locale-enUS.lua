@@ -31,6 +31,7 @@ L["Pickup Macro"] = true
 L["Click to pickup the IHML macro so that you can place it on an action bar."] = true
 L["Reinsert default macros"] = true
 L["Use this to recover any removed default macros. Won't replace changed versions. If you want to revert changed macros delete them first."] = true
+
 -- Macros -------------------
 L["Select Macro:"] = true
 L["Select a macro."] = true
@@ -65,76 +66,76 @@ L["Upper Veil Shil'ak"] = true
 L["Veil Ala'rak"] = true
 L["Veil Harr'ik"] = true
 L["m_skettis"] = [[#showtooltip item:32406
-/use Skyguard Blasting Charges]]
+/use item:32406]]
 -- Ogri'La ------------------
 L["Vortex Pinnacle"] = true
 L["m_vortexpinnacle"] = [[#showtooltip item:32698
-/use Wrangling Rope
+/use item:32698
 /stopattack
 /petpassive]]
 L["Forge Camp: Wrath"] = true
 L["Forge Camp: Terror"] = true
 L["m_forgecamp"] = [[#showtooltip [flying] item:32456; item:32696
-/use [flying] Skyguard Bombs
-/use [noflying] Banishing Crystal]]
+/use [flying] item:32456
+/use [noflying] item:32696]]
 -- Netherwing ---------------
 L["Netherwing Ledge"] = true
 L["m_booterang"] = [[#showtooltip [flying] item:32680; item:32503
-/use [noflying] Yarzill's Mutton
+/use [noflying] item:32503
 /stopmacro [noflying]
 /targetexact Disobedient Dragonmaw Peon
-/use Booterang
+/use item:32680
 /cleartarget]]
 -- Shattered Sun Offensive --
 L["Isle of Quel'Danas"] = true
 L["m_crystalcores"] = [[#showtooltip item:34368
 /targetexact Erratic Sentry
-/use Attuned Crystal Cores]]
+/use item:34368]]
 L["Sun's Reach Sanctum"] = true
 L["m_manaremnants"] = [[#showtooltip item:34338
-/use Mana Remnants]]
+/use item:34338]]
 L["Throne of Kil'jaeden"] = true
 L["m_blood4blood"] = [[#showtooltip item:34257
-/use Fel Siphon]]
+/use item:34257]]
 L["Spirit Fields"] = true
 L["m_spectrogoggles"] = [[#showtooltip item:35233
-/use Multiphase Spectrographic Goggles
-/equip Multiphase Spectrographic Goggles]]
+/use item:35233
+/equip item:35233]]
 L["The Dead Scar"] = true
 L["m_deadscar"] = [[#showtooltip item:34475
-/use Arcane Charges]]
+/use item:34475]]
 L["The Dawning Square"] = true
 L["m_ssbanner"] = [[#showtooltip [dead] item:34414; item:34533
-/use [dead] Shattered Sun Banner; Astromancer's Crystal]]
+/use [dead] item:34414; item:34533]]
 L["Greengill Coast"] = true
 L["m_greengil"] = [[#showtooltip [exists] item:34483; item:34533
-/use [exists] Orb of Murloc Control; Astromancer's Crystal]]
+/use [exists] item:34483; item:34533]]
 L["Dawnstar Village"] = true
 L["m_dawnstar"] = [[#showtooltip [dead] item:34368; item:34533
-/use [dead] Attuned Crystal Cores; Astromancer's Crystal]]
+/use [dead] item:34368; item:34533]]
 L["Bash'ir Landing"] = true
 L["m_bashir"] = [[#showtooltip item:34248
-/use Bash'ir Phasing Device]]
+/use item:34248]]
 L["The Sin'loren"] = true
 L["The Dawnchaser"] = true
 L["The Bloodoath"] = true
 L["m_flamingoil"] = [[#showtooltip item:34489
-/use Flaming Oil]]
+/use item:34489]]
 L["Sun's Reach Armory"] = true
 L["m_atamal"] = [[#showtooltip item:34500
-/use Ata'mal Armament]]
+/use item:34500]]
 L["Razorthorn Rise"] = true
 L["m_razorthorn"] = [[#showtooltip [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root; item:34255
-/use [nopet] Razorthorn Flayer Gland
+/use [nopet] item:34255
 /cast [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root]]
 -- Cooking ------------------
 L["Ancestral Grounds"] = true
 L["m_soup4soul"] = [[#showtooltip item:33851
-/use Cooking Pot]]
+/use item:33851]]
 -- The Black Morass -------------
 L["The Black Morass"] = true
 L["m_blackmorass"] = [[#showtooltip item:24289
-/use Chrono-beacon]]
+/use item:24289]]
 -- Magisters' Terrace -------
 L["Halls of Theory"] = true
 L["m_vexallus"] = [[/targetexact Pure Energy
@@ -162,62 +163,67 @@ L["m_vashj"] = [[/stopmacro[noexists][harm]
 -- Mount Hyjal --------------
 L["Archimonde"] = true
 L["m_archimonde"] = [[#showtooltip item:24494
-/use Tears of the Goddess]]
+/use item:24494]]
 -- Black Temple -------------
 L["High Warlord Naj'entus"] = true
 L["m_najentus"] = [[#showtooltip item:32408
-/use Naj'entus Spine]]
+/use item:32408]]
 
 -- WotLK
 L["Coldarra"] = true
 L["m_drakehunt"] = [[#showtooltip item:35506
-/use Raelorasz's Spear]]
+/use item:35506]]
+-- Storm Peaks
 L["The Forlorn Mine"] = true
 L["m_discipline"] = [[#showtooltip item:42837
-/use Disciplining Rod]]
+/use item:42837]]
 L["Fjorn's Anvil"] = true
 L["Frostfield Lake"] = true
 L["m_essenceofice"] = [[#showtooltip item:42246
-/use Essence of Ice]]
-L["The Valley of Fallen Heroes"] = true
-L["m_alliancebline"] = [[#showtooltip item:44212
-/target Skybreaker Recon Fighter
-/use SGM-3]]
-L["Njorndar Village"] = true
-L["m_leavemark"] = [[#showtooltip item:42480
-/use [dead] Ebon Blade Banner]]
-L["Onslaught Harbor"] = true
-L["m_corpserise"] = [[#showtooltip item:40587
-/use [dead] Darkmender's Tincture]]
-L["The Stormwright's Shelf"] = true
-L["m_windandwater"] = [[#showtooltip item:39571
-/use Drums of the Tempest]]
+/use item:42246]]
 L["Valkyrion"] = true
 L["The Blighted Pool"] = true
-L["m_aberations"] = [["#showtooltip item:41612
-/use Vial of Frost Oil"]]
-L["Courtyard of the Ancients"] = true
-L["m_strand"] = [["#showtooltip item:39213
-/use Massive Seaforium Charge"]]
+L["m_aberations"] = [[#showtooltip item:41612
+/use item:41612]]
 L["Garm's Bane"] = true
-L["m_landmine"] = [["#showtooltip item:40676
-/use Improved Land Mines"]]
+L["m_landmine"] = [[#showtooltip item:40676
+/use item:40676]]
 L["Thunderfall"] = true
-L["m_hodirhorn"] = [["#showtooltip item:42164
-/use Hodir's Horn"]]
+L["m_hodirhorn"] = [[#showtooltip item:42164
+/use item:42164]]
 L["Valley of Ancient Winters"] = true
-L["m_hodirdaily"] = [["#showtooltip [dead] item:42479; item:42774
-/use [dead] Ethereal Worg's Fang; Arngrim's Tooth\n"]]
+L["m_hodirdaily"] = [[#showtooltip [dead] item:42479; item:42774
+/use [dead] item:42479; item:42774]]
+-- Ice Crown
+L["The Valley of Fallen Heroes"] = true
+L["m_alliancebline"] = [[#showtooltip item:44212
+/targetexact Skybreaker Recon Fighter
+/use item:44212]]
+L["Njorndar Village"] = true
+L["m_leavemark"] = [[#showtooltip [dead] item:42480
+/use [dead] item:42480]]
+L["Onslaught Harbor"] = true
+L["m_corpserise"] = [[#showtooltip [dead] item:40587
+/use [dead] item:40587]]
+-- Basin
+L["The Stormwright's Shelf"] = true
+L["m_windandwater"] = [[#showtooltip item:39571
+/use item:39571]]
+-- Strand of the Ancients
+L["Courtyard of the Ancients"] = true
+L["m_strand"] = [[#showtooltip item:39213
+/use item:39213]]
 L["The Culling of Stratholme"] = true
-L["m_cos"] = [["#showtooltip item:37888
-/use Arcane Disruptor"]]
+L["m_cos"] = [[#showtooltip item:37888
+/use item:37888]]
+-- Howling Fjord
 L["Howling Fjord"] = true
 L["Ledge of Garvan"] = true
 L["Twin Coast"] = true
 L["m_fishyfish"] = [[#showtooltip item:40946
-/use Anuniaq's Net]]
+/use item:40946]]
 L["m_lureit"] = [[#showtooltip item:34127
 /target Reef Bull
 /target Attracted Reef Bull
-/use Tasty Reef Fish]]
+/use item:34127]]
 -- /Default macros --------------------
