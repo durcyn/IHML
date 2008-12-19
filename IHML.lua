@@ -123,6 +123,7 @@ local defaults = {
 			[L["Garm's Bane"]] = L["m_landmine"],
 			[L["Thunderfall"]] = L["m_hodirhorn"],
 			[L["Valley of Ancient Winters"]] = L["m_hodirdaily"],
+			[L["The Pit of the Fang"]] = L["m_pitoffang"],
 			-- Ice Crown
 			[L["The Valley of Fallen Heroes"]] = L["m_alliancebline"],
 			[L["Njorndar Village"]] = L["m_leavemark"],

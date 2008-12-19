@@ -194,6 +194,9 @@ L["m_hodirhorn"] = [[#showtooltip item:42164
 L["Valley of Ancient Winters"] = true
 L["m_hodirdaily"] = [[#showtooltip [dead] item:42479; item:42774
 /use [dead] item:42479; item:42774]]
+L["The Pit of the Fang"] = true
+L["m_pitoffang"] = [[#showtooltip item:42499
+/use item:42499]]
 -- Ice Crown
 L["The Valley of Fallen Heroes"] = true
 L["m_alliancebline"] = [[#showtooltip item:44212
