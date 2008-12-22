@@ -13,7 +13,7 @@
 
 
 ## Interface: 30000
-## Version: Beta 2.0
+## Version: 2.0
 ## X-Revision: @project-revision@
 ## X-Date: @file-date-iso@
 ## Interface: 30000
