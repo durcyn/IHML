@@ -126,6 +126,7 @@ local defaults = {
 			[L["The Pit of the Fang"]] = L["m_pitoffang"],
 			-- Zul'Drak
 			[L["Drak'Sotra"]] = L["m_draksotra"],
+			[L["Zul'Drak"]] = L["m_zuldrak"],
 			-- Ice Crown
 			[L["The Valley of Fallen Heroes"]] = L["m_alliancebline"],
 			[L["Njorndar Village"]] = L["m_leavemark"],

@@ -230,6 +230,10 @@ L["m_lureit"] = [[#showtooltip item:34127
 /target Attracted Reef Bull
 /use item:34127]]
 L["Drak'Sotra"] = true
+-- 38564 == torches
 L["m_draksotra"] = [[#showtooltip [dead] item:38556;item:38544
 /use [dead] item:38556;item:38544]]
+L["Zul'Drak"] = true
+L["m_zuldrak"] = [[#showtooltip item:38566
+/use item:38566]]
 -- /Default macros --------------------
