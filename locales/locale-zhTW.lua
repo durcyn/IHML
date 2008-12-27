@@ -1,4 +1,25 @@
-﻿local L = LibStub("AceLocale-3.0"):NewLocale("IHML", "zhTW")
+﻿--[[
+****************************************************************************************
+
+locale-zhTW.lua
+
+zhTW localization strings for IHML
+
+File date: @file-date-iso@ 
+File revision: @file-revision@ 
+Project revision: @project-revision@
+Project version: @project-version@
+
+Original translated by: 
+Currently maintained by: 
+
+Please make sure you update the ToC file with any translations.
+
+****************************************************************************************
+]]--
+
+local L = LibStub("AceLocale-3.0"):NewLocale("IHML", "zhTW")
+
 if not L then return end
 
 
@@ -172,4 +193,68 @@ L["m_archimonde"] = [[#showtooltip item:24494
 L["High Warlord Naj'entus"] = "高階督軍納珍塔斯"
 L["m_najentus"] = [[#showtooltip item:32408
 /use 納珍塔斯脊骨]]
+
+-- WotLK
+L["Coldarra"] = "凜懼島"
+L["m_drakehunt"] = [[#showtooltip item:35506
+/use item:35506]]
+-- Storm Peaks
+L["The Forlorn Mine"] = "凋落礦坑"
+L["m_discipline"] = [[#showtooltip item:42837
+/use item:42837]]
+L["Fjorn's Anvil"] = "斐雍之砧"
+L["Frostfield Lake"] = "霜域湖"
+L["m_essenceofice"] = [[#showtooltip item:42246
+/use item:42246]]
+L["Valkyrion"] = "華爾基倫"
+L["The Blighted Pool"] = "荒疫之池"
+L["m_aberations"] = [[#showtooltip item:41612
+/use item:41612]]
+L["Garm's Bane"] = "迦姆之禍"
+L["m_landmine"] = [[#showtooltip item:40676
+/use item:40676]]
+L["Thunderfall"] = "雷殞之地"
+L["m_hodirhorn"] = [[#showtooltip item:42164
+/use item:42164]]
+L["Valley of Ancient Winters"] = "遠古寒冬山谷"
+L["m_hodirdaily"] = [[#showtooltip [dead] item:42479; item:42774
+/use [dead] item:42479; item:42774]]
+L["The Pit of the Fang"] = "尖牙之淵"
+L["m_pitoffang"] = [[#showtooltip item:42499
+/use item:42499]]
+-- Ice Crown
+L["The Valley of Fallen Heroes"] = "逝往英雄山谷"
+L["m_alliancebline"] = [[#showtooltip item:44212
+/targetexact Skybreaker Recon Fighter
+/use item:44212]]
+L["Njorndar Village"] = "尼約達村"
+L["m_leavemark"] = [[#showtooltip [dead] item:42480
+/use [dead] item:42480]]
+L["Onslaught Harbor"] = "突襲軍港口"
+L["m_corpserise"] = [[#showtooltip [dead] item:40587
+/use [dead] item:40587]]
+-- Basin
+L["The Stormwright's Shelf"] = "風暴工匠沙洲"
+L["m_windandwater"] = [[#showtooltip item:39571
+/use item:39571]]
+-- Strand of the Ancients
+L["Courtyard of the Ancients"] = "遠祖庭院"
+L["m_strand"] = [[#showtooltip item:39213
+/use item:39213]]
+L["The Culling of Stratholme"] = "斯坦索姆的抉擇"
+L["m_cos"] = [[#showtooltip item:37888
+/use item:37888]]
+-- Howling Fjord
+L["Howling Fjord"] = "凜風峽灣"
+L["Ledge of Garvan"] = "加爾文暗礁"
+L["Twin Coast"] = "雙水之濱"
+L["m_fishyfish"] = [[#showtooltip item:40946
+/use item:40946]]
+L["m_lureit"] = [[#showtooltip item:34127
+/target 暗礁公海獅
+/target 被吸引的暗礁公海獅
+/use item:34127]]
+L["Drak'Sotra"] = "德拉克索璀"
+L["m_draksotra"] = [[#showtooltip item:38556
+/use item:38556]]
 -- /Default macros --------------------

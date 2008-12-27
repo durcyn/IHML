@@ -1,4 +1,25 @@
-﻿local L = LibStub("AceLocale-3.0"):NewLocale("IHML", "deDE")
+﻿--[[
+****************************************************************************************
+
+locale-deDE.lua
+
+deDE localization strings for IHML
+
+File date: @file-date-iso@ 
+File revision: @file-revision@ 
+Project revision: @project-revision@
+Project version: @project-version@
+
+Original translated by: 
+Currently maintained by: 
+
+Please make sure you update the ToC file with any translations.
+
+****************************************************************************************
+]]--
+
+local L = LibStub("AceLocale-3.0"):NewLocale("IHML", "deDE")
+
 if not L then return end
 
 
