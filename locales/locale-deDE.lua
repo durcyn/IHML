@@ -1,25 +1,4 @@
-﻿--[[
-****************************************************************************************
-
-locale-deDE.lua
-
-deDE localization strings for IHML
-
-File date: @file-date-iso@ 
-File revision: @file-revision@ 
-Project revision: @project-revision@
-Project version: @project-version@
-
-Original translated by: 
-Currently maintained by: 
-
-Please make sure you update the ToC file with any translations.
-
-****************************************************************************************
-]]--
-
-local L = LibStub("AceLocale-3.0"):NewLocale("IHML", "deDE")
-
+﻿local L = LibStub("AceLocale-3.0"):NewLocale("IHML", "deDE")
 if not L then return end
 
 
@@ -188,9 +167,36 @@ L["m_archimonde"] = [[#showtooltip item:24494
 L["High Warlord Naj'entus"] = "Oberster Kriegsfürst Naj'entus"
 L["m_najentus"] = [[#showtooltip item:32408
 /use Naj'entus' Stachel]]
+
+-- WotLK
+L["Coldarra"] = "Kaltarra"
+L["m_drakehunt"] = [[#showtooltip item:35506
+/use Raelorasz' Speer]]
+-- Storm Peaks
 L["The Forlorn Mine"] = "Die verlassene Mine"
 L["m_discipline"] = [[#showtooltip item:42837
 /use Disziplinarrute]]
+L["Fjorn's Anvil"] = "Fjorns Amboss"
+L["Frostfield Lake"] = "Frostfeldsee"
+L["m_essenceofice"] = [[#showtooltip item:42246
+/use Essenz des Eises]]
+L["Valkyrion"] = "Valkyrion"
+L["The Blighted Pool"] = "Der verseuchte Teich"
+L["m_aberations"] = [[#showtooltip item:41612
+/use Phiole voll Frostöl]]
+L["Garm's Bane"] = "Garms Bann"
+L["m_landmine"] = [[#showtooltip item:40676
+/use Verbesserte Landminen]]
+L["Thunderfall"] = "Donnerfall"
+L["m_hodirhorn"] = [[#showtooltip item:42164
+/use Hodirs Horn]]
+L["Valley of Ancient Winters"] = "Das uralte Wintertal"
+L["m_hodirdaily"] = [[#showtooltip [dead] item:42479; item:42774
+/use [dead] Fangzahn eines astralen Worgs; Arngrims Zahn]]
+L["The Pit of the Fang"] = "Die Reißzahngrube"
+L["m_pitoffang"] = [[#showtooltip item:42499
+/use item:42499]]
+-- Ice Crown
 L["The Valley of Fallen Heroes"] = "Das Tal der Gefallenen Helden"
 L["m_alliancebline"] = [[#showtooltip item:44212
 /target Kampfaufklärer der Himmelsbrecher
@@ -201,9 +207,19 @@ L["m_leavemark"] = [[#showtooltip item:42480
 L["Onslaught Harbor"] = "Hafen des Ansturms"
 L["m_corpserise"] = [[#showtooltip item:40587
 /use [dead] Tinktur des Dunkelheilers]]
+-- Basin
 L["The Stormwright's Shelf"] = "Das Sturmherrenschelf"
 L["m_windandwater"] = [[#showtooltip item:39571
 /use Trommeln des Sturms]]
+-- Strand of the Ancients
+L["Courtyard of the Ancients"] = "Der Hof der Uralten" --needs varification!
+L["m_strand"] = [[#showtooltip item:39213
+/use item:39213]]
+-- The Culling of Stratholme
+L["The Culling of Stratholme"] = "Das Ausmerzen von Stratholme"
+L["m_cos"] = [[#showtooltip item:37888
+/use Arkaner Disruptor]]
+-- Howling Fjord
 L["Howling Fjord"] = "Der heulende Fjord"
 L["Ledge of Garvan"] = "Garvans Riff"
 L["Twin Coast"] = "Zwillingsküste"
@@ -213,4 +229,8 @@ L["m_lureit"] = [[#showtooltip item:34127
 /target Riffbulle
 /target Angelockter Riffbulle
 /use Schmackhafter Rifffisch]]
+-- Zul'Drak
+--L["Drak'Sotra"] = true
+L["m_draksotra"] = [[#showtooltip item:38556
+/use item:38556]]
 -- /Default macros --------------------
