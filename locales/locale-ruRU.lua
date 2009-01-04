@@ -37,7 +37,7 @@ L["Select a macro."] = "Выбрать макрос."
 L["Swap!"] = "Смена!"
 L["Swap to the selected macro."] = "Сменить на выбранный макрос."
 L["Edit Macro"] = "Редактировать макрос"
-L["Name: Type \"boss\" for last loaded boss module or \"zone\" for current zone.\nIcon: A number from 1 to 779. You might want to edit this from the Blizzard Macro UI."] = "Название: Напечатайте \"boss\" для последнего загруженного босс модуля или \"zone\" для текущей зоны.\nЗначок: Номер с 1 до 779. Вероятно вы захотите использовать для этого Blizzard Macro UI." -- Иногда сбивается вывод, отчего и как лечить - не разобрался
+L["Name: Type \"boss\" for last loaded boss module or \"zone\" for current zone.\nIcon: A number from 1 to 1044. You might want to edit this from the Blizzard Macro UI."] = "Название: Напечатайте \"boss\" для последнего загруженного босс модуля или \"zone\" для текущей зоны.\nЗначок: Номер с 1 до 1044. Вероятно вы захотите использовать для этого Blizzard Macro UI." -- Иногда сбивается вывод, отчего и как лечить - не разобрался
 L["Name:"] = "Название:"
 L["This needs to match the boss module name or zone exactly for auto swap to work."] = "Точное название босс модуля или зоны для правильной работы автосмены."
 L["Macros must have a name!"] = "У макроса должно быть название!"
@@ -65,76 +65,76 @@ L["Upper Veil Shil'ak"] = "Верхнее гнездовье Шил'ак"
 L["Veil Ala'rak"] = "Гнездовье Ала'рак"
 L["Veil Harr'ik"] = "Гнездовье Харр'ик"
 L["m_skettis"] = [[#showtooltip item:32406
-/use Взрывчатка Стражи Небес]]
+/use item:32406]]
 -- Огри'ла ------------------
 L["Vortex Pinnacle"] = "Нагорье Смерчей"
 L["m_vortexpinnacle"] = [[#showtooltip item:32698
-/use Веревочный аркан
+/use item:32698
 /stopattack
 /petpassive]]
 L["Forge Camp: Wrath"] = "Лагерь Легиона: Гнев"
 L["Forge Camp: Terror"] = "Лагерь Легиона: Ужас"
 L["m_forgecamp"] = [[#showtooltip [flying] item:32456; item:32696
-/use [flying] Бомбы Стражи Небес
-/use [noflying] Кристалл Изгнания]]
+/use [flying] item:32456
+/use [noflying] item:32696]]
 -- Крылья Пустоверти ---------------
 L["Netherwing Ledge"] = "Кряж Крыльев Пустоты"
 L["m_booterang"] = [[#showtooltip [flying] item:32680; item:32503
-/use [noflying] Баранина Ярзилла
+/use [noflying] item:32503
 /stopmacro [noflying]
 /targetexact Непокорный батрак клана Драконьей Пасти
-/use Ботиранг
+/use item:32680
 /cleartarget]]
 -- Армия Расколотого Солнца --
 L["Isle of Quel'Danas"] = "Остров Кель'Данас"
 L["m_crystalcores"] = [[#showtooltip item:34368
 /targetexact Блуждающий караульный
-/use Настроенные кристаллы-сердечники]]
+/use item:34368]]
 L["Sun's Reach Sanctum"] = "Святилище Солнечного Края"
 L["m_manaremnants"] = [[#showtooltip item:34338
-/use Клочки маны]]
+/use item:34338]]
 L["Throne of Kil'jaeden"] = "Трон Кил'джедена"
 L["m_blood4blood"] = [[#showtooltip item:34257
-/use Отбор Скверны]]
+/use item:34257]]
 L["Spirit Fields"] = "Поля Духов"
 L["m_spectrogoggles"] = [[#showtooltip item:35233
-/use Мультифазовые спектрографические очки
-/equip Мультифазовые спектрографические очки]]
+/use item:35233
+/equip item:35233]]
 L["The Dead Scar"] = "Тропа Мертвых"
 L["m_deadscar"] = [[#showtooltip item:34475
-/use Волшебные сгустки]]
+/use item:34475]]
 L["The Dawning Square"] = "Рассветная площадь"
 L["m_ssbanner"] = [[#showtooltip [dead] item:34414; item:34533
-/use [dead] Знамя Расколотого Солнца; Кристалл звездочета]]
+/use [dead] item:34414; item:34533]]
 L["Greengill Coast"] = "Залив Зеленожабрых"
 L["m_greengil"] = [[#showtooltip [exists] item:34483; item:34533
-/use [exists] Сфера контроля мурлока; Кристалл звездочета]]
+/use [exists] item:34483; item:34533]]
 L["Dawnstar Village"] = "Деревня Утренней Звезды"
 L["m_dawnstar"] = [[#showtooltip [dead] item:34368; item:34533
-/use [dead] Настроенные кристаллы-сердечники; Кристалл звездочета]]
+/use [dead] item:34368; item:34533]]
 L["Bash'ir Landing"] = "Лагерь Баш'ира"
 L["m_bashir"] = [[#showtooltip item:34248
-/use Синхронизатор Баш'ира]]
+/use item:34248]]
 L["The Sin'loren"] = "Син'лорен"
 L["The Dawnchaser"] = "Рассветный охотник"
 L["The Bloodoath"] = "Кровавая Клятва"
 L["m_flamingoil"] = [[#showtooltip item:34489
-/use Горящее масло]]
+/use item:34489]]
 L["Sun's Reach Armory"] = "Оружейная Солнечного Края"
 L["m_atamal"] = [[#showtooltip item:34500
-/use Оружие Ата'мала]]
+/use item:34500]]
 L["Razorthorn Rise"] = "Уступ Острого Шипа"
 L["m_razorthorn"] = [[#showtooltip [pet, harm, nodead] Накинуться; [pet] Вырывание корня острошипа; item:34255
-/use [nopet] Железа острошипа-живодера
+/use [nopet] item:34255
 /cast [pet, harm, nodead] Накинуться; [pet] Вырывание корня острошипа]]
 -- Кулинария ------------------
 L["Ancestral Grounds"] = "Земли Предков"
 L["m_soup4soul"] = [[#showtooltip item:33851
-/use Котелок]]
+/use item:33851]]
 -- Черные топи -------------
---L["The Black Morass"] = "Черные топи"
---L["m_blackmorass"] = [[#showtooltip item:24289
---/use Маяк времени]]
+L["The Black Morass"] = "Черные топи"
+L["m_blackmorass"] = [[#showtooltip item:24289
+/use item:24289]]
 -- Терраса Магистров -------
 L["Halls of Theory"] = "Залы Теории"
 L["m_vexallus"] = [[/targetexact Чистая энергия
@@ -162,9 +162,78 @@ L["m_vashj"] = [[/stopmacro[noexists][harm]
 -- Хиджал --------------
 L["Archimonde"] = "Архимонд"
 L["m_archimonde"] = [[#showtooltip item:24494
-/use Слезы Богини]] -- НУЖНО подтверждение
+/use item:24494]]
 -- Черный храм -------------
 L["High Warlord Naj'entus"] = "Верховный Полководец Надж'ентус"
 L["m_najentus"] = [[#showtooltip item:32408
-/use Шип Наджентуса]] -- НУЖНО подтверждение
+/use item:32408]]
+
+-- WotLK
+L["Coldarra"] = "Хладарра"
+L["m_drakehunt"] = [[#showtooltip item:35506
+/use item:35506]]
+-- Грозовая Гряда
+L["The Forlorn Mine"] = "Заброшенный рудник"
+L["m_discipline"] = [[#showtooltip item:42837
+/use item:42837]]
+L["Fjorn's Anvil"] = "Наковальня Фьорна"
+L["Frostfield Lake"] = "Промерзшее озеро"
+L["m_essenceofice"] = [[#showtooltip item:42246
+/use item:42246]]
+L["Valkyrion"] = "Валькирион"
+L["The Blighted Pool"] = "Нечистый пруд"
+L["m_aberations"] = [[#showtooltip item:41612
+/use item:41612]]
+L["Garm's Bane"] = "Бич Гарма"
+L["m_landmine"] = [[#showtooltip item:40676
+/use item:40676]]
+L["Thunderfall"] = "Громовержье"
+L["m_hodirhorn"] = [[#showtooltip item:42164
+/use item:42164]]
+L["Valley of Ancient Winters"] = "Долина Древних Зим"
+L["m_hodirdaily"] = [[#showtooltip [dead] item:42479; item:42774
+/use [dead] item:42479; item:42774]]
+L["The Pit of the Fang"] = "Яма Клыка"
+L["m_pitoffang"] = [[#showtooltip item:42499
+/use item:42499]]
+-- Ледяная Корона
+L["The Valley of Fallen Heroes"] = "Долина павших героев"
+L["m_alliancebline"] = [[#showtooltip item:44212
+/targetexact Разведывательный истребитель "Усмирителя Небес"
+/use item:44212]]
+L["Njorndar Village"] = "Деревня Ньорндар"
+L["m_leavemark"] = [[#showtooltip [dead] item:42480
+/use [dead] item:42480]]
+L["Onslaught Harbor"] = "Гавань Натиска"
+L["m_corpserise"] = [[#showtooltip [dead] item:40587
+/use [dead] item:40587]]
+-- Низина Шолазар
+L["The Stormwright's Shelf"] = "Уступ Ваятеля Бурь"
+L["m_windandwater"] = [[#showtooltip item:39571
+/use item:39571]]
+-- Берег Древних
+L["Courtyard of the Ancients"] = "Внутренний двор Древних" -- Нужно подтверждение
+L["m_strand"] = [[#showtooltip item:39213
+/use item:39213]]
+L["The Culling of Stratholme"] = "Очищение Стратхольма" -- Нужно подтверждение
+L["m_cos"] = [[#showtooltip item:37888
+/use item:37888]]
+-- Ревущий фьорд
+L["Howling Fjord"] = "Ревущий фьорд"
+L["Ledge of Garvan"] = "Риф Гарвана"
+L["Twin Coast"] = "Два берега"
+L["m_fishyfish"] = [[#showtooltip item:40946
+/use item:40946]]
+L["m_lureit"] = [[#showtooltip item:34127
+/target Рифовый буйвол
+/target Прикормленный рифовый буйвол
+/use item:34127]]
+-- Зул'Драк
+L["Drak'Sotra"] = "Драк'Сотра"
+-- 38564 == torches
+L["m_draksotra"] = [[#showtooltip [dead] item:38556;item:38544
+/use [dead] item:38556;item:38544]]
+L["Zul'Drak"] = "Зул'Драк"
+L["m_zuldrak"] = [[#showtooltip item:38566
+/use item:38566]]
 -- /Default macros --------------------
