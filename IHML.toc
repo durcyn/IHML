@@ -23,7 +23,7 @@
 ## X-Feedback: http://wow.curse.com/downloads/wow-addons/details/ihml.aspx
 ## X-Website: http://wow.curse.com/downloads/wow-addons/details/ihml.aspx
 
-## OptionalDeps: Ace3, LibStub, CallbackHandler-1.0, LibAboutPanel
+## OptionalDeps: Ace3, LibStub, CallbackHandler-1.0, LibAboutPanel, LibBabble-Zone-3.0, LibBabble-Boss-3.0
 ## SavedVariables: IHMLDB
 
 #@no-lib-strip@

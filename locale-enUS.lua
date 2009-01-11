@@ -1,17 +1,38 @@
-﻿local L = LibStub("AceLocale-3.0"):NewLocale("IHML", "enUS", true)
+﻿--[[
 
--- See locale-exEX.lua for instructions in how to make a translation
+locale-enUS.lua
 
--- Core -------------------------------
+enUS localization strings for Ackis Recipe List
+
+File date: @file-date-iso@ 
+File revision: @file-revision@ 
+Project revision: @project-revision@
+Project version: @project-version@
+
+Original translated by: Ackis
+Currently maintained by: Snago
+
+Please make sure you update the ToC file with any translations.
+
+Please update http://www.wowace.com/projects/ihml/localization/enUS/ for any translation
+additions or changes.
+
+****************************************************************************************
+]]--
+
+local L = LibStub("AceLocale-3.0"):NewLocale("IHML", "enUS", true)
+
+if not L then return end
+
+-- Core Options
 L["In combat! %s queued lol!"] = true -- %s will be replaced with the macro in question
 L["%s! I have that macro lol!"] = true -- %s will be replaced with the macro in question
 L["Please choose a macroname by typing: /ihml macroname <name here>"] = true -- Don't translate the command, it won't change
 L["|cffff9999Warning!|r No macro named %s found. Make it plz!"] = true -- %s will be replaced with macroname
 L["|cffff9999Warning!|r No free macro space :("] = true
--- /core ------------------------------
 
--- Config -----------------------------
--- Options ------------------
+-- Configuration
+-- Options
 L["Macros"] = true
 L["Options"] = true
 L["Auto Swap"] = true
@@ -32,7 +53,7 @@ L["Click to pickup the IHML macro so that you can place it on an action bar."] =
 L["Reinsert default macros"] = true
 L["Use this to recover any removed default macros. Won't replace changed versions. If you want to revert changed macros delete them first."] = true
 
--- Macros -------------------
+-- Macros
 L["Select Macro:"] = true
 L["Select a macro."] = true
 L["Swap!"] = true
@@ -54,10 +75,9 @@ L["New macro %d"] = true -- %d gets replaced with a number
 L["Remove!"] = true
 L["Remove the macro."] = true
 L["Are you sure you want to remove %s?"] = true -- %s gets replaced with the macro in question
--- /config ----------------------------
 
--- Default macros ---------------------
--- Skettis ------------------
+-- Default macros
+-- Skettis
 L["Blackwind Lake"] = true
 L["Lower Veil Shil'ak"] = true
 L["Skettis"] = true
@@ -231,9 +251,10 @@ L["m_lureit"] = [[#showtooltip item:34127
 /use item:34127]]
 L["Drak'Sotra"] = true
 -- 38564 == torches
+-- 38566 == Steel spade
+-- 38574 == grenades
 L["m_draksotra"] = [[#showtooltip [dead] item:38556;item:38544
 /use [dead] item:38556;item:38544]]
 L["Zul'Drak"] = true
 L["m_zuldrak"] = [[#showtooltip item:38566
 /use item:38566]]
--- /Default macros --------------------

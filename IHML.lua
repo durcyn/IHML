@@ -1,3 +1,25 @@
+--[[
+
+************************************************************************
+
+IHML.lua
+
+File date: @file-date-iso@ 
+File revision: @file-revision@ 
+Project revision: @project-revision@
+Project version: @project-version@
+
+Author: Ackis
+Originally done by Snago
+
+************************************************************************
+
+Please see WoWAce.com for more information.
+
+************************************************************************
+
+--]]
+
 local LibStub = LibStub
 
 local MODNAME = "IHML"
