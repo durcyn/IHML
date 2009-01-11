@@ -152,7 +152,7 @@ L["m_halazzi"] = [[/targetexact Оскверненный тотем молний
 /startattack]]
 -- Змеиное святилище -----
 L["Fathom-Lord Karathress"] = "Повелитель глубин Каратресс"
-L["m_flk"] = [[/targetexact Тотем огненного всполоха -- НУЖНО подтверждение
+L["m_flk"] = [[/targetexact Тотем огненного всполоха
 /startattack]]
 L["Lady Vashj"] = "Леди Вайш"
 L["m_vashj"] = [[/stopmacro[noexists][harm]
@@ -171,6 +171,7 @@ L["m_najentus"] = [[#showtooltip item:32408
 -- WotLK
 L["Coldarra"] = "Хладарра"
 L["m_drakehunt"] = [[#showtooltip item:35506
+/targetexact Детеныш дракона Нексуса
 /use item:35506]]
 -- Грозовая Гряда
 L["The Forlorn Mine"] = "Заброшенный рудник"
@@ -212,7 +213,7 @@ L["The Stormwright's Shelf"] = "Уступ Ваятеля Бурь"
 L["m_windandwater"] = [[#showtooltip item:39571
 /use item:39571]]
 -- Берег Древних
-L["Courtyard of the Ancients"] = "Внутренний двор Древних" -- Нужно подтверждение
+L["Courtyard of the Ancients"] = "Внутренний двор Древних" -- Нужно подтверждение (в файлах вова называется Двор Древних)
 L["m_strand"] = [[#showtooltip item:39213
 /use item:39213]]
 L["The Culling of Stratholme"] = "Очищение Стратхольма" -- Нужно подтверждение
@@ -230,7 +231,11 @@ L["m_lureit"] = [[#showtooltip item:34127
 /use item:34127]]
 -- Зул'Драк
 L["Drak'Sotra"] = "Драк'Сотра"
+-- 38556 == Incinerating Oil
+-- 38544 == Argent Crusade Banner
 -- 38564 == torches
+-- 38566 == Steel spade
+-- 38574 == grenades
 L["m_draksotra"] = [[#showtooltip [dead] item:38556;item:38544
 /use [dead] item:38556;item:38544]]
 L["Zul'Drak"] = "Зул'Драк"
