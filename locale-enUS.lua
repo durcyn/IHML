@@ -250,6 +250,8 @@ L["m_lureit"] = [[#showtooltip item:34127
 /target Attracted Reef Bull
 /use item:34127]]
 L["Drak'Sotra"] = true
+-- 38556 == Incinerating Oil
+-- 38544 == Argent Crusade Banner
 -- 38564 == torches
 -- 38566 == Steel spade
 -- 38574 == grenades
