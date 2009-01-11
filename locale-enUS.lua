@@ -192,6 +192,7 @@ L["m_najentus"] = [[#showtooltip item:32408
 -- WotLK
 L["Coldarra"] = true
 L["m_drakehunt"] = [[#showtooltip item:35506
+/targetexact Nexus Drake Hatchling
 /use item:35506]]
 -- Storm Peaks
 L["The Forlorn Mine"] = true
