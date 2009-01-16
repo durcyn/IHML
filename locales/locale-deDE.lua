@@ -171,6 +171,7 @@ L["m_najentus"] = [[#showtooltip item:32408
 -- WotLK
 L["Coldarra"] = "Kaltarra"
 L["m_drakehunt"] = [[#showtooltip item:35506
+/targetexact Nexusdrachenjunges
 /use Raelorasz' Speer]]
 -- Storm Peaks
 L["The Forlorn Mine"] = "Die verlassene Mine"
@@ -231,6 +232,9 @@ L["m_lureit"] = [[#showtooltip item:34127
 /use Schmackhafter Rifffisch]]
 -- Zul'Drak
 --L["Drak'Sotra"] = true
-L["m_draksotra"] = [[#showtooltip item:38556
-/use item:38556]]
+L["m_draksotra"] = [[#showtooltip [dead] item:38556;item:38544
+/use [dead] item:38556;item:38544]]
+--L["Zul'Drak"] = true
+L["m_zuldrak"] = [[#showtooltip item:38566
+/use item:38566]]
 -- /Default macros --------------------
