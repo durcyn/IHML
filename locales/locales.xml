@@ -6,4 +6,7 @@
 <Script file="locale-zhTW.lua"/>
 <Script file="locale-zhCN.lua"/>
 <Script file="locale-enUS.lua"/>
+<Script file="locale-koKR.lua"/>
+<Script file="locale-esES.lua"/>
+<Script file="locale-esMX.lua"/>
 </Ui>
