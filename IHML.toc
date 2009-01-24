@@ -11,7 +11,6 @@
 ## X-License: MIT modified with notification clause
 ## X-Donate: Donate a few bucks/hours at your local animal shelter, send me UDE Point codes, or a Murky Code.
 
-
 ## Interface: 30000
 ## Version: 2.1
 ## X-Revision: @project-revision@
