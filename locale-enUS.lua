@@ -261,3 +261,6 @@ L["m_draksotra"] = [[#showtooltip [dead] item:38556;item:38544
 L["Zul'Drak"] = true
 L["m_zuldrak"] = [[#showtooltip item:38566
 /use item:38566]]
+L["Venture Bay"] = true
+L["m_venturebay"] = [[#showtooltip item:37621
+/use item:37621]]

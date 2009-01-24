@@ -134,6 +134,8 @@ local defaults = {
 			[L["Twin Coast"]] = L["m_lureit"],
 			-- Borean Tundra
 			[L["Coldarra"]] = L["m_drakehunt"],
+			-- Grizzly Hills
+			[L["Venture Bay"]] = L["m_venturebay"],
 			-- The Storm Peaks
 			[5] = L["m_essenceofice"],
 			[L["Fjorn's Anvil"]] = 5,
