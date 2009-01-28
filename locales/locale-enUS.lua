@@ -58,6 +58,7 @@ L["Select Macro:"] = true
 L["Select a macro."] = true
 L["Swap!"] = true
 L["Swap to the selected macro."] = true
+L["Last Module"] = true
 L["Edit Macro"] = true
 L["Name: Type \"boss\" for last loaded boss module or \"zone\" for current zone.\nIcon: A number from 1 to 1044. You might want to edit this from the Blizzard Macro UI."] = true
 L["Name:"] = true
