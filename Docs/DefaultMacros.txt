@@ -1,21 +1,22 @@
-These macros are included in IHML.
+These macros are included, by default in [http://wow.curseforge.com/projects/ihml/pages/Main/ IHML].
+
+=Burning Crusade=
 
 ==Skettis==
 ===Blackwind Lake, Lower Veil Shil'ak, Skettis, Terokk's Rest, Upper Veil Shil'ak, Veil Ala'rak and Veil Harr'ik===
- <code>#showtooltip item:32406
- /use [flying] item:32406</code>
+ #showtooltip item:32406
+ /use [flying] item:32406
 
 ==Ogri'La==
 ===Vortex Pinnacle===
  #showtooltip item:32698
- /use Wrangling Rope
+ /use item:32698
  /stopattack
  /petpassive
 
 ===Forge Camp: Wrath and Forge Camp: Terror===
- #showtooltip [flying] item:32456; item:32696
- /use [flying] Skyguard Bombs
- /use [noflying] Banishing Crystal
+ #showtooltip [flying] item:32456; [noflying] item:32696
+ /use [flying] item:32456; [noflying] item:32696
 
 ==Netherwing==
 ===Netherwing Ledge===
@@ -74,7 +75,7 @@ These macros are included in IHML.
  /use [nopet] Razorthorn Flayer Gland
  /cast [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root
 
-==Cooking==
+==Cooking Daily==
 ===Ancestral Grounds===
  #showtooltip item:33851
  /use Cooking Pot
@@ -82,7 +83,7 @@ These macros are included in IHML.
 ==The Black Morass==
 ===The Black Morass===
  #showtooltip item:24289
- /use Chrono-beacon
+ /use item:24289
  
 ==Magisters' Terrace==
 ===Halls of Theory===
@@ -122,3 +123,10 @@ These macros are included in IHML.
 ===High Warlord Naj'entus===
  #showtooltip item:32408
  /use Naj'entus Spine
+
+=Wrath of the Lich King=
+
+==Sons of Hodir==
+===Fjorn's Anvil, Frostfield Lake===
+ #showtooltip item:42246
+ /use item:42246

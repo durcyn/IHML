@@ -14,3 +14,8 @@
  type: wiki
  input-file: Docs/Localization.txt
  output-page: "Localization"
+-
+ type: luadoc
+ input-file: IHML.lua
+ output-page: "API"
+ 

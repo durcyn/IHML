@@ -58,6 +58,9 @@ local macroUIHooked, bwLoaded
 local lastboss
 local currentType
 
+--- Default macros which do not require localization
+-- @usage Used internally to define which macros to load
+
 local macrolist = {
 	["m_skettis"] = [[#showtooltip item:32406
 /use [flying] item:32406]],
@@ -65,9 +68,8 @@ local macrolist = {
 /use item:32698
 /stopattack
 /petpassive]],
-	["m_forgecamp"] = [[#showtooltip [flying] item:32456; item:32696
-/use [flying] item:32456
-/use [noflying] item:32696]],
+	["m_forgecamp"] = [[#showtooltip [flying] item:32456; [noflying] item:32696
+/use [flying] item:32456; [noflying] item:32696]],
 	["m_manaremnants"] = [[#showtooltip item:34338
 /use item:34338]],
 	["m_blood4blood"] = [[#showtooltip item:34257
