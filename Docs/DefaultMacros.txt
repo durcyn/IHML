@@ -1,0 +1,124 @@
+These macros are included in IHML.
+
+==Skettis==
+===Blackwind Lake, Lower Veil Shil'ak, Skettis, Terokk's Rest, Upper Veil Shil'ak, Veil Ala'rak and Veil Harr'ik===
+ #showtooltip item:32406
+ /use Skyguard Blasting Charges
+
+==Ogri'La==
+===Vortex Pinnacle===
+ #showtooltip item:32698
+ /use Wrangling Rope
+ /stopattack
+ /petpassive
+
+===Forge Camp: Wrath and Forge Camp: Terror===
+ #showtooltip [flying] item:32456; item:32696
+ /use [flying] Skyguard Bombs
+ /use [noflying] Banishing Crystal
+
+==Netherwing==
+===Netherwing Ledge===
+ #showtooltip [flying] item:32680; item:32503
+ /use [noflying] Yarzill's Mutton
+ /stopmacro [noflying]
+ /targetexact Disobedient Dragonmaw Peon
+ /use Booterang
+ /cleartarget
+
+==Shattered Sun Offensive==
+===Isle of Quel'Danas===
+ #showtooltip item:34368
+ /targetexact Erratic Sentry
+ /use Attuned Crystal Cores
+
+===Sun's Reach Sanctum===
+ #showtooltip item:34338
+ /use Mana Remnants
+
+===Throne of Kil'jaeden===
+ #showtooltip item:34257
+ /use Fel Siphon
+
+===Spirit Fields===
+ #showtooltip item:35233
+ /use Multiphase Spectrographic Goggles
+ /equip Multiphase Spectrographic Goggles
+
+===The Dead Scar===
+ #showtooltip item:34475
+ /use Arcane Charges
+
+===The Dawning Square===
+ #showtooltip [dead] item:34414; item:34533
+ /use [dead] Shattered Sun Banner; Astromancer's Crystal
+
+===Dawnstar Village===
+ #showtooltip [dead] item:34368; item:34533
+ /use [dead] Attuned Crystal Cores; Astromancer's Crystal
+
+===Greengil Coast===
+ #showtooltip [exists] item:34483; item:34533
+ /use [exists] Orb of Murloc Control; Astromancer's Crystal
+
+===Bash'ir Landing===
+ #showtooltip item:34248
+ /use Bash'ir Phasing Device
+
+===The Sin'loren, The Dawnchaser and The Bloodoath===
+ #showtooltip item:34489
+ /use Flaming Oil
+
+===Razorthorn Rise===
+ #showtooltip [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root; item:34255
+ /use [nopet] Razorthorn Flayer Gland
+ /cast [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root
+
+==Cooking==
+===Ancestral Grounds===
+ #showtooltip item:33851
+ /use Cooking Pot
+
+==The Black Morass==
+===The Black Morass===
+ #showtooltip item:24289
+ /use Chrono-beacon
+ 
+==Magisters' Terrace==
+===Halls of Theory===
+ /targetexact Pure Energy
+ /startattack
+
+==Karazhan==
+===The Curator===
+ /targetexact Astral Flare
+ /startattack
+
+===Terestian Illhoof===
+ /targetexact Demon Chains
+ /startattack
+
+==Zul'Aman==
+===Halazzi===
+ /targetexact Corrupted Lightning Totem
+ /startattack
+
+==Serpentshrine Cavern==
+===Fathom-Lord Karathress===
+ /targetexact Spitfire Totem
+ /startattack
+
+===Lady Vashj===
+ /stopmacro[noexists][harm]
+ /run i=31088 t="target" if GetItemCount(i)>0 and HasFullControl() and IsItemInRange(i,t) then n=UnitName(t) s=SendChatMessage m="<-- TAINTED CORE TO --> " s(m..n.." !","RAID") s(m.."YOU !","WHISPER",nil,n) end
+ /use item:31088
+
+==Mount Hyjal==
+===Archimonde===
+ #showtooltip item:24494
+ /use Tears of the Goddess
+
+==Black Temple==
+===High Warlord Naj'entus===
+ #showtooltip item:32408
+ /use Naj'entus Spine

@@ -18,7 +18,7 @@
 ## Interface: 30000
 
 ## X-Category: Questing
-## X-Localizations: enUS
+## X-Localizations: enUS, ruRU, deDE, frFR, zhCN, zhTW
 ## X-Feedback: http://wow.curse.com/downloads/wow-addons/details/ihml.aspx
 ## X-Website: http://wow.curse.com/downloads/wow-addons/details/ihml.aspx
 
@@ -30,7 +30,6 @@
 embeds.xml
 #@end-no-lib-strip@
 
-locale-enUS.lua
 locales\locales.xml
 
 IHML.lua

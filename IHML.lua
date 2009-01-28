@@ -659,7 +659,7 @@ options.args.macros.args = {
 		args = {
 			info = {
 				type = "description",
-				name = L["Name: Type \"boss\" for last loaded boss module or \"zone\" for current zone.\nIcon: A number from 1 to 1044. You might want to edit this from the Blizzard Macro UI."],
+				name = L["Last Module"],
 				order = 100,
 				image = function() return GetMacroIconInfo(mBody[guiMacro] and mIcon[guiMacro] or (c.current ~= nil and currentIcon or 1)), 56, 56 end,
 			},

@@ -1,0 +1,48 @@
+Tired of manually having to open your macro window to swap macros for bosses? Running out of macro space because of all the different boss macros taking up a slot each? Getting sick of having to dig through your bags every time for those special daily quest items? Then IHML might be what you want.
+
+IHML is an addon that gives you one macro which automagically changes what it is depending on what zone you're in or which BigWigs boss module is enabled. All you have to do is take the IHML macro (the addon creates this for you and you can find it in your macro window or by typing /ihml pickup) and place it on one of your action bars.
+
+It comes preloaded with various macros for Vashj, Curator, most (if not all) Shattered Sun Offensive daily quests, bombing in Skettis, using the Booterang in Netherwing Ledge, etc.
+You can also add your own macros using the options menu (found by typing /ihml).
+
+IHML will only use one macro slot and will work with any action bar addon that you can put a normal macro on.
+Due to addon limitations macros can't be swapped in combat but will instead be queued for swap as soon as possible.
+
+==Setting up==
+You should have a macro named "ihml" that you can drag to the desired space on your action bar. You can find it among your normal macros or by typing /ihml pickup.
+If you logged in with all macro slots taken go to your macros and delete one from the general macros page (not the character specific). Then open the IHML configuration window (with /ihml) and click "Make Macro" on the options page.
+
+Done! Whenever a BigWigs boss module load/reset or you enter a zone you have a macro for IHML will automagically swap to the correct macro.
+
+==Localization==
+So far IHML has been translated to French (frFR), German (deDE) and Chinese (both zhCN and zhTW). IHML will work fine in any locale but the default macros need to be translated to work in other languages than English. If you want to help translate IHML to another language or help update a language file you can post a Patch ticket with your translations and I'll include it in the next version.
+
+==Macros==
+See the [http://wow.curseforge.com/projects/ihml/pages/default-macros/ Default macros] and [http://wow.curseforge.com/projects/ihml/pages/macro-suggestions/ Macro suggestions] pages.
+
+There are some special macros you can make apart from boss and zone macros.
+*default - This macro will be swapped in when no other macro takes priority.
+*party - Will be swapped in when you enter a 5-man instance.
+*raid - Will be swapped in when you enter a raid instance.
+*pvp - Macro for battle grounds.
+*arena - Macro for arenas.
+Note that macro names are case sensitive. "Default" or "PvP" will not work.
+
+==Chat commands==
+*/ihml or
+*/ihml config or
+*/ihml show - Show the configuration window.
+*/ihml pickup - Place the IHML macro on your cursor, ready to be placed on an action bar where you want it.
+Everything is configurable from the configuration window, so that's the only command you need to learn. There are some more commands available if you happen to prefer chat commands:
+*/ihml help - Show a list of commands.
+*/ihml save - Save any modifications to the current macro.
+*/ihml saveas "new name" - Save modifications to a new macro. Notice the quotation marks. Use them if the name contains spaces.
+*/ihml rename "new name" - Change name for current macro.
+*/ihml rename "macro" "new name" - Change name for another macro.
+*/ihml delete "macro" - Delete a macro.
+*/ihml delete - Delete the current macro.
+*/ihml list - List all available macros.
+*/ihml anything else - Swap to the macro "anything else" if it exists. Notice the lack of quotation marks.
+
+
+If you get any errors or other problems, please post a ticket or a comment about it. Feature requests and other suggestions for improvement are welcome too.

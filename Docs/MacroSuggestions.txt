@@ -1,0 +1,67 @@
+This is a list of macros that could be useful with IHML, but not useful enough for everyone to be included by default.
+If you have a good macro (for a specific boss or zone) you want to share, post a comment and I'll add it.
+
+==Ogri'La==
+===Forge Camp: Wrath and Forge Camp: Terror===
+If you use Quartz, this macro will start a custom timer when you use the Banishing Crystal.
+
+ #showtooltip [flying] item:32456; item:32696
+ /use [flying] Skyguard Bombs
+ /stopmacro [flying]
+ /use Banishing Crystal
+ /qt Banishing Crystal 180
+
+==Halaa==
+When flying the bomb runs in Halaa it would be useful with macro like this. Haven't tested it.
+ #showtooltip Fire Bomb
+ /use Fire Bomb
+
+==Magister's Terrace==
+===Grand Magister's Asylum===
+Macro to target the Phoenix.
+ /targetexact Phoenix
+ /startattack
+
+==Tempest Keep==
+===Kael'thas Sunstrider===
+Macro for hunters to equip the bow, conjure a bundle of arrows, loot the arrows (if you have autoloot on) and equip them.
+ /equip Netherstrand Longbow
+ /use Netherstrand Longbow
+ /use Bundle of Nether Spikes
+ /equip Nether Spike 
+Example of a macro to equip the legendary weapons in combat and equip your normal weapons when you are out of combat. Will need modifications from char to char to equip the right weapons.
+ /equipslot [combat] 16 Warp Slicer
+ /equipslot [combat] 17 Infinity Blade
+ /equipslot [nocombat] 16 Name of your normal mainhand here
+ /equipslot [nocombat] 17 Name of your normal offhand here
+Staff users might want to use their staff too with the same macro.
+ /equip [combat] Staff of Disintegration
+ /use [combat] Staff of Disintegration
+ /equip [nocombat] Your normal staff here
+Macro for rogues to not kill the mind controlled.
+ /cast Shiv
+ /stopattack
+
+==Mount Hyjal==
+===Rage Winterchill===
+Macro to use the medallion to break the ice block.
+ #showtooltip
+ /use Medallion of the Alliance
+
+ #showtooltip
+ /use Medallion of the Horde
+
+==Black Temple==
+===Teron Gorefiend===
+Full ghost control in one macro! Takes some modification-key skill to handle, that's why it's not included as a default macro.
+ /cast [mod:alt, mod:ctrl] Spirit Strike; [mod:alt] Spirit Chains; [mod:ctrl] Spirit Shield; [mod:shift] Spirit Volley; Spirit Lance
+
+===Shrine of Lost Souls===
+If you want to make a macro for Reliquary of Souls it's better to use the zone name (Shrine of Lost Souls) than the boss module name since you'll already be in combat by the time the BigWigs module load.
+
+For example:
+ /cast Kick
+ /p Kicked!
+You could also add a macro for a Nature Protection potion from a cauldron for phase 3. This macro uses the potion from the cauldron, not the normal one.
+ #showtooltip item:32844
+ /use item:32844
