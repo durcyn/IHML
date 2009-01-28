@@ -87,10 +87,6 @@ L["Veil Ala'rak"] = true
 L["Veil Harr'ik"] = true
 -- Ogri'La ------------------
 L["Vortex Pinnacle"] = true
-L["m_vortexpinnacle"] = [[#showtooltip item:32698
-/use item:32698
-/stopattack
-/petpassive]]
 L["Forge Camp: Wrath"] = true
 L["Forge Camp: Terror"] = true
 L["m_forgecamp"] = [[#showtooltip [flying] item:32456; item:32696

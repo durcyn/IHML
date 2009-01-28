@@ -10,7 +10,7 @@ Project revision: @project-revision@
 Project version: @project-version@
 
 Author: Ackis
-Originally done by Snago
+Originally Author: Snago
 
 ************************************************************************
 
@@ -22,9 +22,11 @@ Please see WoWAce.com for more information.
 
 local LibStub = LibStub
 
+IHML = LibStub("AceAddon-3.0"):NewAddon(MODNAME,"AceConsole-3.0","AceEvent-3.0","AceHook-3.0")
+
 local MODNAME = "IHML"
 
-local IHML = LibStub("AceAddon-3.0"):NewAddon(MODNAME,"AceConsole-3.0","AceEvent-3.0","AceHook-3.0")
+local addon		= LibStub("AceAddon-3.0"):GetAddon(MODNAME)
 local L = LibStub("AceLocale-3.0"):GetLocale(MODNAME)
 
 -- Upvalues from the global namespace
@@ -56,6 +58,15 @@ local macroUIHooked, bwLoaded
 local lastboss
 local currentType
 
+local macrolist = {
+	["m_skettis"] = [[#showtooltip item:32406
+/use [flying] item:32406]],
+	["m_pinnacle"] = [[#showtooltip item:32698
+/use item:32698
+/stopattack
+/petpassive]],
+}
+
 local defaults = {
 	profile = {
 		autoswap = true,
@@ -76,8 +87,7 @@ local defaults = {
 			-- BC Dailies
 			-- Daily quests ---------------------
 			-- Skettis ------
-			[1] = [[#showtooltip item:32406
-/use [flying] item:32406]],
+			[1] = macrolist["m_skettis"],
 			[L["Blackwind Lake"]] = 1,
 			[L["Lower Veil Shil'ak"]] = 1,
 			[L["Skettis"]] = 1,
@@ -89,7 +99,7 @@ local defaults = {
 			[2] = L["m_forgecamp"],
 			[L["Forge Camp: Wrath"]] = 2,
 			[L["Forge Camp: Terror"]] = 2,
-			[L["Vortex Pinnacle"]] = L["m_vortexpinnacle"],
+			[L["Vortex Pinnacle"]] = macrolist["m_pinnacle"],
 			-- Netherwing ---
 			[L["Netherwing Ledge"]] = L["m_booterang"],
 			-- Shattered Sun Offensive --
@@ -187,10 +197,10 @@ end
 
 local function checkMacro(name, dontMake)
 	if not name then
-		return IHML:Print(L["Please choose a macroname by typing: /ihml macroname <name here>"])
+		return addon:Print(L["Please choose a macroname by typing: /ihml macroname <name here>"])
 	elseif GetMacroIndexByName(name) == 0 then
 		if dontMake or InCombatLockdown() then
-			return IHML:Print(format(L["|cffff9999Warning!|r No macro named %s found. Make it plz!"], name))
+			return addon:Print(format(L["|cffff9999Warning!|r No macro named %s found. Make it plz!"], name))
 		else
 			for perChar = 0, 1 do
 				local m = perChar*18+18
@@ -201,13 +211,13 @@ local function checkMacro(name, dontMake)
 					end
 				end
 			end
-			return IHML:Print(L["|cffff9999Warning!|r No free macro space :("])
+			return addon:Print(L["|cffff9999Warning!|r No free macro space :("])
 		end
 	end
 	return 1
 end
 
-function IHML:OnInitialize()
+function addon:OnInitialize()
 	db = LibStub("AceDB-3.0"):New("IHMLDB", defaults, "Default")
 	self.db = db
 	c = db.char
@@ -228,7 +238,7 @@ function IHML:OnInitialize()
 
 end
 
-function IHML:OnProfileChanged()
+function addon:OnProfileChanged()
 	p = db.profile
 	mName = {}
 	mIcon = p.macroIcon
@@ -240,7 +250,7 @@ function IHML:OnProfileChanged()
 	end
 end
 
-function IHML:OnEnable()
+function addon:OnEnable()
 	self:UpdateSettings()
 	checkMacro(p.macroname)
 	if c.current then
@@ -260,11 +270,11 @@ function IHML:OnEnable()
 	end
 end
 
-function IHML:OnDisable()
+function addon:OnDisable()
 	bw2bm = nil
 end
 
-function IHML:ZoneChanged()
+function addon:ZoneChanged()
 	local zone = GetMinimapZoneText()
 	self:SwapMacro(zone)
 	if currentType == "zone" then
@@ -277,7 +287,7 @@ function IHML:ZoneChanged()
 	end
 end
 
-function IHML:PLAYER_ENTERING_WORLD()
+function addon:PLAYER_ENTERING_WORLD()
 	local instanceType = select(2, IsInInstance())
 	if instanceType == "none" then
 		if currentType == "instance" then
@@ -292,7 +302,7 @@ function IHML:PLAYER_ENTERING_WORLD()
 	end
 end
 
-function IHML:ADDON_LOADED(event, addon)
+function addon:ADDON_LOADED(event, addon)
 	if addon == "Blizzard_MacroUI" then
 		-- Blizzard_MacroUI loads twice for some reason
 		-- (guessing it has got something to do with the dummy addon in the AddOns-folder)
@@ -303,7 +313,7 @@ function IHML:ADDON_LOADED(event, addon)
 			if MacroPopupEditBox:GetText() == p.macroname then
 				currentIcon = MacroPopupFrame.selectedIcon
 				mIcon[c.current] = currentIcon
-				--IHML:Print("Caught macro icon index: "..currentIcon)
+				--addon:Print("Caught macro icon index: "..currentIcon)
 			end
 		end)
 		macroUIHooked = true
@@ -312,7 +322,7 @@ function IHML:ADDON_LOADED(event, addon)
 			-- If the addon don't have enabletrigger then it's not a bossmod
 			if addon.enabletrigger and bw2bm then
 				lastboss = addon.name
-				IHML:SwapMacro(lastboss)
+				addon:SwapMacro(lastboss)
 				if c.current == lastboss then
 					currentType = "boss"
 				end
@@ -322,7 +332,7 @@ function IHML:ADDON_LOADED(event, addon)
 			if sync ~= "BossDeath" then return end
 			if c.current == module then
 				currentType = nil
-				IHML:SwapMacro("default")
+				addon:SwapMacro("default")
 			end
 		end)
 		bwLoaded = true
@@ -332,7 +342,7 @@ function IHML:ADDON_LOADED(event, addon)
 	end
 end
 
-function IHML:SwapMacro(new, silent)
+function addon:SwapMacro(new, silent)
 	if silent == nil then silent = p.silent end
 	new = new ~= "PLAYER_REGEN_ENABLED" and new or queued
 	local body = mBody[new]
@@ -373,7 +383,7 @@ function IHML:SwapMacro(new, silent)
 end
 
 
-function IHML:ChatCommand(msg)
+function addon:ChatCommand(msg)
 	local arg, pos = self:GetArgs(msg, 1, 1)
 	if not arg or arg == "config" or arg == "gui" or arg == "show" then
 		LibStub("AceConfigDialog-3.0"):Open("IHML")
@@ -475,7 +485,7 @@ function IHML:ChatCommand(msg)
 			end
 		end
 		db:RegisterDefaults(defaults)
-		IHML:OnProfileChanged()
+		addon:OnProfileChanged()
 		return
 	end
 --	self:Print(msg)
@@ -485,7 +495,7 @@ function IHML:ChatCommand(msg)
 	end
 end
 
-function IHML:UpdateSettings()
+function addon:UpdateSettings()
 	if p.autoswap then
 		bw2bm = p.byBigWigs2BossMod == true
 		if p.byInstanceType then
@@ -529,7 +539,7 @@ options = {
 			desc = L["Options"],
 			order = 200,
 			get = function(k) return p[k.arg] end,
-			set = function(k, v) p[k.arg] = v; IHML:UpdateSettings() end,
+			set = function(k, v) p[k.arg] = v; addon:UpdateSettings() end,
 			--args = {}, -- defined later
 		},
 	}
@@ -649,7 +659,7 @@ options.args.macros.args = {
 		desc = L["Swap to the selected macro."],
 		order = 101,
 		disabled = function() return guiMacro == nil end,
-		func = function() IHML:SwapMacro(guiMacro); if c.current == guiMacro then currentType = nil end end,
+		func = function() addon:SwapMacro(guiMacro); if c.current == guiMacro then currentType = nil end end,
 	},
 	macro = {
 		type = "group",
@@ -805,9 +815,7 @@ options.args.macros.args = {
 				end
 			end
 			db:RegisterDefaults(defaults)
-			IHML:OnProfileChanged()
+			addon:OnProfileChanged()
 		end,
 	},
 }
-
-_G.IHML = IHML
