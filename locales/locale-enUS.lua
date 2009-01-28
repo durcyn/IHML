@@ -85,8 +85,6 @@ L["Terokk's Rest"] = true
 L["Upper Veil Shil'ak"] = true
 L["Veil Ala'rak"] = true
 L["Veil Harr'ik"] = true
-L["m_skettis"] = [[#showtooltip item:32406
-/use item:32406]]
 -- Ogri'La ------------------
 L["Vortex Pinnacle"] = true
 L["m_vortexpinnacle"] = [[#showtooltip item:32698

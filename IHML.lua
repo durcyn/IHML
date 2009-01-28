@@ -76,7 +76,8 @@ local defaults = {
 			-- BC Dailies
 			-- Daily quests ---------------------
 			-- Skettis ------
-			[1] = L["m_skettis"],
+			[1] = [[#showtooltip item:32406
+/use [flying] item:32406]],
 			[L["Blackwind Lake"]] = 1,
 			[L["Lower Veil Shil'ak"]] = 1,
 			[L["Skettis"]] = 1,
