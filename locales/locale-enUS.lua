@@ -2,7 +2,7 @@
 
 locale-enUS.lua
 
-enUS localization strings for Ackis Recipe List
+enUS localization strings for IHML
 
 File date: @file-date-iso@ 
 File revision: @file-revision@ 
