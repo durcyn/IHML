@@ -58,10 +58,10 @@ local macroUIHooked, bwLoaded
 local lastboss
 local currentType
 
--------------------------------------------------------------------------------
--- Default Macros
+--- Default Macros
 -- @class table
 -- @name macrolist
+-- @field [] Macro text for all the default macros
 
 local macrolist = {
 	["m_skettis"] = [[#showtooltip item:32406
