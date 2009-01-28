@@ -2,8 +2,8 @@ These macros are included in IHML.
 
 ==Skettis==
 ===Blackwind Lake, Lower Veil Shil'ak, Skettis, Terokk's Rest, Upper Veil Shil'ak, Veil Ala'rak and Veil Harr'ik===
- #showtooltip item:32406
- /use Skyguard Blasting Charges
+ <code>#showtooltip item:32406
+ /use [flying] item:32406</code>
 
 ==Ogri'La==
 ===Vortex Pinnacle===

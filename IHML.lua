@@ -65,6 +65,75 @@ local macrolist = {
 /use item:32698
 /stopattack
 /petpassive]],
+	["m_forgecamp"] = [[#showtooltip [flying] item:32456; item:32696
+/use [flying] item:32456
+/use [noflying] item:32696]],
+	["m_manaremnants"] = [[#showtooltip item:34338
+/use item:34338]],
+	["m_blood4blood"] = [[#showtooltip item:34257
+/use item:34257]],
+	["m_spectrogoggles"] = [[#showtooltip item:35233
+/use item:35233
+/equip item:35233]],
+	["m_deadscar"] = [[#showtooltip item:34475
+/use item:34475]],
+	["m_ssbanner"] = [[#showtooltip [dead] item:34414; item:34533
+/use [dead] item:34414; item:34533]],
+	["m_greengil"] = [[#showtooltip [exists] item:34483; item:34533
+/use [exists] item:34483; item:34533]],
+	["m_dawnstar"] = [[#showtooltip [dead] item:34368; item:34533
+/use [dead] item:34368; item:34533]],
+	["m_bashir"] = [[#showtooltip item:34248
+/use item:34248]],
+	["m_flamingoil"] = [[#showtooltip item:34489
+/use item:34489]],
+	["m_atamal"] = [[#showtooltip item:34500
+/use item:34500]],
+	["m_soup4soul"] = [[#showtooltip item:33851
+/use item:33851]],
+	["m_blackmorass"] = [[#showtooltip item:24289
+/use item:24289]], -- ???
+	["m_archimonde"] = [[#showtooltip item:24494
+/use item:24494]],
+	["m_najentus"] = [[#showtooltip item:32408
+/use item:32408]],
+	["m_discipline"] = [[#showtooltip item:42837
+/use item:42837]],
+	["m_essenceofice"] = [[#showtooltip item:42246
+/use item:42246]],
+	["m_aberations"] = [[#showtooltip item:41612
+/use item:41612]],
+	["m_landmine"] = [[#showtooltip item:40676
+/use item:40676]],
+	["m_hodirhorn"] = [[#showtooltip item:42164
+/use item:42164]],
+	["m_hodirdaily"] = [[#showtooltip [dead] item:42479; item:42774
+/use [dead] item:42479; item:42774]],
+	["m_pitoffang"] = [[#showtooltip item:42499
+/use item:42499]],
+	["m_leavemark"] = [[#showtooltip [dead] item:42480
+/use [dead] item:42480]],
+	["m_corpserise"] = [[#showtooltip [dead] item:40587
+/use [dead] item:40587]],
+	["m_windandwater"] = [[#showtooltip item:39571
+/use item:39571]],
+	["m_strand"] = [[#showtooltip item:39213
+/use item:39213]],
+	["m_cos"] = [[#showtooltip item:37888
+/use item:37888]],
+	["m_fishyfish"] = [[#showtooltip item:40946
+/use item:40946]],
+-- 38556 == Incinerating Oil
+-- 38544 == Argent Crusade Banner
+-- 38564 == torches
+-- 38566 == Steel spade
+-- 38574 == grenades
+	["m_draksotra"] = [[#showtooltip [dead] item:38556;item:38544
+/use [dead] item:38556;item:38544]],
+	["m_zuldrak"] = [[#showtooltip item:38566
+/use item:38566]],
+	["m_venturebay"] = [[#showtooltip item:37621
+/use item:37621]],
 }
 
 local defaults = {
@@ -96,7 +165,7 @@ local defaults = {
 			[L["Veil Ala'rak"]] = 1,
 			[L["Veil Harr'ik"]] = 1,
 			-- Ogri'La ------
-			[2] = L["m_forgecamp"],
+			[2] = macrolist["m_forgecamp"],
 			[L["Forge Camp: Wrath"]] = 2,
 			[L["Forge Camp: Terror"]] = 2,
 			[L["Vortex Pinnacle"]] = macrolist["m_pinnacle"],
@@ -104,23 +173,25 @@ local defaults = {
 			[L["Netherwing Ledge"]] = L["m_booterang"],
 			-- Shattered Sun Offensive --
 			[L["Isle of Quel'Danas"]] = L["m_crystalcores"],
-			[L["Sun's Reach Sanctum"]] = L["m_manaremnants"],
-			[L["Throne of Kil'jaeden"]] = L["m_blood4blood"],
-			[L["Spirit Fields"]] = L["m_spectrogoggles"],
-			[L["The Dead Scar"]] = L["m_deadscar"],
-			[L["The Dawning Square"]] = L["m_ssbanner"],
-			[L["Bash'ir Landing"]] = L["m_bashir"],
-			[3] = L["m_flamingoil"],
+			[L["Sun's Reach Sanctum"]] = macrolist["m_manaremnants"],
+			[L["Throne of Kil'jaeden"]] = macrolist["m_blood4blood"],
+			[L["Spirit Fields"]] = macrolist["m_spectrogoggles"],
+			[L["The Dead Scar"]] = macrolist["m_deadscar"],
+			[L["The Dawning Square"]] = macrolist["m_ssbanner"],
+			[L["Bash'ir Landing"]] = macrolist["m_bashir"],
+			[3] = macrolist["m_flamingoil"],
 			[L["The Sin'loren"]] = 3,
 			[L["The Dawnchaser"]] = 3,
 			[L["The Bloodoath"]] = 3,
-			[L["Greengill Coast"]] = L["m_greengil"],
-			[L["Dawnstar Village"]] = L["m_dawnstar"],
-			[L["Sun's Reach Armory"]] = L["m_atamal"],
+			[L["Greengill Coast"]] = macrolist["m_greengil"],
+			[L["Dawnstar Village"]] = macrolist["m_dawnstar"],
+			[L["Sun's Reach Armory"]] = macrolist["m_atamal"],
 			[L["Razorthorn Rise"]] = L["m_razorthorn"],
 			-- Cooking ------
-			[L["Ancestral Grounds"]] = L["m_soup4soul"],
+			[L["Ancestral Grounds"]] = macrolist["m_soup4soul"],
 			-- BC Instances
+			-- The Black Morass
+			[L["The Black Morass"]] = macrolist["m_blackmorass"],
 			-- Magisters' Terrace ---------------
 			[L["Halls of Theory"]] = L["m_vexallus"],
 			-- Karazhan -------------------------
@@ -132,47 +203,47 @@ local defaults = {
 			[L["Fathom-Lord Karathress"]] = L["m_flk"],
 			[L["Lady Vashj"]] = L["m_vashj"],
 			-- Mount Hyjal ----------------------
-			[L["Archimonde"]] = L["m_archimonde"],
+			[L["Archimonde"]] = macrolist["m_archimonde"],
 			-- Black Temple ---------------------
-			[L["High Warlord Naj'entus"]] = L["m_najentus"],
+			[L["High Warlord Naj'entus"]] = macrolist["m_najentus"],
 			-------------------------------------
 
 			-- Wrath Dailies
 			-- Howling Fjord
-			[7] = L["m_fishyfish"],
+			[7] = macrolist["m_fishyfish"],
 			[L["Howling Fjord"]] = 7,
 			[L["Ledge of Garvan"]] = 7,
 			[L["Twin Coast"]] = L["m_lureit"],
 			-- Borean Tundra
 			[L["Coldarra"]] = L["m_drakehunt"],
 			-- Grizzly Hills
-			[L["Venture Bay"]] = L["m_venturebay"],
+			[L["Venture Bay"]] = macrolist["m_venturebay"],
 			-- The Storm Peaks
-			[5] = L["m_essenceofice"],
+			[5] = macrolist["m_essenceofice"],
 			[L["Fjorn's Anvil"]] = 5,
 			[L["Frostfield Lake"]] = 5,
-			[L["The Forlorn Mine"]] = L["m_discipline"],
-			[6] = L["m_aberations"],
+			[L["The Forlorn Mine"]] = macrolist["m_discipline"],
+			[6] = macrolist["m_aberations"],
 			[L["The Blighted Pool"]] = 6,
 			[L["Valkyrion"]] = 6,
-			[L["Garm's Bane"]] = L["m_landmine"],
-			[L["Thunderfall"]] = L["m_hodirhorn"],
-			[L["Valley of Ancient Winters"]] = L["m_hodirdaily"],
-			[L["The Pit of the Fang"]] = L["m_pitoffang"],
+			[L["Garm's Bane"]] = macrolist["m_landmine"],
+			[L["Thunderfall"]] = macrolist["m_hodirhorn"],
+			[L["Valley of Ancient Winters"]] = macrolist["m_hodirdaily"],
+			[L["The Pit of the Fang"]] = macrolist["m_pitoffang"],
 			-- Zul'Drak
-			[L["Drak'Sotra"]] = L["m_draksotra"],
-			[L["Zul'Drak"]] = L["m_zuldrak"],
+			[L["Drak'Sotra"]] = macrolist["m_draksotra"],
+			[L["Zul'Drak"]] = macrolist["m_zuldrak"],
 			-- Ice Crown
 			[L["The Valley of Fallen Heroes"]] = L["m_alliancebline"],
-			[L["Njorndar Village"]] = L["m_leavemark"],
-			[L["Onslaught Harbor"]] = L["m_corpserise"],
+			[L["Njorndar Village"]] = macrolist["m_leavemark"],
+			[L["Onslaught Harbor"]] = macrolist["m_corpserise"],
 			-- Shozalar Basin
-			[L["The Stormwright's Shelf"]] = L["m_windandwater"],
+			[L["The Stormwright's Shelf"]] = macrolist["m_windandwater"],
 			-- Strand of the Ancients
-			[L["Courtyard of the Ancients"]] = L["m_strand"],
+			[L["Courtyard of the Ancients"]] = macrolist["m_strand"],
 			-- WotLK Instances
 			-- Culling of Stratholme
-			[L["The Culling of Stratholme"]] = L["m_cos"],
+			[L["The Culling of Stratholme"]] = macrolist["m_cos"],
 		},
 	}
 }
