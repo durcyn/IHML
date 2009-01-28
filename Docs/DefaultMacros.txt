@@ -128,7 +128,66 @@ This is a listing of default macros contained in the addon [http://wow.curseforg
 
 =Wrath of the Lich King=
 
-==Sons of Hodir Dailies==
-===Fjorn's Anvil, Frostfield Lake===
+==Storm Peaks==
+
+===The Forlorn Mine===
+ #showtooltip item:42837
+ /use item:42837
+
+===The Blighted Pool, Valkyrion===
+ #showtooltip item:41612
+ /use item:41612
+
+===Garm's Bane===
+ #showtooltip item:40676
+ /use item:40676
+
+===Sons of Hodir Dailies===
+====Fjorn's Anvil, Frostfield Lake====
  #showtooltip item:42246
  /use item:42246
+====Thunderfall====
+ #showtooltip item:42164
+ /use item:42164
+====Valley of Ancient Winters====
+ #showtooltip [dead] item:42479; item:42774
+ /use [dead] item:42479; item:42774
+====The Pit of Fang====
+ #showtooltip item:42499
+ /use item:42499
+
+==Ice Crown==
+===Njorndar Village===
+ #showtooltip [dead] item:42480
+ /use [dead] item:42480]]
+===???===
+ showtooltip [dead] item:40587
+ /use [dead] item:40587
+===???===
+ #showtooltip item:39571
+ /use item:39571
+
+==Strand of the Ancients==
+ #showtooltip item:39213
+ /use item:39213
+
+==Caverns of Tme: Stratholme==
+ #showtooltip item:37888
+ /use item:37888
+
+==Grizzly Hills==
+===Venture Bay===
+ #showtooltip item:37621
+ /use item:37621
+==Howling Fjord==
+===Howling Fjord, Ledge of Garvan===
+ #showtooltip item:40946
+ /use item:40946
+
+ ==Zul'Drak==
+ ===Drak Sotra===
+ #showtooltip [dead] item:38556;item:38544
+ /use [dead] item:38556;item:38544
+ ===Zul'Drak===
+ #showtooltip item:38566
+ /use item:38566
