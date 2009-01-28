@@ -58,6 +58,8 @@ local macroUIHooked, bwLoaded
 local lastboss
 local currentType
 
+-------------------------------------------------------------------------------
+-- Default Macros
 -- @class table
 -- @name macrolist
 
