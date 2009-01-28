@@ -58,8 +58,8 @@ local macroUIHooked, bwLoaded
 local lastboss
 local currentType
 
---- Default macros which do not require localization
--- @usage Used internally to define which macros to load
+-- @class table
+-- @name macrolist
 
 local macrolist = {
 	["m_skettis"] = [[#showtooltip item:32406

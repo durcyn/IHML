@@ -1,13 +1,15 @@
-These macros are included, by default in [http://wow.curseforge.com/projects/ihml/pages/Main/ IHML].
+=IHML=
+
+This is a listing of default macros contained in the addon [http://wow.curseforge.com/projects/ihml/pages/Main/ IHML].
 
 =Burning Crusade=
 
-==Skettis==
+==Skettis Dailies==
 ===Blackwind Lake, Lower Veil Shil'ak, Skettis, Terokk's Rest, Upper Veil Shil'ak, Veil Ala'rak and Veil Harr'ik===
  #showtooltip item:32406
  /use [flying] item:32406
 
-==Ogri'La==
+==Ogri'La Dailies==
 ===Vortex Pinnacle===
  #showtooltip item:32698
  /use item:32698
@@ -18,7 +20,7 @@ These macros are included, by default in [http://wow.curseforge.com/projects/ihm
  #showtooltip [flying] item:32456; [noflying] item:32696
  /use [flying] item:32456; [noflying] item:32696
 
-==Netherwing==
+==Netherwing Dailies==
 ===Netherwing Ledge===
  #showtooltip [flying] item:32680; item:32503
  /use [noflying] Yarzill's Mutton
@@ -111,7 +113,7 @@ These macros are included, by default in [http://wow.curseforge.com/projects/ihm
 
 ===Lady Vashj===
  /stopmacro[noexists][harm]
- /run i=31088 t="target" if GetItemCount(i)>0 and HasFullControl() and IsItemInRange(i,t) then n=UnitName(t) s=SendChatMessage m="<-- TAINTED CORE TO --> " s(m..n.." !","RAID") s(m.."YOU !","WHISPER",nil,n) end
+ <nowiki>/run i=31088 t="target" if GetItemCount(i)>0 and HasFullControl() and IsItemInRange(i,t) then n=UnitName(t) s=SendChatMessage m="<-- TAINTED CORE TO --> " s(m..n.." !","RAID") s(m.."YOU !","WHISPER",nil,n) end</nowiki>
  /use item:31088
 
 ==Mount Hyjal==
@@ -126,7 +128,7 @@ These macros are included, by default in [http://wow.curseforge.com/projects/ihm
 
 =Wrath of the Lich King=
 
-==Sons of Hodir==
+==Sons of Hodir Dailies==
 ===Fjorn's Anvil, Frostfield Lake===
  #showtooltip item:42246
  /use item:42246
