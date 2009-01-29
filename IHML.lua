@@ -22,9 +22,9 @@ Please see WoWAce.com for more information.
 
 local LibStub = LibStub
 
-IHML = LibStub("AceAddon-3.0"):NewAddon(MODNAME,"AceConsole-3.0","AceEvent-3.0","AceHook-3.0")
-
 local MODNAME = "IHML"
+
+IHML = LibStub("AceAddon-3.0"):NewAddon(MODNAME,"AceConsole-3.0","AceEvent-3.0","AceHook-3.0")
 
 local addon		= LibStub("AceAddon-3.0"):GetAddon(MODNAME)
 local L = LibStub("AceLocale-3.0"):GetLocale(MODNAME)
