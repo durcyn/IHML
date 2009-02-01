@@ -168,6 +168,10 @@ L["Thunderfall"] = true
 L["Valley of Ancient Winters"] = true
 L["The Pit of the Fang"] = true
 -- Ice Crown
+L["The Broken Front"] = true
+L["m_brokenfront"] = [[#showtooltip item:43968
+/targetexact Hulking Abomination
+/use item:43968]]
 L["The Valley of Fallen Heroes"] = true
 L["m_alliancebline"] = [[#showtooltip item:44212
 /targetexact Skybreaker Recon Fighter

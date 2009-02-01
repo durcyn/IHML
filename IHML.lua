@@ -241,6 +241,7 @@ local defaults = {
 			[L["Drak'Sotra"]] = macrolist["m_draksotra"],
 			[L["Zul'Drak"]] = macrolist["m_zuldrak"],
 			-- Ice Crown
+			[L["The Broken Front"]] = L["m_brokenfront"],
 			[L["The Valley of Fallen Heroes"]] = L["m_alliancebline"],
 			[L["Njorndar Village"]] = macrolist["m_leavemark"],
 			[L["Onslaught Harbor"]] = macrolist["m_corpserise"],
