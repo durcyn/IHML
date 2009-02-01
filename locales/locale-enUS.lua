@@ -180,6 +180,8 @@ L["The Stormwright's Shelf"] = true
 -- Strand of the Ancients
 L["Courtyard of the Ancients"] = true
 L["The Culling of Stratholme"] = true
+-- Grizzly Hills
+L["Grizzly Hills"] = true
 -- Howling Fjord
 L["Howling Fjord"] = true
 L["Ledge of Garvan"] = true
