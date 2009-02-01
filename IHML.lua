@@ -138,6 +138,8 @@ local macrolist = {
 /use item:38566]],
 	["m_venturebay"] = [[#showtooltip item:37621
 /use item:37621]],
+	["m_grizzly"] = [[#showtooltip item:35908
+/use item:35908]],
 }
 
 local defaults = {
@@ -221,6 +223,7 @@ local defaults = {
 			-- Borean Tundra
 			[L["Coldarra"]] = L["m_drakehunt"],
 			-- Grizzly Hills
+			[L["Grizzly Hills"]] = macrolist["m_grizzly"],
 			[L["Venture Bay"]] = macrolist["m_venturebay"],
 			-- The Storm Peaks
 			[5] = macrolist["m_essenceofice"],
@@ -377,8 +380,8 @@ function addon:PLAYER_ENTERING_WORLD()
 	end
 end
 
-function addon:ADDON_LOADED(event, addon)
-	if addon == "Blizzard_MacroUI" then
+function addon:ADDON_LOADED(event, addonname)
+	if addonname == "Blizzard_MacroUI" then
 		-- Blizzard_MacroUI loads twice for some reason
 		-- (guessing it has got something to do with the dummy addon in the AddOns-folder)
 		-- MacroFrame remains nil until it has loaded for real.
@@ -392,8 +395,8 @@ function addon:ADDON_LOADED(event, addon)
 			end
 		end)
 		macroUIHooked = true
-	elseif addon == "BigWigs" then
-		AceLibrary("AceEvent-2.0").RegisterEvent(IHML, "Ace2_AddonEnabled", function(addon)
+	elseif addonname == "BigWigs" then
+		AceLibrary("AceEvent-2.0").RegisterEvent(IHML, "Ace2_AddonEnabled", function(addonname)
 			-- If the addon don't have enabletrigger then it's not a bossmod
 			if addon.enabletrigger and bw2bm then
 				lastboss = addon.name
