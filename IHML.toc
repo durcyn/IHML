@@ -7,8 +7,6 @@
 
 ## Author: Ackis, Snago
 ## eMail: ackis AT shaw DOT ca
-## X-email: ackis AT shaw DOT ca
-## X-License: MIT modified with notification clause
 ## X-Donate: Donate a few bucks/hours at your local animal shelter, send me UDE Point codes, or a Murky Code.
 
 ## Interface: 30000
@@ -20,7 +18,6 @@
 ## X-Category: Questing
 ## X-Localizations: enUS, ruRU, deDE, frFR, zhCN, zhTW
 ## X-Feedback: http://wow.curse.com/downloads/wow-addons/details/ihml.aspx
-## X-Website: http://wow.curse.com/downloads/wow-addons/details/ihml.aspx
 
 ## OptionalDeps: Ace3, LibStub, CallbackHandler-1.0, LibAboutPanel
 ## SavedVariables: IHMLDB
