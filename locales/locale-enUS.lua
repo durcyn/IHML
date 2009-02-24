@@ -75,6 +75,7 @@ L["New macro %d"] = true -- %d gets replaced with a number
 L["Remove!"] = true
 L["Remove the macro."] = true
 L["Are you sure you want to remove %s?"] = true -- %s gets replaced with the macro in question
+L["PVP"] = true
 
 -- Default macros
 -- Most macros do not need to be localized.

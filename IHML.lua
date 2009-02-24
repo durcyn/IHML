@@ -46,6 +46,8 @@ local InCombatLockdown = InCombatLockdown
 local GetMacroIconInfo = GetMacroIconInfo
 local GetMinimapZoneText = GetMinimapZoneText
 local GetMacroIndexByName = GetMacroIndexByName
+local UnitFactionGroup = UnitFactionGroup
+local UnitIsPlayer = UnitIsPlayer
 
 -- locals
 local db, c, p, options
@@ -140,11 +142,13 @@ local macrolist = {
 /use item:37621]],
 	["m_grizzly"] = [[#showtooltip item:35908
 /use item:35908]],
+	["m_pvp"] = "",
 }
 
 local defaults = {
 	profile = {
 		autoswap = true,
+		pvpenabled = false,
 		silent = true,
 		byBigWigs2BossMod = true,
 		byInstanceType = true,
@@ -252,6 +256,7 @@ local defaults = {
 			-- WotLK Instances
 			-- Culling of Stratholme
 			[L["The Culling of Stratholme"]] = macrolist["m_cos"],
+			[L["PVP"]] = macrolist["m_pvp"],
 		},
 	}
 }
@@ -366,6 +371,19 @@ function addon:ZoneChanged()
 	end
 end
 
+local playerFaction = UnitFactionGroup("player")
+
+function addon:PLAYER_TARGET_CHANGED()
+
+	if UnitIsPlayer("target") then
+		local targetfaction = UnitFactionGroup("target")
+		if (targetfaction ~= playerFaction) then
+			self:SwapMacro(L["PVP"])
+		end
+	end
+
+end
+
 function addon:PLAYER_ENTERING_WORLD()
 	local instanceType = select(2, IsInInstance())
 	if instanceType == "none" then
@@ -460,7 +478,6 @@ function addon:SwapMacro(new, silent)
 	queued = nil
 	self:UnregisterEvent("PLAYER_REGEN_ENABLED")
 end
-
 
 function addon:ChatCommand(msg)
 	local arg, pos = self:GetArgs(msg, 1, 1)
@@ -593,6 +610,11 @@ function addon:UpdateSettings()
 			self:UnregisterEvent("ZONE_CHANGED_INDOORS")
 			self:UnregisterEvent("ZONE_CHANGED")
 		end
+		if p.pvpenabled then
+			self:RegisterEvent("PLAYER_TARGET_CHANGED")
+		else
+			self:UnregisterEvent("PLAYER_TARGET_CHANGED")
+		end
 	else
 		bw2bm = nil
 		self:UnregisterEvent("PLAYER_ENTERING_WORLD")
@@ -669,6 +691,12 @@ options.args.option.args = {
 						desc = L["By Zone"],
 						order = 200,
 						arg = "byZone",
+					},
+					pvp = {
+						name = L["PVP"], type = "toggle",
+						desc = L["PVP"],
+						order = 250,
+						arg = "pvpenabled",
 					},
 				},
 			},
