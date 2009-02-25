@@ -59,6 +59,7 @@ local queued
 local macroUIHooked, bwLoaded
 local lastboss
 local currentType
+local lastMacro
 
 --- Default Macros
 -- @class table
@@ -375,10 +376,17 @@ local playerFaction = UnitFactionGroup("player")
 
 function addon:PLAYER_TARGET_CHANGED()
 
+	-- Remember what our last macro was
+	if (c.current ~= L["PVP"]) then
+		lastMacro = c.current
+	end
+
 	if UnitIsPlayer("target") then
 		local targetfaction = UnitFactionGroup("target")
 		if (targetfaction ~= playerFaction) then
 			self:SwapMacro(L["PVP"])
+		else
+			self:SwapMacro(lastMacro)
 		end
 	end
 
