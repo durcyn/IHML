@@ -191,7 +191,7 @@ L["Grizzly Hills"] = true
 -- Howling Fjord
 L["Howling Fjord"] = true
 L["Ledge of Garvan"] = true
-L["Twin Coast"] = true
+L["Twin Shores"] = true
 L["m_lureit"] = [[#showtooltip item:34127
 /target Reef Bull
 /target Attracted Reef Bull

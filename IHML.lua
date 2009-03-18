@@ -228,7 +228,7 @@ local defaults = {
 			[7] = macrolist["m_fishyfish"],
 			[L["Howling Fjord"]] = 7,
 			[L["Ledge of Garvan"]] = 7,
-			[L["Twin Coast"]] = L["m_lureit"],
+			[L["Twin Shores"]] = L["m_lureit"],
 			-- Borean Tundra
 			[L["Coldarra"]] = L["m_drakehunt"],
 			-- Grizzly Hills
