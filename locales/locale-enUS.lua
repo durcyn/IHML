@@ -91,6 +91,8 @@ L["Veil Harr'ik"] = true
 L["Vortex Pinnacle"] = true
 L["Forge Camp: Wrath"] = true
 L["Forge Camp: Terror"] = true
+-- Halaa
+L["Halaa"] = true
 -- Netherwing
 L["Netherwing Ledge"] = true
 L["m_booterang"] = [[#showtooltip [flying] item:32680; item:32503

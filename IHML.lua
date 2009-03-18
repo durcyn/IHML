@@ -144,6 +144,8 @@ local macrolist = {
 	["m_grizzly"] = [[#showtooltip item:35908
 /use item:35908]],
 	["m_pvp"] = "",
+	["m_halaa"] = [[#showtooltip item:24538
+/use item:24538]],
 }
 
 local defaults = {
@@ -175,13 +177,15 @@ local defaults = {
 			[L["Upper Veil Shil'ak"]] = 1,
 			[L["Veil Ala'rak"]] = 1,
 			[L["Veil Harr'ik"]] = 1,
-			-- Ogri'La ------
+			-- Ogri'La
 			[2] = macrolist["m_forgecamp"],
 			[L["Forge Camp: Wrath"]] = 2,
 			[L["Forge Camp: Terror"]] = 2,
 			[L["Vortex Pinnacle"]] = macrolist["m_pinnacle"],
-			-- Netherwing ---
+			-- Netherwing
 			[L["Netherwing Ledge"]] = L["m_booterang"],
+			-- Halaa
+			[L["Halaa"]] = macrolist["m_halaa"],
 			-- Shattered Sun Offensive --
 			[L["Isle of Quel'Danas"]] = L["m_crystalcores"],
 			[L["Sun's Reach Sanctum"]] = macrolist["m_manaremnants"],
