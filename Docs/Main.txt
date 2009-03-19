@@ -1,3 +1,4 @@
+==What it does==
 Tired of manually having to open your macro window to swap macros for bosses? Running out of macro space because of all the different boss macros taking up a slot each? Getting sick of having to dig through your bags every time for those special daily quest items? Then IHML might be what you want.
 
 IHML is an addon that gives you one macro which automagically changes what it is depending on what zone you're in or which BigWigs boss module is enabled. All you have to do is take the IHML macro (the addon creates this for you and you can find it in your macro window or by typing /ihml pickup) and place it on one of your action bars.
@@ -8,27 +9,18 @@ You can also add your own macros using the options menu (found by typing /ihml).
 IHML will only use one macro slot and will work with any action bar addon that you can put a normal macro on.
 Due to addon limitations macros can't be swapped in combat but will instead be queued for swap as soon as possible.
 
-==Setting up==
+==Where to get it==
+* [http://www.wowace.com/projects/ihml/ WoW Ace] - Alpha Quality
+* [http://wow.curse.com/downloads/wow-addons/details/ihml.aspx Curse] - Stable release
+* [http://www.wowinterface.com/downloads/info8441-IHML-IHaveMacroLol.html WoWInterface] - Stable release
+
+==How to get it to work==
 You should have a macro named "ihml" that you can drag to the desired space on your action bar. You can find it among your normal macros or by typing /ihml pickup.
 If you logged in with all macro slots taken go to your macros and delete one from the general macros page (not the character specific). Then open the IHML configuration window (with /ihml) and click "Make Macro" on the options page.
 
 Done! Whenever a BigWigs boss module load/reset or you enter a zone you have a macro for IHML will automagically swap to the correct macro.
 
-==Localization==
-Please see the documentation on [http://wow.curseforge.com/projects/ihml/pages/Localization/ Localization] to help with translation.
-
-==Macros==
-See the [http://wow.curseforge.com/projects/ihml/pages/default-macros/ Default macros] and [http://wow.curseforge.com/projects/ihml/pages/macro-suggestions/ Macro suggestions] pages.
-
-There are some special macros you can make apart from boss and zone macros.
-*default - This macro will be swapped in when no other macro takes priority.
-*party - Will be swapped in when you enter a 5-man instance.
-*raid - Will be swapped in when you enter a raid instance.
-*pvp - Macro for battle grounds.
-*arena - Macro for arenas.
-Note that macro names are case sensitive. "Default" or "PvP" will not work.
-
-==Chat commands==
+===Chat commands===
 * <code>/ihml</code> or
 * <code>/ihml config</code> or
 * <code>/ihml show</code>
@@ -56,4 +48,28 @@ Everything is configurable from the configuration window, so that's the only com
 * <code>/ihml anything else</code>
 **Swap to the macro "anything else" if it exists. Notice the lack of quotation marks.
 
-If you get any errors or other problems, please post a ticket or a comment about it. Feature requests and other suggestions for improvement are welcome too.
+===Macros===
+See the [http://wow.curseforge.com/projects/ihml/pages/default-macros/ Default macros] and [http://wow.curseforge.com/projects/ihml/pages/macro-suggestions/ Macro suggestions] pages.
+
+There are some special macros you can make apart from boss and zone macros.
+*default - This macro will be swapped in when no other macro takes priority.
+*party - Will be swapped in when you enter a 5-man instance.
+*raid - Will be swapped in when you enter a raid instance.
+*pvp - Macro for battle grounds.
+*arena - Macro for arenas.
+Note that macro names are case sensitive. "Default" or "PvP" will not work.
+
+==Localization==
+Please see the documentation on [http://wow.curseforge.com/projects/ihml/pages/Localization/ Localization] to help with translation.
+
+==Bug Reports==
+Please use the [http://www.wowace.com/projects/ihml/tickets/ WoW Ace] tracker to file bug reports.  Posting bugs in the comments is not the place to do it.
+
+==Wish List==
+Please use the [http://www.wowace.com/projects/ihml/tickets/ WoW Ace] tracker to add suggestions and feature requests.
+
+==Bug Reporting==
+Please use the [http://www.wowace.com/projects/ihml/tickets/ WoW Ace] tracker to file bug reports.
+
+==Wiki==
+[http://www.wowwiki.com/IHML WoW Wiki]
