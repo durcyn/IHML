@@ -199,3 +199,4 @@ L["m_lureit"] = [[#showtooltip item:34127
 L["Drak'Sotra"] = true
 L["Zul'Drak"] = true
 L["Venture Bay"] = true
+L["Blue Sky Logging Grounds"] = true

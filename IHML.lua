@@ -146,6 +146,8 @@ local macrolist = {
 	["m_pvp"] = "",
 	["m_halaa"] = [[#showtooltip item:24538
 /use item:24538]],
+	["m_bluesky"] = [[#showtooltip item:37568
+/use item:37568]],
 }
 
 local defaults = {
@@ -232,6 +234,7 @@ local defaults = {
 			-- Borean Tundra
 			[L["Coldarra"]] = L["m_drakehunt"],
 			-- Grizzly Hills
+			[L["Blue Sky Logging Grounds"]] = macrolist["m_bluesky"],
 			[L["Grizzly Hills"]] = macrolist["m_grizzly"],
 			[L["Venture Bay"]] = macrolist["m_venturebay"],
 			-- The Storm Peaks
