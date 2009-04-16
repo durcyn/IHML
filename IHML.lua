@@ -152,6 +152,8 @@ local macrolist = {
 /use item:45046]],
 	["m_chipofulduar"] = [[#showtooltip item:45281
 /use item:45281]],
+	["m_edgeofwinter"] = [[#showtooltip item:45005
+/use item:45005]],
 }
 
 local defaults = {
@@ -227,14 +229,13 @@ local defaults = {
 			[L["Archimonde"]] = macrolist["m_archimonde"],
 			-- Black Temple ---------------------
 			[L["High Warlord Naj'entus"]] = macrolist["m_najentus"],
-			-------------------------------------
-
 			-- Wrath Dailies
 			-- Howling Fjord
 			[7] = macrolist["m_fishyfish"],
 			[L["Howling Fjord"]] = 7,
 			[L["Ledge of Garvan"]] = 7,
 			[L["Twin Shores"]] = L["m_lureit"],
+			[L["Winter's Breath Lake"]] = macrolist["m_edgeofwinter"],
 			-- Borean Tundra
 			[L["Coldarra"]] = L["m_drakehunt"],
 			-- Grizzly Hills
