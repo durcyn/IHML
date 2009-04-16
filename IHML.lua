@@ -148,6 +148,8 @@ local macrolist = {
 /use item:24538]],
 	["m_bluesky"] = [[#showtooltip item:37568
 /use item:37568]],
+	["m_greattree"] = [[#showtooltip item:45046
+/use item:45046]],
 }
 
 local defaults = {
@@ -261,6 +263,8 @@ local defaults = {
 			[L["The Stormwright's Shelf"]] = macrolist["m_windandwater"],
 			-- Strand of the Ancients
 			[L["Courtyard of the Ancients"]] = macrolist["m_strand"],
+			-- Crystalsong Forest
+			[L["The Great Tree"]] = macrolist["m_greattree"],
 			-- WotLK Instances
 			-- Culling of Stratholme
 			[L["The Culling of Stratholme"]] = macrolist["m_cos"],

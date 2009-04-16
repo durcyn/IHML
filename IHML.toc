@@ -9,11 +9,10 @@
 ## eMail: ackis AT shaw DOT ca
 ## X-Donate: Donate a few bucks/hours at your local animal shelter, send me UDE Point codes, or a Murky Code.
 
-## Interface: 30000
-## Version: 2.3
+## Interface: 30100
+## Version: 2.4
 ## X-Revision: @project-revision@
 ## X-Date: @file-date-iso@
-## Interface: 30000
 
 ## X-Category: Questing
 ## X-Localizations: enUS, ruRU, deDE, frFR, zhCN, zhTW
