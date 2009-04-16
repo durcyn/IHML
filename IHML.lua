@@ -154,6 +154,8 @@ local macrolist = {
 /use item:45281]],
 	["m_edgeofwinter"] = [[#showtooltip item:45005
 /use item:45005]],
+	["m_ghostfish"] = [[#showtooltip item:45902
+/use item:45902]],
 }
 
 local defaults = {
@@ -266,6 +268,7 @@ local defaults = {
 			[L["Onslaught Harbor"]] = macrolist["m_corpserise"],
 			-- Shozalar Basin
 			[L["The Stormwright's Shelf"]] = macrolist["m_windandwater"],
+			[L["River's Heart"]] = macrolist["m_ghostfish"],
 			-- Strand of the Ancients
 			[L["Courtyard of the Ancients"]] = macrolist["m_strand"],
 			-- Crystalsong Forest
