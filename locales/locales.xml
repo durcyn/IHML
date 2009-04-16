@@ -5,8 +5,13 @@
 <Script file="locale-frFR.lua"/>
 <Script file="locale-zhTW.lua"/>
 <Script file="locale-zhCN.lua"/>
+<!--@non-debug@
 <Script file="locale-enUS.lua"/>
+@end-non-debug@-->
 <Script file="locale-koKR.lua"/>
 <Script file="locale-esES.lua"/>
 <Script file="locale-esMX.lua"/>
+<!--@debug@-->
+<Include file="Locals\repoenUS.lua"/>
+<!--@end-debug@-->
 </Ui>
