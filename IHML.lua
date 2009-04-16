@@ -150,6 +150,8 @@ local macrolist = {
 /use item:37568]],
 	["m_greattree"] = [[#showtooltip item:45046
 /use item:45046]],
+	["m_chipofulduar"] = [[#showtooltip item:45281
+/use item:45281]],
 }
 
 local defaults = {
@@ -251,6 +253,7 @@ local defaults = {
 			[L["Thunderfall"]] = macrolist["m_hodirhorn"],
 			[L["Valley of Ancient Winters"]] = macrolist["m_hodirdaily"],
 			[L["The Pit of the Fang"]] = macrolist["m_pitoffang"],
+			[L["The Foot Steppes"]] = macrolist["m_chipofulduar"],
 			-- Zul'Drak
 			[L["Drak'Sotra"]] = macrolist["m_draksotra"],
 			[L["Zul'Drak"]] = macrolist["m_zuldrak"],
