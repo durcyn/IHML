@@ -209,3 +209,4 @@ L["m_bladefitforchampion"] = [[#showtooltip item:44986
 /tar Lake Frog
 /kiss]]
 L["River's Heart"] = true
+L["Crystalsong Forest"] = true

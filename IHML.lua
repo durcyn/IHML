@@ -273,6 +273,7 @@ local defaults = {
 			[L["Courtyard of the Ancients"]] = macrolist["m_strand"],
 			-- Crystalsong Forest
 			[L["The Great Tree"]] = macrolist["m_greattree"],
+			[L["Crystalsong Forest"]] = macrolist["m_greattree"],
 			-- WotLK Instances
 			-- Culling of Stratholme
 			[L["The Culling of Stratholme"]] = macrolist["m_cos"],
