@@ -3,7 +3,8 @@ Tired of manually having to open your macro window to swap macros for bosses? Ru
 
 IHML is an addon that gives you one macro which automagically changes what it is depending on what zone you're in or which BigWigs boss module is enabled. All you have to do is take the IHML macro (the addon creates this for you and you can find it in your macro window or by typing /ihml pickup) and place it on one of your action bars.
 
-It comes preloaded with various macros for Vashj, Curator, most (if not all) Shattered Sun Offensive daily quests, bombing in Skettis, using the Booterang in Netherwing Ledge, etc.
+It comes preloaded with various macros for most if not all daily quests found in the game, and also provides marcros to help with boss encounters.
+
 You can also add your own macros using the options menu (found by typing /ihml).
 
 IHML will only use one macro slot and will work with any action bar addon that you can put a normal macro on.
