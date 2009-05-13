@@ -157,6 +157,8 @@ local macrolist = {
 /use item:45005]],
 	["m_ghostfish"] = [[#showtooltip item:45902
 /use item:45902]],
+	["m_winterhyacinth"] = [[#showtooltip item:45000
+/use item:45000]],
 }
 
 local defaults = {
@@ -262,6 +264,7 @@ local defaults = {
 			-- Zul'Drak
 			[L["Drak'Sotra"]] = macrolist["m_draksotra"],
 			[L["Zul'Drak"]] = macrolist["m_zuldrak"],
+			[L["Drak'Mar Lake"]] = macrolist["m_winterhyacinth"],
 			-- Ice Crown
 			[L["The Broken Front"]] = L["m_brokenfront"],
 			[L["The Valley of Fallen Heroes"]] = L["m_alliancebline"],
