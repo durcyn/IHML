@@ -248,6 +248,7 @@ local defaults = {
 			[L["Grizzly Hills"]] = macrolist["m_grizzly"],
 			[L["Venture Bay"]] = macrolist["m_venturebay"],
 			[L["Ashwood Lake"]] = L["m_bladefitforchampion"],
+			[L["Ashwood Post"]] = L["m_bladefitforchampion"],
 			-- The Storm Peaks
 			[5] = macrolist["m_essenceofice"],
 			[L["Fjorn's Anvil"]] = 5,

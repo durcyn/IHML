@@ -211,3 +211,4 @@ L["m_bladefitforchampion"] = [[#showtooltip item:44986
 L["River's Heart"] = true
 L["Crystalsong Forest"] = true
 L["Drak'Mar Lake"] = true
+L["Ashwood Post"] = true
