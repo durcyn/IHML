@@ -48,6 +48,7 @@ local GetMinimapZoneText = GetMinimapZoneText
 local GetMacroIndexByName = GetMacroIndexByName
 local UnitFactionGroup = UnitFactionGroup
 local UnitIsPlayer = UnitIsPlayer
+local GetRealZoneText = GetRealZoneText
 
 -- locals
 local db, c, p, options
@@ -380,12 +381,27 @@ function addon:OnDisable()
 end
 
 function addon:ZoneChanged()
-	local zone = GetMinimapZoneText()
+	local zone = GetRealZoneText()
 	self:SwapMacro(zone)
 	if currentType == "zone" then
 		if c.current ~= zone and c.current ~= mBody[zone] then
 			currentType = nil
 			self:SwapMacro("default")
+		end
+	elseif c.current == zone or c.current == mBody[zone] then
+		currentType = "zone"
+		return
+	end
+	
+	local zone1 = zone
+	zone = GetMinimapZoneText()
+	self:SwapMacro(zone)
+	if currentType == "zone" then
+		if c.current ~= zone and c.current ~= mBody[zone] then
+			if c.current ~= zone1 and c.current ~= mBody[zone1] then
+				currentType = nil
+				self:SwapMacro("default")
+			end
 		end
 	elseif c.current == zone or c.current == mBody[zone] then
 		currentType = "zone"
