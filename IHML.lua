@@ -428,6 +428,8 @@ function addon:PLAYER_TARGET_CHANGED()
 		else
 			self:SwapMacro(lastMacro)
 		end
+	else
+		self:SwapMacro(lastMacro)
 	end
 
 end
