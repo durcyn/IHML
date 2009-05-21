@@ -49,6 +49,7 @@ local GetMacroIndexByName = GetMacroIndexByName
 local UnitFactionGroup = UnitFactionGroup
 local UnitIsPlayer = UnitIsPlayer
 local GetRealZoneText = GetRealZoneText
+local GetActiveTalentGroup = GetActiveTalentGroup
 
 -- locals
 local db, c, p, options
@@ -380,7 +381,6 @@ function addon:OnEnable()
 	if not macroUIHooked and MacroFrame then
 		self:ADDON_LOADED(nil, "Blizzard_MacroUI") -- the MacroUI has already loaded
 	end
-	self:RegisterEvent("PLAYER_TALENT_UPDATE")
 end
 
 function addon:OnDisable()
@@ -436,10 +436,6 @@ function addon:PLAYER_TARGET_CHANGED()
 	else
 		self:SwapMacro(lastMacro)
 	end
-
-end
-
-function addon:PLAYER_TALENT_UPDATE()
 
 end
 
@@ -505,6 +501,18 @@ function addon:SwapMacro(new, silent)
 	end
 
 	new = new ~= "PLAYER_REGEN_ENABLED" and new or queued
+
+	-- If we are swapping to the default macro
+	if (new == "default") then
+		-- Get the active talent group
+		local activetalent = GetActiveTalentGroup(false, false)
+		if (activetalent == 1) then
+			new = "m_handykey1"
+		elseif (activetalent == 2) then
+			new = "m_handykey2"
+		end
+	end
+
 	local body = mBody[new]
 	local oldnew
 
@@ -514,8 +522,8 @@ function addon:SwapMacro(new, silent)
 		body = mBody[new]
 	end
 
-	if not new or -- Got called without argument even when there was nothing queued.
-	   not body then -- Macro don't exists
+	if (not new) or -- Got called without argument even when there was nothing queued.
+	   (not body) then -- Macro don't exists
 		return
 	end
 
@@ -550,6 +558,7 @@ function addon:SwapMacro(new, silent)
 	if (index == 0) then
 		return
 	end
+
 	EditMacro(index, p.macroname, icon, body, 1, 0)
 	c.current = new
 	currentIcon = icon
