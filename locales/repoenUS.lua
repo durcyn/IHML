@@ -212,3 +212,5 @@ L["River's Heart"] = true
 L["Crystalsong Forest"] = true
 L["Drak'Mar Lake"] = true
 L["Ashwood Post"] = true
+L["Different default macro based on which talent spec you have enabled."] = true
+L["Talent Specific"] = true

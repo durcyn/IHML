@@ -168,6 +168,7 @@ local defaults = {
 	profile = {
 		autoswap = true,
 		pvpenabled = false,
+		talentbased = true,
 		silent = true,
 		byBigWigs2BossMod = true,
 		byInstanceType = true,
@@ -503,7 +504,7 @@ function addon:SwapMacro(new, silent)
 	new = new ~= "PLAYER_REGEN_ENABLED" and new or queued
 
 	-- If we are swapping to the default macro
-	if (new == "default") then
+	if ((new == "default") and (p.talentbased == true)) then
 		-- Get the active talent group
 		local activetalent = GetActiveTalentGroup(false, false)
 		if (activetalent == 1) then
@@ -781,10 +782,18 @@ options.args.option.args = {
 						arg = "byZone",
 					},
 					pvp = {
-						name = L["PVP"], type = "toggle",
+						name = L["PVP"],
+						type = "toggle",
 						desc = L["PVP"],
 						order = 250,
 						arg = "pvpenabled",
+					},
+					talentbased = {
+						name = L["Talent Specific"],
+						type = "toggle",
+						desc = L["Different default macro based on which talent spec you have enabled."],
+						order = 251,
+						arg = "talentbased",
 					},
 				},
 			},
