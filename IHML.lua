@@ -159,6 +159,8 @@ local macrolist = {
 /use item:45902]],
 	["m_winterhyacinth"] = [[#showtooltip item:45000
 /use item:45000]],
+	["m_handykey1"] = "", -- Default macro that it'll switch to for spec 1
+	["m_handykey2"] = "", -- Default macro that it'll switch to for spec 2
 }
 
 local defaults = {
@@ -378,6 +380,7 @@ function addon:OnEnable()
 	if not macroUIHooked and MacroFrame then
 		self:ADDON_LOADED(nil, "Blizzard_MacroUI") -- the MacroUI has already loaded
 	end
+	self:RegisterEvent("PLAYER_TALENT_UPDATE")
 end
 
 function addon:OnDisable()
@@ -385,10 +388,12 @@ function addon:OnDisable()
 end
 
 function addon:ZoneChanged()
+
 	local zone = GetRealZoneText()
+
 	self:SwapMacro(zone)
-	if currentType == "zone" then
-		if c.current ~= zone and c.current ~= mBody[zone] then
+	if (currentType == "zone") then
+		if ((c.current ~= zone) and (c.current ~= mBody[zone])) then
 			currentType = nil
 			self:SwapMacro("default")
 		end
@@ -431,6 +436,10 @@ function addon:PLAYER_TARGET_CHANGED()
 	else
 		self:SwapMacro(lastMacro)
 	end
+
+end
+
+function addon:PLAYER_TALENT_UPDATE()
 
 end
 
@@ -490,43 +499,63 @@ function addon:ADDON_LOADED(event, addonname)
 end
 
 function addon:SwapMacro(new, silent)
-	if silent == nil then silent = p.silent end
+
+	if (silent == nil) then 
+		silent = p.silent
+	end
+
 	new = new ~= "PLAYER_REGEN_ENABLED" and new or queued
 	local body = mBody[new]
 	local oldnew
-	if type(body) == "number" then
+
+	if (type(body) == "number") then
 		oldnew = new
 		new = body
 		body = mBody[new]
 	end
+
 	if not new or -- Got called without argument even when there was nothing queued.
-		not body then -- Macro don't exists
+	   not body then -- Macro don't exists
 		return
 	end
-	if new == c.current then -- Macro is same as current macro.
-		if queued then
+
+	if (new == c.current) then -- Macro is same as current macro
+		if (queued) then
 			-- Remove the queued macro
 			queued = nil
 			self:UnregisterEvent("PLAYER_REGEN_ENABLED")
 		end
 		return
 	end
-	if InCombatLockdown() then
-		if queued and (queued == oldnew or queued == new) then return end
+
+	if (InCombatLockdown()) then
+		if (queued and ((queued == oldnew) or (queued == new))) then
+			return
+		end
 		queued = oldnew or new
 		self:RegisterEvent("PLAYER_REGEN_ENABLED", "SwapMacro")
-		if not silent then self:Print(format(L["In combat! %s queued lol!"], queued)) end
+		if not silent then
+			self:Print(format(L["In combat! %s queued lol!"], queued))
+		end
 		return
 	end
+
 	local icon = mIcon[new]
-	if not silent then self:Print(format(L["%s! I have that macro lol!"], oldnew or new)) end
+
+	if (not silent) then
+		self:Print(format(L["%s! I have that macro lol!"], oldnew or new))
+	end
+
 	local index = GetMacroIndexByName(p.macroname)
-	if index == 0 then return end
+	if (index == 0) then
+		return
+	end
 	EditMacro(index, p.macroname, icon, body, 1, 0)
 	c.current = new
 	currentIcon = icon
 	queued = nil
 	self:UnregisterEvent("PLAYER_REGEN_ENABLED")
+
 end
 
 function addon:ChatCommand(msg)
