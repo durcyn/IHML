@@ -1,195 +1,197 @@
-=IHML=
+=IHML Default Macros
 
-This is a listing of default macros contained in the addon [http://wow.curseforge.com/projects/ihml/pages/Main/ IHML].
+This is a listing of default macros contained in the addon [[ Main | IHML]].
 
-It is out of date substantially.
+==Burning Crusade
+===Skettis Dailies
+====Blackwind Lake, Lower Veil Shil'ak, Skettis, Terokk's Rest, Upper Veil Shil'ak, Veil Ala'rak and Veil Harr'ik
+<<code>>#showtooltip item:32406
+/use [flying] item:32406<</code>>
 
-=Burning Crusade=
+===Ogri'La Dailies
+====Vortex Pinnacle
+<<code>>#showtooltip item:32698
+/use item:32698
+/stopattack
+/petpassive<</code>>
+====Forge Camp: Wrath and Forge Camp: Terror
+<<code>>#showtooltip [flying] item:32456; [noflying] item:32696
+/use [flying] item:32456; [noflying] item:32696<</code>>
 
-==Skettis Dailies==
-===Blackwind Lake, Lower Veil Shil'ak, Skettis, Terokk's Rest, Upper Veil Shil'ak, Veil Ala'rak and Veil Harr'ik===
- #showtooltip item:32406
- /use [flying] item:32406
+===Netherwing Dailies
+====Netherwing Ledge
+<<code>>#showtooltip [flying] item:32680; item:32503
+/use [noflying] Yarzill's Mutton
+/stopmacro [noflying]
+/targetexact Disobedient Dragonmaw Peon
+/use Booterang
+/cleartarget<</code>>
 
-==Ogri'La Dailies==
-===Vortex Pinnacle===
- #showtooltip item:32698
- /use item:32698
- /stopattack
- /petpassive
-
-===Forge Camp: Wrath and Forge Camp: Terror===
- #showtooltip [flying] item:32456; [noflying] item:32696
- /use [flying] item:32456; [noflying] item:32696
-
-==Netherwing Dailies==
-===Netherwing Ledge===
- #showtooltip [flying] item:32680; item:32503
- /use [noflying] Yarzill's Mutton
- /stopmacro [noflying]
- /targetexact Disobedient Dragonmaw Peon
- /use Booterang
- /cleartarget
-
-==Shattered Sun Offensive==
-===Isle of Quel'Danas===
- #showtooltip item:34368
- /targetexact Erratic Sentry
- /use Attuned Crystal Cores
+===Shattered Sun Offensive
+====Isle of Quel'Danas
+<<code>>#showtooltip item:34368
+/targetexact Erratic Sentry
+/use Attuned Crystal Cores<</code>>
 
 ===Sun's Reach Sanctum===
- #showtooltip item:34338
- /use Mana Remnants
+<<code>>#showtooltip item:34338
+/use Mana Remnants<</code>>
 
 ===Throne of Kil'jaeden===
- #showtooltip item:34257
- /use Fel Siphon
+<<code>>#showtooltip item:34257
+/use Fel Siphon<</code>>
 
 ===Spirit Fields===
- #showtooltip item:35233
- /use Multiphase Spectrographic Goggles
- /equip Multiphase Spectrographic Goggles
+<<code>>#showtooltip item:35233
+/use Multiphase Spectrographic Goggles
+/equip Multiphase Spectrographic Goggles<</code>>
 
 ===The Dead Scar===
- #showtooltip item:34475
- /use Arcane Charges
+<<code>>#showtooltip item:34475
+/use Arcane Charges<</code>>
 
 ===The Dawning Square===
- #showtooltip [dead] item:34414; item:34533
- /use [dead] Shattered Sun Banner; Astromancer's Crystal
+<<code>>#showtooltip [dead] item:34414; item:34533
+/use [dead] Shattered Sun Banner; Astromancer's Crystal<</code>>
 
 ===Dawnstar Village===
- #showtooltip [dead] item:34368; item:34533
- /use [dead] Attuned Crystal Cores; Astromancer's Crystal
+<<code>>#showtooltip [dead] item:34368; item:34533
+/use [dead] Attuned Crystal Cores; Astromancer's Crystal<</code>>
 
 ===Greengil Coast===
- #showtooltip [exists] item:34483; item:34533
- /use [exists] Orb of Murloc Control; Astromancer's Crystal
+<<code>>#showtooltip [exists] item:34483; item:34533
+/use [exists] Orb of Murloc Control; Astromancer's Crystal<</code>>
 
 ===Bash'ir Landing===
- #showtooltip item:34248
- /use Bash'ir Phasing Device
+<<code>>#showtooltip item:34248
+/use Bash'ir Phasing Device<</code>>
 
 ===The Sin'loren, The Dawnchaser and The Bloodoath===
- #showtooltip item:34489
- /use Flaming Oil
+<<code>>#showtooltip item:34489
+/use Flaming Oil<</code>>
 
 ===Razorthorn Rise===
- #showtooltip [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root; item:34255
- /use [nopet] Razorthorn Flayer Gland
- /cast [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root
+<<code>>#showtooltip [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root; item:34255
+/use [nopet] Razorthorn Flayer Gland
+/cast [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root<</code>>
 
 ==Cooking Daily==
 ===Ancestral Grounds===
- #showtooltip item:33851
- /use Cooking Pot
+<<code>>#showtooltip item:33851
+/use Cooking Pot<</code>>
 
 ==The Black Morass==
 ===The Black Morass===
- #showtooltip item:24289
- /use item:24289
+<<code>>#showtooltip item:24289
+/use item:24289<</code>>
  
 ==Magisters' Terrace==
 ===Halls of Theory===
- /targetexact Pure Energy
- /startattack
+<<code>>/targetexact Pure Energy
+/startattack<</code>>
 
 ==Karazhan==
 ===The Curator===
- /targetexact Astral Flare
- /startattack
+<<code>>/targetexact Astral Flare
+/startattack<</code>>
 
 ===Terestian Illhoof===
- /targetexact Demon Chains
- /startattack
+<<code>>/targetexact Demon Chains
+/startattack<</code>>
 
 ==Zul'Aman==
 ===Halazzi===
- /targetexact Corrupted Lightning Totem
- /startattack
+<<code>>/targetexact Corrupted Lightning Totem
+/startattack<</code>>
 
 ==Serpentshrine Cavern==
 ===Fathom-Lord Karathress===
- /targetexact Spitfire Totem
- /startattack
+<<code>>/targetexact Spitfire Totem
+/startattack<</code>>
 
 ===Lady Vashj===
- /stopmacro[noexists][harm]
- <nowiki>/run i=31088 t="target" if GetItemCount(i)>0 and HasFullControl() and IsItemInRange(i,t) then n=UnitName(t) s=SendChatMessage m="<-- TAINTED CORE TO --> " s(m..n.." !","RAID") s(m.."YOU !","WHISPER",nil,n) end</nowiki>
- /use item:31088
+<<code>>/stopmacro[noexists][harm]
+/run i=31088 t="target" if GetItemCount(i)>0 and HasFullControl() and IsItemInRange(i,t) then n=UnitName(t) s=SendChatMessage m="<-- TAINTED CORE TO --> " s(m..n.." !","RAID") s(m.."YOU !","WHISPER",nil,n) end
+/use item:31088<</code>>
 
 ==Mount Hyjal==
 ===Archimonde===
- #showtooltip item:24494
- /use Tears of the Goddess
+<<code>>#showtooltip item:24494
+/use Tears of the Goddess<</code>>
 
 ==Black Temple==
 ===High Warlord Naj'entus===
- #showtooltip item:32408
- /use Naj'entus Spine
+<<code>>#showtooltip item:32408
+/use Naj'entus Spine<</code>>
 
-=Wrath of the Lich King=
+==Wrath of the Lich King
 
-==Storm Peaks==
+===Storm Peaks
+====The Forlorn Mine
+<<code>>#showtooltip item:42837
+/use item:42837<</code>>
 
-===The Forlorn Mine===
- #showtooltip item:42837
- /use item:42837
+====The Blighted Pool, Valkyrion
+<<code>>#showtooltip item:41612
+/use item:41612<</code>>
 
-===The Blighted Pool, Valkyrion===
- #showtooltip item:41612
- /use item:41612
+====Garm's Bane
+<<code>>#showtooltip item:40676
+/use item:40676<</code>>
 
-===Garm's Bane===
- #showtooltip item:40676
- /use item:40676
+===Sons of Hodir Dailies
+====Fjorn's Anvil, Frostfield Lake
+<<code>>#showtooltip item:42246
+/use item:42246<</code>>
 
-===Sons of Hodir Dailies===
-====Fjorn's Anvil, Frostfield Lake====
- #showtooltip item:42246
- /use item:42246
 ====Thunderfall====
- #showtooltip item:42164
- /use item:42164
+<<code>>#showtooltip item:42164
+/use item:42164<</code>>
+
 ====Valley of Ancient Winters====
- #showtooltip [dead] item:42479; item:42774
- /use [dead] item:42479; item:42774
+<<code>>#showtooltip [dead] item:42479; item:42774
+/use [dead] item:42479; item:42774<</code>>
+
 ====The Pit of Fang====
- #showtooltip item:42499
- /use item:42499
+<<code>>#showtooltip item:42499
+/use item:42499<</code>>
 
 ==Ice Crown==
 ===Njorndar Village===
- #showtooltip [dead] item:42480
- /use [dead] item:42480]]
+<<code>>#showtooltip [dead] item:42480
+/use [dead] item:42480]]<</code>>
+
 ===???===
- showtooltip [dead] item:40587
- /use [dead] item:40587
+<<code>>#showtooltip [dead] item:40587
+/use [dead] item:40587<</code>>
+
 ===???===
- #showtooltip item:39571
- /use item:39571
+<<code>>#showtooltip item:39571
+/use item:39571<</code>>
 
 ==Strand of the Ancients==
- #showtooltip item:39213
- /use item:39213
+<<code>>#showtooltip item:39213
+/use item:39213<</code>>
 
 ==Caverns of Tme: Stratholme==
- #showtooltip item:37888
- /use item:37888
+<<code>>#showtooltip item:37888
+/use item:37888<</code>>
 
 ==Grizzly Hills==
 ===Venture Bay===
- #showtooltip item:37621
- /use item:37621
+<<code>>#showtooltip item:37621
+/use item:37621<</code>>
+
 ==Howling Fjord==
 ===Howling Fjord, Ledge of Garvan===
- #showtooltip item:40946
- /use item:40946
+<<code>>#showtooltip item:40946
+/use item:40946<</code>>
 
  ==Zul'Drak==
  ===Drak Sotra===
- #showtooltip [dead] item:38556;item:38544
- /use [dead] item:38556;item:38544
+<<code>>#showtooltip [dead] item:38556;item:38544
+/use [dead] item:38556;item:38544<</code>>
+
  ===Zul'Drak===
- #showtooltip item:38566
- /use item:38566
+<<code>>#showtooltip item:38566
+/use item:38566<</code>>
