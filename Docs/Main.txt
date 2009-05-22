@@ -63,6 +63,8 @@ See the [http://wow.curseforge.com/projects/ihml/pages/default-macros/ Default m
 
 There are some special macros you can make apart from boss and zone macros.
 *default - This macro will be swapped in when no other macro takes priority.
+*default1 - This macro will be swapped in when no other macro takes priority and you are in talent spec 1 (if the option is enabled).
+*default2 - This macro will be swapped in when no other macro takes priority and you are in talent spec 2 (if the option is enabled).
 *party - Will be swapped in when you enter a 5-man instance.
 *raid - Will be swapped in when you enter a raid instance.
 *pvp - Macro for battle grounds.

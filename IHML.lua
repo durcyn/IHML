@@ -160,8 +160,9 @@ local macrolist = {
 /use item:45902]],
 	["m_winterhyacinth"] = [[#showtooltip item:45000
 /use item:45000]],
-	["m_handykey1"] = "", -- Default macro that it'll switch to for spec 1
-	["m_handykey2"] = "", -- Default macro that it'll switch to for spec 2
+	["default1"] = "", -- Default macro that it'll switch to for spec 1
+	["default2"] = "", -- Default macro that it'll switch to for spec 2
+	["default"] = "", -- Default macro when you don't care about specs
 }
 
 local defaults = {
@@ -293,13 +294,15 @@ local defaults = {
 
 -- Helper function
 local function setMacro(name, icon, body)
-	if icon == nil and body == nil then
+
+	-- No icon or macro body
+	if ((icon == nil) and (body == nil)) then
 		mName[tostring(name)] = nil
 		mIcon[name] = nil
 		mBody[name] = nil
 		-- Setting default macros to nil won't do it
 		db:RegisterDefaults(defaults)
-		if mBody[name] then
+		if (mBody[name]) then
 			mBody[name] = false
 		end
 	else
@@ -307,12 +310,14 @@ local function setMacro(name, icon, body)
 		mIcon[name] = icon
 		mBody[name] = body
 	end
+
 end
 
 local function checkMacro(name, dontMake)
-	if not name then
+
+	if (not name) then
 		return addon:Print(L["Please choose a macroname by typing: /ihml macroname <name here>"])
-	elseif GetMacroIndexByName(name) == 0 then
+	elseif (GetMacroIndexByName(name) == 0) then
 		if dontMake or InCombatLockdown() then
 			return addon:Print(format(L["|cffff9999Warning!|r No macro named %s found. Make it plz!"], name))
 		else
@@ -329,9 +334,11 @@ local function checkMacro(name, dontMake)
 		end
 	end
 	return 1
+
 end
 
 function addon:OnInitialize()
+
 	db = LibStub("AceDB-3.0"):New("IHMLDB", defaults, "Default")
 	self.db = db
 	c = db.char
@@ -344,7 +351,7 @@ function addon:OnInitialize()
 	options.args.profile.order = 300
 	self:RegisterChatCommand("ihml", "ChatCommand", true)
 
-	if LibStub:GetLibrary("LibAboutPanel", true) then
+	if (LibStub:GetLibrary("LibAboutPanel", true)) then
 		LibStub("LibAboutPanel").new(nil,MODNAME)
 	else
 		self:Print("Lib AboutPanel not loaded.")
@@ -393,12 +400,13 @@ function addon:ZoneChanged()
 	local zone = GetRealZoneText()
 
 	self:SwapMacro(zone)
+
 	if (currentType == "zone") then
 		if ((c.current ~= zone) and (c.current ~= mBody[zone])) then
 			currentType = nil
 			self:SwapMacro("default")
 		end
-	elseif c.current == zone or c.current == mBody[zone] then
+	elseif ((c.current == zone) or (c.current == mBody[zone])) then
 		currentType = "zone"
 		return
 	end
@@ -408,14 +416,14 @@ function addon:ZoneChanged()
 	zone = GetMinimapZoneText()
 	self:SwapMacro(zone)
 
-	if currentType == "zone" then
-		if c.current ~= zone and c.current ~= mBody[zone] then
-			if c.current ~= zone1 and c.current ~= mBody[zone1] then
+	if (currentType == "zone") then
+		if ((c.current ~= zone) and (c.current ~= mBody[zone])) then
+			if ((c.current ~= zone1) and (c.current ~= mBody[zone1])) then
 				currentType = nil
 				self:SwapMacro("default")
 			end
 		end
-	elseif c.current == zone or c.current == mBody[zone] then
+	elseif ((c.current == zone) or (c.current == mBody[zone])) then
 		currentType = "zone"
 	end
 
@@ -499,7 +507,8 @@ function addon:ADDON_LOADED(event, addonname)
 end
 
 function addon:SwapMacro(new, silent)
-self:Print("DEBUG: New 1 - " .. new)
+
+	-- If we don't pass the silent parameter, use the default
 	if (silent == nil) then 
 		silent = p.silent
 	end
@@ -509,14 +518,14 @@ self:Print("DEBUG: New 1 - " .. new)
 		-- Get the active talent group
 		local activetalent = GetActiveTalentGroup(false, false)
 		if (activetalent == 1) then
-			new = "m_handykey1"
+			new = "default1"
 		elseif (activetalent == 2) then
-			new = "m_handykey2"
+			new = "default2"
 		end
 	end
-self:Print("DEBUG: New 2 - " .. new)
+
 	new = new ~= "PLAYER_REGEN_ENABLED" and new or queued
-self:Print("DEBUG: New 3 - " .. new)
+
 	local body = mBody[new]
 	local oldnew
 
@@ -557,7 +566,7 @@ self:Print("DEBUG: New 3 - " .. new)
 	if (not silent) then
 		self:Print(format(L["%s! I have that macro lol!"], oldnew or new))
 	end
-self:Print(p.macroname)
+
 	local index = GetMacroIndexByName(p.macroname)
 	if (index == 0) then
 		return

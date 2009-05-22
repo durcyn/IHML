@@ -2,6 +2,8 @@
 
 This is a listing of default macros contained in the addon [http://wow.curseforge.com/projects/ihml/pages/Main/ IHML].
 
+It is out of date substantially.
+
 =Burning Crusade=
 
 ==Skettis Dailies==
