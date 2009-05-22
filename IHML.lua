@@ -68,7 +68,6 @@ local lastMacro
 --- Default Macros which are included
 -- @class table
 -- @name defaultmacrolist
--- @describe Default macros that do not require localization that are included with IHML.
 -- @field m_skettis <<code>>#showtooltip item:32406
 -- /use [flying] item:32406<</code>>
 -- @field m_pinnacle <<code>>#showtooltip item:32698
@@ -79,6 +78,82 @@ local lastMacro
 -- /use [flying] item:32456; [noflying] item:32696<</code>>
 -- @field manaremnants <<code>>#showtooltip item:34338
 -- /use item:34338<</code>>
+-- @field m_blood4blood <<code>>#showtooltip item:34257
+-- /use item:34257]],
+-- @field m_spectrogoggles <<code>>#showtooltip item:35233
+-- /use item:35233
+-- /equip item:35233]],
+-- @field m_deadscar <<code>>#showtooltip item:34475
+-- /use item:34475]],
+-- @field m_ssbanner <<code>>#showtooltip [dead] item:34414; item:34533
+-- /use [dead] item:34414; item:34533]],
+-- @field m_greengil <<code>>#showtooltip [exists] item:34483; item:34533
+-- /use [exists] item:34483; item:34533]],
+-- @field m_dawnstar <<code>>#showtooltip [dead] item:34368; item:34533
+-- /use [dead] item:34368; item:34533]],
+-- @field m_bashir <<code>>#showtooltip item:34248
+-- /use item:34248<</code>>
+-- @field m_flamingoil <<code>>#showtooltip item:34489
+-- /use item:34489<</code>>
+-- @field m_atamal <<code>>#showtooltip item:34500
+-- /use item:34500<</code>>
+-- @field m_soup4soul <<code>>#showtooltip item:33851
+-- /use item:33851<</code>>
+-- @field m_blackmorass <<code>>#showtooltip item:24289
+-- /use item:24289<</code>>
+-- @field m_archimonde <<code>>#showtooltip item:24494
+-- /use item:24494<</code>>
+-- @field m_najentus <<code>>#showtooltip item:32408
+-- /use item:32408<</code>>
+-- @field m_discipline <<code>>#showtooltip item:42837
+-- /use item:42837<</code>>
+-- @field m_essenceofice <<code>>#showtooltip item:42246
+-- /use item:42246<</code>>
+-- @field m_aberations <<code>>#showtooltip item:41612
+-- /use item:41612<</code>>
+-- @field m_landmine <<code>>#showtooltip item:40676
+-- /use item:40676<</code>>
+-- @field m_hodirhorn <<code>>#showtooltip item:42164
+-- /use item:42164<</code>>
+-- @field m_hodirdaily <<code>>#showtooltip [dead] item:42479; item:42774
+-- /use [dead] item:42479; item:42774<</code>>
+-- @field m_pitoffang <<code>>#showtooltip item:42499
+-- /use item:42499<</code>>
+-- @field m_leavemark <<code>>#showtooltip [dead] item:42480
+-- /use [dead] item:42480<</code>>
+-- @field m_corpserise <<code>>#showtooltip [dead] item:40587
+-- /use [dead] item:40587<</code>>
+-- @field m_windandwater <<code>>#showtooltip item:39571
+-- /use item:39571<</code>>
+-- @field m_strand <<code>>#showtooltip item:39213
+-- /use item:39213<</code>>
+-- @field m_cos <<code>>#showtooltip item:37888
+-- /use item:37888<</code>>
+-- @field m_fishyfish <<code>>#showtooltip item:40946
+-- /use item:40946<</code>>
+-- @field m_draksotra <<code>>#showtooltip [dead] item:38556;item:38544
+-- /use [dead] item:38556;item:38544<</code>>
+-- @field m_zuldrak <<code>>#showtooltip item:38566
+-- /use item:38566<</code>>
+-- @field m_venturebay <<code>>#showtooltip item:37621
+-- /use item:37621<</code>>
+-- @field m_grizzly <<code>>#showtooltip item:35908
+-- /use item:35908<</code>>
+-- @field m_halaa <<code>>#showtooltip item:24538
+-- /use item:24538<</code>>
+-- @field m_bluesky <<code>>#showtooltip item:37568
+-- /use item:37568<</code>>
+-- @field m_greattree <<code>>#showtooltip item:45046
+-- /use item:45046<</code>>
+-- @field m_chipofulduar <<code>>#showtooltip item:45281
+-- /use item:45281<</code>>
+-- @field m_edgeofwinter <<code>>#showtooltip item:45005
+-- /use item:45005<</code>>
+-- @field m_ghostfish <<code>>#showtooltip item:45902
+-- /use item:45902<</code>>
+-- @field m_winterhyacinth <<code>>#showtooltip item:45000
+-- /use item:45000<</code>>
+
 
 local defaultmacrolist = {
 	["m_skettis"] = [[#showtooltip item:32406
@@ -520,6 +595,7 @@ end
 
 --- Swaps between an existing macro and a new macro.
 -- @name IHML:SwapMacro
+-- @see defaultmacrolist
 -- @usage IHML:SwapMacro(new, silent)
 -- @param new New macro to swap to.
 -- @param silent Boolean to determine if we output a message to chat when the macro is swapped.
