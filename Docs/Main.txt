@@ -43,12 +43,12 @@ If you logged in with all macro slots taken go to your macros and delete one fro
 Done! Whenever a BigWigs boss module load/reset or you enter a zone you have a macro for IHML will automagically swap to the correct macro.
 
 ===Chat commands
-* <<code>>/ihml<</code>> or
-* <<code>>/ihml config<</code>> or
-* <<code>>/ihml show<</code>>
-** Show the configuration window.
-* <<code>>/ihml pickup<</code>>
-** Place the IHML macro on your cursor, ready to be placed on an action bar where you want it.
+* Show the configuration window.
+<<code>>/ihml<</code>> or
+<<code>>/ihml config<</code>> or
+<<code>>/ihml show<</code>>
+* Place the IHML macro on your cursor, ready to be placed on an action bar where you want it.
+<<code>>/ihml pickup<</code>>
 
 Everything is configurable from the configuration window, so that's the only command you need to learn. There are some more commands available if you happen to prefer chat commands:
 * <<code>>/ihml help<</code>>
