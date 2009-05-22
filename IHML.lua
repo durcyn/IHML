@@ -597,7 +597,7 @@ end
 -- @name IHML:SwapMacro
 -- @see defaultmacrolist
 -- @usage IHML:SwapMacro(new, silent)
--- @param new New macro to swap to.
+-- @param new New macro to swap to, or "PLAYER_REGEN_ENABLED" when the player goes out of combat and a macro is queued.
 -- @param silent Boolean to determine if we output a message to chat when the macro is swapped.
 -- @return Macro body text is changed to the new body text
 
@@ -607,6 +607,8 @@ function addon:SwapMacro(new, silent)
 	if (silent == nil) then 
 		silent = p.silent
 	end
+
+	new = new ~= "PLAYER_REGEN_ENABLED" and new or queued
 
 	-- If we are swapping to the default macro
 	if ((new == "default") and (p.talentbased == true)) then
@@ -618,8 +620,6 @@ function addon:SwapMacro(new, silent)
 			new = "default2"
 		end
 	end
-
-	new = new ~= "PLAYER_REGEN_ENABLED" and new or queued
 
 	local body = mBody[new]
 	local oldnew
