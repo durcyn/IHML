@@ -1,5 +1,5 @@
 -
- type: wiki
+ type: creole
  input-file: Docs/Main.txt
  output-page: "Main"
 -

@@ -1,4 +1,4 @@
-==What it does==
+==What it does
 Tired of manually having to open your macro window to swap macros for bosses? Running out of macro space because of all the different boss macros taking up a slot each? Getting sick of having to dig through your bags every time for those special daily quest items? Then IHML might be what you want.
 
 IHML is an addon that gives you one macro which automagically changes what it is depending on what zone you're in or which BigWigs boss module is enabled. All you have to do is take the IHML macro (the addon creates this for you and you can find it in your macro window or by typing /ihml pickup) and place it on one of your action bars.
@@ -10,56 +10,68 @@ You can also add your own macros using the options menu (found by typing /ihml).
 IHML will only use one macro slot and will work with any action bar addon that you can put a normal macro on.
 Due to addon limitations macros can't be swapped in combat but will instead be queued for swap as soon as possible.
 
-==Where to get it==
-* [http://www.wowace.com/projects/ihml/ WoW Ace] - Alpha Quality
-* [http://wow.curse.com/downloads/wow-addons/details/ihml.aspx Curse] - Stable release
-* [http://www.wowinterface.com/downloads/info8441-IHML-IHaveMacroLol.html WoWInterface] - Stable release
+===French (frFR)
 
-==Donations==
-I have setup a donation site via [http://www.pledgie.com/campaigns/3462 Pledgie].  Feel free to donate if you like this mod.  I have put countless hours of time and effort into it along with many people who have helped me.  I did not write this mod with the intent to make any money from it, I wrote it to help me with some needs that I saw in-game.
+Change de macro selon la zone où vous vous trouvez ou selon les modules de boss BigWigs activés.
+
+===Simplified Chinese (zhCN)
+
+随地点或首领模组变换宏
+
+===Traditional Chinese (zhTW)
+
+隨地點或首領模組變換巨集
+
+==Where to get it
+* [[http://www.wowace.com/projects/ihml/ | WoW Ace]] - Alpha Quality
+* [[http://wow.curse.com/downloads/wow-addons/details/ihml.aspx | Curse]] - Stable release
+* [[http://www.wowinterface.com/downloads/info8441-IHML-IHaveMacroLol.html | WoWInterface]] - Stable release
+
+==Donations
+I have setup a donation site via [[http://www.pledgie.com/campaigns/3462 | Pledgie]].  Feel free to donate if you like this mod.  I have put countless hours of time and effort into it along with many people who have helped me.  I did not write this mod with the intent to make any money from it, I wrote it to help me with some needs that I saw in-game.
 
 If you don't wish to donate money feel free to consider one of the following methods which may be more suitable:
-* Volunteer time at your local animal shelter such as the [http://www.edmontonhumanesociety.com/ Society for Prevention of Cruelty for Animals (SPCA)] or drop a few bucks off for them.  If you do this, please let [mailto:ackis@shaw.ca me] know.
-* Send 	[mailto:ackis@shaw.ca me] some UDE Points.  These points are obtained from the [http://www.wowtcg.com/ World of Warcraft TCG and Mini] game.
+* Volunteer time at your local animal shelter such as the [[http://www.edmontonhumanesociety.com/ | Society for Prevention of Cruelty for Animals (SPCA)]] or drop a few bucks off for them.  If you do this, please let [[mailto:ackis@shaw.ca | me]] know.
+* Send 	[[mailto:ackis@shaw.ca me]] some UDE Points.  These points are obtained from the [[http://www.wowtcg.com/ | World of Warcraft TCG and Mini]] game.
 * Send some gold to one of the authors in-game or help out with some achievements, or even send a message saying thanks. :)
-** [http://www.wowarmory.com/character-sheet.xml?r=Thunderlord&n=Ackis Ackis (US)]
+** [[http://www.wowarmory.com/character-sheet.xml?r=Thunderlord&n=Ackis | Ackis (US)]]
 
-==How to get it to work==
+==How to get it to work
 You should have a macro named "ihml" that you can drag to the desired space on your action bar. You can find it among your normal macros or by typing /ihml pickup.
 If you logged in with all macro slots taken go to your macros and delete one from the general macros page (not the character specific). Then open the IHML configuration window (with /ihml) and click "Make Macro" on the options page.
 
 Done! Whenever a BigWigs boss module load/reset or you enter a zone you have a macro for IHML will automagically swap to the correct macro.
 
-===Chat commands===
-* <code>/ihml</code> or
-* <code>/ihml config</code> or
-* <code>/ihml show</code>
+===Chat commands
+* <<code>>/ihml<</code>> or
+* <<code>>/ihml config<</code>> or
+* <<code>>/ihml show<</code>>
 ** Show the configuration window.
-* <code>/ihml pickup</code>
+* <<code>>/ihml pickup<</code>>
 ** Place the IHML macro on your cursor, ready to be placed on an action bar where you want it.
 
 Everything is configurable from the configuration window, so that's the only command you need to learn. There are some more commands available if you happen to prefer chat commands:
-* <code>/ihml help</code>
+* <<code>>/ihml help<</code>>
 ** Show a list of commands.
-* <code>/ihml save</code>
+* <<code>>/ihml save<</code>>
 ** Save any modifications to the current macro.
-* <code>/ihml saveas "new name"</code>
+* <<code>>/ihml saveas "new name"<</code>>
 ** Save modifications to a new macro. Notice the quotation marks. Use them if the name contains spaces.
-* <code>/ihml rename "new name"</code>
+* <<code>>/ihml rename "new name"<</code>>
 ** Change name for current macro.
-* <code>/ihml rename "macro" "new name"</code>
+* <<code>>/ihml rename "macro" "new name"<</code>>
 ** Change name for another macro.
-* <code>/ihml delete "macro"</code>
+* <<code>>/ihml delete "macro"<</code>>
 ** Delete a macro.
-* <code>/ihml delete</code>
+* <<code>>/ihml delete<</code>>
 ** Delete the current macro.
-* <code>/ihml list</code>
+* <<code>>/ihml list<</code>>
 ** List all available macros.
-* <code>/ihml anything else</code>
+* <<code>>/ihml anything else<</code>>
 **Swap to the macro "anything else" if it exists. Notice the lack of quotation marks.
 
-===Macros===
-See the [http://wow.curseforge.com/projects/ihml/pages/default-macros/ Default macros] and [http://wow.curseforge.com/projects/ihml/pages/macro-suggestions/ Macro suggestions] pages.
+===Macros
+See the [[default-macros | Default macros]] and [[macro-suggestions | Macro suggestions]] pages.
 
 There are some special macros you can make apart from boss and zone macros.
 *default - This macro will be swapped in when no other macro takes priority.
@@ -71,17 +83,17 @@ There are some special macros you can make apart from boss and zone macros.
 *arena - Macro for arenas.
 Note that macro names are case sensitive. "Default" or "PvP" will not work.
 
-==Localization==
-Please see the documentation on [http://wow.curseforge.com/projects/ihml/pages/Localization/ Localization] to help with translation.
+==Localization
+Please see the documentation on [[Localization]] to help with translation.
 
-==Bug Reports==
-Please use the [http://www.wowace.com/projects/ihml/tickets/ WoW Ace] tracker to file bug reports.  Posting bugs in the comments is not the place to do it.
+==Bug Reports
+Please use the [[http://www.wowace.com/projects/ihml/tickets/ | WoW Ace]] tracker to file bug reports.  Posting bugs in the comments is not the place to do it.
 
-==Wish List==
-Please use the [http://www.wowace.com/projects/ihml/tickets/ WoW Ace] tracker to add suggestions and feature requests.
+==Wish List
+Please use the [[http://www.wowace.com/projects/ihml/tickets/ | WoW Ace]] tracker to add suggestions and feature requests.
 
-==Bug Reporting==
-Please use the [http://www.wowace.com/projects/ihml/tickets/ WoW Ace] tracker to file bug reports.
+==Bug Reporting
+Please use the [[http://www.wowace.com/projects/ihml/tickets/ | WoW Ace]] tracker to file bug reports.
 
-==Wiki==
-[http://www.wowwiki.com/IHML WoW Wiki]
+==Wiki
+[[http://www.wowwiki.com/IHML | WoW Wiki]]
