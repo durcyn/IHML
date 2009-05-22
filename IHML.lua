@@ -404,8 +404,10 @@ function addon:ZoneChanged()
 	end
 	
 	local zone1 = zone
+
 	zone = GetMinimapZoneText()
 	self:SwapMacro(zone)
+
 	if currentType == "zone" then
 		if c.current ~= zone and c.current ~= mBody[zone] then
 			if c.current ~= zone1 and c.current ~= mBody[zone1] then
@@ -416,6 +418,7 @@ function addon:ZoneChanged()
 	elseif c.current == zone or c.current == mBody[zone] then
 		currentType = "zone"
 	end
+
 end
 
 local playerFaction = UnitFactionGroup("player")
@@ -496,12 +499,10 @@ function addon:ADDON_LOADED(event, addonname)
 end
 
 function addon:SwapMacro(new, silent)
-
+self:Print("DEBUG: New 1 - " .. new)
 	if (silent == nil) then 
 		silent = p.silent
 	end
-
-	new = new ~= "PLAYER_REGEN_ENABLED" and new or queued
 
 	-- If we are swapping to the default macro
 	if ((new == "default") and (p.talentbased == true)) then
@@ -513,7 +514,9 @@ function addon:SwapMacro(new, silent)
 			new = "m_handykey2"
 		end
 	end
-
+self:Print("DEBUG: New 2 - " .. new)
+	new = new ~= "PLAYER_REGEN_ENABLED" and new or queued
+self:Print("DEBUG: New 3 - " .. new)
 	local body = mBody[new]
 	local oldnew
 
@@ -554,7 +557,7 @@ function addon:SwapMacro(new, silent)
 	if (not silent) then
 		self:Print(format(L["%s! I have that macro lol!"], oldnew or new))
 	end
-
+self:Print(p.macroname)
 	local index = GetMacroIndexByName(p.macroname)
 	if (index == 0) then
 		return
