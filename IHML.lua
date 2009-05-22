@@ -79,18 +79,18 @@ local lastMacro
 -- @field manaremnants <<code>>#showtooltip item:34338
 -- /use item:34338<</code>>
 -- @field m_blood4blood <<code>>#showtooltip item:34257
--- /use item:34257]],
+-- /use item:34257<</code>>
 -- @field m_spectrogoggles <<code>>#showtooltip item:35233
 -- /use item:35233
--- /equip item:35233]],
+-- /equip item:35233<</code>>
 -- @field m_deadscar <<code>>#showtooltip item:34475
--- /use item:34475]],
+-- /use item:34475<</code>>
 -- @field m_ssbanner <<code>>#showtooltip [dead] item:34414; item:34533
--- /use [dead] item:34414; item:34533]],
+-- /use [dead] item:34414; item:34533<</code>>
 -- @field m_greengil <<code>>#showtooltip [exists] item:34483; item:34533
--- /use [exists] item:34483; item:34533]],
+-- /use [exists] item:34483; item:34533<</code>>
 -- @field m_dawnstar <<code>>#showtooltip [dead] item:34368; item:34533
--- /use [dead] item:34368; item:34533]],
+-- /use [dead] item:34368; item:34533<</code>>
 -- @field m_bashir <<code>>#showtooltip item:34248
 -- /use item:34248<</code>>
 -- @field m_flamingoil <<code>>#showtooltip item:34489
