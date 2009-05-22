@@ -33,94 +33,94 @@ This is a listing of default macros contained in the addon [[ Main | IHML]].
 /targetexact Erratic Sentry
 /use Attuned Crystal Cores<</code>>
 
-===Sun's Reach Sanctum===
+====Sun's Reach Sanctum
 <<code>>#showtooltip item:34338
 /use Mana Remnants<</code>>
 
-===Throne of Kil'jaeden===
+====Throne of Kil'jaeden
 <<code>>#showtooltip item:34257
 /use Fel Siphon<</code>>
 
-===Spirit Fields===
+====Spirit Fields
 <<code>>#showtooltip item:35233
 /use Multiphase Spectrographic Goggles
 /equip Multiphase Spectrographic Goggles<</code>>
 
-===The Dead Scar===
+====The Dead Scar
 <<code>>#showtooltip item:34475
 /use Arcane Charges<</code>>
 
-===The Dawning Square===
+====The Dawning Square
 <<code>>#showtooltip [dead] item:34414; item:34533
 /use [dead] Shattered Sun Banner; Astromancer's Crystal<</code>>
 
-===Dawnstar Village===
+====Dawnstar Village
 <<code>>#showtooltip [dead] item:34368; item:34533
 /use [dead] Attuned Crystal Cores; Astromancer's Crystal<</code>>
 
-===Greengil Coast===
+====Greengil Coast
 <<code>>#showtooltip [exists] item:34483; item:34533
 /use [exists] Orb of Murloc Control; Astromancer's Crystal<</code>>
 
-===Bash'ir Landing===
+====Bash'ir Landing
 <<code>>#showtooltip item:34248
 /use Bash'ir Phasing Device<</code>>
 
-===The Sin'loren, The Dawnchaser and The Bloodoath===
+====The Sin'loren, The Dawnchaser and The Bloodoath
 <<code>>#showtooltip item:34489
 /use Flaming Oil<</code>>
 
-===Razorthorn Rise===
+====Razorthorn Rise
 <<code>>#showtooltip [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root; item:34255
 /use [nopet] Razorthorn Flayer Gland
 /cast [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root<</code>>
 
-==Cooking Daily==
-===Ancestral Grounds===
+===Cooking Daily
+====Ancestral Grounds
 <<code>>#showtooltip item:33851
 /use Cooking Pot<</code>>
 
-==The Black Morass==
-===The Black Morass===
+===The Black Morass
+====The Black Morass
 <<code>>#showtooltip item:24289
 /use item:24289<</code>>
  
-==Magisters' Terrace==
-===Halls of Theory===
+===Magisters' Terrace
+====Halls of Theory
 <<code>>/targetexact Pure Energy
 /startattack<</code>>
 
-==Karazhan==
-===The Curator===
+===Karazhan
+====The Curator
 <<code>>/targetexact Astral Flare
 /startattack<</code>>
 
-===Terestian Illhoof===
+====Terestian Illhoof
 <<code>>/targetexact Demon Chains
 /startattack<</code>>
 
-==Zul'Aman==
-===Halazzi===
+===Zul'Aman
+====Halazzi
 <<code>>/targetexact Corrupted Lightning Totem
 /startattack<</code>>
 
-==Serpentshrine Cavern==
-===Fathom-Lord Karathress===
+===Serpentshrine Cavern
+====Fathom-Lord Karathress
 <<code>>/targetexact Spitfire Totem
 /startattack<</code>>
 
-===Lady Vashj===
+====Lady Vashj
 <<code>>/stopmacro[noexists][harm]
 /run i=31088 t="target" if GetItemCount(i)>0 and HasFullControl() and IsItemInRange(i,t) then n=UnitName(t) s=SendChatMessage m="<-- TAINTED CORE TO --> " s(m..n.." !","RAID") s(m.."YOU !","WHISPER",nil,n) end
 /use item:31088<</code>>
 
-==Mount Hyjal==
-===Archimonde===
+===Mount Hyjal
+====Archimonde
 <<code>>#showtooltip item:24494
 /use Tears of the Goddess<</code>>
 
-==Black Temple==
-===High Warlord Naj'entus===
+===Black Temple
+====High Warlord Naj'entus
 <<code>>#showtooltip item:32408
 /use Naj'entus Spine<</code>>
 
