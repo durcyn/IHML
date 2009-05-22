@@ -5,20 +5,22 @@
 IHML.lua
 
 File date: @file-date-iso@ 
-File revision: @file-revision@ 
-Project revision: @project-revision@
 Project version: @project-version@
 
 Author: Ackis
-Originally Author: Snago
-
-************************************************************************
-
-Please see WoWAce.com for more information.
+Original Author: Snago
 
 ************************************************************************
 
 --]]
+
+--- **IHML** allows you to dynamically switch between macros depending on certain conditions.
+-- There is a default set of macros for use within IHML, however you can add more.\\
+-- IHML supports all the daily quests which use items from BC and WotLK.
+-- @class file
+-- @name IHML.lua
+-- @release @project-version@
+
 
 local LibStub = LibStub
 
