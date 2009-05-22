@@ -68,7 +68,7 @@ local lastMacro
 --- Default Macros
 -- @class table
 -- @name macrolist
--- @field m_skettis
+-- @field m_skettis Default macro
 
 local macrolist = {
 	["m_skettis"] = [[#showtooltip item:32406
