@@ -69,6 +69,9 @@ local lastMacro
 -- @class table
 -- @name defaultmacrolist
 -- @field m_skettis <<code>>#showtooltip item:32406\\/use [flying] item:32406<</code>>
+-- @field m_pinnacle <<code>>#showtooltip item:32406\n/use [flying] item:32406<</code>>
+-- @field manaremnants <<code>>#showtooltip item:32406
+-- /use [flying] item:32406<</code>>
 
 local defaultmacrolist = {
 	["m_skettis"] = [[#showtooltip item:32406
