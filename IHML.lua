@@ -67,10 +67,10 @@ local lastMacro
 
 --- Default Macros
 -- @class table
--- @name macrolist
--- @field m_skettis Default macro
+-- @name defaultmacrolist
+-- @field m_skettis <<code>>#showtooltip item:32406\\/use [flying] item:32406<</code>>
 
-local macrolist = {
+local defaultmacrolist = {
 	["m_skettis"] = [[#showtooltip item:32406
 /use [flying] item:32406]],
 	["m_pinnacle"] = [[#showtooltip item:32698
@@ -189,7 +189,7 @@ local defaults = {
 			-- BC Dailies
 			-- Daily quests ---------------------
 			-- Skettis ------
-			[1] = macrolist["m_skettis"],
+			[1] = defaultmacrolist["m_skettis"],
 			[L["Blackwind Lake"]] = 1,
 			[L["Lower Veil Shil'ak"]] = 1,
 			[L["Skettis"]] = 1,
@@ -198,35 +198,35 @@ local defaults = {
 			[L["Veil Ala'rak"]] = 1,
 			[L["Veil Harr'ik"]] = 1,
 			-- Ogri'La
-			[2] = macrolist["m_forgecamp"],
+			[2] = defaultmacrolist["m_forgecamp"],
 			[L["Forge Camp: Wrath"]] = 2,
 			[L["Forge Camp: Terror"]] = 2,
-			[L["Vortex Pinnacle"]] = macrolist["m_pinnacle"],
+			[L["Vortex Pinnacle"]] = defaultmacrolist["m_pinnacle"],
 			-- Netherwing
 			[L["Netherwing Ledge"]] = L["m_booterang"],
 			-- Halaa
-			[L["Halaa"]] = macrolist["m_halaa"],
+			[L["Halaa"]] = defaultmacrolist["m_halaa"],
 			-- Shattered Sun Offensive --
 			[L["Isle of Quel'Danas"]] = L["m_crystalcores"],
-			[L["Sun's Reach Sanctum"]] = macrolist["m_manaremnants"],
-			[L["Throne of Kil'jaeden"]] = macrolist["m_blood4blood"],
-			[L["Spirit Fields"]] = macrolist["m_spectrogoggles"],
-			[L["The Dead Scar"]] = macrolist["m_deadscar"],
-			[L["The Dawning Square"]] = macrolist["m_ssbanner"],
-			[L["Bash'ir Landing"]] = macrolist["m_bashir"],
-			[3] = macrolist["m_flamingoil"],
+			[L["Sun's Reach Sanctum"]] = defaultmacrolist["m_manaremnants"],
+			[L["Throne of Kil'jaeden"]] = defaultmacrolist["m_blood4blood"],
+			[L["Spirit Fields"]] = defaultmacrolist["m_spectrogoggles"],
+			[L["The Dead Scar"]] = defaultmacrolist["m_deadscar"],
+			[L["The Dawning Square"]] = defaultmacrolist["m_ssbanner"],
+			[L["Bash'ir Landing"]] = defaultmacrolist["m_bashir"],
+			[3] = defaultmacrolist["m_flamingoil"],
 			[L["The Sin'loren"]] = 3,
 			[L["The Dawnchaser"]] = 3,
 			[L["The Bloodoath"]] = 3,
-			[L["Greengill Coast"]] = macrolist["m_greengil"],
-			[L["Dawnstar Village"]] = macrolist["m_dawnstar"],
-			[L["Sun's Reach Armory"]] = macrolist["m_atamal"],
+			[L["Greengill Coast"]] = defaultmacrolist["m_greengil"],
+			[L["Dawnstar Village"]] = defaultmacrolist["m_dawnstar"],
+			[L["Sun's Reach Armory"]] = defaultmacrolist["m_atamal"],
 			[L["Razorthorn Rise"]] = L["m_razorthorn"],
 			-- Cooking ------
-			[L["Ancestral Grounds"]] = macrolist["m_soup4soul"],
+			[L["Ancestral Grounds"]] = defaultmacrolist["m_soup4soul"],
 			-- BC Instances
 			-- The Black Morass
-			[L["The Black Morass"]] = macrolist["m_blackmorass"],
+			[L["The Black Morass"]] = defaultmacrolist["m_blackmorass"],
 			-- Magisters' Terrace ---------------
 			[L["Halls of Theory"]] = L["m_vexallus"],
 			-- Karazhan -------------------------
@@ -238,58 +238,58 @@ local defaults = {
 			[L["Fathom-Lord Karathress"]] = L["m_flk"],
 			[L["Lady Vashj"]] = L["m_vashj"],
 			-- Mount Hyjal ----------------------
-			[L["Archimonde"]] = macrolist["m_archimonde"],
+			[L["Archimonde"]] = defaultmacrolist["m_archimonde"],
 			-- Black Temple ---------------------
-			[L["High Warlord Naj'entus"]] = macrolist["m_najentus"],
+			[L["High Warlord Naj'entus"]] = defaultmacrolist["m_najentus"],
 			-- Wrath Dailies
 			-- Howling Fjord
-			[7] = macrolist["m_fishyfish"],
+			[7] = defaultmacrolist["m_fishyfish"],
 			[L["Howling Fjord"]] = 7,
 			[L["Ledge of Garvan"]] = 7,
 			[L["Twin Shores"]] = L["m_lureit"],
-			[L["Winter's Breath Lake"]] = macrolist["m_edgeofwinter"],
+			[L["Winter's Breath Lake"]] = defaultmacrolist["m_edgeofwinter"],
 			-- Borean Tundra
 			[L["Coldarra"]] = L["m_drakehunt"],
 			-- Grizzly Hills
-			[L["Blue Sky Logging Grounds"]] = macrolist["m_bluesky"],
-			[L["Grizzly Hills"]] = macrolist["m_grizzly"],
-			[L["Venture Bay"]] = macrolist["m_venturebay"],
+			[L["Blue Sky Logging Grounds"]] = defaultmacrolist["m_bluesky"],
+			[L["Grizzly Hills"]] = defaultmacrolist["m_grizzly"],
+			[L["Venture Bay"]] = defaultmacrolist["m_venturebay"],
 			[L["Ashwood Lake"]] = L["m_bladefitforchampion"],
 			[L["Ashwood Post"]] = L["m_bladefitforchampion"],
 			-- The Storm Peaks
-			[5] = macrolist["m_essenceofice"],
+			[5] = defaultmacrolist["m_essenceofice"],
 			[L["Fjorn's Anvil"]] = 5,
 			[L["Frostfield Lake"]] = 5,
-			[L["The Forlorn Mine"]] = macrolist["m_discipline"],
-			[6] = macrolist["m_aberations"],
+			[L["The Forlorn Mine"]] = defaultmacrolist["m_discipline"],
+			[6] = defaultmacrolist["m_aberations"],
 			[L["The Blighted Pool"]] = 6,
 			[L["Valkyrion"]] = 6,
-			[L["Garm's Bane"]] = macrolist["m_landmine"],
-			[L["Thunderfall"]] = macrolist["m_hodirhorn"],
-			[L["Valley of Ancient Winters"]] = macrolist["m_hodirdaily"],
-			[L["The Pit of the Fang"]] = macrolist["m_pitoffang"],
-			[L["The Foot Steppes"]] = macrolist["m_chipofulduar"],
+			[L["Garm's Bane"]] = defaultmacrolist["m_landmine"],
+			[L["Thunderfall"]] = defaultmacrolist["m_hodirhorn"],
+			[L["Valley of Ancient Winters"]] = defaultmacrolist["m_hodirdaily"],
+			[L["The Pit of the Fang"]] = defaultmacrolist["m_pitoffang"],
+			[L["The Foot Steppes"]] = defaultmacrolist["m_chipofulduar"],
 			-- Zul'Drak
-			[L["Drak'Sotra"]] = macrolist["m_draksotra"],
-			[L["Zul'Drak"]] = macrolist["m_zuldrak"],
-			[L["Drak'Mar Lake"]] = macrolist["m_winterhyacinth"],
+			[L["Drak'Sotra"]] = defaultmacrolist["m_draksotra"],
+			[L["Zul'Drak"]] = defaultmacrolist["m_zuldrak"],
+			[L["Drak'Mar Lake"]] = defaultmacrolist["m_winterhyacinth"],
 			-- Ice Crown
 			[L["The Broken Front"]] = L["m_brokenfront"],
 			[L["The Valley of Fallen Heroes"]] = L["m_alliancebline"],
-			[L["Njorndar Village"]] = macrolist["m_leavemark"],
-			[L["Onslaught Harbor"]] = macrolist["m_corpserise"],
+			[L["Njorndar Village"]] = defaultmacrolist["m_leavemark"],
+			[L["Onslaught Harbor"]] = defaultmacrolist["m_corpserise"],
 			-- Shozalar Basin
-			[L["The Stormwright's Shelf"]] = macrolist["m_windandwater"],
-			[L["River's Heart"]] = macrolist["m_ghostfish"],
+			[L["The Stormwright's Shelf"]] = defaultmacrolist["m_windandwater"],
+			[L["River's Heart"]] = defaultmacrolist["m_ghostfish"],
 			-- Strand of the Ancients
-			[L["Courtyard of the Ancients"]] = macrolist["m_strand"],
+			[L["Courtyard of the Ancients"]] = defaultmacrolist["m_strand"],
 			-- Crystalsong Forest
-			[L["The Great Tree"]] = macrolist["m_greattree"],
-			[L["Crystalsong Forest"]] = macrolist["m_greattree"],
+			[L["The Great Tree"]] = defaultmacrolist["m_greattree"],
+			[L["Crystalsong Forest"]] = defaultmacrolist["m_greattree"],
 			-- WotLK Instances
 			-- Culling of Stratholme
-			[L["The Culling of Stratholme"]] = macrolist["m_cos"],
-			[L["PVP"]] = macrolist["m_pvp"],
+			[L["The Culling of Stratholme"]] = defaultmacrolist["m_cos"],
+			[L["PVP"]] = defaultmacrolist["m_pvp"],
 		},
 	}
 }
