@@ -68,10 +68,16 @@ local lastMacro
 --- Default Macros
 -- @class table
 -- @name defaultmacrolist
--- @field m_skettis <<code>>#showtooltip item:32406\\/use [flying] item:32406<</code>>
--- @field m_pinnacle <<code>>#showtooltip item:32406\n/use [flying] item:32406<</code>>
--- @field manaremnants <<code>>#showtooltip item:32406
+-- @field m_skettis <<code>>#showtooltip item:32406
 -- /use [flying] item:32406<</code>>
+-- @field m_pinnacle <<code>>#showtooltip item:32698
+-- /use item:32698
+-- /stopattack
+-- /petpassive<</code>>
+-- @field m_forgecamp <<code>>#showtooltip [flying] item:32456; [noflying] item:32696
+-- /use [flying] item:32456; [noflying] item:32696<</code>>
+-- @field manaremnants <<code>>#showtooltip item:34338
+-- /use item:34338<</code>>
 
 local defaultmacrolist = {
 	["m_skettis"] = [[#showtooltip item:32406
