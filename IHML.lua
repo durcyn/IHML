@@ -19,7 +19,7 @@ Original Author: Snago
 -- IHML supports all the daily quests which use items from BC and WotLK.
 -- @class file
 -- @name IHML.lua
--- @release @project-version@
+-- @release 2.4
 
 
 local LibStub = LibStub
@@ -65,9 +65,10 @@ local lastboss
 local currentType
 local lastMacro
 
---- Default Macros
+--- Default Macros which are included
 -- @class table
 -- @name defaultmacrolist
+-- @describe Default macros that do not require localization that are included with IHML.
 -- @field m_skettis <<code>>#showtooltip item:32406
 -- /use [flying] item:32406<</code>>
 -- @field m_pinnacle <<code>>#showtooltip item:32698
@@ -516,6 +517,13 @@ function addon:ADDON_LOADED(event, addonname)
 		self:UnregisterEvent("ADDON_LOADED") -- Don't need this anymore
 	end
 end
+
+--- Swaps between an existing macro and a new macro.
+-- @name IHML:SwapMacro
+-- @usage IHML:SwapMacro(new, silent)
+-- @param new New macro to swap to.
+-- @param silent Boolean to determine if we output a message to chat when the macro is swapped.
+-- @return Macro body text is changed to the new body text
 
 function addon:SwapMacro(new, silent)
 
