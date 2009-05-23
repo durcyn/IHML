@@ -8,6 +8,7 @@ ignore:
  - .pkgmeta
  - .docmeta
  - Docs
+ - locales/repoenUS.lua
 
 tools-used:
  - data-tools

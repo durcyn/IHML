@@ -21,7 +21,6 @@ Original Author: Snago
 -- @name IHML.lua
 -- @release 2.4
 
-
 local LibStub = LibStub
 
 local MODNAME = "IHML"
@@ -232,7 +231,6 @@ local defaultmacrolist = {
 /use item:37621]],
 	["m_grizzly"] = [[#showtooltip item:35908
 /use item:35908]],
-	["m_pvp"] = "",
 	["m_halaa"] = [[#showtooltip item:24538
 /use item:24538]],
 	["m_bluesky"] = [[#showtooltip item:37568
@@ -247,9 +245,10 @@ local defaultmacrolist = {
 /use item:45902]],
 	["m_winterhyacinth"] = [[#showtooltip item:45000
 /use item:45000]],
-	["default1"] = "", -- Default macro that it'll switch to for spec 1
-	["default2"] = "", -- Default macro that it'll switch to for spec 2
-	["default"] = "", -- Default macro when you don't care about specs
+	["m_pvp"] = [[/print "Default macro when opposing faction is targetted."]],
+	["default1"] = [[/print "Default macro when no other macro exists and you are in talent spec 1."]], -- Default macro that it'll switch to for spec 1
+	["default2"] = [[/print "Default macro when no other macro exists and you are in talent spec 2."]], -- Default macro that it'll switch to for spec 2
+	["default"] = [[/print "Default macro when no other macro exists."]], -- Default macro when you don't care about specs
 }
 
 local defaults = {
@@ -375,6 +374,9 @@ local defaults = {
 			-- Culling of Stratholme
 			[L["The Culling of Stratholme"]] = defaultmacrolist["m_cos"],
 			[L["PVP"]] = defaultmacrolist["m_pvp"],
+			[L["Default Macro"]] = defaultmacrolist["default"],
+			[L["Default Macro Spec 1"]] = defaultmacrolist["default1"],
+			[L["Default Macro Spec 2"]] = defaultmacrolist["default2"],
 		},
 	}
 }
@@ -467,7 +469,7 @@ function addon:OnEnable()
 		self:SwapMacro(nil, true)
 		currentType = nil
 	else
-		self:SwapMacro("default", true)
+		self:SwapMacro(L["Default Macro"], true)
 	end
 	self:RegisterEvent("ADDON_LOADED") -- To detect when the BigWigs/Macro frame loads
 	if not bwLoaded and BigWigs then
@@ -491,7 +493,7 @@ function addon:ZoneChanged()
 	if (currentType == "zone") then
 		if ((c.current ~= zone) and (c.current ~= mBody[zone])) then
 			currentType = nil
-			self:SwapMacro("default")
+			self:SwapMacro(L["Default Macro"])
 		end
 	elseif ((c.current == zone) or (c.current == mBody[zone])) then
 		currentType = "zone"
@@ -507,7 +509,7 @@ function addon:ZoneChanged()
 		if ((c.current ~= zone) and (c.current ~= mBody[zone])) then
 			if ((c.current ~= zone1) and (c.current ~= mBody[zone1])) then
 				currentType = nil
-				self:SwapMacro("default")
+				self:SwapMacro(L["Default Macro"])
 			end
 		end
 	elseif ((c.current == zone) or (c.current == mBody[zone])) then
@@ -543,7 +545,7 @@ function addon:PLAYER_ENTERING_WORLD()
 	if instanceType == "none" then
 		if currentType == "instance" then
 			currentType = nil
-			self:SwapMacro("default")
+			self:SwapMacro(L["Default Macro"])
 		end
 	else
 		self:SwapMacro(instanceType)
@@ -583,7 +585,7 @@ function addon:ADDON_LOADED(event, addonname)
 			if sync ~= "BossDeath" then return end
 			if c.current == module then
 				currentType = nil
-				addon:SwapMacro("default")
+				addon:SwapMacro(L["Default Macro"])
 			end
 		end)
 		bwLoaded = true
@@ -611,13 +613,13 @@ function addon:SwapMacro(new, silent)
 	new = new ~= "PLAYER_REGEN_ENABLED" and new or queued
 
 	-- If we are swapping to the default macro
-	if ((new == "default") and (p.talentbased == true)) then
+	if ((new == L["Default Macro"]) and (p.talentbased == true)) then
 		-- Get the active talent group
 		local activetalent = GetActiveTalentGroup(false, false)
 		if (activetalent == 1) then
-			new = "default1"
+			new = L["Default Macro Spec 1"]
 		elseif (activetalent == 2) then
-			new = "default2"
+			new = L["Default Macro Spec 2"]
 		end
 	end
 

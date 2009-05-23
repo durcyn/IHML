@@ -214,3 +214,6 @@ L["Drak'Mar Lake"] = true
 L["Ashwood Post"] = true
 L["Different default macro based on which talent spec you have enabled."] = true
 L["Talent Specific"] = true
+L["Default Macro"] = true
+L["Default Macro Spec 1"] = true
+L["Default Macro Spec 2"] = true
