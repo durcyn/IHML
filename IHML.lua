@@ -245,6 +245,11 @@ local defaultmacrolist = {
 /use item:45902]],
 	["m_winterhyacinth"] = [[#showtooltip item:45000
 /use item:45000]],
+	["m_argentjousting"] = [[#showtooltip [nomounted] item:46106;item:45724
+/use [nomounted] item:46106;item:45724 -- Argent
+/use [nomounted] item:46070;item:45724 -- Hord
+/use [nomounted] item:46069;item:45724 -- Ally
+]],
 	["m_pvp"] = [[/print "Default macro when opposing faction is targetted."]],
 	["default1"] = [[/print "Default macro when no other macro exists and you are in talent spec 1."]], -- Default macro that it'll switch to for spec 1
 	["default2"] = [[/print "Default macro when no other macro exists and you are in talent spec 2."]], -- Default macro that it'll switch to for spec 2
@@ -362,6 +367,15 @@ local defaults = {
 			[L["The Valley of Fallen Heroes"]] = L["m_alliancebline"],
 			[L["Njorndar Village"]] = defaultmacrolist["m_leavemark"],
 			[L["Onslaught Harbor"]] = defaultmacrolist["m_corpserise"],
+			[L["Argent Tournament Grounds"]] = defaultmacrolist["m_argentjousting"],
+			[L["The Horde Valiants' Ring"]] = defaultmacrolist["m_argentjousting"],
+			[L["The Argent Valiants' Ring"]] = defaultmacrolist["m_argentjousting"],
+			[L["The Alliance Valiants' Ring"]] = defaultmacrolist["m_argentjousting"],
+			[L["The Aspirants' Ring"]] = defaultmacrolist["m_argentjousting"],
+			[L["The Ring of Champions"]] = defaultmacrolist["m_argentjousting"],
+			[L["Argent Pavillion"]] = defaultmacrolist["m_argentjousting"],
+			[L["Silver Covenant Pavillion"]] = defaultmacrolist["m_argentjousting"],
+			[L["Sunreaver Pavillion"]] = defaultmacrolist["m_argentjousting"],
 			-- Shozalar Basin
 			[L["The Stormwright's Shelf"]] = defaultmacrolist["m_windandwater"],
 			[L["River's Heart"]] = defaultmacrolist["m_ghostfish"],
