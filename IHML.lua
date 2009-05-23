@@ -373,9 +373,9 @@ local defaults = {
 			[L["The Alliance Valiants' Ring"]] = defaultmacrolist["m_argentjousting"],
 			[L["The Aspirants' Ring"]] = defaultmacrolist["m_argentjousting"],
 			[L["The Ring of Champions"]] = defaultmacrolist["m_argentjousting"],
-			[L["Argent Pavillion"]] = defaultmacrolist["m_argentjousting"],
-			[L["Silver Covenant Pavillion"]] = defaultmacrolist["m_argentjousting"],
-			[L["Sunreaver Pavillion"]] = defaultmacrolist["m_argentjousting"],
+			[L["Argent Pavilion"]] = defaultmacrolist["m_argentjousting"],
+			[L["Silver Covenant Pavilion"]] = defaultmacrolist["m_argentjousting"],
+			[L["Sunreaver Pavilion"]] = defaultmacrolist["m_argentjousting"],
 			-- Shozalar Basin
 			[L["The Stormwright's Shelf"]] = defaultmacrolist["m_windandwater"],
 			[L["River's Heart"]] = defaultmacrolist["m_ghostfish"],
