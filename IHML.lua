@@ -152,6 +152,10 @@ local lastMacro
 -- /use item:45902<</code>>
 -- @field m_winterhyacinth <<code>>#showtooltip item:45000
 -- /use item:45000<</code>>
+-- @field m_argentjousting <<code>>#showtooltip [nomounted] item:46106;item:45724
+-- /use [nomounted] item:46106;item:45724 -- Argent
+-- /use [nomounted] item:46070;item:45724 -- Hord
+-- /use [nomounted] item:46069;item:45724 -- Ally<</code>>
 
 
 local defaultmacrolist = {
@@ -248,8 +252,7 @@ local defaultmacrolist = {
 	["m_argentjousting"] = [[#showtooltip [nomounted] item:46106;item:45724
 /use [nomounted] item:46106;item:45724 -- Argent
 /use [nomounted] item:46070;item:45724 -- Hord
-/use [nomounted] item:46069;item:45724 -- Ally
-]],
+/use [nomounted] item:46069;item:45724 -- Ally]],
 	["m_pvp"] = [[/print "Default macro when opposing faction is targetted."]],
 	["default1"] = [[/print "Default macro when no other macro exists and you are in talent spec 1."]], -- Default macro that it'll switch to for spec 1
 	["default2"] = [[/print "Default macro when no other macro exists and you are in talent spec 2."]], -- Default macro that it'll switch to for spec 2
