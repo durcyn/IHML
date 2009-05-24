@@ -536,12 +536,14 @@ local playerFaction = UnitFactionGroup("player")
 
 function addon:PLAYER_TARGET_CHANGED()
 
+	-- We assume that the flag is enabled because this event will be disabled if the option is set that way
+
 	-- Remember what our last macro was
 	if (c.current ~= L["PVP"]) then
 		lastMacro = c.current
 	end
 
-	if UnitIsPlayer("target") then
+	if (UnitIsPlayer("target")) then
 		local targetfaction = UnitFactionGroup("target")
 		if (targetfaction ~= playerFaction) then
 			self:SwapMacro(L["PVP"])
@@ -567,6 +569,15 @@ function addon:PLAYER_ENTERING_WORLD()
 			currentType = "instance"
 		end
 	end
+end
+
+function addon:PLAYER_TALENT_UPDATE()
+
+	-- Remember what our last macro was 
+	if ((c.current == L["Default Macro"]) or (c.current == L["Default Macro Spec 1"]) or (c.current == L["Default Macro Spec 2"])) then
+		self:SwapMacro(L["Default Macro"])
+	end
+
 end
 
 function addon:ADDON_LOADED(event, addonname)
@@ -822,10 +833,15 @@ function addon:UpdateSettings()
 			self:UnregisterEvent("ZONE_CHANGED_INDOORS")
 			self:UnregisterEvent("ZONE_CHANGED")
 		end
-		if p.pvpenabled then
+		if (p.pvpenabled == true) then
 			self:RegisterEvent("PLAYER_TARGET_CHANGED")
 		else
 			self:UnregisterEvent("PLAYER_TARGET_CHANGED")
+		end
+		if (p.talentbased == true) then
+			self:RegisterEvent("PLAYER_TALENT_UPDATE")
+		else
+			self:UnregisterEvent("PLAYER_TALENT_UPDATE")
 		end
 	else
 		bw2bm = nil
