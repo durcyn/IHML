@@ -527,6 +527,7 @@ function addon:OnProfileChanged()
 end
 
 function addon:OnEnable()
+
 	self:UpdateSettings()
 	checkMacro(p.macroname)
 	if (c.current) then
@@ -923,15 +924,15 @@ function addon:UpdateSettings()
 		else
 			self:UnregisterEvent("PLAYER_TARGET_CHANGED")
 		end
+		if (p.usedefault == false) then
+			options.args.option.args.autoswap.args.events.args.talentbased.disabled = true
+		else
+			options.args.option.args.autoswap.args.events.args.talentbased.disabled = false
+		end
 		if (p.talentbased == true) then
 			self:RegisterEvent("PLAYER_TALENT_UPDATE")
 		else
 			self:UnregisterEvent("PLAYER_TALENT_UPDATE")
-		end
-		if (p.usedefault == false) then
-			options.args.option.args.autoswap.args.talentbased.disables = true
-		else
-			options.args.option.args.autoswap.args.talentbased.disables = false
 		end
 	else
 		bw2bm = nil
