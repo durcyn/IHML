@@ -529,15 +529,13 @@ end
 function addon:OnEnable()
 	self:UpdateSettings()
 	checkMacro(p.macroname)
-	if c.current then
+	if (c.current) then
 		queued = c.current
 		c.current = nil
 		self:SwapMacro(nil, true)
 		currentType = nil
-	else
-		if (p.usedefault == true_ then
-			self:SwapMacro(L["Default Macro"], true)
-		end
+	elseif (p.usedefault == true) then
+		self:SwapMacro(L["Default Macro"], true)
 	end
 	self:RegisterEvent("ADDON_LOADED") -- To detect when the BigWigs/Macro frame loads
 	if not bwLoaded and BigWigs then
@@ -546,6 +544,7 @@ function addon:OnEnable()
 	if not macroUIHooked and MacroFrame then
 		self:ADDON_LOADED(nil, "Blizzard_MacroUI") -- the MacroUI has already loaded
 	end
+
 end
 
 function addon:OnDisable()
@@ -561,7 +560,7 @@ function addon:ZoneChanged()
 	if (currentType == "zone") then
 		if ((c.current ~= zone) and (c.current ~= mBody[zone])) then
 			currentType = nil
-			if (p.usedefault == true_ then
+			if (p.usedefault == true) then
 				self:SwapMacro(L["Default Macro"], true)
 			end
 		end
@@ -579,7 +578,7 @@ function addon:ZoneChanged()
 		if ((c.current ~= zone) and (c.current ~= mBody[zone])) then
 			if ((c.current ~= zone1) and (c.current ~= mBody[zone1])) then
 				currentType = nil
-				if (p.usedefault == true_ then
+				if (p.usedefault == true) then
 					self:SwapMacro(L["Default Macro"], true)
 				end
 			end
@@ -636,7 +635,7 @@ function addon:PLAYER_ENTERING_WORLD()
 	if (instanceType == "none") then
 		if (currentType == "instance") then
 			currentType = nil
-			if (p.usedefault == true_ then
+			if (p.usedefault == true) then
 				self:SwapMacro(L["Default Macro"], true)
 			end
 		end
@@ -694,7 +693,7 @@ function addon:ADDON_LOADED(event, addonname)
 			if sync ~= "BossDeath" then return end
 			if c.current == module then
 				currentType = nil
-				if (p.usedefault == true_ then
+				if (p.usedefault == true) then
 					self:SwapMacro(L["Default Macro"], true)
 				end
 			end
