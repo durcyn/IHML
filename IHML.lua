@@ -157,7 +157,7 @@ local lastMacro
 -- /use [nomounted] item:46070;item:45724 -- Hord
 -- /use [nomounted] item:46069;item:45724 -- Ally<</code>>
 
-
+-- Default non-localized macros
 local defaultmacrolist = {
 	["m_skettis"] = [[#showtooltip item:32406
 /use [flying] item:32406]],
@@ -259,6 +259,7 @@ local defaultmacrolist = {
 	["default"] = [[/print "Default macro when no other macro exists."]], -- Default macro when you don't care about specs
 }
 
+-- Default settings
 local defaults = {
 	profile = {
 		autoswap = true,
@@ -538,6 +539,13 @@ end
 
 local playerFaction = UnitFactionGroup("player")
 
+--- Function when the PLAYER_TARGET_CHANGED event occurs
+-- @name IHML:PLAYER_TARGET_CHANGED
+-- @see IHML:OnInitialize()
+-- @see IHML:UpdateSettings()
+-- @usage IHML:PLAYER_TARGET_CHANGED()
+-- @return Updates current macro to the PVP macro if the PVP flag is set, and the target is an opposite faction NPC.
+
 function addon:PLAYER_TARGET_CHANGED()
 
 	-- We assume that the flag is enabled because this event will be disabled if the option is set that way
@@ -560,20 +568,37 @@ function addon:PLAYER_TARGET_CHANGED()
 
 end
 
+--- Function when the PLAYER_ENTERING_WORLD event occurs
+-- @name IHML:PLAYER_ENTERING_WORLD
+-- @see IHML:OnInitialize()
+-- @see IHML:UpdateSettings()
+-- @usage IHML:PLAYER_ENTERING_WORLD()
+-- @return Swaps the macro the the default macro or sets the currentType flag to be instance depending on the circumstance.
+
 function addon:PLAYER_ENTERING_WORLD()
+
+	-- Lets see which type of instance we're in, if any
 	local instanceType = select(2, IsInInstance())
-	if instanceType == "none" then
-		if currentType == "instance" then
+
+	if (instanceType == "none") then
+		if (currentType == "instance") then
 			currentType = nil
 			self:SwapMacro(L["Default Macro"], true)
 		end
 	else
 		self:SwapMacro(instanceType)
-		if c.current == instanceType then
+		if (c.current == instanceType) then
 			currentType = "instance"
 		end
 	end
 end
+
+--- Function when the PLAYER_TALENT_UPDATE event occurs
+-- @name IHML:PLAYER_TALENT_UPDATE
+-- @see IHML:OnInitialize()
+-- @see IHML:UpdateSettings()
+-- @usage IHML:PLAYER_TALENT_UPDATE()
+-- @return Swaps the macro the the default macro when there is a talent change.
 
 function addon:PLAYER_TALENT_UPDATE()
 
