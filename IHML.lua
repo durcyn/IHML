@@ -157,6 +157,52 @@ local lastMacro
 -- /use [nomounted] item:46070;item:45724 -- Hord
 -- /use [nomounted] item:46069;item:45724 -- Ally<</code>>
 
+--- Default Macros which are included (local specific)
+-- @class table
+-- @name dlocalizedefaultmacrolist
+-- @field m_bladefitforchampion <<code>>#showtooltip item:44986
+-- /use item:44986
+-- /tar Lake Frog
+-- /kiss<</code>>
+-- @field m_lureit <<code>>#showtooltip item:34127
+-- /target Reef Bull
+-- /target Attracted Reef Bull
+-- /use item:34127<</code>>
+-- @field m_alliancebline <<code>>#showtooltip item:44212
+-- /targetexact Skybreaker Recon Fighter
+-- /use item:44212<</code>>
+-- @field m_brokenfront <<code>>#showtooltip item:43968
+-- /targetexact Hulking Abomination
+-- /use item:43968<</code>>
+-- @field m_drakehunt <<code>>#showtooltip item:35506
+-- /targetexact Nexus Drake Hatchling
+-- /use item:35506<</code>>
+-- @field m_vashj <<code>>/stopmacro[noexists][harm]
+-- /run i=31088 t="target" if GetItemCount(i)>0 and HasFullControl() and IsItemInRange(i,t) then n=UnitName(t) s=SendChatMessage m="<-- TAINTED CORE TO --> " s(m..n.." !","RAID") s(m.."YOU !","WHISPER",nil,n) end
+-- /use item:31088<</code>>
+-- @field m_flk <<code>>/targetexact Spitfire Totem
+-- /startattack<</code>>
+-- @field m_booterang <<code>>#showtooltip [flying] item:32680; item:32503
+-- /use [noflying] item:32503
+-- /stopmacro [noflying]
+-- /targetexact Disobedient Dragonmaw Peon
+-- /use item:32680
+-- /cleartarget<</code>>
+-- @field m_crystalcores <<code>>#showtooltip item:34368
+-- /targetexact Erratic Sentry
+-- /use item:34368<</code>>
+-- @field m_razorthorn <<code>>#showtooltip [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root; item:34255
+-- /use [nopet] item:34255
+-- /cast [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root<</code>>
+-- @field m_vexallus <<code>>/targetexact Pure Energy
+-- /startattack<</code>>
+-- @field m_curator <<code>>/targetexact Astral Flare
+-- /startattack<</code>>
+-- @field m_illhoof <<code>>/targetexact Demon Chains
+-- /startattack<</code>>
+-- @field m_halazzi <<code>>/targetexact Corrupted Lightning Totem
+-- /startattack<</code>>
+
 -- Default non-localized macros
 local defaultmacrolist = {
 	["m_skettis"] = [[#showtooltip item:32406
