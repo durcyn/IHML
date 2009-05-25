@@ -511,7 +511,7 @@ function addon:ZoneChanged()
 	if (currentType == "zone") then
 		if ((c.current ~= zone) and (c.current ~= mBody[zone])) then
 			currentType = nil
-			self:SwapMacro(L["Default Macro"])
+			self:SwapMacro(L["Default Macro"], true)
 		end
 	elseif ((c.current == zone) or (c.current == mBody[zone])) then
 		currentType = "zone"
@@ -527,7 +527,7 @@ function addon:ZoneChanged()
 		if ((c.current ~= zone) and (c.current ~= mBody[zone])) then
 			if ((c.current ~= zone1) and (c.current ~= mBody[zone1])) then
 				currentType = nil
-				self:SwapMacro(L["Default Macro"])
+				self:SwapMacro(L["Default Macro"], true)
 			end
 		end
 	elseif ((c.current == zone) or (c.current == mBody[zone])) then
@@ -565,7 +565,7 @@ function addon:PLAYER_ENTERING_WORLD()
 	if instanceType == "none" then
 		if currentType == "instance" then
 			currentType = nil
-			self:SwapMacro(L["Default Macro"])
+			self:SwapMacro(L["Default Macro"], true)
 		end
 	else
 		self:SwapMacro(instanceType)
@@ -579,7 +579,7 @@ function addon:PLAYER_TALENT_UPDATE()
 
 	-- Remember what our last macro was 
 	if ((c.current == L["Default Macro"]) or (c.current == L["Default Macro Spec 1"]) or (c.current == L["Default Macro Spec 2"])) then
-		self:SwapMacro(L["Default Macro"])
+		self:SwapMacro(L["Default Macro"], true)
 	end
 
 end
