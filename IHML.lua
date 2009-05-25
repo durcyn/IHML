@@ -27,7 +27,7 @@ local MODNAME = "IHML"
 
 IHML = LibStub("AceAddon-3.0"):NewAddon(MODNAME,"AceConsole-3.0","AceEvent-3.0","AceHook-3.0")
 
-local addon		= LibStub("AceAddon-3.0"):GetAddon(MODNAME)
+local addon	= LibStub("AceAddon-3.0"):GetAddon(MODNAME)
 local L = LibStub("AceLocale-3.0"):GetLocale(MODNAME)
 
 -- Upvalues from the global namespace
@@ -310,6 +310,7 @@ local defaults = {
 	profile = {
 		autoswap = true,
 		pvpenabled = false,
+		usedefault = true,
 		talentbased = true,
 		silent = true,
 		byBigWigs2BossMod = true,
@@ -534,7 +535,9 @@ function addon:OnEnable()
 		self:SwapMacro(nil, true)
 		currentType = nil
 	else
-		self:SwapMacro(L["Default Macro"], true)
+		if (p.usedefault == true_ then
+			self:SwapMacro(L["Default Macro"], true)
+		end
 	end
 	self:RegisterEvent("ADDON_LOADED") -- To detect when the BigWigs/Macro frame loads
 	if not bwLoaded and BigWigs then
@@ -558,7 +561,9 @@ function addon:ZoneChanged()
 	if (currentType == "zone") then
 		if ((c.current ~= zone) and (c.current ~= mBody[zone])) then
 			currentType = nil
-			self:SwapMacro(L["Default Macro"], true)
+			if (p.usedefault == true_ then
+				self:SwapMacro(L["Default Macro"], true)
+			end
 		end
 	elseif ((c.current == zone) or (c.current == mBody[zone])) then
 		currentType = "zone"
@@ -574,7 +579,9 @@ function addon:ZoneChanged()
 		if ((c.current ~= zone) and (c.current ~= mBody[zone])) then
 			if ((c.current ~= zone1) and (c.current ~= mBody[zone1])) then
 				currentType = nil
-				self:SwapMacro(L["Default Macro"], true)
+				if (p.usedefault == true_ then
+					self:SwapMacro(L["Default Macro"], true)
+				end
 			end
 		end
 	elseif ((c.current == zone) or (c.current == mBody[zone])) then
@@ -629,7 +636,9 @@ function addon:PLAYER_ENTERING_WORLD()
 	if (instanceType == "none") then
 		if (currentType == "instance") then
 			currentType = nil
-			self:SwapMacro(L["Default Macro"], true)
+			if (p.usedefault == true_ then
+				self:SwapMacro(L["Default Macro"], true)
+			end
 		end
 	else
 		self:SwapMacro(instanceType)
@@ -685,7 +694,9 @@ function addon:ADDON_LOADED(event, addonname)
 			if sync ~= "BossDeath" then return end
 			if c.current == module then
 				currentType = nil
-				addon:SwapMacro(L["Default Macro"])
+				if (p.usedefault == true_ then
+					self:SwapMacro(L["Default Macro"], true)
+				end
 			end
 		end)
 		bwLoaded = true
@@ -713,7 +724,7 @@ function addon:SwapMacro(new, silent)
 	new = new ~= "PLAYER_REGEN_ENABLED" and new or queued
 
 	-- If we are swapping to the default macro
-	if ((new == L["Default Macro"]) and (p.talentbased == true)) then
+	if (((p.usedefault == true) and new == L["Default Macro"]) and (p.talentbased == true)) then
 		-- Get the active talent group
 		local activetalent = GetActiveTalentGroup(false, false)
 		if (activetalent == 1) then
@@ -994,6 +1005,13 @@ options.args.option.args = {
 						desc = L["By Zone"],
 						order = 200,
 						arg = "byZone",
+					},
+					usedefault = {
+						name = L["Use Default"],
+						type = "toggle",
+						desc = L["USE_DEFAULT_DESC"],
+						order = 249,
+						arg = "usedefault",
 					},
 					pvp = {
 						name = L["PVP"],

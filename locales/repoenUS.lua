@@ -226,4 +226,5 @@ L["The Ring of Champions"] = true
 L["Argent Pavilion"] = true
 L["Silver Covenant Pavilion"] = true
 L["Sunreaver Pavilion"] = true
-
+L["Use Default"] = true
+L["USE_DEFAULT_DESC"] = "Toggles the use of a default macro on or off."
