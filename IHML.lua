@@ -928,6 +928,11 @@ function addon:UpdateSettings()
 		else
 			self:UnregisterEvent("PLAYER_TALENT_UPDATE")
 		end
+		if (p.usedefault == false) then
+			options.args.option.args.autoswap.args.talentbased.disables = true
+		else
+			options.args.option.args.autoswap.args.talentbased.disables = false
+		end
 	else
 		bw2bm = nil
 		self:UnregisterEvent("PLAYER_ENTERING_WORLD")
