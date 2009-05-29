@@ -153,9 +153,10 @@ local lastMacro
 -- @field m_winterhyacinth <<code>>#showtooltip item:45000
 -- /use item:45000<</code>>
 -- @field m_argentjousting <<code>>#showtooltip [nomounted] item:46106;item:45724
--- /use [nomounted] item:46106;item:45724 -- Argent
--- /use [nomounted] item:46070;item:45724 -- Hord
--- /use [nomounted] item:46069;item:45724 -- Ally<</code>>
+-- /use [mounted] item:45724
+-- /equip [nomounted] item:46106 -- Argent
+-- /equip [nomounted] item:46070 -- Hord
+-- /equip [nomounted] item:46069 -- Ally<</code>>
 
 --- Default Macros which are included (local specific)
 -- @class table
