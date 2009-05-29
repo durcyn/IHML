@@ -1,6 +1,6 @@
 =IHML Default Macros
 
-This is a listing of default macros contained in the addon [[ Main | IHML]].
+This is a listing of default macros contained in the addon [[Main | IHML]].  You can also view a listing of macros in the addon by viewing the [[Main | IHML]] [[api | API]] page.
 
 ==Burning Crusade
 ===Skettis Dailies
@@ -195,3 +195,197 @@ This is a listing of default macros contained in the addon [[ Main | IHML]].
  ===Zul'Drak===
 <<code>>#showtooltip item:38566
 /use item:38566<</code>>
+
+=Macros From Code
+== defaultmacrolist
+; m_skettis
+: <<code>>#showtooltip item:32406
+/use [flying] item:32406<</code>>
+; m_pinnacle
+: <<code>>#showtooltip item:32698
+/use item:32698
+/stopattack
+/petpassive<</code>>
+; m_forgecamp
+: <<code>>#showtooltip [flying] item:32456; [noflying] item:32696
+/use [flying] item:32456; [noflying] item:32696<</code>>
+; manaremnants
+: <<code>>#showtooltip item:34338
+/use item:34338<</code>>
+; m_blood4blood
+: <<code>>#showtooltip item:34257
+/use item:34257<</code>>
+; m_spectrogoggles
+: <<code>>#showtooltip item:35233
+/use item:35233
+/equip item:35233<</code>>
+; m_deadscar
+: <<code>>#showtooltip item:34475
+/use item:34475<</code>>
+; m_ssbanner
+: <<code>>#showtooltip [dead] item:34414; item:34533
+/use [dead] item:34414; item:34533<</code>>
+; m_greengil
+: <<code>>#showtooltip [exists] item:34483; item:34533
+/use [exists] item:34483; item:34533<</code>>
+; m_dawnstar
+: <<code>>#showtooltip [dead] item:34368; item:34533
+/use [dead] item:34368; item:34533<</code>>
+; m_bashir
+: <<code>>#showtooltip item:34248
+/use item:34248<</code>>
+; m_flamingoil
+: <<code>>#showtooltip item:34489
+/use item:34489<</code>>
+; m_atamal
+: <<code>>#showtooltip item:34500
+/use item:34500<</code>>
+; m_soup4soul
+: <<code>>#showtooltip item:33851
+/use item:33851<</code>>
+; m_blackmorass
+: <<code>>#showtooltip item:24289
+/use item:24289<</code>>
+; m_archimonde
+: <<code>>#showtooltip item:24494
+/use item:24494<</code>>
+; m_najentus
+: <<code>>#showtooltip item:32408
+/use item:32408<</code>>
+; m_discipline
+: <<code>>#showtooltip item:42837
+/use item:42837<</code>>
+; m_essenceofice
+: <<code>>#showtooltip item:42246
+/use item:42246<</code>>
+; m_aberations
+: <<code>>#showtooltip item:41612
+/use item:41612<</code>>
+; m_landmine
+: <<code>>#showtooltip item:40676
+/use item:40676<</code>>
+; m_hodirhorn
+: <<code>>#showtooltip item:42164
+/use item:42164<</code>>
+; m_hodirdaily
+: <<code>>#showtooltip [dead] item:42479; item:42774
+/use [dead] item:42479; item:42774<</code>>
+; m_pitoffang
+: <<code>>#showtooltip item:42499
+/use item:42499<</code>>
+; m_leavemark
+: <<code>>#showtooltip [dead] item:42480
+/use [dead] item:42480<</code>>
+; m_corpserise
+: <<code>>#showtooltip [dead] item:40587
+/use [dead] item:40587<</code>>
+; m_windandwater
+: <<code>>#showtooltip item:39571
+/use item:39571<</code>>
+; m_strand
+: <<code>>#showtooltip item:39213
+/use item:39213<</code>>
+; m_cos
+: <<code>>#showtooltip item:37888
+/use item:37888<</code>>
+; m_fishyfish
+: <<code>>#showtooltip item:40946
+/use item:40946<</code>>
+; m_draksotra
+: <<code>>#showtooltip [dead] item:38556;item:38544
+/use [dead] item:38556;item:38544<</code>>
+; m_zuldrak
+: <<code>>#showtooltip item:38566
+/use item:38566<</code>>
+; m_venturebay
+: <<code>>#showtooltip item:37621
+/use item:37621<</code>>
+; m_grizzly
+: <<code>>#showtooltip item:35908
+/use item:35908<</code>>
+; m_halaa
+: <<code>>#showtooltip item:24538
+/use item:24538<</code>>
+; m_bluesky
+: <<code>>#showtooltip item:37568
+/use item:37568<</code>>
+; m_greattree
+: <<code>>#showtooltip item:45046
+/use item:45046<</code>>
+; m_chipofulduar
+: <<code>>#showtooltip item:45281
+/use item:45281<</code>>
+; m_edgeofwinter
+: <<code>>#showtooltip item:45005
+/use item:45005<</code>>
+; m_ghostfish
+: <<code>>#showtooltip item:45902
+/use item:45902<</code>>
+; m_winterhyacinth
+: <<code>>#showtooltip item:45000
+/use item:45000<</code>>
+; m_argentjousting
+: <<code>>#showtooltip [nomounted] item:46106;item:45724
+/use [nomounted] item:46106;item:45724 -- Argent
+/use [nomounted] item:46070;item:45724 -- Hord
+/use [nomounted] item:46069;item:45724 -- Ally<</code>>
+
+\\
+
+== dlocalizedefaultmacrolist
+; m_bladefitforchampion
+: <<code>>#showtooltip item:44986
+/use item:44986
+/tar Lake Frog
+/kiss<</code>>
+; m_lureit
+: <<code>>#showtooltip item:34127
+/target Reef Bull
+/target Attracted Reef Bull
+/use item:34127<</code>>
+; m_alliancebline
+: <<code>>#showtooltip item:44212
+/targetexact Skybreaker Recon Fighter
+/use item:44212<</code>>
+; m_brokenfront
+: <<code>>#showtooltip item:43968
+/targetexact Hulking Abomination
+/use item:43968<</code>>
+; m_drakehunt
+: <<code>>#showtooltip item:35506
+/targetexact Nexus Drake Hatchling
+/use item:35506<</code>>
+; m_vashj
+: <<code>>/stopmacro[noexists][harm]
+/run i=31088 t="target" if GetItemCount(i)>0 and HasFullControl() and IsItemInRange(i,t) then n=UnitName(t) s=SendChatMessage m="<-- TAINTED CORE TO --> " s(m..n.." !","RAID") s(m.."YOU !","WHISPER",nil,n) end
+/use item:31088<</code>>
+; m_flk
+: <<code>>/targetexact Spitfire Totem
+/startattack<</code>>
+; m_booterang
+: <<code>>#showtooltip [flying] item:32680; item:32503
+/use [noflying] item:32503
+/stopmacro [noflying]
+/targetexact Disobedient Dragonmaw Peon
+/use item:32680
+/cleartarget<</code>>
+; m_crystalcores
+: <<code>>#showtooltip item:34368
+/targetexact Erratic Sentry
+/use item:34368<</code>>
+; m_razorthorn
+: <<code>>#showtooltip [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root; item:34255
+/use [nopet] item:34255
+/cast [pet, harm, nodead] Ravage; [pet] Expose Razorthorn Root<</code>>
+; m_vexallus
+: <<code>>/targetexact Pure Energy
+/startattack<</code>>
+; m_curator
+: <<code>>/targetexact Astral Flare
+/startattack<</code>>
+; m_illhoof
+: <<code>>/targetexact Demon Chains
+/startattack<</code>>
+; m_halazzi
+: <<code>>/targetexact Corrupted Lightning Totem
+/startattack<</code>>
