@@ -11,11 +11,6 @@ If you use Quartz, this macro will start a custom timer when you use the Banishi
  /use Banishing Crystal
  /qt Banishing Crystal 180
 
-==Halaa==
-When flying the bomb runs in Halaa it would be useful with macro like this. Haven't tested it.
- #showtooltip Fire Bomb
- /use Fire Bomb
-
 ==Magister's Terrace==
 ===Grand Magister's Asylum===
 Macro to target the Phoenix.
