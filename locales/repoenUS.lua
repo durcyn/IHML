@@ -25,10 +25,15 @@ local L = LibStub("AceLocale-3.0"):NewLocale("IHML", "enUS", true)
 if not L then return end
 
 -- Core Options
+--L{"COMBAT_QUEUE"] = 
 L["In combat! %s queued lol!"] = true -- %s will be replaced with the macro in question
+--L{"MACRO_FOUND"] = 
 L["%s! I have that macro lol!"] = true -- %s will be replaced with the macro in question
+--L{"SLAHS_COMMAND_MACRO"] = 
 L["Please choose a macroname by typing: /ihml macroname <name here>"] = true -- Don't translate the command, it won't change
+--L{"MACRO_NOTFOUND"] = 
 L["|cffff9999Warning!|r No macro named %s found. Make it plz!"] = true -- %s will be replaced with macroname
+--L{"NO_MACRO_SPACE"] = 
 L["|cffff9999Warning!|r No free macro space :("] = true
 
 -- Configuration
@@ -43,24 +48,31 @@ L["Auto Swap events"] = true
 L["BigWigs"] = true
 L["By BigWigs Boss Module"] = true
 L["Instance type"] = true
+--L{"INSTANCE_TYPE_OPTIONS"] = 
 L["By instance type. (arena, pvp, party or raid)"] = true -- Don't translate (arena, pvp, party or raid), those names won't change with locale
 L["Zone"] = true
 L["By Zone"] = true
 L["Used Macro"] = true
 L["Make Macro"] = true
 L["Pickup Macro"] = true
+--L{"PICKUP_MACRO"] = 
 L["Click to pickup the IHML macro so that you can place it on an action bar."] = true
+--L{"REINSERT_DEFAULTS"] = 
 L["Reinsert default macros"] = true
+--L{"RECOVER_MACROS"] = 
 L["Use this to recover any removed default macros. Won't replace changed versions. If you want to revert changed macros delete them first."] = true
 
 -- Macros
 L["Select Macro:"] = true
 L["Select a macro."] = true
 L["Swap!"] = true
+--L{"SWAP_MODULE"] = 
 L["Swap to the selected macro."] = true
+--L{"LAST_MODULE"] = 
 L["Last Module"] = "Name: Type \"boss\" for last loaded boss module or \"zone\" for current zone.\nIcon: A number from 1 to 1044. You might want to edit this from the Blizzard Macro UI."
 L["Edit Macro"] = true
 L["Name:"] = true
+--L{"AUTO_SWAP_MATCH"] = 
 L["This needs to match the boss module name or zone exactly for auto swap to work."] = true
 L["Macros must have a name!"] = true
 L["No boss module loaded!"] = true
