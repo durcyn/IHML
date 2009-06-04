@@ -430,7 +430,7 @@ local defaults = {
 			[L["Argent Pavilion"]] = 8,
 			[L["Silver Covenant Pavilion"]] = 8,
 			[L["Sunreaver Pavilion"]] = 8,
-			[L["Court of Bones"]] = 8,
+			[L["The Court of Bones"]] = 8,
 			-- Shozalar Basin
 			[L["The Stormwright's Shelf"]] = defaultmacrolist["m_windandwater"],
 			[L["River's Heart"]] = defaultmacrolist["m_ghostfish"],
