@@ -261,8 +261,8 @@ local defaultmacrolist = {
 /use [dead] item:42480]],
 	["m_corpserise"] = [[#showtooltip [dead] item:40587
 /use [dead] item:40587]],
-	["m_windandwater"] = [[#showtooltip item:39571
-/use item:39571]],
+	["m_windandwater"] = [[#showtooltip [noexists] item:39599; item:39571
+/use [noexists] item:39599; item:39571]],
 	["m_strand"] = [[#showtooltip item:39213
 /use item:39213]],
 	["m_cos"] = [[#showtooltip item:37888
@@ -432,7 +432,7 @@ local defaults = {
 			[L["Sunreaver Pavilion"]] = 8,
 			[L["The Court of Bones"]] = 8,
 			-- Shozalar Basin
-			[L["The Stormwright's Shelf"]] = defaultmacrolist["m_windandwater"],
+			[L["The Stormwrights' Shelf"]] = defaultmacrolist["m_windandwater"],
 			[L["River's Heart"]] = defaultmacrolist["m_ghostfish"],
 			-- Strand of the Ancients
 			[L["Courtyard of the Ancients"]] = defaultmacrolist["m_strand"],

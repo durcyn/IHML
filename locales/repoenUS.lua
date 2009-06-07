@@ -194,7 +194,7 @@ L["m_alliancebline"] = [[#showtooltip item:44212
 L["Njorndar Village"] = true
 L["Onslaught Harbor"] = true
 -- Basin
-L["The Stormwright's Shelf"] = true
+L["The Stormwrights' Shelf"] = true
 -- Strand of the Ancients
 L["Courtyard of the Ancients"] = true
 L["The Culling of Stratholme"] = true
