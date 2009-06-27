@@ -432,7 +432,7 @@ local defaults = {
 			[L["Sunreaver Pavilion"]] = 8,
 			[L["The Court of Bones"]] = 8,
 			-- Shozalar Basin
-			[L["The Stormwrights' Shelf"]] = defaultmacrolist["m_windandwater"],
+			[L["The Stormwright's Shelf"]] = defaultmacrolist["m_windandwater"],
 			[L["River's Heart"]] = defaultmacrolist["m_ghostfish"],
 			-- Strand of the Ancients
 			[L["Courtyard of the Ancients"]] = defaultmacrolist["m_strand"],
