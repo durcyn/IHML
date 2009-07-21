@@ -22,6 +22,9 @@ Change de macro selon la zone où vous vous trouvez ou selon les modules de boss
 
 隨地點或首領模組變換巨集
 
+==Important Note
+Hello everyone, as some of you may know I'm no longer playing WoW.  I'll continue to keep this addon updated, however I will need your help even more.  With each patch there may be issues/etc and I will need people to help me out with testing and bug reports.  In addition, there will always be new macros which should be added, and I'll need assistance with discovering those.
+
 ==Where to get it
 * [[http://www.wowace.com/projects/ihml/ | WoW Ace]] - Alpha Quality
 * [[http://wow.curse.com/downloads/wow-addons/details/ihml.aspx | Curse]] - Stable release
@@ -77,10 +80,10 @@ There are some special macros you can make apart from boss and zone macros.
 *default - This macro will be swapped in when no other macro takes priority.
 *default1 - This macro will be swapped in when no other macro takes priority and you are in talent spec 1 (if the option is enabled).
 *default2 - This macro will be swapped in when no other macro takes priority and you are in talent spec 2 (if the option is enabled).
-*party - Will be swapped in when you enter a 5-man instance.
-*raid - Will be swapped in when you enter a raid instance.
-*pvp - Macro for battle grounds.
-*arena - Macro for arenas.
+*party - Will be swapped in when you enter a 5-man instance. (NYI)
+*raid - Will be swapped in when you enter a raid instance. (NYI)
+*pvp - Macro for battle grounds. (NYI)
+*arena - Macro for arenas. (NYI)
 Note that macro names are case sensitive. "Default" or "PvP" will not work.
 
 ==Localization
