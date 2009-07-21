@@ -12,7 +12,7 @@
 ## X-Donate: http://www.wowace.com/projects/ihml/#w_donations
 
 ## Interface: 30100
-## Version: 2.61
+## Version: 2.62
 ## X-Revision: @project-revision@
 ## X-Date: @file-date-iso@
 
