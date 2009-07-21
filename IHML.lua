@@ -668,7 +668,8 @@ function addon:PLAYER_TALENT_UPDATE()
 end
 
 function addon:ADDON_LOADED(event, addonname)
-	if addonname == "Blizzard_MacroUI" then
+
+	if (addonname == "Blizzard_MacroUI") then
 		-- Blizzard_MacroUI loads twice for some reason
 		-- (guessing it has got something to do with the dummy addon in the AddOns-folder)
 		-- MacroFrame remains nil until it has loaded for real.
@@ -678,24 +679,26 @@ function addon:ADDON_LOADED(event, addonname)
 			if MacroPopupEditBox:GetText() == p.macroname then
 				currentIcon = MacroPopupFrame.selectedIcon
 				mIcon[c.current] = currentIcon
-				--addon:Print("Caught macro icon index: "..currentIcon)
 			end
 		end)
 		macroUIHooked = true
-	elseif addonname == "BigWigs" then
+
+	elseif (addonname == "BigWigs") then
 		AceLibrary("AceEvent-2.0").RegisterEvent(IHML, "Ace2_AddonEnabled", function(addonname)
 			-- If the addon don't have enabletrigger then it's not a bossmod
-			if addon.enabletrigger and bw2bm then
-				lastboss = addon.name
+			if ((addonname.enabletrigger) and (bw2bm)) then
+				lastboss = addonname.name
 				addon:SwapMacro(lastboss)
-				if c.current == lastboss then
+				if (c.current == lastboss) then
 					currentType = "boss"
 				end
 			end
 		end)
 		AceLibrary("AceEvent-2.0").RegisterEvent(IHML, "BigWigs_RecvSync", function(sync, module)
-			if sync ~= "BossDeath" then return end
-			if c.current == module then
+			if (sync ~= "BossDeath") then
+				return
+			end
+			if (c.current == module) then
 				currentType = nil
 				if (p.usedefault == true) then
 					self:SwapMacro(L["Default Macro"], true)
@@ -704,9 +707,11 @@ function addon:ADDON_LOADED(event, addonname)
 		end)
 		bwLoaded = true
 	end
+
 	if macroUIHooked and bwLoaded then
 		self:UnregisterEvent("ADDON_LOADED") -- Don't need this anymore
 	end
+
 end
 
 --- Swaps between an existing macro and a new macro.
