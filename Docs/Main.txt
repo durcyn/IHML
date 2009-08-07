@@ -11,19 +11,16 @@ IHML will only use one macro slot and will work with any action bar addon that y
 Due to addon limitations macros can't be swapped in combat but will instead be queued for swap as soon as possible.
 
 ===French (frFR)
-
 Change de macro selon la zone où vous vous trouvez ou selon les modules de boss BigWigs activés.
 
 ===Simplified Chinese (zhCN)
-
 随地点或首领模组变换宏
 
 ===Traditional Chinese (zhTW)
-
 隨地點或首領模組變換巨集
 
 ==Important Note
-Hello everyone, as some of you may know I'm no longer playing WoW.  I'll continue to keep this addon updated, however I will need your help even more.  With each patch there may be issues/etc and I will need people to help me out with testing and bug reports.  In addition, there will always be new macros which should be added, and I'll need assistance with discovering those.
+Hello everyone, as some of you may know I'm no longer playing WoW.  I'll continue to keep this addon updated, however I will need your help even more.  With each patch there may be issues/etc and I will need people to help me out with testing and bug reports.  In addition, there will always be new macros which should be added, and I'll need assistance with discovering those.  Please make a ticket with the macro text/zone where it applies and I'll add them in as soon as possible.
 
 ==Where to get it
 * [[http://www.wowace.com/projects/ihml/ | WoW Ace]] - Alpha Quality
