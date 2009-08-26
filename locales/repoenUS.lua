@@ -247,3 +247,4 @@ L["Use Default"] = true
 L["USE_DEFAULT_DESC"] = "Toggles the use of a default macro on or off."
 L["The Court of Bones"] = true
 L["The Sea Reaver's Run"] = true
+L["Hrothgar's Landing"] = true
