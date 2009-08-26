@@ -203,6 +203,11 @@ local lastMacro
 -- /startattack<</code>>
 -- @field m_halazzi <<code>>/targetexact Corrupted Lightning Totem
 -- /startattack<</code>>
+--@field m_kraken <<code>>#showtooltip item:46954
+--/target North sea Kraken
+--/use item:46954
+--/target Kvaldir deepcaller
+--/use item:46954<</code>>
 
 -- Default non-localized macros
 local defaultmacrolist = {
@@ -431,6 +436,7 @@ local defaults = {
 			[L["Silver Covenant Pavilion"]] = 8,
 			[L["Sunreaver Pavilion"]] = 8,
 			[L["The Court of Bones"]] = 8,
+			[L["The Sea Reaver's Run"]] = L["m_kraken"],
 			-- Shozalar Basin
 			[L["The Stormwright's Shelf"]] = defaultmacrolist["m_windandwater"],
 			[L["River's Heart"]] = defaultmacrolist["m_ghostfish"],

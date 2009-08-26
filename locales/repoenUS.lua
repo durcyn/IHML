@@ -220,6 +220,11 @@ L["m_bladefitforchampion"] = [[#showtooltip item:44986
 /use item:44986
 /tar Lake Frog
 /kiss]]
+["m_kraken"] = [[#showtooltip item:46954
+/target North sea Kraken
+/use item:46954
+/target Kvaldir deepcaller
+/use item:46954]]
 L["River's Heart"] = true
 L["Crystalsong Forest"] = true
 L["Drak'Mar Lake"] = true
@@ -241,3 +246,4 @@ L["Sunreaver Pavilion"] = true
 L["Use Default"] = true
 L["USE_DEFAULT_DESC"] = "Toggles the use of a default macro on or off."
 L["The Court of Bones"] = true
+L["The Sea Reaver's Run"] = true
