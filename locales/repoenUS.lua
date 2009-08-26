@@ -220,7 +220,7 @@ L["m_bladefitforchampion"] = [[#showtooltip item:44986
 /use item:44986
 /tar Lake Frog
 /kiss]]
-["m_kraken"] = [[#showtooltip item:46954
+L["m_kraken"] = [[#showtooltip item:46954
 /target North sea Kraken
 /use item:46954
 /target Kvaldir deepcaller
