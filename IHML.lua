@@ -45,12 +45,13 @@ local IsInInstance = IsInInstance
 local GetMacroInfo = GetMacroInfo
 local InCombatLockdown = InCombatLockdown
 local GetMacroIconInfo = GetMacroIconInfo
-local GetMinimapZoneText = GetMinimapZoneText
+--local GetMinimapZoneText = GetMinimapZoneText
 local GetMacroIndexByName = GetMacroIndexByName
 local UnitFactionGroup = UnitFactionGroup
 local UnitIsPlayer = UnitIsPlayer
 local GetRealZoneText = GetRealZoneText
 local GetActiveTalentGroup = GetActiveTalentGroup
+local GetSubZoneText = GetSubZoneText
 
 -- locals
 local db, c, p, options
@@ -569,7 +570,7 @@ end
 
 function addon:ZoneChanged()
 
-	local zone = GetRealZoneText()
+	local zone = GetSubZoneText()
 
 	self:SwapMacro(zone)
 
@@ -587,7 +588,7 @@ function addon:ZoneChanged()
 	
 	local zone1 = zone
 
-	zone = GetMinimapZoneText()
+	zone = GetRealZoneText()
 	self:SwapMacro(zone)
 
 	if (currentType == "zone") then
