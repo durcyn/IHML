@@ -256,8 +256,8 @@ local defaultmacrolist = {
 /use item:42246]],
 	["m_aberations"] = [[#showtooltip item:41612
 /use item:41612]],
-	["m_landmine"] = [[#showtooltip item:40676
-/use item:40676]],
+	["m_landmine"] = [[#showtooltip [exists] item:46885; item:40676
+/use [exists] item:46885; item:40676]],
 	["m_hodirhorn"] = [[#showtooltip item:42164
 /use item:42164]],
 	["m_hodirdaily"] = [[#showtooltip [dead] item:42479; item:42774
@@ -415,6 +415,7 @@ local defaults = {
 			[5] = defaultmacrolist["m_aberations"],
 			[L["The Blighted Pool"]] = 5,
 			[L["Valkyrion"]] = 5,
+			[L["Snowblind Hills"]] = defaultmacrolist["m_landmine"],
 			[L["Garm's Bane"]] = defaultmacrolist["m_landmine"],
 			[L["Thunderfall"]] = defaultmacrolist["m_hodirhorn"],
 			[L["Valley of Ancient Winters"]] = defaultmacrolist["m_hodirdaily"],
