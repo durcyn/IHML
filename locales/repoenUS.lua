@@ -188,7 +188,7 @@ L["m_brokenfront"] = [[#showtooltip item:43968
 /targetexact Hulking Abomination
 /use item:43968]]
 L["The Valley of Fallen Heroes"] = true
-L["m_alliancebline"] = [[#showtooltip item:44212
+L["m_allianceblind"] = [[#showtooltip item:44212
 /targetexact Skybreaker Recon Fighter
 /use item:44212]]
 L["Njorndar Village"] = true
@@ -223,7 +223,7 @@ L["m_bladefitforchampion"] = [[#showtooltip item:44986
 L["m_kraken"] = [[#showtooltip item:46954
 /target North sea Kraken
 /use item:46954
-/target Kvaldir deepcaller
+/target Kvaldir Deepcaller
 /use item:46954]]
 L["River's Heart"] = true
 L["Crystalsong Forest"] = true
