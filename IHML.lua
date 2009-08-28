@@ -160,6 +160,8 @@ local lastMacro
 -- /equip [nomounted] item:46069 -- Ally<</code>>
 -- @field m_hrothgar <<code>>#showtooltip item:47006
 -- /use item:47006<</code>>
+-- @field m_sharkbait <<code>>#showtooltip item:47036
+-- /use item:47036<</code>>
 
 --- Default Macros which are included (local specific)
 -- @class table
@@ -311,6 +313,8 @@ local defaultmacrolist = {
 /equip [nomounted] item:46069 -- Ally]],
 	["m_hrothgar"] = [[#showtooltip item:47006
 /use item:47006]],
+	["m_sharkbait"] = [[#showtooltip item:47036
+/use item:47036]],
 	["m_pvp"] = [[/print "Default macro when opposing faction is targetted."]],
 	["default1"] = [[/print "Default macro when no other macro exists and you are in talent spec 1."]], -- Default macro that it'll switch to for spec 1
 	["default2"] = [[/print "Default macro when no other macro exists and you are in talent spec 2."]], -- Default macro that it'll switch to for spec 2
@@ -444,6 +448,8 @@ local defaults = {
 			[L["The Court of Bones"]] = 8,
 			[L["The Sea Reaver's Run"]] = L["m_kraken"],
 			[L["Hrothgar's Landing"]] = defaultmacrolist["m_hrothgar"],
+			[L["The Crimson Dawn"]]= defaultmacrolist["m_sharkbait"],
+			[L["The Silver Blade"]]= defaultmacrolist["m_sharkbait"],
 			-- Shozalar Basin
 			[L["The Stormwright's Shelf"]] = defaultmacrolist["m_windandwater"],
 			[L["River's Heart"]] = defaultmacrolist["m_ghostfish"],

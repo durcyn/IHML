@@ -249,3 +249,5 @@ L["The Court of Bones"] = true
 L["The Sea Reaver's Run"] = true
 L["Hrothgar's Landing"] = true
 L["Snowblind Hills"] = true
+L["The Crimson Dawn"] = true
+L["The Silver Blade"] = true
