@@ -174,7 +174,7 @@ local lastMacro
 -- /target Reef Bull
 -- /target Attracted Reef Bull
 -- /use item:34127<</code>>
--- @field m_alliancebline <<code>>#showtooltip item:44212
+-- @field m_allianceblind <<code>>#showtooltip item:44212
 -- /targetexact Skybreaker Recon Fighter
 -- /use item:44212<</code>>
 -- @field m_brokenfront <<code>>#showtooltip item:43968
@@ -432,7 +432,7 @@ local defaults = {
 			[L["Drak'Mar Lake"]] = defaultmacrolist["m_winterhyacinth"],
 			-- Ice Crown
 			[L["The Broken Front"]] = L["m_brokenfront"],
-			[L["The Valley of Fallen Heroes"]] = L["m_alliancebline"],
+			[L["The Valley of Fallen Heroes"]] = L["m_allianceblind"],
 			[L["Njorndar Village"]] = defaultmacrolist["m_leavemark"],
 			[L["Onslaught Harbor"]] = defaultmacrolist["m_corpserise"],
 			[8] = defaultmacrolist["m_argentjousting"],

@@ -188,7 +188,8 @@ L["m_brokenfront"] = [[#showtooltip item:43968
 /targetexact Hulking Abomination
 /use item:43968]]
 L["The Valley of Fallen Heroes"] = true
-L["m_allianceblind"] = [[#showtooltip item:44212
+L["m_allianceblind"] = [[#showtooltip [noexists] item:44212; item:47033
+/use item:47033
 /targetexact Skybreaker Recon Fighter
 /use item:44212]]
 L["Njorndar Village"] = true
