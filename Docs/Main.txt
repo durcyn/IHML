@@ -83,6 +83,9 @@ There are some special macros you can make apart from boss and zone macros.
 *arena - Macro for arenas. (NYI)
 Note that macro names are case sensitive. "Default" or "PvP" will not work.
 
+====Contributing Macros
+If you have a common task that can be used in a macro for this mod, please make a ticket with the macro and other information.
+
 ==Localization
 Please see the documentation on [[Localization]] to help with translation.
 
