@@ -19,7 +19,7 @@ Original Author: Snago
 -- IHML supports all the daily quests which use items from BC and WotLK.
 -- @class file
 -- @name IHML.lua
--- @release 2.6
+-- @release 2.62
 
 local LibStub = LibStub
 
