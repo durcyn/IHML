@@ -158,8 +158,8 @@ local lastMacro
 -- /equip [nomounted] item:46106 -- Argent
 -- /equip [nomounted] item:46070 -- Hord
 -- /equip [nomounted] item:46069 -- Ally<</code>>
--- @field m_hrothgar <<code>>#showtooltip item:47006
--- /use item:47006<</code>>
+-- @field m_hrothgar <<code>>#showtooltip [dead]item:46870;item:47006
+-- /use [dead]item:46870;item:47006<</code>>
 -- @field m_sharkbait <<code>>#showtooltip item:47036
 -- /use item:47036<</code>>
 
@@ -311,8 +311,8 @@ local defaultmacrolist = {
 /equip [nomounted] item:46106 -- Argent
 /equip [nomounted] item:46070 -- Hord
 /equip [nomounted] item:46069 -- Ally]],
-	["m_hrothgar"] = [[#showtooltip item:47006
-/use item:47006]],
+	["m_hrothgar"] = [[#showtooltip [dead]item:46870;item:47006
+/use [dead]item:46870;item:47006]],
 	["m_sharkbait"] = [[#showtooltip item:47036
 /use item:47036]],
 	["m_pvp"] = [[/print "Default macro when opposing faction is targetted."]],
