@@ -11,9 +11,9 @@
 ## X-Author-Server = Thunderlord US
 ## X-Donate: http://www.wowace.com/projects/ihml/#w_donations
 
-## Interface: 30200
-## Version: 2.7 Beta
-## X-Revision: @project-revision@
+## Interface: 30300
+## Version: @project-version@
+## X-Revision: @project-abbreviated-hash@
 ## X-Date: @file-date-iso@
 
 ## X-Credits: Snago for writing this mod! :)
