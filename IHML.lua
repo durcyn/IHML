@@ -702,7 +702,7 @@ function addon:ADDON_LOADED(event, addonname)
 		end)
 		macroUIHooked = true
 
-	elseif (addonname == "BigWigs") then
+	elseif (addonname == "BigWigs") and AceLibrary then
 		AceLibrary("AceEvent-2.0").RegisterEvent(IHML, "Ace2_AddonEnabled", function(addonname)
 			-- If the addon don't have enabletrigger then it's not a bossmod
 			if ((addonname.enabletrigger) and (bw2bm)) then
