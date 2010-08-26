@@ -55,7 +55,7 @@ local GetSubZoneText = GetSubZoneText
 
 -- locals
 local db, c, p, options
-local bw2bm
+local bw3bm
 local mName -- Need for AceConfig
 local mIcon, mBody
 local currentIcon -- the index for the current macro icon
@@ -329,7 +329,7 @@ local defaults = {
 		usedefault = true,
 		talentbased = true,
 		silent = true,
-		byBigWigs2BossMod = true,
+		byBigWigs3BossMod = true,
 		byInstanceType = true,
 		byZone = true,
 		macroname = "ihml",
@@ -571,7 +571,7 @@ function addon:OnEnable()
 end
 
 function addon:OnDisable()
-	bw2bm = nil
+	bw3bm = nil
 end
 
 function addon:ZoneChanged()
@@ -703,23 +703,25 @@ function addon:ADDON_LOADED(event, addonname)
 		macroUIHooked = true
 
 	elseif (addonname == "BigWigs") and AceLibrary then
-		AceLibrary("AceEvent-2.0").RegisterEvent(IHML, "Ace2_AddonEnabled", function(addonname)
-			-- If the addon don't have enabletrigger then it's not a bossmod
-			if ((addonname.enabletrigger) and (bw2bm)) then
-				lastboss = addonname.name
-				addon:SwapMacro(lastboss)
-				if (c.current == lastboss) then
+		LibStub("AceEvent-3.0").RegisterMessage(IHML, "BigWigs_OnBossEnable", function(name)
+			--@alpha@
+			print(name) --debug
+			--@end-alpha@
+			if name and bw3bm then
+				lastboss = name
+				addon:SwapMacro(name)
+				if (c.current == name) then
 					currentType = "boss"
 				end
 			end
 		end)
-		AceLibrary("AceEvent-2.0").RegisterEvent(IHML, "BigWigs_RecvSync", function(sync, module)
-			if (sync ~= "BossDeath") then
-				return
-			end
-			if (c.current == module) then
+		LibStub("AceEvent-3.0").RegisterEvent(IHML, "BigWigs_OnBossDisable", function(name)
+			--@alpha@
+			print(name) --debug
+			--@end-alpha@
+			if name and bw3bm then
 				currentType = nil
-				if (p.usedefault == true) then
+				if p.usedefault == true then
 					self:SwapMacro(L["Default Macro"], true)
 				end
 			end
@@ -929,7 +931,7 @@ end
 
 function addon:UpdateSettings()
 	if p.autoswap then
-		bw2bm = p.byBigWigs2BossMod == true
+		bw3bm = p.byBigWigs3BossMod == true
 		if p.byInstanceType then
 			self:RegisterEvent("PLAYER_ENTERING_WORLD")
 		else
@@ -962,7 +964,7 @@ function addon:UpdateSettings()
 			self:UnregisterEvent("PLAYER_TALENT_UPDATE")
 		end
 	else
-		bw2bm = nil
+		bw3bm = nil
 		self:UnregisterEvent("PLAYER_ENTERING_WORLD")
 		self:UnregisterEvent("MINIMAP_ZONE_CHANGED")
 		self:UnregisterEvent("ZONE_CHANGED")
@@ -1024,7 +1026,7 @@ options.args.option.args = {
 						name = L["BigWigs"], type = "toggle",
 						desc = L["By BigWigs Boss Module"],
 						order = 100,
-						arg = "byBigWigs2BossMod",
+						arg = "byBigWigs3BossMod",
 					},
 					instancetype = {
 						name = L["Instance type"], type = "toggle",
